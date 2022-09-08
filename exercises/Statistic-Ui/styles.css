@@ -1,0 +1,127 @@
+body{
+   box-sizing: border-box; 
+   margin: 0;
+   padding: 0;
+   background: linear-gradient(
+    45deg,
+    #ff9a9e,
+    #fad0c4 
+   );
+   width: 100%;
+   overflow: auto;
+   font-family: 'Times New Roman', sans-serif;
+}
+
+header{
+    width: 95%;
+    height: 89px;
+    background-color: #ddd;
+    text-align: center;
+    /* margin: auto; */
+    /* margin-top: 40px; */
+    margin: 40px auto;
+    padding: 3px ;
+}
+
+#header > input {
+    width: 40%;
+    height: 27px;
+    border-radius: 3px;
+    margin-top: 0px;
+    margin: auto;
+    border: none;
+}
+ 
+#header h1{
+    /* margin-bottom: 0px;
+    margin:  auto;
+    margin-top: 0px; */
+    text-align: center;
+    margin: 7px auto 0px auto;
+}
+
+::placeholder{
+font-size: 14px;
+padding-left: 5px;
+font-family: serif;
+}
+
+main{
+    margin: auto;
+    width: 789px;
+    height: 625px;
+    background-color: white;
+    border: 2px solid black;
+
+}
+
+#second-row  div{
+    width: 200px;
+    height: 160px;
+border: none;
+    border-radius: 5px;
+    margin: ;
+    text-align: left;
+    padding: 23px;
+    
+}
+
+
+#second-row  button{
+background-color: transparent;
+border: 1px solid black;
+border-radius: 7px;
+margin: auto;
+padding: 11px;
+font-size: 12px;
+}
+
+#second-row button:hover{
+    background-color: #fff;
+    cursor: pointer;
+}
+
+
+#second-row{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0 10px;
+}
+
+#price-calculator{
+    background-color: #ffc7c7;
+}
+
+#name-statistics{
+    background-color: #ffe2e2;
+}
+
+#stats-table{
+    background-color: #FFCFDF;
+}
+
+#stats-table button{
+transform: translate(0px, 20px);
+}
+
+#second-row div{
+    width: 200px;
+    height: 160px;
+    border: none;
+    border-radius: 5px;
+    margin: ;
+    text-align: left;
+    padding: 23px;
+    
+}
+
+#second-row{
+    margin-top: 40px;
+}
+
+
+
+button:active{
+    transform: translate(0.5px);
+}

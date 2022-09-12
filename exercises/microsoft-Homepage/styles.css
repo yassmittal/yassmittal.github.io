@@ -216,4 +216,5 @@ margin: 6px;
 
 button:hover{
     opacity: 0.9;
+    cursor: pointer;
 }

@@ -208,3 +208,12 @@ margin: 6px;
     text-decoration: none;
     color: #616161;
 }
+
+#navbar a:hover{
+    border-bottom: 2px solid black;
+    padding-bottom: 2px;
+}
+
+button:hover{
+    opacity: 0.9;
+}

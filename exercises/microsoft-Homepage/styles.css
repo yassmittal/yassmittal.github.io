@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+#main a{
+text-decoration: none;
+color: #000;
+word-spacing: 10px;
+}
+
+body{
+margin: 0 73px 0 70px;
+}
+
+button{
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: rgba(0, 0, 0, 0.8);
+font-size: 17px;
+font-weight: 500;
+border:none;
+color: white;
+height: 42px;
+width: 140px;
+}
+
+#navbar{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin-top: 17px;
+margin-bottom: 10px;
+margin-left: 0;
+}
+
+
+
+
+#navbar ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 56%;
+    align-items: center;
+}
+ 
+#navbar li{
+    margin: 4px;
+}
+
+#navbar img{
+    width: 120px;
+    object-fit: contain;
+    margin-left: 0;
+}
+ 
+#navbar .fas{
+margin: 6px;
+}
+
+#hero-section{
+    background-image: url(https://i.ibb.co/zGSDGCL/slide1.png);
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ccc;
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    height: 84%;
+    width: 50%;
+    margin: auto;
+}
+
+.hero-content p{
+    margin: 20px auto;
+}
+
+.fa-chevron-right{
+    margin-left: 4px;
+}
+
+.products{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 19px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.products div{
+    width: 24%;
+}
+
+.products img{
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.products a{
+    color: #0067b8;
+    font-weight: 900;
+    font-size: 17px;
+
+}
+
+.products p{
+    margin: 6px 0 21px 0;
+    text-align: justify;
+}
+.Xbox, .last-section{
+    background-image: url(https://i.ibb.co/tBJGPD9/xbox.png);
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #ccc;
+    padding: 50px 30px;
+    margin: 25px 0;
+}
+
+.content-back{
+    width: 35%;
+    line-height: 24px;
+    text-align: justify;
+}
+ .content-back p{
+    margin: 6px 0 20px 0 ;
+ }
+
+.last-section{
+    background-image: url(https://i.ibb.co/72cgtsz/carbon.jpg);
+    color: #fff;
+}
+
+.last-section button{
+    color: black;
+    background-color: #fff;
+}
+
+.last-section .content-back{
+    width: 48%;
+    margin-top: 75px;
+}
+
+#first-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 400px;
+}
+
+#second-footer{
+    background-color: #f2f2f2;
+    font-size: 14px;
+    color: #616161;
+
+}
+.specifications{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 11px 90px 0 15px;
+    margin-top: 8px;
+}
+
+.specifications ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+}
+
+.specifications li{
+    list-style: none;
+}
+
+.specifications li:first-child{
+    font-weight: bold;
+    margin: 4px 0;
+}
+
+#other-links{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 75%;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+
+#other-links a{
+    text-decoration: none;
+    color: #616161;
+}

@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap");
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Mulish' , sans-serif;
+    font-size: 11px;
+}
+
+input , textarea{
+    display: block;
+    resize: none;
+}
+
+#main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 27px;
+}
+
+.elements{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin-top: 13px;
+}
+
+.elements li{
+    margin: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #1a1b38;
+}
+
+.elements button{
+    background-color: #3457dc;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 11px;
+    border: none;
+    height: 20px;
+    width: 75px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+form{
+    font-weight: bold;
+}
+
+form input {
+    margin: 3px 0px 13px 0px;
+    width: 300px;
+    height: 32px;
+    font-size: 11px;
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+form textarea{
+    margin-top: 3px;
+    border: 1px solid #ddd;
+    width: 300px;
+}
+
+form h3{
+    margin-bottom: 14px;
+}
+
+#section-1{
+    margin: 40px 0px 0px 15%;
+    height: 100%;
+
+}
+
+#section-2{
+    display: flex;
+    flex-direction: column;
+    height: 470px;
+    background-color: #fff;
+    padding: 30px 0px 0px 50px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #f7f9fd;
+    width: 50%;
+    font-size: 12px;
+}
+
+#section-2 h3{
+    margin-bottom: 15px;
+}
+
+#description h2{
+    margin-bottom: 23px;
+}
+
+#description{
+    margin-bottom: 30px;
+}
+
+.input{
+    margin-bottom: 20px;
+}
+
+.box img {
+width: 59px;
+}
+
+.box{
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    padding: 24px;
+    width: 260px;
+    height: 150px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    border-radius: 4px;
+}
+
+.box .text p{
+    margin-top: 9px;
+}
+
+.box img , #logo-2{
+    margin-right: 13px;
+    margin-left: 0;
+}
+
+
+#logo-2{
+    width: 175px;
+    height: 57px;
+    background-color: #6585ff;
+    border-radius: 100%;
+}

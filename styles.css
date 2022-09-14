@@ -30,3 +30,19 @@
   background-color: rgba(245, 245, 220, 0.3);
   font-size: 23px;
 }
+
+.projects-container{
+  text-align: center;
+  font-size: 30px;
+  padding: 30px;
+}
+
+.projects-container li{
+  padding: 30px;
+  list-style: none;
+}
+
+.projects-container li:hover{
+  transition: all 400ms ease-in-out;
+  translate: 0px 7px;
+}

@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;900&display=swap");
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto Slab' , sans-serif;
+    background:  linear-gradient(#e55d87, #5fc3e4);
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 15px;
+    align-items: center;
+}
+
+#left-section{
+    min-width: 400px;
+    max-width: 700px;
+    margin: 30px 30px 0px 150px;
+}
+
+#top-section{
+    margin: 15px 0px;
+}
+
+#top-section h2{
+    margin: 13px 0;
+}
+
+#join-head{
+    margin: 20px 0 16px 0 ;
+}
+
+.form-row{
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+.form-row div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 9px 15px 9px 0;
+}
+
+.form-row input , .form-row select{
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    margin-top: 2px;
+    font-size: 12px;
+}
+
+.form-row input:focus , .form-row select:focus{
+    outline: none;
+}
+
+.work textarea{
+padding: 5px;
+margin: 3px 0;
+font-size: 12px;
+resize: none;
+border: none;
+}
+
+.work textarea:focus{
+    outline: none;
+}
+
+.work{
+    font-size: 15px;
+}
+
+#receive-email{
+    margin: 6px 0;
+    font-size: 15px;
+}
+
+#register{
+    width: 190px;
+    height: 45px;
+    box-shadow: 0px 2px 6px  rgba(0, 0, 0, 0.8);
+    margin: 15px 0;
+}
+
+#right-section{
+    background-color: #3e4149;
+    width: 40%;
+    height: 80%;
+}
+
+#figma{
+    height: 50px;
+    width: 120px;
+    background-color: #fff;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 25px 12px 25px;
+    font-size: 13px;
+    float: right;
+    margin: 30px;
+    font-family: sans-serif;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+#figma img{
+    width: 16px;
+}
+
+#social-icons{
+    margin: 100px 25px 70px 25px;
+    color: #fff;
+}
+
+#social-icons .fab{
+    margin: 10px;
+}
+
+#social-icons p{
+    margin: 0px 30px;
+}
+
+#social-icons a{
+    color: #fff;
+}
+
+.guest img , .host img{
+    width: 50px;
+    border-radius: 100%;
+    margin-right: 20px;
+}
+
+.guest , .host{
+    display: flex;
+    margin: 10px 15px 10px 15px;
+}
+
+#guests-hosts{
+    display: flex;
+    flex-direction: column;
+}
+
+#guests h3{
+    text-align: c;
+}
+
+#guests-hosts h3{
+    margin-left: 50px;
+}
+
+.hosted-by{
+    margin-top: 30px;
+}

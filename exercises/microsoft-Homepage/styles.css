@@ -6,7 +6,7 @@
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
-#main a{
+#main a {
 text-decoration: none;
 color: #000;
 word-spacing: 10px;
@@ -38,11 +38,9 @@ margin-bottom: 10px;
 margin-left: 0;
 }
 
-
-
-
 #navbar ul{
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     justify-content: space-between;
     width: 56%;
@@ -116,12 +114,10 @@ margin: 6px;
     color: #0067b8;
     font-weight: 900;
     font-size: 17px;
-
 }
 
 .products p{
     margin: 6px 0 21px 0;
-    text-align: justify;
 }
 .Xbox, .last-section{
     background-image: url(https://i.ibb.co/tBJGPD9/xbox.png);
@@ -217,4 +213,73 @@ margin: 6px;
 button:hover{
     opacity: 0.9;
     cursor: pointer;
+}
+
+@media screen and (max-width: 850px) {
+    body{
+        font-size: 0.9rem;
+        margin: 0 10px 0 10px;
+
+    }
+    
+    .products div{
+        justify-content: space-evenly;
+    }
+
+    .specifications{
+    padding: 11px 0 0 5px;
+        font-size: 13px;
+    }
+
+    .specifications ul{
+        height: 280px;
+    }
+
+    .specifications li{
+        margin: 0 2px;
+    }
+
+    .products{
+        font-size: 12px;
+    }
+
+    #navbar li:first-child{
+        width: 90%;
+    }
+
+    #navbar div{
+        display: flex;
+    }
+
+.Xbox, .last-section{
+    height: 400px;
+    font-size: 0.8rem;
+}
+
+#other-links{
+    margin: 0 10px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#other-links li{
+    margin: 0.6em;
+}
+
+.fa-globe{
+    width: 100%;
+}
+
+#other-links li:nth-child(2){
+    width: 100%;
+}
+
+}
+
+@media screen and (max-width: 1000px) {
+    #navbar ul{
+        width: 90%;
+        justify-content: flex-start;
+    }
+    
 }

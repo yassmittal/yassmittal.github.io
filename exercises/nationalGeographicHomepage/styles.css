@@ -212,7 +212,7 @@ main{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-left: 4rem;
+  margin-left: 3.999rem;
 }
 
 .social-icons{

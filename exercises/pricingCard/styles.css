@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+
+body{
+  background-color: #f7f7f7;
+  font-family: 'Montserrat' , sans-serif;
+  margin: auto;
+  overflow: hidden;
+  padding: 2.5rem 0 0.5rem 0;
+}
+
+header{
+  width: 100%;
+  display: flex;
+  flex-direction: column; 
+  /* margin: auto; why this property is not working for centering text */
+  text-align: center;
+  justify-content: space-between;
+  color: hsl(233, 13%, 49%);
+}
+
+button{
+  width: 150px;
+  height: 39px;
+  border: none;
+  border-radius: 4px;
+  background: linear-gradient(135deg, rgba(163, 168, 240, 1) 0%, rgba(105, 111, 221, 1) 100%);
+  box-shadow: 3px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+button:hover{
+  cursor: pointer;
+  background: linear-gradient(-20deg, #6e45e2 0%, #88d3ce 100%);
+}
+
+
+
+button:active{
+  transform: translate(1px);
+}
+
+.toggle-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  margin-top: 3.15em;
+  margin-bottom: 1em;
+  color: rgb(179 181 198);
+}
+
+.toggle-switch{
+  background: linear-gradient( 135deg, rgba(163, 168, 240, 1) 0%, rgba(105, 111, 221, 1) 100% );
+  width: 54px;
+  height: 26px;
+  border-radius: 50px;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  margin: 0 0.95em;
+}
+
+.inner-circle{
+  width: 23px;
+  height: 23px;
+  border-radius: 100%;
+  background-color: #fff;
+  transition: all 400ms ease-in-out;
+}
+
+.inner-circle:checked {
+  translate: 20px;
+}
+
+main{
+  display: flex;
+  color: hsl(233, 13%, 49%);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2.7em auto 0 auto;
+}
+
+.box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  padding: 2em 0 3em 0;
+}
+
+.basic-section, .master-section{
+  width: 24.5rem;
+  background-color: #fff;
+  height: 67vh;
+}
+
+.professional-section{
+  width: 27rem;
+  height: 74vh;
+  background-image: linear-gradient(135deg, rgba(163, 168, 240, 1) 0%, rgba(105, 111, 221, 1) 100%);
+  color: #fff;
+  text-align: center;
+  translate: 0 -3.5vh;
+  font-size: 1.1em;
+}
+
+.price{
+  font-size: 1.24rem;
+  margin-top: 0.9em;
+}
+
+.professional-section .price{
+  font-size: 1.35rem;
+}
+
+.feature{
+  border-bottom: 2px solid hsl(233, 13%, 49%);
+  padding-bottom: 20px;
+  font-weight: bold;
+  width: 160px;
+}
+
+.feature-front{
+  width: 220px;
+}
+
+.button-front{
+    width: 165px;
+    height: 38px;
+    border: none;
+    border-radius: 4px;
+    background: #fff;
+    color: hsl(233, 13%, 49%);
+}
+
+.button-front:hover{
+  background: #fff;
+}
+
+.box > h2:first-child{
+  font-size: 1.3rem;
+}
+
+.professional-section > h2:first-child{
+  font-size: 1.4rem;
+}

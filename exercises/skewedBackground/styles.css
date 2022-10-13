@@ -8,25 +8,27 @@
 
 body{
   font-family: 'Roboto0' , sans-serif;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: #222;
-  /* font-size: 17px; */
+  height: 100%;
 }
 
 main{
   background-color: #00b285;
-  transform:  skewY(-10deg);
+  transform:  skew(0, -10deg);
   height: 72vh;
   color: #fff;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
+  margin-top: -140px;
 }
 
 .content-main{
+  padding: 200px 0;
   margin: auto;
-  transform: skewY(10deg);
+  transform: skew( 0 ,10deg);
 }
 
 .content-main p{
@@ -40,12 +42,11 @@ main{
 }
 
 footer{
-  height: 50vh;
+  height: 43vh;
   color: #666;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding-top: 8rem;
+  align-items: flex-end;
   padding-bottom: 1rem;
 }
 

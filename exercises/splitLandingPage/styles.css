@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+}
+
+a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.playstation{
+  background-image: url(https://images.unsplash.com/photo-1550828486-68812fa3f966?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+}
+
+.xbox{
+  background-image: url(https://images.unsplash.com/photo-1606145797958-2aa69009f500?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+}
+
+.split-page{
+  width: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  padding:  4px 5px 4px 5px;
+  transition: all 1s ease-in-out;
+}
+
+.box {
+  border: 3px solid #fff;
+  width: 256px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  translate: 0 -28px;
+  margin: auto;
+  font-weight: bold;
+}
+
+.content{
+  font-family: "Roboto" , sans-serif;
+  margin-top: 25%;
+}
+
+.content h2{
+  font-size: 3.75rem;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.playstation .box{
+  background-color: rgba(87, 84, 236, 0.7);
+}
+
+.xbox .box{
+background-color: rgba(43, 43, 43, 0.8);
+}
+
+.playstation .box:hover{
+background-color: rgba(87, 84, 236, 1);
+cursor: pointer;
+}
+
+.xbox .box:hover{
+  background-color: rgba(28, 122, 28, 1);
+  cursor: pointer;
+}
+
+.split-page:hover{
+  width: 116%;
+  padding: 0;
+}

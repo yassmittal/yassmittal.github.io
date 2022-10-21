@@ -1,6 +1,0 @@
- --primary-color: #17103b; darkblue
-    --secondary-color: #ffa593; pinkish for botton
-    --mute-color: #d3edee; main tag background
-    --light-color: #d9e5dd; border of 3rd section
-    --white-color: rgba(255, 255, 255, 0.17); 3rd section
-    --light-blue-color: rgba(89, 175, 150, 0.15); 1st box  some dark

@@ -8,3 +8,45 @@ body{
   height: 100vh;
 }
 
+.search-bar{
+  width: 50px;
+  background-color: white;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.search-bar.active{
+  width: 200px;
+}
+
+.search-bar.active input{
+  visibility: visible;
+  border: none;
+}
+
+.search-bar.active .fa-search{
+  right: 12px;
+}
+
+.fa-search{
+  font-size: 24px;
+  position: absolute;
+  right: 12px;
+}
+
+input{
+  visibility: hidden;
+  font-size: 18px;
+  width: 100%;
+  padding: 0 14px;
+}
+
+input:focus{
+  outline: none;
+}

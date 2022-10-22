@@ -1,0 +1,56 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  width: 100%;
+}
+
+
+
+.image-content-wrapper{
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+}
+
+.image{
+  width: 500px;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  margin: auto;
+  display: none;
+}
+
+.active{
+  display: block;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto;
+}
+
+.btn{
+  width: 248px;
+  height: 36px;
+  display: inline;
+  background-color: rebeccapurple;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover{
+  opacity: 0.9;
+}
+

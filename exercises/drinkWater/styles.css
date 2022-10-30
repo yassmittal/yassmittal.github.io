@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap");
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  padding: 15px;
+  text-align: center;
+}
+
+.goal-glass , .drank-glass{
+  border: 4px solid #0F044C;
+  background-color: #fff;
+  color:  #144fc6;
+  font-weight: bold;
+  /* font-size: 1.2rem; */
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goal-section{
+  display: flex;
+  flex-direction: column;
+  /* height: 60vh; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.goal-glass{
+  height: 330px;
+  width: 150px;
+  margin-top: 40px;
+  margin: 27px 0 20px 0;
+  border-radius: 0 0 40px 40px;
+  font-size: 0.75rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.remained{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.goal-litre{
+  font-size: 1.26rem;
+  display: block;
+}
+
+.sub-title{
+  margin: 11px 0;
+  font-size: 1.16rem;
+}
+
+.goal-section h2{
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.drank-section{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.drank-section h2{
+  font-size: 1.25rem;
+  margin: 10px auto;
+
+}
+
+.drank-glass-wrapper{
+  width: 230px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  height: 210px;
+}
+
+.drank-glass{
+  height: 95px;
+  border-radius: 0 0 15px 15px;
+  padding: 0  6.87px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  width: 50px;
+  cursor: pointer;
+  transition:  0.3s ease;
+  /* font-size: 23px; */
+  /* padding: 20px; */
+}
+
+.full{
+  background-color:  #6ab3f8;
+  color: #fff;
+}
+
+.filled-prcnt{
+  width: 100%;
+  height: 0px;
+  background-color: #6ab3f8;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  visibility: visible;
+  transition:  0.3s ease;
+}

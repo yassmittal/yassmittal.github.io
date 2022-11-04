@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validating form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <form class="form-wrapper" id="form">
+    <div class="name-section">
+        <label for="first-name">First Name
+            <input type="text" id="first-name" placeholder="Enter first Name" name="firstName">
+        </label>
+        <span class="firstName_err_msg error"></span>
+        <label for="last-name">Last Name
+            <input type="text" id="last-name" placeholder="Enter last Name" name="lastName">
+        </label>
+        <span class="lastName_err_msg error"></span>
+    </div>
+
+    <div class="email-wrapper">
+        <label for="email">
+            Email <input type="email" id="email" placeholder="Enter a valid email" name="email">
+        </label>
+        <span class="email_err_msg error"></span>
+    </div>
+
+    <div class="password-wrapper">
+        <label for="password">
+            Password
+            <input type="password" id="password" placeholder="Enter password" name="password">
+        </label>
+        <span class="password_err_msg error"></span>
+    </div>
+
+    <div class="phone-no-wrapper">
+        <label for="number-wrapper">
+             Phone number 
+            <input type="number" id="number" placeholder="Enter valid phone number" name="phoneNumber">
+        </label>
+        <span class="num_err_msg error"></span>
+    </div>
+
+    <div>
+        <label for="bio-wrapper">
+            Bio
+            <input type="bio" id="bio" placeholder="Enter your bio" name="bio">
+        </label>
+        <span class="bio_err_msg error"></span>
+    </div>
+
+    <div class="submit-button-wrapper">
+        <button>Submit</button>
+    </div>
+  </form>  
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: rgb(237, 246, 229);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100wh;
+  height: 100vh;
+  font-family: "Noto Sans KR" , sans-serif;
+}
+
+input , button{
+  width: 400px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+button{
+   background-color: #ED8E7C;
+   color: #000;
+   font-weight: 700;
+   font-size: 16px;
+   opacity: 0.9;
+ }
+
+ button:hover{
+  opacity: 1;
+  cursor: pointer;
+ }
+
+.name-section input{
+  width: 190px;
+}
+
+.form-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(2, 20, 2);
+  background-color: #1b1b32;
+  opacity: 0.8;
+  width: 460px;
+  height: 83.4%;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 3px 4px 5px rgba(0 , 0 , 0 , 0.3);
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px;
+  padding-top: 29px;
+}
+
+
+.name-section{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.name-section label:first-child{
+  margin-right: 10px;
+}
+
+#first-name{
+  width: 200px; 
+}
+
+.form-wrapper label{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.error {
+  display: block;
+  color: #e74c3c;
+  font-size: 13px;
+  position: absolute;
+  margin-top: 10px;
+}
+
+.firstName_err_msg{
+  position: absolute;
+  top: 70px;
+  left: 20px;
+}
+
+.lastName_err_msg{
+  position: absolute;
+  top: 70px;
+  right: 70px;
+}
+
+.err_input{
+  border-color: red;
+}

@@ -14,7 +14,6 @@ body{
   align-items: center;
   width: 100%;
   overflow-x: hidden;
-  height: 10000px;
 }
 
 .card{
@@ -32,7 +31,6 @@ body{
   margin: 10px 0;
   transform: translateX(400%);
   transition: all 0.6s cubic-bezier(0.58,-0.39, 0.45, 1.61);
-  margin-top: 1000px;
 }
 
 .card:nth-of-type(even){

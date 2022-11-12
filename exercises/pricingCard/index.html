@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<header id="header">
+<header id="header"> 
 
   <div class="heading"><h1>Our Pricing</h1></div>
   <div class="toggle-wrapper">
@@ -18,9 +18,9 @@
 
     <label class="toggle-switch" for="checkbox">
 
-      <input type="checkbox" id="checkbox"     class="inner-circle">
+      <input type="checkbox" id="checkbox">
 
-      <!-- <div class="inner-circle"></div> -->
+      <div class="inner-circle"></div>
     </label>
 
     <p class="monthly">Monthly</p>
@@ -33,7 +33,7 @@
   <div class="basic-section box">
     
       <h2>Basic</h2>
-      <div class="price"><h2>$199.99</h2></div>
+      <div class="price"><h2 id="basic-price-plan">$199.99</h2></div>
       <div class="feature"><p>500 GB Storage</p></div>
       <div class="feature"><p>2 Users Allowed</p></div>
       <div class="feature"><p>Send up to 3 GB</p></div>
@@ -44,7 +44,7 @@
     <div class="professional-section box ">
   
         <h2>Professional</h2>
-        <div class="price"><h2>$249.99</h2></div>
+        <div class="price"><h2 id="professional-price-plan">$249.99</h2></div>
         <div class="feature feature-front"><p>1 TB Storage</p></div>
         <div class="feature feature-front"><p>5 Users Allowed</p></div>
         <div class=" feature feature-front"><p>Send up to 10 GB</p></div>
@@ -56,7 +56,7 @@
     <div class="master-section box">
   
         <h2>Master</h2>
-        <div class="price"><h2>$399.99</h2></div>
+        <div class="price"><h2 id="master-price-plan">$399.99</h2></div>
         <div class="feature"><p>2 TB Storage</p></div>
         <div class="feature"><p>10 Users Allowed</p></div>
         <div class="feature"><p>Send up to 20 GB</p></div>
@@ -68,6 +68,6 @@
   
   
 </main>
-  
+ <script src="./script.js"></script> 
 </body>
 </html>

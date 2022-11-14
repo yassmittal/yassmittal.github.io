@@ -31,3 +31,6 @@ e.preventDefault()
   phoneNumber === "" ? num_err.innerText = "Please enter valid Phone number" : num_err.innerText = "";
   bio === "" ? bio_err.innerText = "Please Enter bio" : bio_err.innerText = ""; 
 })
+
+
+

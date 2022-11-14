@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700&display=swap");
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Open Sans' , sans-serif;
+  color: #fff;
+}
+
+.slider-wrapper{
+  position: relative;
+  /* overflow: hidden; */
+  height: 100vh;
+  width: 100%;
+}
+
+button{
+  background-color: #fff;
+  position: absolute;
+  border: none;
+  z-index: 2;
+  top: 38%;
+  left: 35%;
+  padding: 16px;
+  border-radius: 0 5px 5px 0;
+  color: #aaa;
+  font-size: 15px
+}
+
+button:hover{
+  color: #333;
+  cursor: pointer;
+}
+
+button:focus{
+  outline: none;
+}
+
+.left-slider{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 35%;
+}
+
+.left-slider div{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title{
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.sub-title{
+  margin-top: 1rem;
+}
+
+.flying-eagle-background{
+  background-color: #ffb866;
+}
+
+.lonely-castle-background{
+  background-color: #252e33;
+}
+
+.blue-sky-background{
+ background-color:  #2a86ba
+}
+
+.natural-flower-background{
+  background-color: #fd3555;
+}
+
+.right-slider{
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 35%;
+  width: 65%;
+  height: 100vh;
+  /* background-color: #000; */
+}
+
+.right-slider  > div{
+  width: 100%;
+  height: 100%;
+  /* position: absolute; */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.button-down{
+  transform: translate(-100% , 155%);
+  border-radius: 5px 0 0 5px;
+}

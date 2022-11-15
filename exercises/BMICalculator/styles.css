@@ -47,6 +47,10 @@ button{
   height: 38px;
 }
 
+button:hover{
+  cursor: pointer;
+}
+
 .input-fields{
   display: flex;
   flex-direction: column;

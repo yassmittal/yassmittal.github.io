@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,900;1,500&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  height: 65vh;
+}
+
+input{
+  width: 80px;
+  padding: 0.78em 0.5em;
+  border-radius: 2px;
+  border: none;
+}
+
+hr{
+  width: 500px;
+  height: 0;
+  color: #fff;
+  background-color: #fff;
+  border-top: none;
+  /* margin: em 0 1em 0; */
+}
+
+button{
+  border-radius: 10px;
+  border: none;
+  font-size: 1.02rem;
+  width: 130px;
+  height: 38px;
+}
+
+.input-fields{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: -1.3em;
+}
+
+.subsection{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+  margin-bottom: 1em;
+  width: 110%;
+}
+
+.input-fields h1{
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin: 1em 0;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.result{
+  font-size: 1.25rem;
+  font-weight: bold;
+}

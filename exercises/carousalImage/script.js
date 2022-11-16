@@ -2,6 +2,7 @@ const images = document.querySelectorAll(".image");
 const prevButton = document.querySelector(".prev-btn")
 const nextButton = document.querySelector(".next-btn")
 
+let timer = setInterval(seeNextImage, 2000)
 
 function removeActiveClass(){
   for( i = 0; i<images.length ; i++){
@@ -20,29 +21,26 @@ prevButton.addEventListener('click' , function(){
     activeIndex = images.length - 1;
     console.log('else')
   }
-
   removeActiveClass();
   images[activeIndex].classList.add('active');
-
+  clearInterval(timer)
+  timer = setInterval(seeNextImage, 2000)
+  
 })
 
-nextButton.addEventListener('click' , function(){
+nextButton.addEventListener('click' , seeNextImage )
+
+function seeNextImage(){
   if( activeIndex < images.length - 1){
     activeIndex++;
-    console.log('if')
   } else{
     activeIndex = 0;
-    console.log('else')
   }
 
+  clearInterval(timer)
+  timer = setInterval(seeNextImage, 2000);
   removeActiveClass();
   images[activeIndex].classList.add('active');
-})
-
-
-
-
-
-
+}
 
 

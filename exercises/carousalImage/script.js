@@ -1,8 +1,8 @@
 const images = document.querySelectorAll(".image");
-const prevButton = document.querySelector(".prev-btn")
-const nextButton = document.querySelector(".next-btn")
+const prevButton = document.querySelector(".prev-btn");
+const nextButton = document.querySelector(".next-btn");
 
-let timer = setInterval(seeNextImage, 2000)
+let timer = setInterval(seeNextImage, 2000);
 
 function removeActiveClass(){
   for( i = 0; i<images.length ; i++){
@@ -15,17 +15,14 @@ let activeIndex = 0;
 prevButton.addEventListener('click' , function(){
   if(activeIndex > 0){
     activeIndex--;
-    console.log('if ')
   }
   else{
     activeIndex = images.length - 1;
-    console.log('else')
   }
   removeActiveClass();
   images[activeIndex].classList.add('active');
   clearInterval(timer)
   timer = setInterval(seeNextImage, 2000)
-  
 })
 
 nextButton.addEventListener('click' , seeNextImage )

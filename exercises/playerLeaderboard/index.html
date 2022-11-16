@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player Leaderboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+  integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+  crossorigin="anonymous"
+/>
+</head>
+<body>
+  <form id="form">
+    <h1>Player Leaderboard</h1>
+    <input 
+    type="text" placeholder="First Name"
+    class="first-name"
+    name="firstName">
+
+    <span class="first-name-error error-msg">Please put Your First Name</span>
+
+    <input 
+    type="text"
+    placeholder="Last Name"
+    name="lastName"
+    class="last-name"
+    >
+
+    <span class="last-name-error error-msg">Please put Your Last Name</span>
+
+
+    <select name="country">
+      <option value="">Country</option>
+      <option value="Afghanistan">Afghanistan</option>
+      <option value="Albania">Albania</option>
+      <option value="Algeria">Algeria</option>
+      <option value="American Samo">American Samo</option>
+      <option value="Syria">Syria</option>
+      <option value="Angola">Angola</option>
+      <option value="Shrilanka">Shrilanka</option>
+      <option value="Myanmar">Myanmar</option>
+      <option value="Argentina">Argentina</option>
+      <option value="Armenia">Armenia</option>
+      <option value="Iraq">Iraq</option>
+      <option value="Australia">Australia</option>
+      <option value="China">China</option>
+      <option value="Russia">Russia</option>
+      <option value="Bahamas">Bahamas</option>
+      <option value="Pakistan">Pakistan</option>
+      <option value="Bangladesh">Bangladesh</option>
+      <option value="France">France</option>
+      <option value="India">India</option>
+    </select>
+
+    <span class="country-error error-msg">please select a country</span>
+
+
+    <input 
+    type="number"
+    placeholder="Player score"
+    name="score">
+
+    <span class="score-error error-msg">Please write Correct score</span>
+
+    <button class="submit_btn" id="add-player">Add Player</button>
+
+  </form>
+
+  <table class="leaderboard-container" id="leaaderboard-table">
+
+   <tbody id="leaderboard_tbd">
+    </tbody>
+   
+  </table>
+  <script src="script2.js"></script>
+  <!-- <script src="script2.js"></script> -->
+  </script>
+</body>
+</html>

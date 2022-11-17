@@ -1,0 +1,43 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-section{
+  background-image: url(./images/sustainable-goods-2.webp);
+  text-align: center;
+  width: 100%;
+  height: 60vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.hero-section h3{
+  font-size: 13px;
+  width: 200px;
+  text-align: left;
+}
+
+.full-nav{
+  display: flex;
+  justify-content: space-evenly;
+  border: 2px solid #fff;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  list-style-type: none;
+  border: 2px solid #fff;
+  width: 20%;
+}
+
+.navbar li a{
+  color: #fff;
+  text-decoration: none;
+}

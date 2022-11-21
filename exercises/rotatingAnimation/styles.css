@@ -9,13 +9,13 @@
 body{
   font-family: 'Lato' , sans-serif;
   padding-bottom: 1000rem;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 header{
-  /* position: fixed; */
-  /* left: -6em; */
-  /* top: -6em; */
+  position: fixed;
+  left: -6em;
+  top: -6em;
 }
 
 .side-bar{
@@ -24,15 +24,12 @@ header{
   border-radius: 50%;
   background-color: #ff7979;
   position: fixed;
-  /* top: 0; */
-
-  /* overflow: hidden; */
 }
 
 .hamburger{
   position: absolute;
-  right:40px;
-  bottom: 40px; 
+  right: 55px;
+  bottom: 35px; 
   background-color: transparent;
   border: none;
 }
@@ -40,5 +37,35 @@ header{
 .hamburger , .fas{
   color: #fff;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.65rem;
+}
+
+.hamburger .fas:hover{
+  cursor: pointer;
+}
+
+main{
+  margin: 6.36rem 4rem;
+  line-height: 26px;
+}
+
+main h3{
+  color: #555;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 100;
+  margin: 5px 0 1.4em 0;
+}
+
+main h2{
+  font-size: 18px;
+  margin: 1em 0;
+}
+
+section img{
+  width: 100%;
+}
+
+section p{
+  color: #333;
 }

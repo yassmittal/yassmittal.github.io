@@ -1,11 +1,9 @@
-console.log("Hello world");
 const basic_plan_price = document.querySelector('#basic-price-plan');
 const master_plan_price = document.querySelector("#master-price-plan")
 const professional_plan_price = document.querySelector('#professional-price-plan');
 const checkbox = document.querySelector('#checkbox');
 
 checkbox.addEventListener("click", function(){
-  console.log("click")
  let basic_plan = basic_plan_price.textContent;
  let master_plan = master_plan_price.textContent;
  let professional_plan = professional_plan_price.textContent;

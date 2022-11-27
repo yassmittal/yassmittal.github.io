@@ -1,6 +1,10 @@
 const formEl = document.querySelector("#form");
 const submit_btn = document.querySelector(".submit_btn");
 const leaderboard_tbd = document.querySelector("#leaderboard_tbd");
+const firstNameErr = document.querySelector('.first-name-error');
+const lastNameErr = document.querySelector('.last-name-error');
+const countryErr = document.querySelector('.country-error');
+const scoreErr = document.querySelector('.score-error');
 
 let players = [];
  
@@ -24,7 +28,7 @@ try {
 }
 
 show_players()
-submit_btn.addEventListener("click", function(e){
+formEl.addEventListener("submit", function(e){
  e.preventDefault();
   const formdata = new FormData(formEl)
   // console.log(entries)
@@ -37,7 +41,6 @@ submit_btn.addEventListener("click", function(e){
   update_localStorage()
 })
 
-
 function show_players(){
   leaderboard_tbd.innerText = "";
   players.forEach(player => {
@@ -49,7 +52,6 @@ function show_players(){
     leaderboard_tbd.appendChild(rowEl)
     }
     })
-    
 }
 
 function update_localStorage(){
@@ -64,26 +66,28 @@ const updated_players = players.filter(player => {
   }
 });
 players = updated_players
-console.log(players)
 update_localStorage();
 show_players();
 }
 
+function increaseFive(id){
+  // const updated_players = players.map(
+  //   function(player){
+  //     if(player.id === id){
+  //       player.score = player.score + 5;
+  //     }
+  //     console.log(id);
+  //   }
+  // ); 
+   const player = findPlayer(id);
+   if(player){
+    player.score = +player.score + 5;
+   }
 
-
-// function increaseFive(id){
-//   const updated_players = players.map(
-//     function(player){
-//       if(player.id === id){
-//         player.score = player.score + 5;
-//       }
-//       console.log(id);
-//     }
-//   ); 
-//   players = updated_players;
-//   update_localStorage();
-//   show_players();
-// }
+  // players = updated_players;
+  update_localStorage();
+  show_players();
+}
 
 function decreaseFive(id){
   // const updated_players = players.map(
@@ -97,6 +101,9 @@ function decreaseFive(id){
   const player = findPlayer(id);
   if(player){
     player.score = +player.score - 5;
+  } 
+  if(player.score < 0){
+    player.score = 0;
   }
   // players = updated_players;
   update_localStorage();
@@ -113,3 +120,60 @@ function decreaseFive(id){
     }
     );
 }
+
+
+// ***********adding Validation of Form Below***********
+
+
+formEl.addEventListener('submit' , (e) => {
+ e.preventDefault();
+ const Formdata = new FormData(formEl);
+ const entries  = Object.fromEntries(Formdata);
+ const{firstName , lastName, country , score} = entries;
+
+ function doBorderRedOfPrevSib(errorElement){
+   errorElement.previousElementSibling.style.border = '2px solid red';
+ }
+
+ function removeBorderOfPrevSib(errorElement){
+   errorElement.previousElementSibling.style.border = '2px solid green';
+ }
+
+ if(firstName === ''){
+   firstNameErr.style.opacity = '1';
+   doBorderRedOfPrevSib(firstNameErr);
+ } else{
+   firstNameErr.style.opacity = '0';
+   removeBorderOfPrevSib(firstNameErr);
+ }
+
+ if(lastName === ''){
+   lastNameErr.style.opacity = '1';
+   doBorderRedOfPrevSib(lastNameErr);
+ } else{
+   lastNameErr.style.opacity = '0';
+   removeBorderOfPrevSib(lastNameErr);
+ }
+
+
+ if(country === ''){
+   countryErr.style.opacity  = '1';
+   doBorderRedOfPrevSib(countryErr);
+ } else{
+   countryErr.style.opacity = '0'
+   removeBorderOfPrevSib(countryErr);
+ }
+
+ if(score < 0 || score === ''){
+   scoreErr.style.opacity = '1';
+   doBorderRedOfPrevSib(scoreErr);
+ } else{
+   scoreErr.style.opacity = '0';
+   removeBorderOfPrevSib(scoreErr);
+ }
+
+ // lastName === '' ? lastNameErr.style.opacity ='1' : lastNameErr.style.opacity = '0';
+ // country === '' ? countryErr.style.opacity ='1' : countryErr.style.opacity = '0';
+ // score < 0 || score == ''? scoreErr.style.opacity ='1' : scoreErr.style.opacity = '0';
+ 
+})

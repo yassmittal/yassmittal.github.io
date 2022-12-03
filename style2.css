@@ -1,0 +1,76 @@
+:root{
+  --ff-primary: 'Source Sans Pro' , sans-serif;
+  --ff-secondary: 'Source Code Pro' , monospace;
+
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --clr-light: #fff;
+  --clr-dark: #303030;
+  --clr-accent: #16e0bd;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0 , 0 , 0 , 0.25),
+        0.125em 0.125em 0.25em rgba(0 , 0 , 0 , 0.15);
+}
+
+.portfolio{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.portfolio  > div{
+  position: relative;
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+}
+
+.image{
+  transition: all 300ms ease;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.image:active{
+  transform: translate(10px);
+  box-shadow: none;
+}
+
+.image:hover{
+  scale: 1.01;
+  box-shadow: 0 0 10px rgba(255, 255, 255 , 1);
+}
+
+.image:hover img{
+  opacity: 0.8;
+}
+
+.details{
+  visibility: hidden;
+  position: absolute;
+  color: white;
+  background-color:rgba(48, 48, 48 , 0.6);
+  height: 50%;
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  bottom: 0;
+  transform: translate( 0 , 100%);
+  transition: all 300ms  ease;
+}
+
+.image:hover .details{
+  visibility: visible;
+  transform: translate(0%);
+}

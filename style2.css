@@ -82,6 +82,7 @@
 }
 
 @media (max-width:1000px) {
+  
   .portfolio{
     gap: 100px;
   }

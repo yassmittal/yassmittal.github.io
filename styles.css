@@ -51,7 +51,6 @@ body{
   transform: scale(1.2);
 }
 
-
 #nav-bar ul a{
   display: block;
 }
@@ -109,3 +108,14 @@ nav li span{
   font-family: 'Times New Roman', Times, serif;
 }
 
+@media (max-width: 1200px){
+  .projects-container{
+    width: 50%;
+    margin: auto;
+    max-width: 900px;
+  }
+
+  body{
+    font-size: 14px;
+  }
+}

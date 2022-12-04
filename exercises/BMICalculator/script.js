@@ -19,10 +19,13 @@ calculateBtn.addEventListener('click' , (e)=>{
      
      if(BMI < 18.5){
        bmiCategory.textContent = 'Underweight'
+        bmiCategory.style.color = 'red'
       }else if(BMI < 24.9){
-        bmiCategory.textContent = 'Normal'
+        bmiCategory.textContent = 'Normal Weight'
+        bmiCategory.style.color = '#06ff06'
       }else if(BMI >= 24.9){
-        bmiCategory.textContent = 'Overweight'
+        bmiCategory.style.color = 'red'
+        bmiCategory.textContent = 'Obese'
       }
 
      bmiCategory.classList.add('present')

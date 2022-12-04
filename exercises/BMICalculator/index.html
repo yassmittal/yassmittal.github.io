@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BMI Calculator</title>
   <link rel="stylesheet" href="./styles.css">
-  <script src="./scritpt.js" defer></script>
 </head>
 
 <body>
@@ -14,7 +13,7 @@
   <section class="input-fields">
 
     <h1>BMI Calculater</h1>
-
+    
     <div class="subsection weight-subsection">
       <label for="weight">Weight in kg</label>
       <input type="number" id="weight">
@@ -28,24 +27,33 @@
   </section>
   
   <hr>
-
-
+  
+  
   <div class="buttons">
-
-    <button class="calculato-button"> 
+    
+    <button class="calculation-button"> 
       Calculate BMI
     </button>
-
+    
     <button class="reset-button">
       Reset
     </button>
 
   </div>
-
-  <div class="result">
-    <p>BMI = 16.45</p>
+  
+  <div class="bmiCategory">Underweight</div>
+  
+  <div>
+    <p class="height-error error">Please provide height</p>
+    <p class="weight-error error">Please provide weight</p>
   </div>
+  
+  <div class="result">
+    <p>BMI = ___</p>
+  </div>
+  
+</main>
 
-    </main>
-  </body>
+<script src="./script.js"></script>
+</body>
 </html>

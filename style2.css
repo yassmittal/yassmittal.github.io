@@ -1,3 +1,6 @@
+
+
+
 :root{
   --ff-primary: 'Source Sans Pro' , sans-serif;
   --ff-secondary: 'Source Code Pro' , monospace;
@@ -82,9 +85,10 @@
 }
 
 @media (max-width:1000px) {
-  
+
   .portfolio{
     gap: 100px;
   }
 
 }
+

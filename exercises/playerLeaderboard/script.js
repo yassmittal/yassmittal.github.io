@@ -30,15 +30,20 @@ try {
 show_players()
 formEl.addEventListener("submit", function(e){
  e.preventDefault();
-  const formdata = new FormData(formEl)
-  // console.log(entries)
-  const entries = Object.fromEntries(formdata);
-  const {firstName, lastName, score, country} = entries;
-  const player = new Player(firstName, lastName, score, country)
-  players.push(player)
-  console.log(players)
-  show_players();
-  update_localStorage()
+  validate();
+
+  if(validate() === true){
+    const formdata = new FormData(formEl)
+    const entries = Object.fromEntries(formdata);
+    const {firstName, lastName, score, country} = entries;
+    const player = new Player(firstName, lastName, score, country)
+    players.push(player)
+    console.log(players)
+    show_players();
+    update_localStorage()
+  }else{
+    validate()
+  }
 })
 
 function show_players(){
@@ -59,10 +64,10 @@ localStorage.setItem("players", JSON.stringify(players))
 }
 
 function delete_player(id){
-console.log('called');
+console.log('called' , id);
 const updated_players = players.filter(player => {
   if(player){
-    player.id !== id;
+   return player.id !== id; // just added return here..
   }
 });
 players = updated_players
@@ -71,33 +76,17 @@ show_players();
 }
 
 function increaseFive(id){
-  // const updated_players = players.map(
-  //   function(player){
-  //     if(player.id === id){
-  //       player.score = player.score + 5;
-  //     }
-  //     console.log(id);
-  //   }
-  // ); 
+ 
    const player = findPlayer(id);
    if(player){
     player.score = +player.score + 5;
    }
 
-  // players = updated_players;
   update_localStorage();
   show_players();
 }
 
 function decreaseFive(id){
-  // const updated_players = players.map(
-  //   function(player){
-  //     if(player.id === id){
-  //       player.score = player.score - 5;
-  //     }
-  //     console.log(id);
-  //   }
-  // ); 
   const player = findPlayer(id);
   if(player){
     player.score = +player.score - 5;
@@ -105,13 +94,11 @@ function decreaseFive(id){
   if(player.score < 0){
     player.score = 0;
   }
-  // players = updated_players;
   update_localStorage();
   show_players();
 }
 
  function findPlayer(id){
-  
   return players.find(player => 
     {
       if(player){
@@ -124,56 +111,64 @@ function decreaseFive(id){
 
 // ***********adding Validation of Form Below***********
 
-
-formEl.addEventListener('submit' , (e) => {
- e.preventDefault();
- const Formdata = new FormData(formEl);
- const entries  = Object.fromEntries(Formdata);
- const{firstName , lastName, country , score} = entries;
-
- function doBorderRedOfPrevSib(errorElement){
-   errorElement.previousElementSibling.style.border = '2px solid red';
- }
-
- function removeBorderOfPrevSib(errorElement){
-   errorElement.previousElementSibling.style.border = '2px solid green';
- }
-
- if(firstName === ''){
-   firstNameErr.style.opacity = '1';
-   doBorderRedOfPrevSib(firstNameErr);
- } else{
-   firstNameErr.style.opacity = '0';
-   removeBorderOfPrevSib(firstNameErr);
- }
-
- if(lastName === ''){
-   lastNameErr.style.opacity = '1';
-   doBorderRedOfPrevSib(lastNameErr);
- } else{
-   lastNameErr.style.opacity = '0';
-   removeBorderOfPrevSib(lastNameErr);
- }
-
-
- if(country === ''){
-   countryErr.style.opacity  = '1';
-   doBorderRedOfPrevSib(countryErr);
- } else{
-   countryErr.style.opacity = '0'
-   removeBorderOfPrevSib(countryErr);
- }
-
- if(score < 0 || score === ''){
-   scoreErr.style.opacity = '1';
-   doBorderRedOfPrevSib(scoreErr);
- } else{
-   scoreErr.style.opacity = '0';
-   removeBorderOfPrevSib(scoreErr);
- }
-
- // lastName === '' ? lastNameErr.style.opacity ='1' : lastNameErr.style.opacity = '0';
- // country === '' ? countryErr.style.opacity ='1' : countryErr.style.opacity = '0';
- // score < 0 || score == ''? scoreErr.style.opacity ='1' : scoreErr.style.opacity = '0';
+function validate(){
+  let result = [];
+  const Formdata = new FormData(formEl);
+  const entries  = Object.fromEntries(Formdata);
+  const{firstName , lastName, country , score} = entries;
  
-})
+  function doBorderRedOfPrevSib(errorElement){
+    errorElement.previousElementSibling.style.border = '2px solid red';
+  }
+ 
+  function removeBorderOfPrevSib(errorElement){
+    errorElement.previousElementSibling.style.border = '2px solid green';
+  }
+ 
+  if(firstName.trim() === ''){
+    firstNameErr.style.opacity = '1';
+    doBorderRedOfPrevSib(firstNameErr);
+     result.push(false)
+    } else{
+     firstNameErr.style.opacity = '0';
+     removeBorderOfPrevSib(firstNameErr);
+     result.push(true)
+  }
+ 
+  if(lastName.trim() === ''){
+    lastNameErr.style.opacity = '1';
+    doBorderRedOfPrevSib(lastNameErr);
+    result.push(false)
+  } else{
+    lastNameErr.style.opacity = '0';
+    removeBorderOfPrevSib(lastNameErr);
+    result.push(true)
+  }
+ 
+  if(country.trim() === ''){
+    countryErr.style.opacity  = '1';
+    doBorderRedOfPrevSib(countryErr);
+    result.push(false)
+   } else{
+    countryErr.style.opacity = '0'
+    removeBorderOfPrevSib(countryErr);
+    result.push(true)
+  }
+ 
+  if(score.trim < 0 || score.trim() === ''){
+    scoreErr.style.opacity = '1';
+    doBorderRedOfPrevSib(scoreErr);
+    result.push(false)
+  } else{
+    scoreErr.style.opacity = '0';
+    removeBorderOfPrevSib(scoreErr);
+    result.push(true)
+  }
+
+  if(result.includes(false)){
+    return false;
+  } else{
+    return true
+  }
+  
+ }

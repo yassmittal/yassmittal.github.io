@@ -39,7 +39,6 @@ table{
   width: 835px;
   background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
   margin-top: 5px;
-  padding:  2px 30px 2px 20px;
   color: #fff;
   font-size: 20px;
   font-weight: 400;
@@ -47,11 +46,23 @@ table{
 
 table tr{
   text-align: center;
+  border: none;
 }
+/* 
+table tr::before {
+  height: 1em;
+  display: table-row;
+  content: '';
+  background-color: transparent;
+  position: absolute;
+  right: 0;
+  left: 0;
+} */
 
 table tr td{
   width: 200px;
-  /* border: 2px solid green; */
+  /* border: 2px solid green; */ 
+  border: 1px solid black;
 }
 
 form #add-player{

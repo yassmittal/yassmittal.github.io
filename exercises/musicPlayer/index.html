@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+</head>
+<body>
+
+<main class="main-wrapper">
+
+  <h1 class="main-heading">Music Player</h1>
+
+  <div class="loader">
+    <div class="filled-loader"></div>
+  </div>
+
+  <div class="player">
+
+    <div class="auto-info">
+
+      <div class="image">
+       <img src="https://codewithsakshi.github.io/exercises-v2/music-player/assets/images/ukulele.jpg" alt="music-thumbnail">
+       
+       <div class="small-circle"></div>
+     </div>
+
+     <div class="audio">
+      <audio src="https://codewithsakshi.github.io/exercises-v2/music-player/assets/music/music-player_music_ukulele.mp3">
+      </audio>
+     </div>
+
+    </div>
+
+    <div class="function-buttons">
+
+      <button class="prev-button">
+        <i class="fas fa-backward"></i>
+      </button>
+
+      <button class="play-button">
+        <i class="fas fa-play play-button-icon"></i>
+      </button>
+
+      <button class="next-button">
+        <i class="fas fa-forward"></i>
+      </button>
+
+    </div>
+
+  </div>
+
+</main>
+
+  
+
+  <script src="./script.js"></script>
+</body>
+</html>

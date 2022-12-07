@@ -18,7 +18,7 @@ function startOrEndPlay(){
   if(playButton.classList.contains('notplaying')){
     playSound(sounds[index])
     playButton.setAttribute('class' , 'playing')
-    playButton.firstElementChild.setAttribute('class' , 'fas fa-pause play-button-icon')
+    playButton.firstElementChild.setAttribute('class' , 'fas fa-pause pause-button-icon')
     images[index].classList.add('rotate')
 
   }else if(playButton.classList.contains('playing')){
@@ -27,7 +27,7 @@ function startOrEndPlay(){
     playButton.setAttribute('class' , 'notplaying')
     images[index].classList.add('show-image')
     images[index].classList.remove('rotate')
-    playButton.firstElementChild.setAttribute('class' , 'fas fa-play pause-button-icon')
+    playButton.firstElementChild.setAttribute('class' , 'fas fa-play play-button-icon')
   }
 
 }
@@ -47,9 +47,10 @@ function nextSound(){
   }
   hideAllOtherImages()
   stopAllSound()
-  playButton.firstElementChild.setAttribute('class' , 'fas fa-play pause-button-icon')
+  playSound(sounds[index])
+  images[index].classList.add('rotate')
+  playButton.firstElementChild.setAttribute('class' , 'fas fa-pause pause-button-icon')
 }
-
 
 function prevSound(){
   --index;
@@ -58,7 +59,12 @@ function prevSound(){
   }
   hideAllOtherImages()
   stopAllSound()
-  playButton.firstElementChild.setAttribute('class' , 'fas fa-play pause-button-icon')
+  playSound(sounds[index]);
+  images[index].classList.add('rotate')
+  
+  // startOrEndPlay()
+
+  playButton.firstElementChild.setAttribute('class' , 'fas fa-play play-button-icon')
 }
 
 function hideAllOtherImages(){

@@ -69,6 +69,7 @@ main{
   position: absolute;
   top: -30%;
   left: 30%;
+  transition: opacity 200ms ease;
 }
 
 .small-circle{
@@ -79,6 +80,7 @@ main{
   right: 10%;
   top: 10%;
   background-color: #fff;
+  z-index: 3;
 }
 
 .function-buttons{
@@ -94,17 +96,27 @@ main{
   color: #dfdbdf;
   font-size: 20px;
   cursor: pointer;
-  padding: 1em;  
+  transition: scale 50ms linear;
+  padding: 1em;
 }
 
 .play-button-icon , .pause-button-icon{
   font-size: 30px;
-  color: #bcbaba;
+  color: #dfdbdf;
 }
 
 .rotate{
   animation: rotate 3s linear infinite;
 }
+
+.hide-image{
+  opacity: 0;
+}
+
+.show-image{
+  opacity: 1;
+  z-index: 2;
+ }
 
 @keyframes rotate {
   from{
@@ -115,11 +127,25 @@ main{
   }
 }
 
-.hide-image{
-  opacity: 0;
-}
 
-.show-image{
-  opacity: 1;
-  z-index: 100;
+@media (max-width: 400px){
+  .player{
+    width: 300px;
+  }
+
+  .images{
+    width: 90px;
+    height: 90px;
+  }
+
+  .images img{
+    width: 90px;
+    height: 90px;
+    top: -50%;
+    left: 10%;
+  }
+
+  .small-circle{
+    z-index: -1;
+  }
 }

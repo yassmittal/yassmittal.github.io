@@ -56,13 +56,13 @@ main{
   position: relative;
 }
 
-.image{
+.images{
   position: relative;
   width: 110px;
   height: 110px;
 }
 
-.image img{
+.images img{
   width: 110px;
   height: 110px;
   border-radius: 50%;
@@ -93,10 +93,11 @@ main{
   border: none;
   color: #dfdbdf;
   font-size: 20px;
-  cursor: pointer;  
+  cursor: pointer;
+  padding: 1em;  
 }
 
-.play-button-icon{
+.play-button-icon , .pause-button-icon{
   font-size: 30px;
   color: #bcbaba;
 }
@@ -112,4 +113,13 @@ main{
   to{
     transform: rotate(360deg);
   }
+}
+
+.hide-image{
+  opacity: 0;
+}
+
+.show-image{
+  opacity: 1;
+  z-index: 100;
 }

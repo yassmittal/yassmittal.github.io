@@ -29,9 +29,6 @@ function startOrEndPlay(){
     playButton.firstElementChild.setAttribute('class' , 'fas fa-play play-button-icon')
     pauseLoading()
   }
-
-
-
 }
 
 function playSound(sound){
@@ -99,8 +96,6 @@ let width = 0;
 
 function setLoader(){
   width += +`${ 300 / (sounds[index].duration * 1000)}`
-  // console.log(index);
-
   filledLoader.style.width = `${width}px`;
   if(width > 300){
     width = 0;
@@ -113,10 +108,7 @@ function startLoading(){
   IntervalFunction  = setInterval(setLoader , 1);
 }
 
-console.log(index);
-
 function pauseLoading(){
-  console.log(width);
   filledLoader.style.width = `${width}px`;
   clearInterval(IntervalFunction);
 }
@@ -128,7 +120,3 @@ function backToZero(){
     width = 0;
   }, sounds[index].duration); 
 } 
-
-  
-
-console.log(sounds[index].duration);

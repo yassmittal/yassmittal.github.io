@@ -38,10 +38,11 @@ main{
 }
 
 .filled-loader{
+  width: 0px;
   background-color: #fe8daa;
   height: 100%;
-  width: 30%;
   border-radius: 12px;
+  transition: width 1ms linear;
 }
 
 .player{

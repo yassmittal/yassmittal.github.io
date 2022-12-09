@@ -58,6 +58,7 @@ form{
   padding: 0.6rem 1rem; 
   margin-top: 10px;
   border-top: 1px solid #b5b5b5;
+  cursor: pointer;
 }
 
 .note{
@@ -69,4 +70,9 @@ form{
   margin: auto;
   font-weight: bold;
   margin-top: 3rem;
+}
+
+.completed{
+  text-decoration: line-through;
+  color: #b6b6b6;
 }

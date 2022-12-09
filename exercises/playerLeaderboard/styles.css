@@ -34,7 +34,6 @@ form{
   position: relative;
 }
 
-
 table{
   width: 835px;
   background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
@@ -48,16 +47,6 @@ table tr{
   text-align: center;
   border: none;
 }
-/* 
-table tr::before {
-  height: 1em;
-  display: table-row;
-  content: '';
-  background-color: transparent;
-  position: absolute;
-  right: 0;
-  left: 0;
-} */
 
 table tr td{
   width: 200px;
@@ -86,9 +75,6 @@ table tr td:nth-child(6){
   transform: scale(0.9);
   font-size: 18px;
   margin: 0 200px; /* why this property is not working */
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
 }
 
 table tr td:nth-child(4):hover,

@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+
+body{
+  font-family: 'Lato', sans-serif;
+  height: 100vh;
+  background-color: #242333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-picker label{
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-picker select{
+  height: 40px;
+  width: 200px;
+  border-radius: 10px;
+  margin-left: 20px;
+  padding: 0 1em;
+  font-size: 15px;
+}
+
+.movie-hall{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.movie-hall .availability{
+  width: 450px;
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 50px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+  color: #777;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.availability div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3em;
+}
+
+.seat{
+  width: 34px;
+  height: 28px;
+  border-radius: 12px 12px 0 0;
+  background-color: #444451;
+  margin: 0.3em;
+}
+
+.seat:hover{
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+.available{
+  background-color: #444451;
+}
+
+.selected{
+  background-color: #6feaf6;;
+}
+
+.occupied{
+  background-color: #fff;
+}
+
+.movie-screen{
+  background-color: #FFF;
+  width: 400px;
+  height: 160px;
+  transform: rotateX(-45deg);
+  perspective: 1000px;
+  box-shadow: 0 3px 10px rgb(255 255 255 / 70%);
+}
+
+.seats{
+  display: flex;
+  flex-direction: column;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.row .seat:nth-child(3),
+.row .seat:nth-child(7){
+  margin-left: 2em;
+}
+
+.final-selection{
+  font-size: 20px;
+}
+
+.final-selection span{
+  color: #6feaf6;
+}
+
+.occupied:hover{
+  transform: scale(1);
+  cursor: auto;
+}

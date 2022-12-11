@@ -1,0 +1,879 @@
+@import url('https://fonts.cdnfonts.com/css/itc-avant-garde-gothic-std-book');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'ITC Avant Garde Gothic Std', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  overflow-X: hidden;
+}
+
+.header-section{
+  display: flex;
+  justify-content: space-between;
+  margin: 28px 24px;
+}
+
+.hamburger-line{
+  height: 3px;
+  background-color: #222222;
+}
+
+.long-line{
+  width: 29.33333396911621px;
+  left: 24px;
+  top: 31px;
+  border-radius: 0px;
+}
+
+.short-line{
+  width: 22.33333396911621px;
+  left: 31px;
+  top: 43px;
+  border-radius: 0px;
+  margin-top: 12px;
+  float: right;
+}
+
+.logo{
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.contact-top{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.contact-text{
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.03em;
+  text-align: left;
+}
+
+.contact-img{
+  position: absolute;
+  right: 2px;
+  top: 10%;
+}
+.underline{
+  height: 1px;
+  width: 124px;
+  background: #222222;
+}
+
+.contact-navigate-img{
+  position: absolute;
+  border: 2px solid;
+  right: 2px;
+  top: -12px;
+}
+
+.hero-section{
+  background-image: url(./Images/Group\ 297.jpg);
+  width: 94%;
+  height: 80vh;
+  margin: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
+.hero-section h1{
+  color: #fff;
+  width: 590px;
+  margin: 0 4em 8em 4em;
+  font-size: 50px;
+  letter-spacing: 1.3px;
+  line-height: 60px;
+}
+
+.specifications{
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.specifications h2{
+  font-size: 60px;
+  line-height: 50px;
+  font-weight: 500;
+}
+
+.sub-heading{
+  color: #EC2232;
+  margin: 10px 0;
+}
+
+.specifications-details{
+  font-size: 14px;
+  width: 300px;
+  float: right;
+  margin: 20px 0;
+
+}
+
+.specifications-in-num{
+  display: flex;
+  justify-content: space-between;
+  margin: 6em 0 8em 0;
+}
+
+.specifications-num-column{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.specifications-num-column div{
+  display: flex;
+}
+
+.specifications-num-column span{
+  font-weight: 600;
+}
+
+.specifications-num{
+  font-size: 60px;
+}
+
+.more-sign{
+  font-size: 60px;
+  color: #EC2232;
+  letter-spacing: -0.2em;
+}
+
+.details{
+  background-image: url(./Images/Mask\ group.png);
+  height: 700px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 4em 0 0 4em;
+  position: relative;
+  background-color: #f9f9f9;
+}
+
+.details-wrapper{
+  width: 740px;
+  margin-left: 21.5em;
+}
+
+.details-wrapper h2{
+  font-size: 50px;
+  line-height: 60px;
+}
+
+.details-work-images{
+  display: flex;
+  position: absolute;
+  bottom: -100px;
+  right: -40px;
+}
+
+.details-work-images img{
+  width: 300px;
+}
+
+.details-work-images > .image-wrapper{
+  height: 450px;
+  background-color: white;
+  box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.1);
+  margin-right: 40px;
+}
+
+.details-work-images .image-wrapper .title{
+  width: 170px;
+  height: 100px;
+  padding: 20px 0 0 20px;
+}
+
+.last-image-wrapper{
+  width: 41px;
+}
+
+.last-image-wrapper  img{
+  width: 41px;
+}
+
+.last-image-wrapper > .image-wrapper{
+  width: 41px;
+}
+
+.services-section{
+  margin: 5em auto;
+  display: flex;
+  flex-direction: column;
+  padding: 7em 9em;
+  position: relative;
+}
+
+.services-section-title{
+  font-size: 2.3rem;
+  margin-bottom: 2em;
+}
+
+.services-section-subtitle{
+  color:#9198A0;
+  margin: 2em 0;
+}
+
+.industries{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4em;
+  margin: auto;
+}
+
+.industry{
+  width: 42%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.industry::before{
+  content: '02';
+  position: absolute;
+  left: -40px;
+  top: -20px;
+  color: #F0E3D8;
+  font-size: 24px;
+}
+
+.cement-industry::before{
+  content: '01';
+}
+
+.mineral-industry::before{
+  content: '02';
+}
+
+.rubber-industry::before{
+  content: '03';
+}
+
+.sugar-industry::before{
+  content: '04';
+}
+
+.fertilizer-industry::before{
+  content: '05';
+}
+
+.power-industry::before{
+  content: '06';
+}
+
+.industry .industry-detail{
+  margin: 0 1em;
+}
+
+.industry > img{
+  object-fit: cover;
+  height: 60px;
+}
+
+.expertise-logo{
+  position: absolute;
+  top: 200px;
+  left: 140px;
+}
+
+.long-red-line{
+  position: absolute;
+  height: 400px;
+  width: 1px;
+  background-color: #EC2232;
+  left: 120px;
+  top: 332px;
+}
+
+.side-factory{
+  position: absolute;
+  right: 10px;
+}
+
+.side-factory img{
+  height: 150px;
+}
+
+.machine-infra-section{
+  background-image: url(./Images/chester-alvarez-bphc6kyobMg-unsplash\ 2.png);
+  background-size: cover;
+  background-color:  #094367;
+  width: 100%;
+  height: 550px;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  position: relative;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3em 12em;
+}
+
+.machine-infra-details-top-section{
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 240px;
+}
+
+.machine-infra-details-top-section h2{
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 200;
+  margin-bottom: 1.4em;
+}
+
+.machine-infra-details-top-section .extra-details{
+  font-size: 12px;
+  line-height: 16px;
+  
+}
+.machine-infra-subtitle{
+  font-size: 10px;
+} 
+
+.machine-infra-elements{
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+  margin-bottom: 4em;
+}
+
+.machine-infra-elements img{
+  width: 40px;
+}
+
+.machine-infra-elements span{
+  font-weight: 600;
+}
+
+.machine-infra-elements p{
+  font-weight: 100;
+}
+
+
+.machine-infra-side-logo{
+  position: absolute;
+  right: 100px;
+  top: 100px;
+  z-index: 3;
+}
+
+.machine-infra-side-logo img{
+  width: 100px;
+}
+
+.industries{
+  padding: 4em;
+}
+
+.industries-logos{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4em;
+  padding: 0 4.2em;
+}
+
+.industry-logo{
+  cursor: pointer;
+}
+
+.contact-form{
+  display: flex;
+  align-items: stretch;
+}
+
+.get-in-touch-form{
+  width: 50%;
+  padding: 3em;
+  background-color: #0E3466;
+  color: #fff;
+}
+
+.get-in-touch-form form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+  margin-left: 4em;
+  position: relative;
+}
+
+.get-in-touch-form form h2{
+  font-size: 3em;
+}
+
+.get-in-touch-form form h2::after{
+  content: '';
+  width: 180px;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 45px;
+}
+
+.get-in-touch-form form label{
+  width: 400px;
+  height: 45px;
+  background-color: #fff;
+  display: flex;
+  /* padding: 0.5em; */
+  border-radius: 7.75px;
+  /* padding-left: 0.5em; */
+}
+
+.get-in-touch-form form label img{
+  height: 20px;
+  margin: 11px auto;
+  margin-left: 0.5em;
+}
+
+.get-in-touch-form form input{
+  width: 380px;
+  height: 45px;
+  border-radius: 0 7.75px 7.75px 0;
+  padding: 0.5em;
+  border: none;
+  font-size: 13px;
+}
+
+.get-in-touch-form form input:focus{
+  outline: none;
+}
+
+.get-in-touch-form label[for="message"]{
+  width: 400px;
+  height: 100px;
+  border-radius: 7.75px;
+}
+
+.get-in-touch-form form textarea{
+  width: 370px;
+  height: 0px;
+  border:  none;
+  border-radius: 0 7.75px 7.75px 0;
+  padding: 0.7em;
+  height: 100px;
+  resize: none;
+}
+
+.get-in-touch-form form textarea:focus{
+  outline: none;
+}
+
+.get-in-touch-form form button{
+  background-color: #EC2232;
+  width: 135px;
+  height: 40px;
+  border-radius: 40.2px;
+  border: none;
+  color: #fff;
+}
+
+.address-section{
+  width: 50%;
+}
+
+.address-section{
+  background-color: #F8F8F8;
+  position: relative;
+}
+
+.address-section-wrapper{
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  left:  -100px;
+  top: 50px;
+  background-color: #fff;
+  font-size: 14px;
+  display: flex;
+}
+
+.address-section-wrapper .contact div{
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  position: relative;
+}
+
+.address-section-wrapper .contact div h2{
+  font-size: 16px;
+}
+
+.address-section-wrapper div div::after{
+  content: '';
+  width: 160px;
+  height: 1px;
+  background-color: #c4c4c4;
+  position: absolute;
+  bottom: -20px;
+}
+
+.address-section-wrapper div div:last-child::after{
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.address-section-wrapper p{
+  font-size: 12px;
+  color: #828282;
+  line-height: 20px;
+}
+
+.map img{
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+footer{
+  width: 100%;
+  height: 300px;
+  background-color: #181818;
+  color: #fff;
+  padding: 4em 6em;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 100;
+  font-size: 16px;
+}
+
+footer  > div{
+  position: relative;
+}
+
+footer >  div::after{
+  content: '';
+  height: 100px;
+  width: 1px;
+  background-color: #c4c4c4;
+  position: absolute;
+  left: -130px;
+  top: 50px;
+  opacity: 0.3;
+}
+
+footer >  div:first-child::after{
+  opacity: 0;
+}
+
+.footer-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-industries{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.footer-industries div{
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  font-weight: 100;
+  gap: 4em;
+  /* border: 1px solid white; */
+  height: 400px;
+  font-size: 15px;
+  margin: 2em auto;
+}
+
+.footer-industries ul li{
+  margin: 0 2em;
+}
+
+.copyright{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 120px;
+  font-size: 14px;
+  margin-top: 3em;
+}
+
+.social-icons{
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.copyright:last-child{
+  text-align: right;
+}
+
+@media (max-width: 1000px){
+  body{
+    font-size: 14px;
+  }
+
+  .hero-section{
+    padding-top: 40px;
+  }
+
+  .details-wrapper{
+    width: 640px;
+    margin-left: 2.5em;
+  }
+
+  .details-wrapper h2{
+    font-size: 3em;
+    line-height: 35px;
+  }
+
+  .services-section{
+    margin: 3em auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 9em 1em;
+    position: relative;
+  }
+  
+  .services-section-title{
+    font-size: 1.5rem;
+    margin-bottom: 1.2em;
+  }
+  
+  .services-section-subtitle{
+    color:#9198A0;
+    margin: 2em 0;
+  }
+  
+  .industries{
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+  
+  .industry{
+    width: 70%;
+    flex-wrap: wrap;
+    margin-bottom: 3em;
+  }
+  
+  .industry::before{
+    font-size: 22px;
+  }
+
+.industry > img{
+  height: 40px;
+}
+
+.expertise-logo{
+  top: 250px;
+  left: 50px;
+}
+
+.long-red-line{
+  display: none;
+}
+
+.side-factory{
+  position: absolute;
+  right: 10px;
+  top: 170px;
+}
+
+.side-factory img{
+  height: 100px;
+}
+
+.machine-infra-section{
+  height: 600px;
+  padding: 3em;
+}
+
+.machine-infra-details-top-section h2{
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 200;
+  margin-bottom: 0em;
+}
+
+.machine-infra-elements{
+  width: 500px;
+  margin-bottom: 3em;
+}
+
+.machine-infra-elements img{
+  width: 36px;
+}
+
+.machine-infra-side-logo{
+  right: 50px;
+  top: 80px;
+}
+
+.machine-infra-side-logo img{
+  width: 90px;
+}
+
+.industries{
+  padding: 4em 12px;
+}
+
+.industries-logos{
+  gap: 5em;
+  padding: 0 3em;
+}
+
+.get-in-touch-form{
+  padding: 1.4em;
+}
+
+.get-in-touch-form form{
+  margin-left: 0;
+}
+
+.get-in-touch-form form h2{
+  font-size: 2.3em;
+}
+
+.get-in-touch-form form h2::after{
+  width: 120px;
+  top: 35px;
+}
+
+.get-in-touch-form form label{
+  width: 300px;
+  height: 40px;
+}
+
+.get-in-touch-form form label img{
+  height: 14px;
+}
+
+.get-in-touch-form form input{
+  width: 280px;
+  height: 40px;
+}
+
+.get-in-touch-form label[for="message"]{
+  width: 300px;
+  height: 70px;
+}
+
+.get-in-touch-form form textarea{
+  width: 300px;
+  height: 70px;
+}
+
+.get-in-touch-form form textarea:focus{
+  outline: none;
+}
+
+.get-in-touch-form form button{
+  width: 125px;
+  height: 34px;
+}
+
+.address-section-wrapper{
+  height: 340px;
+  left:  -30px;
+  top: 20px;
+  font-size: 12px;
+}
+
+.address-section-wrapper .contact div{
+  margin: 0.8em;
+}
+
+.address-section-wrapper .contact div h2{
+  font-size: 14px;
+}
+
+.address-section-wrapper div div::after{
+  width: 130px;
+  bottom: -10px;
+}
+
+.address-section-wrapper p{
+  font-size: 11px;
+  line-height: 17px;
+}
+
+.map img{
+  width: 340px;
+  height: 340px;
+}
+
+footer{
+  height: 270px;
+  padding: 2em;
+  font-size: 12px;
+}
+
+footer >  div::after{
+  opacity: 0;
+}
+
+.footer-industries{
+  margin-left: 3.3em;
+}
+
+.footer-industries div{
+  width: 380px;
+  gap: 1.3em;
+  font-size: 13px;
+  margin-top: 3em;
+}
+
+.copyright{
+  font-size: 12px;
+  margin-top: 2em;
+}
+
+}
+
+
+@media (max-width: 700px){
+  body{
+    font-size: 13px;
+  }
+
+  .header-section{
+    margin: 12px;
+  }
+}

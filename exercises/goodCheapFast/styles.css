@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 
+.toggles-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 200px;
+  gap: 0.5em;
+  font-size: 18px;
+  margin: 1em auto;
+}
+
+} */
+
+.toggles-wrapper{
+  width: 160px;
+  margin: 1em auto;
+}
+
+.toggle-wrapper{
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 18px;
+  margin: 1em auto;
+}
+
+.toggle-wrapper label{
+  cursor: pointer;
+}
+
+.toggle-wrapper input{
+  display: none;
+}
+
+.toggle-wrapper  .toggle-label{
+  cursor: pointer;
+  width: 90px;
+  border-radius: 40px;
+  background-color: #d0d0d0;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  transition: background-color 200ms linear;
+  cursor: pointer;
+}
+
+.toggle-wrapper .toggle-label .ball{
+  width: 38px;
+  height: 38px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 400ms ease;
+  animation: slideForward 200ms ease 1;
+}
+
+input:checked + .toggle-label  .ball{
+  transform: translate(46px);
+  animation: slideBackward 300ms linear 1;
+}
+
+input:checked + .toggle-label{
+  background-color: #8e44ad;
+}
+
+@keyframes slideBackward {
+  0%{
+    scale: 1
+  } 50%{
+    scale: 1.2
+  } 100%{
+    scale: 1
+  }
+}
+  
+@keyframes slideForward {
+  0%{
+    scale: 1
+  } 50%{
+    scale: 1.2
+  } 100%{
+    scale: 1
+  }
+}

@@ -30,6 +30,7 @@
   position: relative;
   width: 250px;
   height: 300px;
+  overflow: hidden;
 }
 
 .image img{
@@ -53,7 +54,7 @@
 }
 
 .image:hover{
-  scale: 1.01;
+  scale: 1.2;
 }
 
 .image:hover img{
@@ -65,7 +66,7 @@
   position: absolute;
   color: white;
   background-color:rgba(48, 48, 48 , 0.6);
-  height: 15%;
+  height: 23%;
   width: 100%;
   padding: 12px;
   font-size: 14px;

@@ -1,0 +1,148 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oxygen+Mono&family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  color: #FFF;
+}
+
+main{
+  background-image: url(./images/bg.png);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 35px;
+}
+
+.logo{
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
+
+header .buttons-wrapper{
+  display: flex;
+  justify-content: space-between;
+  width: 130px;
+}
+
+header button{
+  color: #fff;
+  font-weight: bold;
+  background-color:  transparent;
+  border: none;
+}
+
+.main-title-wrapper{
+  margin: 14em;
+  position: relative;
+}
+
+.counting{
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  left: -90px;
+  top: 20px;
+}
+
+.counting sup{
+  font-weight: 300;
+  font-size: 7px;
+}
+
+.main-title-wrapper h1{
+  font-size: 80px;
+  margin-bottom: 0.2em;
+}
+
+.sub-title{
+  display: flex;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  justify-content: space-between;
+  width: 100px;
+  align-items: center;
+}
+
+.sub-title::after{
+  content: '';
+  width: 120px;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: -10px;
+}
+
+.footer{
+  display: flex;
+  color: #646464;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 200px;
+  height: 120px;
+  background-color: white;
+  font-weight: 15px;
+  padding: 1.9em;
+}
+
+.left-side-footer{
+  display: flex;
+  justify-content: space-between;
+  flex: 0.75;
+}
+
+.left-side-footer h4{
+  color: #646464;
+}
+
+.right-side-footer{
+  flex: 0.2;
+  background-color:  #FC4500;
+  right: 0;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+.travellers{
+  flex: 0.3;
+}
+
+.footer-element {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.footer-sub-title{
+  display: flex;
+  justify-content: space-between;
+  width: 107%;
+}
+
+

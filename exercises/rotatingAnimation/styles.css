@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
-
 *{
   box-sizing: border-box;
   margin: 0;
@@ -10,6 +9,7 @@
 body{
   font-family: 'Lato' , sans-serif;
   padding-bottom: 1000rem;
+  background-color: #333;
   /* overflow-x: hidden; */
 }
 
@@ -17,6 +17,7 @@ header{
   position: fixed;
   left: -6em;
   top: -6em;
+  z-index: 2;
 }
 
 .side-bar{
@@ -25,9 +26,10 @@ header{
   border-radius: 50%;
   background-color: #ff7979;
   position: fixed;
+  cursor: pointer;
 }
 
-.hamburger{
+.hamburger , .cross{
   position: absolute;
   right: 55px;
   bottom: 35px; 
@@ -35,19 +37,24 @@ header{
   border: none;
 }
 
-.hamburger , .fas{
-  color: #fff;
+.side-bar  .fas{
+  color: #000;
   font-weight: bold;
   font-size: 1.65rem;
+  z-index: 4;
 }
 
-.hamburger .fas:hover{
+.side-bar .fas:hover{
   cursor: pointer;
+  z-index: 3;
 }
 
 main{
-  margin: 6.36rem 4rem;
   line-height: 26px;
+  transition: all 0.9s linear;
+  background-color: #fff;
+  transform-origin:  top left;
+  padding: 5em 6em;
 }
 
 main h3{
@@ -69,4 +76,45 @@ section img{
 
 section p{
   color: #333;
+}
+
+.hide{
+  opacity: 0;
+}
+
+.rotate{
+  transform: rotate(-20deg);
+}
+
+.side-navbar-wrapper{
+  color: #FFF;
+  transition: opacity 800ms linear;
+}
+
+.side-navbar-wrapper ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: 10px;
+  bottom: 0px;
+  font-size: 18px;
+}
+
+.side-navbar-wrapper ul li{
+  margin: 12px;
+  list-style: none;
+}
+
+.side-navbar-wrapper ul li .fas{
+  margin: 0 12px;
+}
+
+.side-navbar-wrapper ul li+li{
+  transform: translateX(10px);
+}
+
+.side-navbar-wrapper ul li+li+li{
+  transform: translateX(20px);
 }

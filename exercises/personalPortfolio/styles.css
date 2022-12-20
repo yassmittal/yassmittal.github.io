@@ -412,7 +412,6 @@ nav{
   background-color: var(--clr-dark);
   color: var(--clr-light);
   text-align: center;
-
 }
 
 .portfolio{
@@ -441,7 +440,6 @@ nav{
   transform: scale(1.2);
   opacity: 0.5;
 }
-
 
 /* footer */
 

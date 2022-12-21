@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Oxygen+Mono&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'DM Sans', sans-serif;
+  color: #FFF;
+  height: 110vh;
+  overflow: hidden;
+}
+
+main{
+  height: 100%;
+  background-image: url(./Images/BackgroundHero.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 2em 6em;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 170px;
+}
+
+.button-wrapper button{
+  padding: 12px 24px;
+  border-radius: 10px;
+  background: none;
+  border: 1px solid #fff;
+  font-family: 'DM Sans', sans-serif;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.button-wrapper button:hover{
+  background: linear-gradient(83.62deg, #1B45B4 3.5%, #1C2792 96.85%);
+border: none;
+}
+
+.main-content{
+  display: flex;
+}
+
+.form-wrapper{
+  border-radius: 20px;
+  height: 500px;
+  aspect-ratio: 445 /560 ;
+  border-radius: 20px;
+  border-radius: 20px;
+  background: linear-gradient(112.32deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 101.12%);
+  backdrop-filter: blur(39.5999px);
+  border: 1px solid rgb(81, 101, 148);
+  padding: 24px;
+  margin: 2em;
+}
+
+.form-wrapper h2{
+  font-size: 30px;
+  margin-top: 12px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  color: #FFF;
+  padding: 1em;
+  font-size: 15px;
+}
+
+.input-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  position: relative;
+}
+
+.input-wrapper input{
+  height: 50px;
+  aspect-ratio: 365 / 56;
+  border-radius: 10px;
+  padding: 16px 24px 16px 24px;
+  background: linear-gradient(83.95deg, rgba(27, 69, 180, 0.4) 3%, rgba(28, 39, 146, 0.4) 96.84%);
+  border: 1px solid #CDD0D8;
+}
+
+.input-wrapper input::placeholder{
+  color: #CDD0D8;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.input-wrapper input:focus{
+  border: 1px solid #FFFFFF;
+  color: #FFF;
+  outline: none;
+}
+
+.hide-password{
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+  cursor: pointer;
+}
+
+form a{
+  color: #66c1ff;
+  text-decoration: none;
+}
+
+form button{
+  font-family: 'DM Sans', sans-serif;
+  background: linear-gradient(112.8deg, #6A36FF -15.76%, #AC5FE6 102.86%);
+  padding: 10px 40px;
+  height: 55px;
+  aspect-ratio: 365 / 56;
+  border-radius: 10px;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFF;
+  align-self: stretch;
+  cursor: pointer;
+}
+
+form a:hover{
+  text-decoration: underline;
+}
+
+.advance-section{
+  width: 600px;
+  height: 300px;
+  margin: 3em 5em;
+  font-size: 18px;
+}
+
+.advance-section h1{
+  font-size: 60px;
+  margin-bottom: 1em;
+}
+
+.advance-section p{
+  width: 500px;
+}

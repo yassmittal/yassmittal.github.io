@@ -9,7 +9,7 @@
 body{
   font-family: 'DM Sans', sans-serif;
   color: #FFF;
-  height: 110vh;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -155,4 +155,144 @@ form a:hover{
 
 .advance-section p{
   width: 500px;
+}
+
+@media (max-width: 1140px){
+  
+main{
+  padding: 1em;
+}
+.button-wrapper{
+  width: 150px;
+}
+
+.button-wrapper button{
+  padding: 10px 20px;
+}
+
+.form-wrapper{
+  padding: 0;
+  margin: 2em 0em;
+  height: 460px;
+}
+
+.form-wrapper h2{
+  font-size: 26px;
+  margin-top: 0;
+}
+
+form{
+  padding: 1em;
+  font-size: 14px;
+}
+
+.input-wrapper input{
+  height: 45px;
+  border-radius: 8px;
+  padding: 8px 12px 8px 12px;
+}
+
+.hide-password{
+  right: 8px;
+}
+
+form button{
+  height: 45px;
+  border-radius: 8px;
+  font-weight: 400;
+  align-self: center;
+}
+
+.main-content{
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.advance-section{
+  width: 330px;
+  height: 300px;
+  margin: 0 5px;
+  font-size: 14px;
+}
+
+.advance-section h1{
+  font-size: 30px;
+  margin-bottom: 0.6em;
+}
+
+.advance-section p{
+  width: 300px;
+}
+}
+
+@media (max-width: 740px){
+
+  body{
+    overflow: auto;
+  }
+
+  header .logo img{
+    width: 130px;
+  }
+
+  .button-wrapper{
+    width: 130px;
+  }
+
+  .button-wrapper button{
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+
+.form-wrapper{
+  padding: 0;
+  height: 460px;
+  width: 300px;
+}
+
+.form-wrapper h2{
+  font-size: 22px;
+}
+
+form{
+  padding: 0.7em;
+}
+
+.input-wrapper input{
+  height: 40px;
+  padding: 8px 10px 8px 10px;
+}
+
+.hide-password{
+  bottom: 4px;
+}
+
+form button{
+  height: 35px;
+  font-size: 15px;
+}
+
+.main-content{
+  justify-content: space-around;
+  align-items: center;
+}
+
+.advance-section{
+  width: 330px;
+  height: 300px;
+  margin:  3em 0;
+  color: #000;
+  font-size: 14px;
+}
+
+.advance-section h1{
+  font-size: 30px;
+  margin-bottom: 0.6em;
+}
+
+.advance-section p{
+  width: 300px;
+}
 }

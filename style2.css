@@ -28,13 +28,31 @@
 
 .portfolio  > div{
   position: relative;
-  width: 250px;
-  height: 300px;
+  width: 330px;
+  height: 420px;
   overflow: hidden;
+  background-color: var(--clr-accent);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio > div > .about-project{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0px;
+  color: #000;
+  width: 90%;
+  line-height: 18px;
+  margin: 0.4em 0;
+  transition: opacity 150ms linear;
 }
 
 .image img{
-  width: 250px;
+  width: 100%;
   height: 300px;
   object-fit: cover;
   object-position: center;
@@ -43,22 +61,13 @@
 
 .image{
   transition: all 300ms ease;
-  width: 250px;
+  width: 100%;
   height: 300px;
   overflow: hidden;
 }
 
-.image:active{
-  transform: translate(10px);
-  box-shadow: none;
-}
-
-.image:hover{
-  scale: 1.2;
-}
-
-.image:hover img{
-  opacity: 0.8;
+.portfolio div:hover img{
+  opacity: 0.6;
 }
 
 .details{
@@ -66,25 +75,32 @@
   position: absolute;
   color: white;
   background-color:rgba(48, 48, 48 , 0.6);
-  height: 23%;
+  height: 14.5%;
   width: 100%;
   padding: 12px;
   font-size: 14px;
   bottom: 0;
   transform: translate( 0 , 100%);
-  transition: all 300ms  ease;
+  transition: all 300ms ease;
 }
 
-.image:hover .details{
+.portfolio div:hover .details{
   visibility: visible;
   transform: translate(0%);
 }
 
+.portfolio div:hover .image{
+  scale: 1.4;
+}
+
+.portfolio div:hover .about-project{
+  opacity: 0;
+}
 
 .all-projects-button{
   padding: 1em;
   margin: 1em auto;
-  background-color: #16e0bd;
+  background-color: var(--clr-accent);
   font-weight: bold;
   border: none;
   border-radius: 2px;
@@ -95,6 +111,7 @@
 
 .all-projects-button:active{
   transform: translate(5px , 4px);
+  box-shadow: none;
 }
 
 @media (max-width:1000px) {

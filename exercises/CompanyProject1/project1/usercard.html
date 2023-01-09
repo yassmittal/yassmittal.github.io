@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User cards</title>
+  <link rel="stylesheet" href="./input.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-body">
+  <!-- complete page below -->
+  <main class="flex pb-12"> 
+
+        <!-- side-bar below -->
+      <div class="side-bar flex flex-col justify-between shadow-inne w-1/4 border-x border-[#E2E2EA] text-sm font-semibold text-[#2D3F50] h-1/4 lg:text-xs min-w-fit">
+        <!-- this is work space div -->
+      <div class=" work-space-name flex justify-between pl-16 pr-20 py-4 bg-[#7238B31A]  2xl:pl-4 2xl:pr-4 ">
+        <img src="./Images/delivery.svg" alt="truck" class="pr-4">
+        <p>Workspace Name</p>
+      </div>
+
+      <!-- this is add project div -->
+      <div class="add-project flex items-center space-x-3  text-[#7238B3] text-xs py-5 pl-7">
+        <span class="material-icons text-sm text-[#7238B3]">add</span>
+        <p> Add Project</p>
+      </div>
+      
+      <!-- this is samsung  heading div  -->
+      <div class="samsung-div pl-11 relative  2xl:pl-6 2xl:w-11/12 lg:pl-2 lg:w-full" tabindex="0">
+        <img src="./Images/icon (1).svg" alt="icon" class="lg:w-5">
+        <h3>Samsung</h3>
+
+        <div class="flex justify-between items-center">
+          <span class="material-icons text-[#A5AAB5] text-xl">
+            more_horiz
+            </span>
+            <span class="material-icons text-[#A5AAB5] text-xl ml-1">add</span>
+        </div>
+
+        <div class="active hide left-border bg-[#7238B3] w-2 h-full absolute left-0 top-0 bottom-0 rounded-full -translate-x-1.5">
+        </div>
+      </div>
+
+      <!-- this is oled project div -->
+
+      <div class="hide project-details flex flex-start items-center pl-10 pt-2 2xl:pl-2 2xl:w-11/12 lg:pl-0 lg:w-full">
+        <div class="circle w-1 h-1 rounded-full bg-[black]"></div>
+        <span  class="pl-2">OLED Project</span>
+        <i class="material-icons text-[#A5AAB5] text-xl pl-2">
+          more_horiz
+          </i>
+          <span class="material-icons text-[#A5AAB5] text-xl pl-2">add</span>
+      </div>
+
+      <div class="hide flex  items-center pl-20 pt-2 2xl:pl-6 2xl:w-11/12 lg:pl-2 lg:w-full">
+        <span >Crypto analysis</span>
+        <i class="material-icons text-[#A5AAB5] text-xl pl-2">
+          more_horiz
+          </i>
+          <span class="material-icons text-[#A5AAB5] text-xl pl-2">add</span>
+      </div>
+
+      <div class="hide flex items-center pl-20 text-sm ml-2 pt-2 2xl:pl-6 2xl:w-11/12 lg:pl-2 lg:w-full">
+        <div class="circle w-1 h-1 rounded-full bg-[#A5AAB5] mr-2"></div>
+        <span >Jun’s Book</span>
+        <i class="material-icons text-[#A5AAB5] text-xl pl-2">
+          more_horiz
+          </i>
+      </div>
+
+      <div class="hide flex items-center pl-20 text-sm ml-2 pt-2 2xl:pl-6 2xl:w-11/12 lg:pl-2 lg:w-full">
+        <div class="circle w-1 h-1 rounded-full bg-[#A5AAB5] mr-2"></div>
+        <span >Jun’s PC</span>
+        <i class="material-icons text-[#A5AAB5] text-xl pl-2">
+          more_horiz
+          </i>
+      </div>
+
+      <div class="hide flex items-center pl-20 text-sm ml-2 pt-2 2xl:pl-6 2xl:w-11/12 lg:pl-2 lg:w-full">
+        <div class="circle w-1 h-1 rounded-full bg-[#A5AAB5] mr-2"></div>
+        <span >Jun’s hardware</span>
+        <i class="material-icons text-[#A5AAB5] text-xl pl-2">
+          more_horiz
+          </i>
+      </div>
+
+      <div class="hide flex items-center pl-20 text-sm ml-2 pt-2 2xl:pl-6 2xl:w-11/12 lg:pl-2 lg:w-full">
+        <div class="circle w-1 h-1 rounded-full bg-[#A5AAB5] mr-2"></div>
+        <span >Increase Jun’s Pc Ram</span>
+      </div>
+
+      <div class="hide flex items-center  pl-10 text-sm pt-3 2xl:pl-6 2xl:w-11/12 lg:pl-2 lg:w-full">
+        <div class="circle w-1 h-1 rounded-full bg-[black] mr-2"></div>
+        <span >Apple OLED</span>
+      </div>
+
+    </div>
+
+    <!-- side bar completed above -->
+
+    <!-- main right hand side wrapper below -->
+ 
+    <div class="main-peoples-wrapper bg-[#F5F5F5]  h-full w-full px-6 py-6">
+      <h2 class="font-semibold text-[#203B54] my-5">You work with</h2>
+
+      <!-- System Users section below  -->
+      <div>
+        <h3 class="font-semibold text-[#203B54]">System Users</h3>
+        
+        <div class="system-cards-wrapper flex flex-wrap w-9/12">
+  
+          <!-- first card -->
+          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl w-36 border text-center flex flex-col items-center mr-4 mt-4">
+            <img src="./Images/professional-architect-Q375YLM 1.svg" alt="person image" class="rounded-full">
+            <h4 class="text-xs text-[#364F65] mt-3 mb-1 font-medium">Mark Henry</h4>
+            <p class="text-[#9A9DAA] text-[10px] bg-white font-light">Project Manager</p>
+    
+            <span class=" three-dots-icon material-icons text-[#2D3F50] text-xl absolute top-0 right-3 cursor-pointer">
+              more_horiz
+              </span>
+  
+              <div class="edit-delete-wrapper absolute hide bg-white top-4 -right-28 cursor-pointer shadow-lg">
+                <div class="edit flex pl-3 pr-12 py-2">
+                  <img src="./Images/icon (2).svg" alt="edit-icon">
+                  <p class="ml-2 text-[#203B54]">Edit</p>
+                </div>
+      
+                <div class="delete flex text-[#EC6060] bg-[#F9FAFB] pl-3 pr-12 py-2">
+                  <img src="./Images/icon (3).svg" alt="edit-icon">
+                  <p class="ml-1 font-light">Delete</p>
+                </div>
+      
+              </div>
+  
+          </div>
+  
+          <!-- second card  -->
+          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl w-36 border text-center flex flex-col items-center mr-4 mt-4">
+            <img src="./Images/professional-architect-Q375YLM 1.svg" alt="person image" class="rounded-full">
+            <h4 class="text-xs text-[#364F65] mt-3 mb-1 font-medium">Mark Henry</h4>
+            <p class="text-[#9A9DAA] text-[10px] bg-white font-light">Project Manager</p>
+    
+            <span class=" three-dots-icon material-icons text-[#2D3F50] text-xl absolute top-0 right-3 cursor-pointer">
+              more_horiz
+              </span>
+  
+              <div class="edit-delete-wrapper hide absolute bg-white top-4 -right-28 cursor-pointer shadow-lg">
+                <div class="edit flex pl-3 pr-12 py-2">
+                  <img src="./Images/icon (2).svg" alt="edit-icon">
+                  <p class="ml-2 text-[#203B54]">Edit</p>
+                </div>
+      
+                <div class="delete flex text-[#EC6060] bg-[#F9FAFB] pl-3 pr-12 py-2">
+                  <img src="./Images/icon (3).svg" alt="edit-icon">
+                  <p class="ml-1 font-light">Delete</p>
+                </div>
+      
+              </div>
+  
+          </div>
+  
+          <!-- third card  -->
+          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl w-36 border text-center flex flex-col items-center mr-4 mt-4">
+            <img src="./Images/professional-architect-Q375YLM 1.svg" alt="person image" class="rounded-full">
+            <h4 class="text-xs text-[#364F65] mt-3 mb-1 font-medium">Mark Henry</h4>
+            <p class="text-[#9A9DAA] text-[10px] bg-white font-light">Project Manager</p>
+    
+            <span class=" three-dots-icon material-icons text-[#2D3F50] text-xl absolute top-0 right-3 cursor-pointer">
+              more_horiz
+              </span>
+  
+              <div class="edit-delete-wrapper hide absolute bg-white top-4 -right-28 cursor-pointer shadow-lg">
+                <div class="edit flex pl-3 pr-12 py-2">
+                  <img src="./Images/icon (2).svg" alt="edit-icon">
+                  <p class="ml-2 text-[#203B54]">Edit</p>
+                </div>
+      
+                <div class="delete flex text-[#EC6060] bg-[#F9FAFB] pl-3 pr-12 py-2">
+                  <img src="./Images/icon (3).svg" alt="edit-icon">
+                  <p class="ml-1 font-light">Delete</p>
+                </div>
+      
+              </div>
+  
+          </div>
+  
+          <!-- fourth card  -->
+  
+          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl w-36 border text-center flex flex-col items-center mr-4 mt-4">
+            <img src="./Images/professional-architect-Q375YLM 1.svg" alt="person image" class="rounded-full">
+            <h4 class="text-xs text-[#364F65] mt-3 mb-1 font-medium">Mark Henry</h4>
+            <p class="text-[#9A9DAA] text-[10px] bg-white font-light">Project Manager</p>
+    
+            <span class=" three-dots-icon material-icons text-[#2D3F50] text-xl absolute top-0 right-3 cursor-pointer">
+              more_horiz
+              </span>
+  
+              <div class="edit-delete-wrapper hide absolute bg-white top-4 -right-28 cursor-pointer shadow-lg">
+                <div class="edit flex pl-3 pr-12 py-2">
+                  <img src="./Images/icon (2).svg" alt="edit-icon">
+                  <p class="ml-2 text-[#203B54]">Edit</p>
+                </div>
+      
+                <div class="delete flex text-[#EC6060] bg-[#F9FAFB] pl-3 pr-12 py-2">
+                  <img src="./Images/icon (3).svg" alt="edit-icon">
+                  <p class="ml-1 font-light">Delete</p>
+                </div>
+      
+              </div>
+  
+          </div>
+  
+          <!-- fifth card  -->
+  
+          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl w-36 border text-center flex flex-col items-center mr-4 mt-4">
+            <img src="./Images/professional-architect-Q375YLM 1.svg" alt="person image" class="rounded-full">
+            <h4 class="text-xs text-[#364F65] mt-3 mb-1 font-medium">Mark Henry</h4>
+            <p class="text-[#9A9DAA] text-[10px] bg-white font-light">Project Manager</p>
+    
+            <span class=" three-dots-icon material-icons text-[#2D3F50] text-xl absolute top-0 right-3 cursor-pointer">
+              more_horiz
+              </span>
+  
+              <div class="edit-delete-wrapper hide absolute bg-white top-4 -right-28 cursor-pointer shadow-lg">
+                <div class="edit flex pl-3 pr-12 py-2">
+                  <img src="./Images/icon (2).svg" alt="edit-icon">
+                  <p class="ml-2 text-[#203B54]">Edit</p>
+                </div>
+      
+                <div class="delete flex text-[#EC6060] bg-[#F9FAFB] pl-3 pr-12 py-2">
+                  <img src="./Images/icon (3).svg" alt="edit-icon">
+                  <p class="ml-1 font-light">Delete</p>
+                </div>
+      
+              </div>
+  
+          </div>
+  
+          <!-- sixth card  -->
+  
+          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl w-36 border text-center flex flex-col items-center mr-4 mt-4">
+            <img src="./Images/professional-architect-Q375YLM 1.svg" alt="person image" class="rounded-full">
+            <h4 class="text-xs text-[#364F65] mt-3 mb-1 font-medium">Mark Henry</h4>
+            <p class="text-[#9A9DAA] text-[10px] bg-white font-light">Project Manager</p>
+    
+            <span class=" three-dots-icon material-icons text-[#2D3F50] text-xl absolute top-0 right-3 cursor-pointer">
+              more_horiz
+              </span>
+  
+              <div class="edit-delete-wrapper hide absolute bg-white top-4 -right-28 cursor-pointer shadow-lg">
+                <div class="edit flex pl-3 pr-12 py-2">
+                  <img src="./Images/icon (2).svg" alt="edit-icon">
+                  <p class="ml-2 text-[#203B54]">Edit</p>
+                </div>
+      
+                <div class="delete flex text-[#EC6060] bg-[#F9FAFB] pl-3 pr-12 py-2">
+                  <img src="./Images/icon (3).svg" alt="edit-icon">
+                  <p class="ml-1 font-light">Delete</p>
+                </div>
+      
+              </div>
+  
+          </div>
+  
+          <!-- seventh card  -->
+  
+          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl w-36 border text-center flex flex-col items-center mr-4 mt-4">
+            <img src="./Images/professional-architect-Q375YLM 1.svg" alt="person image" class="rounded-full">
+            <h4 class="text-xs text-[#364F65] mt-3 mb-1 font-medium">Mark Henry</h4>
+            <p class="text-[#9A9DAA] text-[10px] bg-white font-light">Project Manager</p>
+    
+            <span class=" three-dots-icon material-icons text-[#2D3F50] text-xl absolute top-0 right-3 cursor-pointer">
+              more_horiz
+              </span>
+  
+              <div class="edit-delete-wrapper hide absolute bg-white top-4 -right-28 cursor-pointer shadow-lg">
+                <div class="edit flex pl-3 pr-12 py-2">
+                  <img src="./Images/icon (2).svg" alt="edit-icon">
+                  <p class="ml-2 text-[#203B54]">Edit</p>
+                </div>
+      
+                <div class="delete flex text-[#EC6060] bg-[#F9FAFB] pl-3 pr-12 py-2">
+                  <img src="./Images/icon (3).svg" alt="edit-icon">
+                  <p class="ml-1 font-light">Delete</p>
+                </div>
+      
+              </div>
+  
+          </div>
+  
+          <!-- eighth card  -->
+  
+          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl w-36 border text-center flex flex-col items-center mr-4 mt-4">
+            <img src="./Images/professional-architect-Q375YLM 1.svg" alt="person image" class="rounded-full">
+            <h4 class="text-xs text-[#364F65] mt-3 mb-1 font-medium">Mark Henry</h4>
+            <p class="text-[#9A9DAA] text-[10px] bg-white font-light">Project Manager</p>
+    
+            <span class=" three-dots-icon material-icons text-[#2D3F50] text-xl absolute top-0 right-3 cursor-pointer">
+              more_horiz
+              </span>
+  
+              <div class="edit-delete-wrapper hide absolute bg-white top-4 -right-28 cursor-pointer shadow-lg">
+                <div class="edit flex pl-3 pr-12 py-2">
+                  <img src="./Images/icon (2).svg" alt="edit-icon">
+                  <p class="ml-2 text-[#203B54]">Edit</p>
+                </div>
+      
+                <div class="delete flex text-[#EC6060] bg-[#F9FAFB] pl-3 pr-12 py-2">
+                  <img src="./Images/icon (3).svg" alt="edit-icon">
+                  <p class="ml-1 font-light">Delete</p>
+                </div>
+      
+              </div>
+  
+          </div>
+  
+          <!-- ninth card  -->
+  
+          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl w-36 border text-center flex flex-col items-center mr-4 mt-4">
+            <img src="./Images/professional-architect-Q375YLM 1.svg" alt="person image" class="rounded-full">
+            <h4 class="text-xs text-[#364F65] mt-3 mb-1 font-medium">Mark Henry</h4>
+            <p class="text-[#9A9DAA] text-[10px] bg-white font-light">Project Manager</p>
+    
+            <span class=" three-dots-icon material-icons text-[#2D3F50] text-xl absolute top-0 right-3 cursor-pointer">
+              more_horiz
+              </span>
+  
+              <div class="edit-delete-wrapper hide absolute bg-white top-4 -right-28 cursor-pointer shadow-lg">
+                <div class="edit flex pl-3 pr-12 py-2">
+                  <img src="./Images/icon (2).svg" alt="edit-icon">
+                  <p class="ml-2 text-[#203B54]">Edit</p>
+                </div>
+      
+                <div class="delete flex text-[#EC6060] bg-[#F9FAFB] pl-3 pr-12 py-2">
+                  <img src="./Images/icon (3).svg" alt="edit-icon">
+                  <p class="ml-1 font-light">Delete</p>
+                </div>
+      
+              </div>
+  
+          </div>
+  
+        </div>
+      </div>
+    
+      <!-- invited users section below  -->
+
+      <div class="my-7">
+        <h3 class="font-semibold text-[#203B54]">Invited</h3>
+        
+        <div class="invited-cards-wrapper flex flex-wrap w-9/12">
+  
+          <!-- first card -->
+          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl w-36 border-y border-[#7238B3] text-center flex flex-col items-center mr-4 mt-4">
+            <img src="./Images/professional-architect-Q375YLM 1.svg" alt="person image" class="rounded-full">
+            <h4 class="text-xs text-[#364F65] mt-3 mb-1 font-medium">Mark Henry</h4>
+            <p class="text-[#7238B3] text-[10px] bg-white font-light">Waiting to accept Invite</p>
+    
+          </div>
+  
+          <!-- second card  -->
+          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl w-36 border text-center flex flex-col items-center mr-4 mt-4 36 border-y border-x-0 border-[#D96980] ">
+            <img src="./Images/professional-architect-Q375YLM 1.svg" alt="person image" class="rounded-full">
+            <h4 class="text-xs text-[#364F65] mt-3 mb-1 font-medium">Mark Henry</h4>
+            <p class="text-[10px] bg-white font-light text-[#D96980]">Invite Expired</p>
+    
+          </div>
+  
+          <!-- third card  -->
+          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl w-36 border text-center flex flex-col items-center mr-4 mt-4 36 border-y border-[#D96980] border-x-0 ">
+            <img src="./Images/professional-architect-Q375YLM 1.svg" alt="person image" class="rounded-full">
+            <h4 class="text-xs text-[#364F65] mt-3 mb-1 font-medium">Mark Henry</h4>
+            <p class="background: #7238B3;
+text-[10px] bg-white font-light text-[#D96980]">Declined</p>
+     
+          </div>
+  
+        </div>
+      </div>
+
+      <!-- Your team section below  -->
+
+      <div class="mt-16">
+        <h3 class="font-semibold text-[#203B54]">Your Teams</h3>
+
+        <div class="your-team-card-wrapper flex flex-wrap">
+          <div class="relative card-people space-x-2  bg-white rounded-xl w-36 border text-center flex flex-col items-center mr-4 mt-4"> 
+    
+            <div class="top-section w-full bg-[#E3D7F0] py-5 rounded-t-xl">
+              <p class="text-[#364F65] text-sm font-medium">WHOA CRM</p>
+            </div>
+
+              <div class="flex rounded-br-md bg-white m-auto pb-7 pt-10">
+                <img src="./Images/Profile.png" alt="" class="w-10 h-1w-10 rounded-full object-cover object-left-top" >
+                <img src="./Images/Profile (1).png" alt="" class="w-10 h-1w-10 rounded-full object-cover object-left-top -translate-x-2" >
+                <img src="./Images/Profile (2).png" alt="" class="w-10 h-1w-10 rounded-full object-cover object-left-top -translate-x-4" >
+              </div>
+
+
+            <span class=" three-dots-icon material-icons text-[#2D3F50] text-xl absolute top-0 right-2 cursor-pointer">
+              more_horiz
+              </span>
+  
+              <div class="edit-delete-wrapper absolute hide bg-white top-4 -right-28 cursor-pointer shadow-lg">
+                <div class="edit flex pl-3 pr-12 py-2">
+                  <img src="./Images/icon (2).svg" alt="edit-icon">
+                  <p class="ml-2 text-[#203B54]">Edit</p>
+                </div>
+      
+                <div class="delete flex text-[#EC6060] bg-[#F9FAFB] pl-3 pr-12 py-2">
+                  <img src="./Images/icon (3).svg" alt="edit-icon">
+                  <p class="ml-1 font-light">Delete</p>
+                </div>
+      
+              </div>
+  
+          </div>
+          <div class="relative card-people space-x-2  bg-white rounded-xl w-36 border text-center flex flex-col items-center mr-4 mt-4"> 
+    
+            <div class="top-section w-full bg-[#E3D7F0] py-5 rounded-t-xl">
+              <p class="text-[#364F65] text-sm font-medium">Safety CRM</p>
+            </div>
+
+              <div class="flex rounded-br-md bg-white m-auto pb-7 pt-10">
+                <img src="./Images/Profile.png" alt="" class="w-10 h-1w-10 rounded-full object-cover object-left-top" >
+                <img src="./Images/Profile (1).png" alt="" class="w-10 h-1w-10 rounded-full object-cover object-left-top -translate-x-2" >
+                <img src="./Images/Profile (2).png" alt="" class="w-10 h-1w-10 rounded-full object-cover object-left-top -translate-x-4" >
+              </div>
+
+
+            <span class=" three-dots-icon material-icons text-[#2D3F50] text-xl absolute top-0 right-2 cursor-pointer">
+              more_horiz
+              </span>
+  
+              <div class="edit-delete-wrapper absolute hide bg-white top-4 -right-28 cursor-pointer shadow-lg">
+                <div class="edit flex pl-3 pr-12 py-2">
+                  <img src="./Images/icon (2).svg" alt="edit-icon">
+                  <p class="ml-2 text-[#203B54]">Edit</p>
+                </div>
+      
+                <div class="delete flex text-[#EC6060] bg-[#F9FAFB] pl-3 pr-12 py-2">
+                  <img src="./Images/icon (3).svg" alt="edit-icon">
+                  <p class="ml-1 font-light">Delete</p>
+                </div>
+      
+              </div>
+  
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="side-buttons space-x-4 absolute text-sm top-10 right-5 flex " >
+        <button class="rounded-lg  bg-[#E3D7F0] text-[#203B54] p-2 ">Create Team</button>
+
+        <button class="rounded-lg bg-[#7238B3] p-2 text-white flex items-center ml-3">
+          <span class="material-icons text-2xl font-normal mx-1">add</span>Add User
+        </button>
+      </div>
+
+    </div>
+
+
+  </main>
+
+
+  <script src="usercard.js"></script>
+</body>
+</html>
+
+

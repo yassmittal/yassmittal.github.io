@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.table-content-wrapper:before , .table-content-wrapper:after{
+  content: '';
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: #8E60C2;
+}
+
+.table-content-wrapper::before{
+  left: 0px;
+}
+
+.table-content-wrapper::after{
+  right: 0px;
+}
+
+.rotated{
+  transform: rotate(90deg);
+  transition: transform 100ms linear;
+}
+
+.hide{
+  display: none;
+}
+
+.decrease-height{
+  height: 240px;
+}
+
+.samsung-div{
+cursor: pointer;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem 0 1rem 2.75rem;
+position: relative;
+width: 75%;
+border-radius: 6px;
+}
+
+.samsung-div:hover{
+  background-color: #7238B31A;
+}
+
+.samsung-div:hover .active{
+  display: block;
+}
+
+.edit-delete-wrapper{
+  z-index: 1;
+}

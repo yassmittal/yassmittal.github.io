@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="main-wrapper">
+    <h1>Send Feedback</h1>
+    <div class="question-order">
+      <p><span class="current-question-count"></span>/ <span class="total-question"></span></p>
+    </div>
+
+    <div class="current-question-wrapper">
+      <p class="current-question"></p>
+    </div>
+
+    <div class="select-rating-wrapper">
+      <div><input type="radio" name="rating" id="" class="radio-input" value="1" required ></div>   
+      <div><input type="radio" name="rating" id="" class="radio-input" value="2" required></div>
+      <div><input type="radio" name="rating" id="" class="radio-input" value="3" required></div>
+      <div><input type="radio" name="rating" id="" class="radio-input" value="4" required></div>
+      <div><input type="radio" name="rating" id="" class="radio-input" value="5" required></div>
+      <div><input type="radio" name="rating" id="" class="radio-input" value="6" required></div>
+      <div><input type="radio" name="rating" id="" class="radio-input" value="7" required></div>
+      <div><input type="radio" name="rating" id="" class="radio-input" value="8" required></div>
+      <div><input type="radio" name="rating" id="" class="radio-input" value="9" required></div>
+      <div><input type="radio" name="rating" id="" class="radio-input" value="10" required></div>
+    </div>
+
+    <div class="feedback-options">
+      <p>Total disagree</p>
+      <p>Total agree</p>
+    </div>
+
+    <div class="button-set">
+      <button class="primary-btn previous-btn">Previous</button>
+      <button class="primary-btn next-btn">Next</button>
+      <button class="primary-btn submit-btn hide">Submit</button>
+    </div>
+
+    <div>
+      <p class="error-msg hide">You need to select a rating to move further</p>
+    </div>
+
+  </main>
+
+  <div class="result-message hide">
+    <p>Your feedback send successfully</p>
+  </div>
+
+
+  
+
+  <script src="./script.js"></script>
+</body>
+</html>

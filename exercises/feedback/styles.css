@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;700;800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+  min-height: 100vh;
+  font-family: "Heebo" , sans-serif;
+  color: #333;
+}
+
+.main-wrapper{
+  width: 60%;
+  min-width: fit-content;
+  margin: auto;
+  text-align: center;
+}
+
+.error-msg{
+  color: red;
+  margin-top: 3em;
+  
+}
+
+.result-message{
+  font-size: 3rem;
+  font-weight: bold;
+  margin: auto;
+  width: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+h1{
+  color: #161616;
+}
+
+.main-wrapper .question-order{
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.main-wrapper .current-question{
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+
+.current-question-wrapper{
+  min-height: 120px;
+}
+
+.select-rating-wrapper{
+  position: relative;
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}     
+
+.select-rating-wrapper::before{
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: #FFF;
+  width: 100%;
+  top: 50%;
+  z-index: -1;
+}
+
+.select-rating-wrapper .radio-input{
+  width: 25px;
+  height: 25px;
+  padding: 0;
+}
+
+.select-rating-wrapper .radio-input:first-child{
+  margin: 0;
+}
+
+.feedback-options{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  width: 110%;
+  margin: 1em auto;
+}
+
+.button-set{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 110%;
+}
+
+.primary-btn{
+  width: 200px;
+  height: 60px;
+  border-radius: 7px;
+  border: 2px solid #333;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.primary-btn:active{
+  scale: 0.99;
+}
+
+.primary-btn:hover{
+  background-color: #e0e0e0;;
+}
+
+.hide{
+  display: none;
+}

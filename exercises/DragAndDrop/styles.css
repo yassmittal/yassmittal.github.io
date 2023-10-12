@@ -1,0 +1,29 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hwb(240 6% 78%);
+  min-height: 100vh;
+  gap: 2rem;
+}
+
+body > div {
+  border: 1px solid white;
+  padding: 1rem;
+  min-width: 400px;
+  max-width: 1200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+body > div > div {
+  border: 1px solid hwb(74 84% 11%);
+  width: 90%;
+  min-width: 400px;
+  max-width: 1200px;
+  padding: 1rem;
+  color: #d3d6d8;
+  cursor: grab;
+}

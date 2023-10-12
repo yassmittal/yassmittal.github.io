@@ -1,0 +1,69 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #224941;
+  color: white;
+  text-align: center;
+  height: 100vh;
+  /* background-image: url(https://raw.githubusercontent.com/bradtraversy/vanillawebprojects/master/relaxer-app/img/bg.jpg); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.circle-wrapper{
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background-image: conic-gradient( #55b7a4 0%,
+  #4ca493 40%,
+  #fff 40%,
+  #fff 60%,
+  #336d62 60%,
+  #2a5b52 100%);
+  padding: 20px;
+  transition: scale 3s linear;
+  position: relative;
+}
+
+.circle-wrapper::after{
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  top: -40px;
+  position: absolute;
+
+}
+
+.circle{
+  background-color: #010f1c;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  /* border-top: 10px solid #55b7a4;
+  border-right: 10px solid #55b7a4;
+  border-bottom: 10px solid green;
+  border-left: 10px solid red; */
+}
+
+.circle-wrapper.expand{
+  scale: 1.3;
+  transition: scale 3.5s linear;
+}

@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  min-width: 100%;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.loginBG {
+  background-image: url(https://s3-alpha-sig.figma.com/img/d3c8/8035/d49d8de62c3d3d330b8abed39cc351e5?Expires=1691366400&Signature=nONqzSrc2MGBezFMyWMzk6-BsjHfcqM30R90mSXm-dakO9cgcmwqoeJaFJcl7HQIzXJpFfGTMZ7UL6sVTu1FOWyWtG1gz5can1cAPKBuEA5Z3a6yhN1RtfrnaH1nnXDeKzduebU2OVxbI5ZRRgEMndToJdenTmcPjoy8Gw0KNzRm6A0o4Ke26PwTKuzhEJbOyJSKEvpuaXAYvPTD6wSaXiHTaeZ~7CMz7nqQbxR5utffiAMQBZdWh1clZ0Oe2uR1FVxAvsuf2mf70N5qCzyUxY842TrwPTWq8E8dDUPRPeHzHxiEulv7Ht7FawzdyqYBXh7MHx3PsXcKZKP0QXRmQw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.loginBG::after{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.359761089086532);
+  z-index: 0;
+}

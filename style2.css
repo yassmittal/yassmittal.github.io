@@ -1,4 +1,4 @@
-:root{
+/* :root{
   --ff-primary: 'Source Sans Pro' , sans-serif;
   --ff-secondary: 'Source Code Pro' , monospace;
 
@@ -7,7 +7,35 @@
 
   --clr-light: #fff;
   --clr-dark: #303030;
-  --clr-accent: #16e0bd;
+  --clr-accent: #16e4eb;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0 , 0 , 0 , 0.25),
+        0.125em 0.125em 0.25em rgba(0 , 0 , 0 , 0.15);
+} */
+
+:root{
+  --ff-primary: 'Source Sans Pro' , sans-serif;
+  --ff-secondary: 'Source Code Pro' , monospace;
+
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --clr-light: hwb(0 81% 15%);
+  --clr-dark: #281515;
+  --clr-accent: #1d5494;
+
+  /* --clr-light: #fff;
+  --clr-dark: #303030;
+  --clr-accent: #16e0bd; */
+
+  /* --clr-light: #FFFFFF;
+  --clr-dark: #6E6E6E;
+  --clr-accent: #DDD0C8; */
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -18,6 +46,53 @@
         0.125em 0.125em 0.25em rgba(0 , 0 , 0 , 0.15);
 }
 
+
+.theme-1{
+  --clr-light: #EE72F8;
+  --clr-dark: #EF036C;
+  --clr-accent: #31EC56;
+}
+
+.theme-1{
+  color: #6E6E6E;
+  background-color: rgba(110, 110, 110 , 0.2);
+  box-shadow: rgba(110, 110, 110 , 0.4) 5px 5px, rgba(110, 110, 110 , 0.3) 10px 10px, rgba(110, 110, 110 , 0.2) 15px 15px, rgba(110, 110, 110 , 0.1) 20px 20px, rgba(110, 110, 110 , 0.05) 25px 25px;
+
+}
+
+
+.theme-2{
+  color: rgb(238, 114, 248);
+  background-color: rgba(238, 114, 248, 0.2);
+  box-shadow: rgba(238 , 114, 248, 0.4) 5px 5px, rgba(238 , 114, 248, 0.3) 10px 10px, rgba(238 , 114, 248, 0.2) 15px 15px, rgba(238 , 114, 248, 0.1) 20px 20px, rgba(238 , 114, 248, 0.05) 25px 25px;
+}
+
+
+.theme-3{
+  color: rgb(49, 236, 86);
+  background-color: rgba(49, 236, 86 , 0.2);
+  box-shadow: rgba(49, 236, 86 , 0.4) 5px 5px, rgba(49, 236, 86 , 0.3) 10px 10px, rgba(49, 236, 86 , 0.2) 15px 15px, rgba(49, 236, 86 , 0.1) 20px 20px, rgba(49, 236, 86 , 0.05) 25px 25px;
+
+}
+
+
+.choose-theme-section{
+  position: absolute;
+  right: 12%;
+  top: 0;
+}
+
+.choose-theme-section button{
+  padding: 9px 13px;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  margin-left: 1rem;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px !important; */
+}
+
+
+
 .portfolio{
   display: flex;
   flex-direction: row;
@@ -26,10 +101,10 @@
   gap: 2rem;
 }
 
-.portfolio  > div{
+.portfolio > div{
   position: relative;
   width: 330px;
-  height: 420px;
+  height: 260px;
   overflow: hidden;
   background-color: var(--clr-accent);
   border-radius: 10px;
@@ -53,7 +128,7 @@
 
 .image img{
   width: 100%;
-  height: 300px;
+  height: 200px;
   object-fit: cover;
   object-position: center;
   cursor: pointer;
@@ -62,7 +137,7 @@
 .image{
   transition: all 300ms ease;
   width: 100%;
-  height: 300px;
+  height: 150px;
   overflow: hidden;
 }
 
@@ -75,7 +150,7 @@
   position: absolute;
   color: white;
   background-color:rgba(48, 48, 48 , 0.6);
-  height: 14.5%;
+  height: 19.5%;
   width: 100%;
   padding: 12px;
   font-size: 14px;
@@ -90,7 +165,7 @@
 }
 
 .portfolio div:hover .image{
-  scale: 1.4;
+  scale: 1.8;
 }
 
 .portfolio div:hover .about-project{
@@ -99,7 +174,7 @@
 
 .all-projects-button{
   padding: 1em;
-  margin: 1em auto;
+  margin: 2em auto;
   background-color: var(--clr-accent);
   font-weight: bold;
   border: none;

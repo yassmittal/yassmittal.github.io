@@ -1,0 +1,51 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(236, 241, 252);
+}
+
+button{
+  background-color: rgb(228, 226, 226);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  transition: box-shadow 40ms linear,
+               transform 40ms linear;
+  padding: 1em 2em;
+  margin: 0 2em;
+}
+
+.decrement-btn{
+  box-shadow: 4px 4px 5px red;
+}
+
+.increment-btn{
+  box-shadow: 4px 4px 5px green;
+}
+
+#result{
+  font-size: 5rem;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+button:active{
+  box-shadow: none;
+  transform: translate(4px);
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.5);
+  padding: 3em 2em;
+}
+
+
+

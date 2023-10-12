@@ -1,0 +1,130 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head> 
+    <meta charset="UTF-8" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <title>Happy Holi Blue Coat</title> 
+    <style> 
+      * { 
+        margin: 0; 
+        padding: 0; 
+        box-sizing: border-box; 
+      } 
+      #main { 
+        height: 100vh; 
+        width: 100vw; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        background-color: aqua; 
+      } 
+ 
+      .container { 
+        height: 70vh; 
+        background: url("images/banyan.jpg") no-repeat center center/cover; 
+        width: 81vw; 
+        justify-content: space-evenly; 
+        display: flex; 
+      } 
+ 
+      .rotateIt { 
+        transform: rotate(90deg); 
+      } 
+ 
+      .toHim { 
+        transform: rotate(180deg); 
+      } 
+ 
+      .backgroundChanged { 
+        background: url("images/redBricks.jpg") no-repeat center center/cover; 
+      } 
+    </style> 
+  </head> 
+  <body id="main"> 
+    <div class="container" id="myImg"> 
+      <figure class="three-same one" id="girlImgContainer"> 
+        <img 
+          src="images/myImg.png" 
+          alt="Trulli" 
+          style="width: 100%; z-index: -1" 
+        /> 
+        <figcaption style="display: block"> 
+          <div class="buttonLeft" style="text-align: center"> 
+            <button 
+              id="girl" 
+              style=" 
+                height: 36px; 
+                background-color: red; 
+                font-size: 23px; 
+                text-align: center; 
+                font-weight: bolder; 
+                color: white; 
+              " 
+            > 
+              Are... Bacho... 
+            </button> 
+          </div> 
+        </figcaption> 
+      </figure> 
+ 
+      <figure class="three-same two"> 
+        <div 
+          class="con" 
+          style=" 
+            height: 100%; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+          " 
+        > 
+          <img 
+            src="images/water-gun-29154892-removebg-preview.png" 
+            class="rotateIt" 
+            alt="Trulli" 
+            style="width: 100%" 
+          /> 
+        </div> 
+      </figure> 
+ 
+      <figure class="three-same three"> 
+        <img src="images/innocentEyes.png" alt="Trulli" style="width: 100%" /> 
+        <figcaption> 
+          <div class="buttonRight" style="text-align: center"> 
+            <button 
+              class="boy" 
+              style=" 
+                height: 36px; 
+                background-color: red; 
+                font-size: 23px; 
+                text-align: center; 
+                font-weight: bolder; 
+                color: white; 
+              " 
+            > 
+              Aap Bacho... 
+            </button> 
+          </div> 
+        </figcaption> 
+      </figure> 
+    </div> 
+    <!-- for img background colorfulHoli--> 
+    <!--https://images.unsplash.com/photo-1558470598-a5dda9640f68?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=991&q=80  --> 
+ 
+    <!-- pichkari --> 
+    <!--  --> 
+    <!-- </section> --> 
+    <script src="index.js"></script> 
+    <script> 
+      let rotateIt = document.getElementsByClassName("rotateIt"); 
+      // console.log(rotatIt); 
+      let Girl = document 
+        .getElementById("girl") 
+        .addEventListener("click", function hello() { 
+          rotateIt.className = "toHim"; 
+ 
+          console.log("hello.."); 
+        }); 
+    </script> 
+  </body> 
+</html>

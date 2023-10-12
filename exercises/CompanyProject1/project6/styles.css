@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  display: flex;
+  font-family: 'Inter' , sans-serif;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.outer-circle{
+  background: linear-gradient(179.94deg, rgba(255, 255, 255, 0.06) -5.48%, rgba(255, 255, 255, 0) 96.9%);
+  border-radius: 50%;
+  width: fit-content;
+  min-Width: 524px;
+ min-height: 524px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.outer-circle .inner-circle-bg{
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) -25.29%, rgba(255, 255, 255, 0) 97.21%);
+  min-Width: 367px;
+  min-height: 367px;
+  border-radius: 50%;
+}
+
+.content-cards-wrapper .activity-card{
+  background: #FFFFFF;
+  box-shadow: -12px 25px 80px rgba(30, 58, 138, 0.2);
+  border-radius: 12px;
+  padding: 12px 12px 11px 13px;
+}
+
+.content-cards-wrapper .pie-chart-graph{
+  background:#F1F5F9;
+  box-shadow: -12px 25px 80px rgba(30, 58, 138, 0.2);
+  border-radius: 12px;
+  position: relative;
+  /* overflow: hidden; */
+  margin-top: 12px;
+}
+
+.sign-up-page input::placeholder{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #94A3B8;
+  padding-left: 4px;
+}
+
+.side-bar{
+  background: #FFFFFF;
+  box-shadow: 10px 10px 50px rgba(100, 116, 139, 0.04);
+}
+
+.navbar ul li{
+  transition: color 0.2s ease-in-out,
+              background-color 0.2s ease-in-out;
+}
+
+
+
+.navbar ul li:hover,
+.navbar ul li.active{
+  background-color: #F8FAFC;
+  color: #2563EB;
+}
+
+
+.navbar ul li svg,
+.navbar ul li svg{
+  stroke: #64748B;
+  transition: stroke 0.2 ease-in-out,
+              fill 0.2 ease-in-out;
+}
+
+.navbar ul li:hover svg{
+  fill: none;
+  stroke: currentColor;
+}
+
+.navbar ul li:first-child:hover svg,
+.navbar ul li:first-child.active svg{
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+
+.navbar ul li:nth-child(3):hover svg,
+.navbar ul li:nth-child(3).active svg{
+  stroke: white;
+  fill: currentColor;
+}
+
+.margin-top-auto{
+  margin-top: auto !important;
+}
+
+.current-date{
+  box-shadow: 4px 8px 18px rgba(37, 99, 235, 0.3);
+}
+
+.open-btn{
+  box-shadow: 0px 0px 1px rgba(75, 85, 99, 0.04), 0px 0px 12px rgba(107, 114, 128, 0.04);
+  background-color: black !important;
+}

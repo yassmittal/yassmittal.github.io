@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  background: url(./image/PXL_20221217_041741110.jpg) no-repeat center
+    center/contain;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  filter: blur(0px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: top;
+  box-shadow: 4px 4px 3px rgb(184, 198, 197),
+    12px 12px 3px rgba(200, 255, 244, 1), 6px 6px 3px rgba(122, 255, 255, 1),
+    11px 11px 3px rgba(233, 122, 255, 1), 6px 6px 3px rgba(122, 255, 255, 1),
+    12px 12px 3px rgba(233, 122, 255, 1), 7px 7px 3px rgba(233, 255, 244, 1),
+    13px 13px 3px rgb(69, 200, 134), 14px 14px 3px rgb(38, 125, 81),
+    15px 15px 3px rgb(0, 0, 0), 16px 16px 3px rgb(11, 14, 15),
+    17px 17px 3px rgb(170, 77, 51), 18px 18px 3px rgb(0, 0, 0),
+    19px 19px 3px rgb(157, 98, 183), 20px 20px 3px rgb(68, 100, 159),
+    21px 21px 3px rgb(197, 38, 219), 22px 22px 3px rgb(0, 255, 128),
+    23px 23px 3px rgb(211, 46, 46), 24px 24px 3px rgb(163, 68, 68),
+    9px 9px 3px rgba(233, 255, 244, 1), 25px 25px 3px rgb(79, 80, 108);
+}
+
+
+.loading-text {
+  font-size: 120px;
+  color: #000;
+  text-shadow: 4px 4px 3px rgb(184, 198, 197),
+    12px 12px 3px rgba(200, 255, 244, 1), 6px 6px 3px rgba(122, 255, 255, 1),
+    11px 11px 3px rgba(233, 122, 255, 1), 6px 6px 3px rgba(122, 255, 255, 1),
+    12px 12px 3px rgba(233, 122, 255, 1), 7px 7px 3px rgba(233, 255, 244, 1),
+    13px 13px 3px rgb(69, 200, 134), 14px 14px 3px rgb(38, 125, 81),
+    15px 15px 3px rgb(0, 0, 0), 16px 16px 3px rgb(11, 14, 15),
+    17px 17px 3px rgb(170, 77, 51), 18px 18px 3px rgb(0, 0, 0),
+    19px 19px 3px rgb(157, 98, 183), 20px 20px 3px rgb(68, 100, 159),
+    21px 21px 3px rgb(197, 38, 219), 22px 22px 3px rgb(0, 255, 128),
+    23px 23px 3px rgb(211, 46, 46), 24px 24px 3px rgb(163, 68, 68),
+    9px 9px 3px rgba(233, 255, 244, 1), 25px 25px 3px rgb(79, 80, 108);
+}

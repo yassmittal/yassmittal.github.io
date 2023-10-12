@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+  .key{
+    @apply w-14 h-14 rounded-full flex justify-center items-center my-1 mx-1 bg-gray-600;
+  }
+}

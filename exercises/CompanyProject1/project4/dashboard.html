@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./index.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#F5B5441A] flex">
+  <div class="dashboard-side-bar h-[152vh] relative bg-white text-[#091B3D]">
+    <div class="mb-[44px]">
+      <img src="./images/Brand.svg" alt="" class="m-auto">
+    </div>
+
+    <div class="bg-[#F5B5441A] py-8 rounded-2xl mx-6">
+      <img src="./images/Avatar 6.svg" alt="" class="rounded-2xl mx-auto mb-4">
+      <h3 class="text-base leading-[26px] text-center font-bold ">Linh Nguyen</h3>
+      <p class="text-xs text-center font-normal text-[#091B3D66]">Owner & Founder</p>
+    </div>
+
+
+    <nav class="mt-6">
+      <div class="flex items-center py-[18.15px] rounded-2xl px-[26px]">
+        <img src="./images/Group.svg" alt="dashboard logo">
+        <p class="ml-[18.5px] text-sm leading-5 font-bold">Dashboard</p>
+      </div>
+
+      <a href="./message.html" class="flex items-center py-[18.15px] rounded-2xl px-[26px] text-[#091B3D66] hover:text-[#091B3D] cursor-pointer transition-colors relative">
+        <img src="./images/chatIcon.svg" alt="dashboard logo">
+        <p class="ml-[18.5px] text-sm leading-5 font-bold">Message</p>
+        <div class="bg-[#2772F0] rounded-lg font-bold  text-center text-white absolute right-6 top-4 px-2 w-6 h-6 flex items-center justify-center text-xs leading-4">5</div>
+      </a>
+
+      <a href="./feedPage.html" class="flex items-center py-[18.15px] rounded-2xl px-[26px] text-[#091B3D66] hover:text-[#091B3D] cursor-pointer transition-colors">
+        <img src="./images/taskIcon.svg" alt="dashboard logo">
+        <p class="ml-[18.5px] text-sm leading-5 font-bold">Project</p>
+      </a>
+
+      <div class="flex items-center py-[18.15px] rounded-2xl px-[26px] text-[#091B3D66] hover:text-[#091B3D] cursor-pointer transition-colors relative">
+        <img src="./images/calendarIcon.svg" alt="dashboard logo">
+        <p class="ml-[18.5px] text-sm leading-5 font-bold">Schedule</p>
+        <div class=" absolute right-[30px] top-6">
+          <img src="./images/dropDownIcon.svg" alt="drop down logo">
+        </div>
+
+      </div>
+
+      <div class="flex items-center py-[18.15px] rounded-2xl px-[26px] text-[#091B3D66] hover:text-[#091B3D] cursor-pointer transition-colors">
+        <img src="./images/clockIcon.svg" alt="dashboard logo">
+        <p class="ml-[18.5px] text-sm leading-5 font-bold">Activity</p>
+      </div>
+      
+    </nav>
+
+    <div class="px-6 absolute bottom-6 w-11/12">
+      <h3 class="font-bold text-[18px] leading-[28px] mb-6">My Teams</h3>
+      <div class=" bg-[#F5B5441A] flex items-end p-4 rounded-2xl w-full">
+        <div class="relative  mr-8">
+          <img src="./images/aWomanImage.svg" alt="" class="relative rounded-lg z-50 min-w-[30px]">
+          <img src="./images/AMenImage.svg" alt="" class="rounded-lg absolute -right-5 -top-3  min-w-[30px]">
+        </div>
+
+        <div>
+          <p class="text-sm font-bold leading-6">CaDesign</p>
+          <p class="text-[#091B3D66] text-xs mt-1">@cadesign</p>
+        </div>
+
+
+      </div>
+
+      <div class="w-full mt-4 flex items-center justify-center gap-[15px] py-4  border border-[#091B3D1A] rounded-2xl cursor-pointer">
+        <img src="./images/AddIcon.svg" alt="add icon">
+        <p class="text-[#2772F0] font-bold text-sm leading-6">Add New Team</p>
+      </div>
+    </div>
+
+  </div>
+  
+  <main class="w-[82%] px-16 py-8">
+    <header class=" flex justify-between items-center mb-16">
+      <div class="w-fit relative">
+        <input type="text" class="placeholder-[#091B3D66] placeholder-text-xs px-[52PX] py-4 rounded-2xl focus:outline-none" placeholder="Search for…">
+        <img src="./images/searchIcon.svg" alt="search Icon" class="absolute left-[18px] top-[18px]">
+      </div>
+
+      <div class="flex gap-6 ">
+        <div class="flex items-center justify-center w-14 h-14 bg-[#f5b5441A] rounded-2xl">
+          <img src="./images/Notification.svg" alt="notification icon">
+        </div>
+
+        <div class="flex items-center justify-center w-14 h-14 bg-[#f5b5441A] rounded-2xl">
+          <img src="./images/settingIcon.svg" alt="setting icon">
+        </div>
+
+        <div class="bg-[#2772F0] rounded-2xl py-4 w-[162px] flex items-center justify-center text-white">
+          <img src="./images/whiteAddIcon.svg" alt="add icon">
+          <p class="ml-[15px]">Start Project</p> 
+        </div>
+      </div>
+    </header>
+
+<!-- main section's main content here  -->
+
+
+
+<div class="flex flex-col  h-full justify-between">
+
+  <!-- my teams section which is 1st section is here  -->
+      <div>
+        <div class="flex items-center justify-between mb-8">
+          <h2 class="text-2xl leading-[34px] font-bold">My Teams</h2>
+          <div class="mr-1">
+            <img src="./images/threeDotIcon.svg" alt="three dot icon">
+          </div>
+        </div>
+  
+        <div class="flex items-center justify-between flex-wrap gap-[34px]">
+            <!-- first card below  -->
+          <div class="p-8 bg-white  rounded-2xl ">
+  
+            <div class="flex items-center justify-between">
+              <div class="flex items-end justify-start">
+  
+                <div class="relative w-fit mr-8">
+                  <img src="./images/aWomanImage.svg" alt="" class="relative rounded-lg z-50">
+                  <img src="./images/AMenImage.svg" alt="" class="rounded-lg absolute -right-5 -top-3">
+                </div>
+    
+                <div>
+                  <h3 class="text-base leading-[26px] font-bold">CaDesign</h3>
+                  <p class="text-xs text-[#091B3D66] font-bold">30 Members</p>
+                </div>
+  
+              </div>
+  
+              <div class="">
+                <img src="images/grayThreeDotIcon.svg" alt="three dot icon">
+              </div>
+  
+            </div>
+  
+            <div class="bg-[#F5B5441A] p-[14px] rounded-2xl mt-8 flex items-center gap-[10px]">
+              <img src="./images/Avatar 1.svg" alt="avtar image" class="rounded-lg">
+              <img src="./images/Avatar 2.svg" alt="avtar image" class="rounded-lg">
+              <img src="./images/Avatar 5.svg" alt="avtar image" class="rounded-lg">
+              <img src="./images/Avatar 8.svg" alt="avtar image" class="rounded-lg">
+              <img src="./images/Avatar 7.svg" alt="avtar image" class="rounded-lg">
+              <div class="w-8 h-8 rounded-[10px] flex items-center justify-center border border-dashed border-[#091B3D1A] font-bold text-sm"><p>+9</p></div>
+            </div>
+  
+          </div>
+  
+          <!-- second card below  -->
+          <div class="p-8 bg-white rounded-2xl w-fit">
+  
+            <div class="flex items-center justify-between">
+              <div class="flex items-end justify-start">
+  
+                <div class="relative w-fit mr-8">
+                  <img src="./images/Avatar 1.svg" alt="" class="relative rounded-lg z-50">
+                  <img src="./images/Avatar 3.svg" alt="" class="rounded-lg absolute -right-5 -top-3">
+                </div>
+    
+                <div>
+                  <h3 class="text-base leading-[26px] font-bold">UI/UX Designer</h3>
+                  <p class="text-xs text-[#091B3D66] font-bold">30 Members</p>
+                </div>
+  
+              </div>
+  
+              <div class="">
+                <img src="images/grayThreeDotIcon.svg" alt="three dot icon">
+              </div>
+  
+            </div>
+  
+            <div class="bg-[#F5B5441A] p-[14px] rounded-2xl mt-8 flex items-center gap-[10px]">
+              <img src="./images/Avatar 2.svg" alt="avtar image" class="rounded-lg">
+              <img src="./images/Avatar 8.svg" alt="avtar image" class="rounded-lg">
+              <img src="./images/Avatar 7.svg" alt="avtar image" class="rounded-lg">
+              <img src="./images/Avatar 6.svg" alt="avtar image" class="rounded-lg w-8">
+              <img src="./images/Avatar 3.svg" alt="avtar image" class="rounded-lg">
+              <img src="./images/Avatar 5.svg" alt="avtar image" class="rounded-lg">
+            </div>
+  
+          </div>
+  
+             <!-- third card below  -->
+          <div class="p-8 bg-white rounded-2xl w-fit">
+  
+            <div class="flex items-center justify-between">
+              <div class="flex items-end justify-start">
+  
+                <div class="relative w-fit mr-8">
+                  <img src="./images/Avatar 5.svg" alt="" class="relative rounded-lg z-50">
+                  <img src="./images/AMenImage.svg" alt="" class="rounded-lg absolute -right-5 -top-3">
+                </div>
+    
+                <div>
+                  <h3 class="text-base leading-[26px] font-bold">Developer</h3>
+                  <p class="text-xs text-[#091B3D66] font-bold">30 Members</p>
+                </div>
+  
+              </div>
+  
+              <div class="">
+                <img src="images/grayThreeDotIcon.svg" alt="three dot icon">
+              </div>
+  
+            </div>
+  
+            <div class="bg-[#F5B5441A] p-[14px] rounded-2xl mt-8 flex items-center gap-[10px]">
+              <img src="./images/Avatar 1.svg" alt="avtar image" class="rounded-lg">
+              <img src="./images/Avatar 8.svg" alt="avtar image" class="rounded-lg">
+              <img src="./images/Avatar 5.svg" alt="avtar image" class="rounded-lg">
+              <img src="./images/Avatar 6.svg" alt="avtar image" class="rounded-lg w-8">
+              <img src="./images/Avatar 2.svg" alt="avtar image" class="rounded-lg">
+              <img src="./images/Avatar 3.svg" alt="avtar image" class="rounded-lg">
+            </div>
+  
+          </div>
+  
+        </div>
+  
+      </div>
+  
+  <!-- my project section which is 2nd section is here  -->
+  
+      <div class="">
+  
+        <div class="flex items-center justify-between mb-8">
+          <h2 class="text-2xl leading-[34px] font-bold">My Projects</h2>
+          <div class="mr-1">
+            <img src="./images/threeDotIcon.svg" alt="three dot icon">
+          </div>
+        </div>
+  
+        <div class="flex items-center justify-between flex-wrap gap-[35px]">
+          <!-- first card below  -->
+          <div class="bg-white rounded-2xl p-8 w-[334px] h-[288px]">
+    
+            <div class="flex justify-between items-center mb-6" >
+    
+              <div>
+                <h3 class="text-base leading-[26px] font-bold">CaAll UI Kit</h3>
+                <p class="text-xs font-bold text-[#091B3D66]">CaDesign</p>
+              </div>
+              
+              <div>
+                <img src="images/grayThreeDotIcon.svg" alt="three dot icon">
+              </div>
+    
+            </div>
+    
+            <div class="flex gap-[19px] items-center justify-start mb-[28px]">
+              <div class="bg-[#091b3d1A] rounded-lg flex items-center justify-center gap-[6px] p-[6px]">
+                <img src="./images/linkAttachIcon.svg" alt="link icon" class="py-[1px] px-[2px]">
+                <p class="text-[#091b3d66] text-xs font-bold">12</p>
+              </div>
+    
+              <div class="bg-[#f5b5441A] rounded-lg flex items-center justify-center gap-[6px] p-[6px]">
+                <img src="./images/clockIconYellow.svg" alt="clock icon" class="p-[1px]">
+                <p class="text-xs font-bold text-[#F5B544]">5 days left</p>
+    
+              </div>
+            </div>
+    
+            <div class="flex items-center justify-between h-1">
+              <div class="bg-[#091B3D1A] w-[222px] h-1 rounded-t-[100px]">
+                <div class="bg-[#F5B544] rounded-t-[100px] w-[80%] h-full">
+                </div>
+              </div>
+    
+              <div>
+                <p class="text-sm font-bold leading-6 text-right">80%</p>
+              </div>
+            </div>
+    
+            <div class="bg-[#F5B5441A] p-[14px] rounded-2xl mt-8 flex items-center gap-[10px]">
+              <img src="./images/Avatar 2.svg" alt="avtar image" class="rounded-lg">
+              <img src="./images/Avatar 8.svg" alt="avtar image" class="rounded-lg">
+              <img src="./images/Avatar 7.svg" alt="avtar image" class="rounded-lg">
+              <img src="./images/Avatar 6.svg" alt="avtar image" class="rounded-lg w-8">
+              <img src="./images/Avatar 3.svg" alt="avtar image" class="rounded-lg">
+              <img src="./images/Avatar 5.svg" alt="avtar image" class="rounded-lg">
+            </div>
+    
+          </div>
+    
+          <!-- second card below  -->
+          <div class="bg-white rounded-2xl p-8 w-[334px] h-[288px]">
+    
+            <div class="flex justify-between items-center mb-6" >
+    
+              <div>
+                <h3 class="text-base leading-[26px] font-bold">Design Website for ca.design</h3>
+                <p class="text-xs font-bold text-[#091B3D66]">UI/UX Designer</p>
+              </div>
+              
+              <div>
+                <img src="images/grayThreeDotIcon.svg" alt="three dot icon">
+              </div>
+    
+            </div>
+    
+            <div class="flex gap-[19px] items-center justify-start mb-[28px]">
+              <div class="bg-[#091b3d1A] rounded-lg flex items-center justify-center gap-[6px] p-[6px]">
+                <img src="./images/linkAttachIcon.svg" alt="link icon" class="py-[1px] px-[2px]">
+                <p class="text-[#091b3d66] text-xs font-bold">5</p>
+              </div>
+    
+              <div class="bg-[#e6521f1A] rounded-lg flex items-center justify-center gap-[6px] p-[6px]">
+                <img src="./images/clockIconRed.svg" alt="clock icon" class="p-[1px]">
+                <p class="text-xs font-bold text-[#E6521F]">1 days left</p>
+    
+              </div>
+            </div>
+    
+            <div class="flex items-center justify-between h-1">
+              <div class="bg-[#091B3D1A] w-[222px] h-1 rounded-t-[100px]">
+                <div class="bg-[#F5B544] rounded-t-[100px] w-[65%] h-full">
+                </div>
+              </div>
+    
+              <div>
+                <p class="text-sm font-bold leading-6 text-right">65%</p>
+              </div>
+            </div>
+    
+            <div class="bg-[#F5B5441A] p-[14px] rounded-2xl mt-8 flex items-center gap-[10px]">
+              <img src="./images/Avatar 1.svg" alt="avtar image" class="rounded-lg">
+              <img src="./images/Avatar 2.svg" alt="avtar image" class="rounded-lg">
+              <img src="./images/Avatar 5.svg" alt="avtar image" class="rounded-lg">
+              <img src="./images/Avatar 8.svg" alt="avtar image" class="rounded-lg">
+              <img src="./images/Avatar 7.svg" alt="avtar image" class="rounded-lg">
+              <div class="w-8 h-8 rounded-[10px] flex items-center justify-center border border-dashed border-[#091B3D1A] font-bold text-sm"><p>+9</p></div>
+            </div>
+    
+          </div>
+  
+         <!-- third card below  -->
+          <div class="bg-white rounded-2xl p-8 w-[334px] h-[288px]">
+  
+            <div class="flex justify-between items-center mb-6" >
+    
+              <div>
+                <h3 class="text-base leading-[26px] font-bold">UX Research for Product</h3>
+                <p class="text-xs font-bold text-[#091B3D66]">UI/UX Designer</p>
+              </div>
+              
+              <div>
+                <img src="images/grayThreeDotIcon.svg" alt="three dot icon">
+              </div>
+    
+            </div>
+    
+            <div class="flex gap-[19px] items-center justify-start mb-[28px]">
+              <div class="bg-[#e6521f1A] rounded-lg flex items-center justify-center gap-[6px] p-[6px]">
+                <img src="./images/clockIconRed.svg" alt="clock icon" class="p-[1px]">
+                <p class="text-xs font-bold text-[#E6521F]">1 days left</p>
+              </div>
+            </div>
+    
+            <div class="flex items-center justify-between h-1">
+              <div class="bg-[#091B3D1A] w-[222px] h-1 rounded-t-[100px]">
+                <div class="bg-[#F5B544] rounded-t-[100px] w-[20%] h-full">
+                </div>
+              </div>
+    
+              <div>
+                <p class="text-sm font-bold leading-6 text-right">20%</p>
+              </div>
+            </div>
+    
+            <div class="bg-[#F5B5441A] p-[14px] rounded-2xl mt-8 flex items-center gap-[10px]">
+              <img src="./images/Avatar 5.svg" alt="avtar image" class="rounded-lg">
+              <img src="./images/Avatar 3.svg" alt="avtar image" class="rounded-lg">
+              <img src="./images/Avatar 6.svg" alt="avtar image" class="rounded-lg w-8">
+              <img src="./images/Avatar 7.svg" alt="avtar image" class="rounded-lg">
+              <img src="./images/Avatar 8.svg" alt="avtar image" class="rounded-lg">
+              <img src="./images/Avatar 2.svg" alt="avtar image" class="rounded-lg">
+            </div>
+    
+          </div>
+  
+        </div>
+      </div>
+  
+  
+      <!-- last section below  -->
+  
+      <div class="flex items-center justify-between flex-wrap gap-[35px]">
+        <div class="px-8 pt-8 pb-[15px] rounded-t-2xl bg-white w-[334px]">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="text-base leading-[26px] font-bold">Product Review for UI8 Mar…</h3>
+              <p class="text-xs font-bold text-[#091B3D66] mt-[6px]">CaDesign</p>
+            </div>
+    
+            <div>
+              <img src="./images/grayThreeDotIcon.svg" alt="three dot icon">
+            </div>
+          </div>
+    
+          <div class="bg-[#091b3d1A] rounded-lg flex items-center justify-center gap-[6px] p-[6px] w-fit mt-6">
+            <img src="./images/clockIcongray.svg" alt="clock icon" class="p-[1px]">
+            <p class="text-xs font-bold text-[#091B3D66]">10 days left</p>
+    
+          </div>
+        </div>
+  
+        <div class="px-8 pt-8 pb-[15px] rounded-t-2xl bg-white w-[334px]">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="text-base leading-[26px] font-bold">Development CaDesign We…</h3>
+              <p class="text-xs font-bold text-[#091B3D66] mt-[6px]">Developer</p>
+            </div>
+    
+            <div>
+              <img src="./images/grayThreeDotIcon.svg" alt="three dot icon">
+            </div>
+          </div>
+    
+          <div class="flex gap-[19px] items-center justify-start mt-6">
+            <div class="bg-[#091b3d1A] rounded-lg flex items-center justify-center gap-[6px] p-[6px]">
+              <img src="./images/linkAttachIcon.svg" alt="link icon" class="py-[1px] px-[2px]">
+              <p class="text-[#091b3d66] text-xs font-bold">10</p>
+            </div>
+  
+            <div class="bg-[#f5b5441A] rounded-lg flex items-center justify-center gap-[6px] p-[6px]">
+              <img src="./images/clockIconYellow.svg" alt="clock icon" class="p-[1px]">
+              <p class="text-xs font-bold text-[#F5B544]">5 days left</p>
+  
+            </div>
+          </div>
+  
+        </div>
+  
+        <div class="px-8 pt-8 pb-[15px] rounded-t-2xl bg-white w-[334px]">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="text-base leading-[26px] font-bold">Development CaDesign We…</h3>
+              <p class="text-xs font-bold text-[#091B3D66] mt-[6px]">Developer</p>
+            </div>
+    
+            <div>
+              <img src="./images/grayThreeDotIcon.svg" alt="three dot icon">
+            </div>
+          </div>
+    
+          <div class="bg-[#091b3d1A] rounded-lg flex items-center justify-center gap-[6px] p-[6px] w-fit mt-6">
+            <img src="./images/clockIcongray.svg" alt="clock icon" class="p-[1px]">
+            <p class="text-xs font-bold text-[#091B3D66]">8 days left</p>
+    
+          </div>
+  
+        </div>
+  
+      </div>
+
+</div>  
+
+  </main>
+
+
+</body>
+</html>

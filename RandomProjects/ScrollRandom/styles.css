@@ -1,0 +1,17 @@
+/* Hide the default scrollbar */
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.container{
+  overflow: auto;
+}
+
+/* Style the custom scrollbar */
+.container.show-scrollbar {
+  /* Add your scrollbar styles here */
+  width: 200px;
+  height: 20px;
+  border: 3px solid black;
+  background-color: green;
+}

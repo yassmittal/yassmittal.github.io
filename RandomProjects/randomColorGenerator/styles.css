@@ -1,0 +1,22 @@
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+button{
+  background-color: Green;
+  color: #fff;
+  font-weight: bold;
+  padding: 1em 3em;
+  border: none;
+  border-radius: 3px;
+}
+
+button:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}

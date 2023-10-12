@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard 1</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+</head>
+<body>
+
+  
+  <div class="complete-dashboard">
+
+    <div class="dashboard-side-bar "></div>
+
+    <main class="dashboard-main-section">
+      <div>
+        <h1>Dashboard</h1>
+        <p class="sub-title">Welcome back, Maria!</p>
+      </div>
+
+      <!-- time rectangle below  -->
+      <div class="time-rectangle">
+        <div><p>All Time</p></div>
+        <div><p>12 months</p></div>
+        <div><p>6 Months</p></div>
+        <div><p>7 days</p></div>
+        <div><p>30 days</p></div>
+        <div><p>24 hours</p></div>
+        <div><p>8 Hours</p></div>
+
+      </div>
+
+      <div class="StatsContainer">
+        <div class="visitors-wrapper">
+          <div>
+            <p class=" stats-subTitle">Visitors</p>
+            <p class="visitors-number">1,260</p>
+          </div>
+
+          <div class="increase-percentage">
+            <div>
+              <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.13185 8.45905C5.13783 8.42222 5.14059 8.38496 5.1401 8.34767L5.1401 1.99835L5.2045 2.1368C5.26855 2.27213 5.35572 2.39524 5.46208 2.50063L7.24258 4.28113C7.46644 4.51563 7.82654 4.55503 8.09581 4.37451C8.38275 4.1644 8.44505 3.76147 8.23494 3.47451C8.21796 3.45133 8.19945 3.4293 8.17953 3.40859L4.9598 0.188862C4.70846 -0.0627596 4.30074 -0.062981 4.04912 0.188359C4.04896 0.18852 4.04878 0.188701 4.04862 0.188862L0.82889 3.40859C0.577772 3.66041 0.578335 4.06813 0.830158 4.31927C0.849979 4.33903 0.871068 4.35748 0.893284 4.37451C1.16255 4.55503 1.52266 4.51563 1.74651 4.28113L3.53024 2.50385C3.62482 2.40937 3.70413 2.30074 3.76528 2.18187L3.85221 1.98869L3.85221 8.31223C3.84 8.64119 4.06979 8.9298 4.39313 8.99159C4.74418 9.04852 5.0749 8.8101 5.13185 8.45905Z" fill="#0A9B50"/>
+              </svg>
+            </div>
+              
+            <p>2.67%</p>
+          </div>
+
+
+        </div>
+
+        <div class="resources-wrapper">
+          <div>
+            <p class=" stats-subTitle">Resources Saved</p>
+            <p class="resources-number">26</p>
+          </div>
+
+          <div class="decrease-percentage">
+            <div>
+              <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_632_8301)">
+                <path d="M3.86815 0.540949C3.86217 0.577775 3.85941 0.615043 3.8599 0.652331L3.8599 7.00165L3.7955 6.8632C3.73145 6.72787 3.64428 6.60476 3.53792 6.49937L1.75741 4.71887C1.53356 4.48437 1.17346 4.44497 0.904187 4.62549C0.617249 4.8356 0.554948 5.23853 0.765055 5.52549C0.782039 5.54867 0.800552 5.5707 0.820475 5.59141L4.0402 8.81114C4.29154 9.06276 4.69926 9.06298 4.95088 8.81164C4.95104 8.81148 4.95122 8.8113 4.95138 8.81114L8.17111 5.59141C8.42223 5.33959 8.42167 4.93187 8.16984 4.68073C8.15002 4.66097 8.12893 4.64252 8.10672 4.62549C7.83745 4.44497 7.47734 4.48437 7.25349 4.71887L5.46976 6.49615C5.37518 6.59063 5.29587 6.69926 5.23472 6.81813L5.14779 7.01131L5.14779 0.687768C5.16 0.358813 4.93021 0.0702048 4.60687 0.00840573C4.25582 -0.0485229 3.9251 0.189899 3.86815 0.540949Z" fill="#E24C4B"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_632_8301">
+                <rect width="9" height="9" fill="white" transform="translate(0 9) rotate(-90)"/>
+                </clipPath>
+                </defs>
+                </svg>
+            </div>
+              
+            <p>5.2%</p>
+          </div>
+
+
+        </div>
+
+        <div class="hottest-resource-wrapper">
+          <div>
+            <p class="hottest-resource-title">Hottest Resource</p>
+            <p class="hottest-resource-content-title">
+              How to <br>
+              Peel a <br>
+              Banana
+            </p>
+
+            
+          </div>
+          
+          <div class="line"></div>
+
+          <div>
+            <p class="view-count"><span class="view-count-number">56</span> <br> views</p>
+          </div>
+
+          <div class="increase-percentage">
+            <div>
+              <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.13185 8.45905C5.13783 8.42222 5.14059 8.38496 5.1401 8.34767L5.1401 1.99835L5.2045 2.1368C5.26855 2.27213 5.35572 2.39524 5.46208 2.50063L7.24258 4.28113C7.46644 4.51563 7.82654 4.55503 8.09581 4.37451C8.38275 4.1644 8.44505 3.76147 8.23494 3.47451C8.21796 3.45133 8.19945 3.4293 8.17953 3.40859L4.9598 0.188862C4.70846 -0.0627596 4.30074 -0.062981 4.04912 0.188359C4.04896 0.18852 4.04878 0.188701 4.04862 0.188862L0.82889 3.40859C0.577772 3.66041 0.578335 4.06813 0.830158 4.31927C0.849979 4.33903 0.871068 4.35748 0.893284 4.37451C1.16255 4.55503 1.52266 4.51563 1.74651 4.28113L3.53024 2.50385C3.62482 2.40937 3.70413 2.30074 3.76528 2.18187L3.85221 1.98869L3.85221 8.31223C3.84 8.64119 4.06979 8.9298 4.39313 8.99159C4.74418 9.04852 5.0749 8.8101 5.13185 8.45905Z" fill="#0A9B50"/>
+              </svg>
+            </div>
+              
+            <p>25%</p>
+          </div>
+
+         
+        </div>
+        
+        
+      </div>
+
+      <section class="fav-resource-wrapper">
+
+        
+      <div>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_632_8274)">
+              <path d="M18.7979 8.5961C18.7161 8.58282 18.6332 8.57669 18.5504 8.57776L4.44077 8.57776L4.74844 8.43467C5.04917 8.29233 5.32276 8.09861 5.55695 7.86227L9.51363 3.90558C10.0347 3.40814 10.1223 2.6079 9.72112 2.00952C9.25422 1.37188 8.35882 1.23343 7.72114 1.70034C7.66962 1.73808 7.62066 1.77922 7.57464 1.82349L0.419694 8.97844C-0.139465 9.53697 -0.139957 10.443 0.418576 11.0022C0.418934 11.0025 0.419336 11.0029 0.419694 11.0033L7.57464 18.1582C8.13425 18.7163 9.04029 18.715 9.59837 18.1554C9.64229 18.1114 9.68329 18.0645 9.72112 18.0151C10.1223 17.4168 10.0347 16.6165 9.51363 16.1191L5.5641 12.1552C5.35415 11.9451 5.11276 11.7688 4.84861 11.6329L4.41931 11.4397L18.4716 11.4397C19.2026 11.4669 19.844 10.9562 19.9813 10.2377C20.1078 9.4576 19.578 8.72265 18.7979 8.5961Z" fill="#989898"/>
+            </g>
+          <defs>
+          <clipPath id="clip0_632_8274">
+          <rect width="20" height="20" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>
+      </div>
+      
+      <div class="fav-resource-content">
+        <h2>Favorite Resource by Country</h2>
+        <div class="fav-resource-main-content">
+          <div>
+            <div class="country-name-wrapper">
+              <h3 class="country-name">Brevard <br> County</h3>
+            </div>
+
+            <div class="article-name-wrapper">
+                <div class="">
+                  <img src="./images/aFamilyImage.svg" alt="a family image">
+                </div>
+
+                <h3>Article <br>Name</h3>
+            </div>
+
+          </div>
+
+          <div>
+            
+            <div class="views-wrapper">
+              <p><span class="view-count-number">56</span> <br> views</p>
+              <div class="increase-percentage">
+                <div>
+                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.13185 8.45905C5.13783 8.42222 5.14059 8.38496 5.1401 8.34767L5.1401 1.99835L5.2045 2.1368C5.26855 2.27213 5.35572 2.39524 5.46208 2.50063L7.24258 4.28113C7.46644 4.51563 7.82654 4.55503 8.09581 4.37451C8.38275 4.1644 8.44505 3.76147 8.23494 3.47451C8.21796 3.45133 8.19945 3.4293 8.17953 3.40859L4.9598 0.188862C4.70846 -0.0627596 4.30074 -0.062981 4.04912 0.188359C4.04896 0.18852 4.04878 0.188701 4.04862 0.188862L0.82889 3.40859C0.577772 3.66041 0.578335 4.06813 0.830158 4.31927C0.849979 4.33903 0.871068 4.35748 0.893284 4.37451C1.16255 4.55503 1.52266 4.51563 1.74651 4.28113L3.53024 2.50385C3.62482 2.40937 3.70413 2.30074 3.76528 2.18187L3.85221 1.98869L3.85221 8.31223C3.84 8.64119 4.06979 8.9298 4.39313 8.99159C4.74418 9.04852 5.0749 8.8101 5.13185 8.45905Z" fill="#0A9B50"/>
+                  </svg>
+                </div>
+                  
+                <p>25%</p>
+              </div>
+
+            </div>
+
+            <div class="input-wrapper">
+              <input type="text" placeholder="Search">
+              <div class="search-icon">
+                <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.43237 2.24707C5.19793 2.24707 1.74707 5.69794 1.74707 9.93237C1.74707 14.1668 5.19793 17.6177 9.43237 17.6177C11.2355 17.6177 12.8926 16.9883 14.2056 15.9429L17.7585 19.4959C18.1002 19.8375 18.6542 19.8375 18.9958 19.4959C19.3386 19.154 19.3386 18.5987 18.9958 18.2568L15.4429 14.7056C16.488 13.3927 17.1177 11.7352 17.1177 9.93237C17.1177 5.69794 13.6668 2.24707 9.43237 2.24707ZM9.43237 3.99707C12.721 3.99707 15.3677 6.64371 15.3677 9.93237C15.3677 13.2211 12.721 15.8677 9.43237 15.8677C6.1437 15.8677 3.49707 13.2211 3.49707 9.93237C3.49707 6.64371 6.1437 3.99707 9.43237 3.99707Z" fill="#575758"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_632_8278)">
+          <path d="M1.20211 11.4039C1.28395 11.4172 1.36676 11.4233 1.44963 11.4222L15.5592 11.4222L15.2516 11.5653C14.9508 11.7077 14.6772 11.9014 14.4431 12.1377L10.4864 16.0944C9.96527 16.5919 9.87771 17.3921 10.2789 17.9905C10.7458 18.6281 11.6412 18.7666 12.2789 18.2997C12.3304 18.2619 12.3793 18.2208 12.4254 18.1765L19.5803 11.0216C20.1395 10.463 20.14 9.55699 19.5814 8.99783C19.5811 8.99747 19.5807 8.99707 19.5803 8.99671L12.4254 1.84176C11.8658 1.28372 10.9597 1.28497 10.4016 1.84458C10.3577 1.88863 10.3167 1.93549 10.2789 1.98486C9.87771 2.58324 9.96527 3.38347 10.4864 3.88092L14.4359 7.84476C14.6459 8.05494 14.8872 8.23117 15.1514 8.36707L15.5807 8.56026L1.52838 8.56026C0.797364 8.53311 0.156012 9.04375 0.0186813 9.76229C-0.107826 10.5424 0.421998 11.2773 1.20211 11.4039Z" fill="#989898"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_632_8278">
+          <rect width="20" height="20" fill="white" transform="translate(20 20) rotate(-180)"/>
+          </clipPath>
+          </defs>
+          </svg>
+      </div>
+
+      
+      </section>
+
+        <div class="most-popular-resources flex-column">
+          <h2>Most Popular Resources</h2>
+
+          <div>
+            <div>
+              <div>
+                <img src="./images/aChildImage.svg" alt="">
+              </div>
+
+              <div>
+                <h3>Title Of Resource Content</h3>
+                <p class="sub-title">Posted on 06/01/2021</p>
+              </div>
+
+              <div>
+                <p class="views text"><span class="views-number">56 <br> </span> views</p>
+              </div>
+            </div>
+          </div>
+
+          
+          <div>
+            <div>
+              <div>
+                <img src="./images/child2.svg" alt="">
+              </div>
+
+              <div>
+                <h3>Title Of Resource Content</h3>
+                <p class="sub-title">Posted on 06/01/2021</p>
+              </div>
+
+              <div>
+                <p class="views text"><span class="views-number">50 <br> </span> views</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <div>
+                <img src="./images/toyImage.svg" alt="">
+              </div>
+
+              <div>
+                <h3>Title Of Resource Content</h3>
+                <p class="sub-title">Posted on 06/01/2021</p>
+              </div>
+
+              <div>
+                <p class="views text"><span class="views-number">45 <br> </span> views</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <div>
+                <img src="./images/child3.svg" alt="">
+              </div>
+
+              <div>
+                <h3>Title Of Resource Content</h3>
+                <p class="sub-title">Posted on 06/01/2021</p>
+              </div>
+
+              <div>
+                <p class="views text"><span class="views-number">44 <br> </span> views</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <div>
+                <img src="./images/child2.svg" alt="">
+              </div>
+
+              <div>
+                <h3>Title Of Resource Content</h3>
+                <p class="sub-title">Posted on 06/01/2021</p>
+              </div>
+
+              <div>
+                <p class="views text"><span class="views-number">44 <br> </span> views</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <div>
+                <img src="./images/toyImage.svg" alt="">
+              </div>
+
+              <div>
+                <h3>Title Of Resource Content</h3>
+                <p class="sub-title">Posted on 06/01/2021</p>
+              </div>
+
+              <div>
+                <p class="views text"><span class="views-number">39 <br> </span> views</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <div>
+                <img src="./images/aChildImage.svg" alt="">
+              </div>
+
+              <div>
+                <h3>Title Of Resource Content</h3>
+                <p class="sub-title">Posted on 06/01/2021</p>
+              </div>
+
+              <div>
+                <p class="views text"><span class="views-number">33 <br> </span> views</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <div>
+                <img src="./images/child3.svg" alt="">
+              </div>
+
+              <div>
+                <h3>Title Of Resource Content</h3>
+                <p class="sub-title">Posted on 06/01/2021</p>
+              </div>
+
+              <div>
+                <p class="views text"><span class="views-number">30 <br> </span> views</p>
+              </div>
+            </div>
+          </div>
+
+          <div >
+            <div>
+              <div>
+                <img src="./images/toyImage.svg" alt="">
+              </div>
+
+              <div>
+                <h3>Title Of Resource Content</h3>
+                <p class="sub-title">Posted on 06/01/2021</p>
+              </div>
+
+              <div>
+                <p class="views text"><span class="views-number">25 <br> </span> views</p>
+              </div>
+            </div>
+          </div>
+          
+
+        </div>
+
+        <div class="site-visitors-wrapper">
+          <h2>Site Visitors</h2>
+
+          <div class="side-visitors-graph-wrapper">
+
+            <div class="background-lines">
+              <div class="background-line"></div>
+              <div class="background-line"></div>
+              <div class="background-line"></div>
+              <div class="background-line"></div>
+              <div class="background-line"></div>
+              <div class="background-line"></div>
+            </div>
+
+            <div class="graph-bars-wrapper">
+              <div>
+                <div class="graph-bar graph-bar-1"></div>
+                <div class="month"><p>Jan</p></div>
+              </div>
+
+              <div>
+                <div class="graph-bar graph-bar-2"></div>
+                <div class="month"><p>Feb</p></div>
+              </div>
+
+              <div>
+                <div class="graph-bar graph-bar-3"></div>
+                <div class="month"><p>Mar</p></div>
+              </div>
+
+              <div>
+                <div class="graph-bar graph-bar-4"></div>
+                <div class="month"><p>Apr</p></div>
+              </div>
+
+              <div>
+                <div class="graph-bar graph-bar-5"></div>
+                <div class="month"><p>May</p></div>
+              </div>
+
+              <div>
+                <div class="graph-bar graph-bar-6"></div>
+                <div class="month"><p>June</p></div>
+              </div>
+
+              <div>
+                <div class="graph-bar graph-bar-7"></div>
+                <div class="month"><p>July</p></div>
+              </div>
+
+              <div>
+                <div class="graph-bar graph-bar-8"></div>
+                <div class="month"><p>Aug</p></div>
+              </div>
+
+              <div>
+                <div class="graph-bar graph-bar-9"></div>
+                <div class="month"><p>Sep</p></div>
+              </div>
+
+              <div>
+                <div class="graph-bar graph-bar-10"></div>
+                <div class="month"><p>Oct</p></div>
+              </div>
+
+              <div>
+                <div class="graph-bar graph-bar-11"></div>
+                <div class="month"><p>Nov</p></div>
+              </div>
+
+              <div>
+                <div class="graph-bar graph-bar-12"></div>
+                <div class="month"><p>Dec</p></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="country-vise-visitors-wrapper">
+          <h2>Visitors by County</h2>
+
+          <div class="country-vise-visitors-graph-wrapper">
+            <div class="background-lines">
+              <div class="background-line"></div>
+              <div class="background-line"></div>
+              <div class="background-line"></div>
+              <div class="background-line"></div>
+              <div class="background-line"></div>
+              <div class="background-line"></div>
+              <div class="background-line"></div>
+            </div>
+
+            <div class="country-vise-visitor-graph-bars-wrapper">
+              <div>
+                <div class="country-name"><p>Apalachicola</p></div>
+                <div class="country-vise-visitor-graph-bar country-vise-visitor-graph-bar-1"></div>
+              </div>
+  
+              <div>
+                <div class="country-name"><p>Arcadia</p></div>
+                <div class="country-vise-visitor-graph-bar country-vise-visitor-graph-bar-2"></div>
+              </div>
+  
+              <div>
+                <div class="country-name"><p>Bartow</p></div>
+                <div class="country-vise-visitor-graph-bar country-vise-visitor-graph-bar-3"></div>
+              </div>
+  
+              <div>
+                <div class="country-name"><p>Blountstown</p></div>
+                <div class="country-vise-visitor-graph-bar country-vise-visitor-graph-bar-4"></div>
+              </div>
+  
+              <div>
+                <div class="country-name"><p>Bonifay</p></div>
+                <div class="country-vise-visitor-graph-bar country-vise-visitor-graph-bar-5"></div>
+              </div>
+  
+              <div>
+                <div class="country-name"><p>Bradenton</p></div>
+                <div class="country-vise-visitor-graph-bar country-vise-visitor-graph-bar-6"></div>
+              </div>
+  
+              <div>
+                <div class="country-name"><p>Bristol</p></div>
+                <div class="country-vise-visitor-graph-bar country-vise-visitor-graph-bar-7"></div>
+              </div>
+  
+              <div>
+                <div class="country-name"><p>Bronson</p></div>
+                <div class="country-vise-visitor-graph-bar country-vise-visitor-graph-bar-8"></div>
+              </div>
+  
+              <div>
+                <div class="country-name"><p>Brooksville</p></div>
+                <div class="country-vise-visitor-graph-bar country-vise-visitor-graph-bar-9"></div>
+              </div>
+  
+              <div>
+                <div class="country-name"><p>Bunnell</p></div>
+                <div class="country-vise-visitor-graph-bar country-vise-visitor-graph-bar-10"></div>
+              </div>
+  
+              <div>
+                <div class="country-name"><p>Bushnell</p></div>
+                <div class="country-vise-visitor-graph-bar country-vise-visitor-graph-bar-11"></div>
+              </div>
+  
+              <div>
+                <div class="country-name"><p>Chipley</p></div>
+                <div class="country-vise-visitor-graph-bar country-vise-visitor-graph-bar-12"></div>
+              </div>
+  
+              <div>
+                <div class="country-name"><p>Clearwater</p></div>
+                <div class="country-vise-visitor-graph-bar country-vise-visitor-graph-bar-13"></div>
+              </div>
+  
+              <div>
+                <div class="country-name"><p>Crawfordville</p></div>
+                <div class="country-vise-visitor-graph-bar country-vise-visitor-graph-bar-14"></div>
+              </div>
+  
+              <div>
+                <div class="country-name"><p>Crestview</p></div>
+                <div class="country-vise-visitor-graph-bar country-vise-visitor-graph-bar-15"></div>
+              </div>
+            </div>
+
+          </div>
+          
+          <div class="scroll-bar">
+            <div class="scroll"></div>
+          </div>
+        </div>
+
+        <div class="most-active-section-wrapper">
+          <div class="most-active-category">
+            <h2>Most Active Category</h2>
+            <div>
+              <h3>Health & <br>
+                Safety</h3>
+
+                <div class="visitors-number">
+                  <div>
+                    <p><span class="visitors-count">106</span> <br> visitors</p>
+                  </div> 
+
+                  <div class="increase-percentage">
+                    <div>
+                      <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.13185 8.45905C5.13783 8.42222 5.14059 8.38496 5.1401 8.34767L5.1401 1.99835L5.2045 2.1368C5.26855 2.27213 5.35572 2.39524 5.46208 2.50063L7.24258 4.28113C7.46644 4.51563 7.82654 4.55503 8.09581 4.37451C8.38275 4.1644 8.44505 3.76147 8.23494 3.47451C8.21796 3.45133 8.19945 3.4293 8.17953 3.40859L4.9598 0.188862C4.70846 -0.0627596 4.30074 -0.062981 4.04912 0.188359C4.04896 0.18852 4.04878 0.188701 4.04862 0.188862L0.82889 3.40859C0.577772 3.66041 0.578335 4.06813 0.830158 4.31927C0.849979 4.33903 0.871068 4.35748 0.893284 4.37451C1.16255 4.55503 1.52266 4.51563 1.74651 4.28113L3.53024 2.50385C3.62482 2.40937 3.70413 2.30074 3.76528 2.18187L3.85221 1.98869L3.85221 8.31223C3.84 8.64119 4.06979 8.9298 4.39313 8.99159C4.74418 9.04852 5.0749 8.8101 5.13185 8.45905Z" fill="#0A9B50"/>
+                      </svg>
+                    </div>
+                      
+                    <p>10%</p>
+                  </div>
+                </div>
+
+
+            </div>
+
+          </div>
+
+
+          <div class="most-active-country">
+            <h2>Most Active County</h2>
+            <div>
+              <h3>Leon</h3>
+
+                <div class="visitors-number">
+                  <div>
+                    <p><span class="visitors-count">106</span> <br> visitors</p>
+                  </div> 
+
+                  <div class="increase-percentage">
+                    <div>
+                      <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.13185 8.45905C5.13783 8.42222 5.14059 8.38496 5.1401 8.34767L5.1401 1.99835L5.2045 2.1368C5.26855 2.27213 5.35572 2.39524 5.46208 2.50063L7.24258 4.28113C7.46644 4.51563 7.82654 4.55503 8.09581 4.37451C8.38275 4.1644 8.44505 3.76147 8.23494 3.47451C8.21796 3.45133 8.19945 3.4293 8.17953 3.40859L4.9598 0.188862C4.70846 -0.0627596 4.30074 -0.062981 4.04912 0.188359C4.04896 0.18852 4.04878 0.188701 4.04862 0.188862L0.82889 3.40859C0.577772 3.66041 0.578335 4.06813 0.830158 4.31927C0.849979 4.33903 0.871068 4.35748 0.893284 4.37451C1.16255 4.55503 1.52266 4.51563 1.74651 4.28113L3.53024 2.50385C3.62482 2.40937 3.70413 2.30074 3.76528 2.18187L3.85221 1.98869L3.85221 8.31223C3.84 8.64119 4.06979 8.9298 4.39313 8.99159C4.74418 9.04852 5.0749 8.8101 5.13185 8.45905Z" fill="#0A9B50"/>
+                      </svg>
+                    </div>
+                      
+                    <p>10%</p>
+                  </div>
+                </div>
+
+
+            </div>
+
+          </div>
+        </div>
+
+    </main>
+
+  </div>
+  
+</body>
+</html>

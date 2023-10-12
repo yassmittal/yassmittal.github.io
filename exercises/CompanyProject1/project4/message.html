@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message</title>
+  <link rel="stylesheet" href="./index.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#F5B5441A] flex">
+  <div class="dashboard-side-bar relative bg-white text-[#091B3D] h-[1024px]">
+    <div class="mb-[44px]">
+      <img src="./images/Brand.svg" alt="" class="m-auto">
+    </div>
+
+    <div class="bg-[#F5B5441A] py-8 rounded-2xl mx-6">
+      <img src="./images/Avatar 6.svg" alt="" class="rounded-2xl mx-auto mb-4">
+      <h3 class="text-base leading-[26px] text-center font-bold ">Linh Nguyen</h3>
+      <p class="text-xs text-center font-normal text-[#091B3D66]">Owner & Founder</p>
+    </div>
+
+
+    <nav class="mt-6">
+      <a href="dashboard.html" class="flex items-center py-[18.15px] rounded-2xl px-[26px] text-[#091B3D66] hover:text-[#091B3D]">
+        <img src="./images/dashboardIcongreay.svg" alt="dashboard logo">
+        <p class="ml-[18.5px] text-sm leading-5 font-bold">Dashboard</p>
+      </a>
+
+      <a href="./message.html" class="flex items-center py-[18.15px] rounded-2xl px-[26px]  hover:text-[#091B3D] cursor-pointer transition-colors relative">
+        <img src="./images/chatIconYellow.svg" alt="dashboard logo">
+        <p class="ml-[18.5px] text-sm leading-5 font-bold">Message</p>
+        <div class="bg-[#2772F0] rounded-lg font-bold  text-center text-white absolute right-6 top-4 px-2 w-6 h-6 flex items-center justify-center text-xs leading-4">5</div>
+      </a>
+
+      <a href="./feedPage.html" class="flex items-center py-[18.15px] rounded-2xl px-[26px] text-[#091B3D66] hover:text-[#091B3D] cursor-pointer transition-colors">
+        <img src="./images/taskIcon.svg" alt="dashboard logo">
+        <p class="ml-[18.5px] text-sm leading-5 font-bold">Project</p>
+      </a>
+
+      <div class="flex items-center py-[18.15px] rounded-2xl px-[26px] text-[#091B3D66] hover:text-[#091B3D] cursor-pointer transition-colors relative">
+        <img src="./images/calendarIcon.svg" alt="dashboard logo">
+        <p class="ml-[18.5px] text-sm leading-5 font-bold">Schedule</p>
+        <div class=" absolute right-[30px] top-6">
+          <img src="./images/dropDownIcon.svg" alt="drop down logo">
+        </div>
+
+      </div>
+
+      <div class="flex items-center py-[18.15px] rounded-2xl px-[26px] text-[#091B3D66] hover:text-[#091B3D] cursor-pointer transition-colors">
+        <img src="./images/clockIcon.svg" alt="dashboard logo">
+        <p class="ml-[18.5px] text-sm leading-5 font-bold">Activity</p>
+      </div>
+      
+    </nav>
+
+    <div class="px-6 absolute bottom-6 w-11/12">
+      <h3 class="font-bold text-[18px] leading-[28px] mb-6">My Teams</h3>
+      <div class=" bg-[#F5B5441A] flex items-end p-4 rounded-2xl w-full">
+        <div class="relative  mr-8">
+          <img src="./images/aWomanImage.svg" alt="" class="relative rounded-lg z-50">
+          <img src="./images/AMenImage.svg" alt="" class="rounded-lg absolute -right-5 -top-3">
+        </div>
+
+        <div>
+          <p class="text-sm font-bold leading-6">CaDesign</p>
+          <p class="text-[#091B3D66] text-xs mt-1">@cadesign</p>
+        </div>
+
+
+      </div>
+
+      <div class="w-full mt-4 flex items-center justify-center gap-[15px] py-4 border border-[#091B3D1A] rounded-2xl cursor-pointer">
+        <img src="./images/AddIcon.svg" alt="add icon">
+        <p class="text-[#2772F0] font-bold text-sm leading-6">Add New Team</p>
+      </div>
+    </div>
+
+  </div>
+  
+  <main class="w-[82%] px-16 py-8">
+    <header class=" flex justify-between items-center mb-16">
+      <div class="w-fit relative">
+        <input type="text" class="placeholder-[#091B3D66] placeholder-text-xs px-[52PX] py-4 rounded-2xl focus:outline-none" placeholder="Search for…">
+        <img src="./images/searchIcon.svg" alt="search Icon" class="absolute left-[18px] top-[18px]">
+      </div>
+
+      <div class="flex gap-6 ">
+        <div class="flex items-center justify-center w-14 h-14 bg-[#f5b5441A] rounded-2xl">
+          <img src="./images/Notification.svg" alt="notification icon">
+        </div>
+
+        <div class="flex items-center justify-center w-14 h-14 bg-[#f5b5441A] rounded-2xl">
+          <img src="./images/settingIcon.svg" alt="setting icon">
+        </div>
+
+        <div class="bg-[#2772F0] rounded-2xl py-4 w-[162px] flex items-center justify-center text-white">
+          <img src="./images/whiteAddIcon.svg" alt="add icon">
+          <p class="ml-[15px]">Start Project</p> 
+        </div>
+      </div>
+    </header>
+
+
+    <div class="text-[#091B3D]">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-2xl leading-[34px] font-bold">Chats</h2>
+        <div class="mr-1">
+          <img src="./images/threeDotIcon.svg" alt="three dot icon">
+        </div>
+      </div>
+
+      <!-- complete chat box below  -->
+      <div class="w-full pb-10 bg-white rounded-t-[32px] overflow-hidden flex">
+        <!-- chat section side bar here below  -->
+        <div class="pt-[48px] px-[48px] w-[31.34%] min-w-[320px] overflow-hidden">
+          <div class="flex items-center justify-between mb-8 pr-3">
+            <h3 class="text-[18px] font-bold leading-[28px]">Direct Messages</h3>
+            <div>
+              <img src="images/plusIconBlue.svg" alt="add icon">
+            </div>
+          </div>
+
+          <div class="bg-[#f5b54466] hover:bg-[#f5b54466] transition-colors py-3 px-4 rounded-2xl flex items-center relative mt-4 cursor-pointer">
+            <img src="./images/Avatar 1.svg" alt="image human" class="rounded-lg mr-4">
+            <p class="font-bold text-sm leading-6">Terry McDaniel</p>
+            <div class="bg-[#2772F0] rounded-lg w-6 h-6 flex items-center justify-center  absolute right-6">
+              <p class="text-xs text-white">5</p>
+            </div>
+          </div>
+
+          <div class="bg-[#f5b5441A] hover:bg-[#f5b54466] transition-colors py-3 px-4 rounded-2xl flex items-center relative mt-4 cursor-pointer">
+            <img src="./images/Avatar 3.svg" alt="image human" class="rounded-lg mr-4">
+            <p class="font-bold text-sm leading-6">Charlotte Peters</p>
+            <div class="rounded-full w-3 h-3 bg-white absolute p-[2px] right-6">
+              <div class="bg-[#4B9F47] w-2 h-2 rounded-full"></div>
+            </div>
+          </div>
+
+          <div class="bg-[#f5b5441A] hover:bg-[#f5b54466] transition-colors cursor-pointer py-3 px-4 rounded-2xl flex items-center relative mt-4">
+            <img src="./images/Avatar 2.svg" alt="image human" class="rounded-lg mr-4">
+            <p class="font-bold text-sm leading-6">Randy Russell</p>
+            <div class="rounded-full w-3 h-3 bg-white absolute p-[2px] right-6">
+              <div class="bg-[#4B9F47] w-2 h-2 rounded-full"></div>
+            </div>
+          </div>
+
+          <div class="bg-[#f5b5441A] hover:bg-[#f5b54466] transition-colors cursor-pointer py-3 px-4 rounded-2xl flex items-center relative mt-4">
+            <img src="./images/Avatar 8.svg" alt="image human" class="rounded-lg mr-4">
+            <p class="font-bold text-sm leading-6">Pearl Ward</p>
+            <div class="absolute right-6">
+              <p class="text-xs font-normal text-[#091B3D66]">100</p>
+            </div>
+          </div>
+
+          <div class="bg-[#f5b5441A] hover:bg-[#f5b54466] transition-colors cursor-pointer py-3 px-4 rounded-2xl flex items-center relative mt-4">
+            <img src="./images/Avatar 7.svg" alt="image human" class="rounded-lg mr-4">
+            <p class="font-bold text-sm leading-6">Martha Gross</p>
+            <div class="rounded-full w-3 h-3 bg-white absolute p-[2px] right-6">
+              <div class="bg-[#4B9F47] w-2 h-2 rounded-full"></div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between mb-8 mt-12 pr-3">
+            <h3 class="text-[18px] font-bold leading-[28px]">Groups</h3>
+            <div>
+              <img src="images/plusIconBlue.svg" alt="add icon">
+            </div>
+          </div>
+
+          <div class="bg-[#f5b5441A] hover:bg-[#f5b54466] transition-colors cursor-pointer p-4 rounded-2xl flex items-center relative mt-4">
+            <p class="font-bold text-sm leading-6">#cadesign</p>
+            <div class="rounded-full w-3 h-3 bg-white absolute p-[2px] right-6">
+              <div class="bg-[#4B9F47] w-2 h-2 rounded-full"></div>
+            </div>
+          </div>
+
+          <div class="bg-[#f5b5441A] hover:bg-[#f5b54466] transition-colors cursor-pointer p-4 rounded-2xl flex items-center relative mt-4">
+            <p class="font-bold text-sm leading-6">#designteam</p>
+            <div class="rounded-full w-3 h-3 bg-white absolute p-[2px] right-6">
+              <div class="bg-[#4B9F47] w-2 h-2 rounded-full"></div>
+            </div>
+          </div>
+
+          <div class="bg-[#f5b5441A] hover:bg-[#f5b54466] transition-colors cursor-pointer p-4 rounded-2xl flex items-center relative mt-4">
+            <p class="font-bold text-sm leading-6">#developer</p>
+            <div class="rounded-full w-3 h-3 bg-white absolute p-[2px] right-6">
+              <div class="bg-[#4B9F47] w-2 h-2 rounded-full"></div>
+            </div>
+          </div>
+
+          
+        </div>
+
+        <div class="w-[68%] py-12 px-8">
+
+          <div class="flex w-full mb-12">
+            <div class="flex">
+
+              <div class="mr-6">
+                <img src="images/Avatar 1.svg" alt="person image" class="rounded-2xl w-14 h-14">
+              </div>
+  
+              <div class="flex flex-col items-start justify-center">
+                <h3 class="text-lg leading-7 font-bold">Terry McDaniel</h3>
+                <p class="text-sm leading-6 text-[#4B9F47] font-normal">Online</p>
+              </div>
+
+            </div>
+
+            <div class="w-[70%] flex items-center justify-end gap-4">
+
+              <div class="bg-[#f5b5441A] p-4 rounded-2xl cursor-pointer">
+                <img src="./images/calIcon.svg" alt="call icon">
+              </div>
+
+              <div class="bg-[#f5b5441A] p-4 rounded-2xl cursor-pointer">
+                <img src="./images/Videoicon.svg" alt="call icon">
+              </div>
+
+              <div class="bg-[#f5b5441A] p-[18px] py-[25px] rounded-2xl cursor-pointer">
+                <img src="./images/threeDotIconYellow.svg" alt="call icon">
+              </div>
+
+            </div>
+
+
+          </div>
+
+          <div class="flex flex-col">
+            <div class="flex flex-col gap-2 items-start justify-start">
+              <div class="bg-[#091B3D1A] py-4 px-6 rounded-t-3xl rounded-br-3xl rounded-bl-[4px]">
+                <p class="text-sm leading-6 font-normal">Hello Linh!</p>
+              </div>
+
+              <div class="bg-[#091B3D1A] py-4 px-6 rounded-t-3xl rounded-br-3xl rounded-bl-[4px]">
+                <p class="text-sm leading-6 font-normal">I really love your work, a great job 💪</p>
+              </div>
+
+              <div>
+                <p class="text-xs font-normal text-[#091B3D66] ml-4">08:20 AM</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2 items-start justify-start self-end mt-12 ">
+              <div class="bg-[#2772F01A] py-4 px-6 rounded-t-3xl rounded-br-[4px] rounded-bl-3xl self-end">
+                <p class="text-sm leading-6 font-normal text-[#2772F0]">👋 Hi Gabriel</p>
+              </div>
+
+              <div class="bg-[#2772F01A] py-4 px-6 rounded-t-3xl rounded-br-[4px] rounded-bl-3xl self-end">
+                <p class="text-sm leading-6 font-normal text-[#2772F0]">Thank you, I also love it.</p>
+              </div>
+
+              <div class="bg-[#2772F01A] py-4 px-6 rounded-t-3xl rounded-br-[4px] rounded-bl-3xl self-end">
+                <p class="text-sm leading-6 font-normal text-[#2772F0]">Good morning ☀️</p>
+              </div>
+
+              <div class="self-end">
+                <p class="text-xs font-normal text-[#091B3D66] mr-4 ">08:22 AM</p>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="mt-[70px]">
+            <div class="w-full rounded-3xl overflow-hidden p-3 relative h-[72px] ">
+
+              <img src="./images/Avatar 6.svg" alt="person image" class="rounded-2xl left-3 top-2 absolute">
+              <input type="text" id="message" class=" absolute top-0 left-0 right-0 bottom-0 rounded-3xl w-full h-72px py-6 bg-[#F5B5441A] pl-[84px] pr-24 focus:outline-none" placeholder="Type something…">
+
+              <div class="absolute top-[26px] right-[24px]">
+                <button>
+                  <img src="images/blueAddIcon.svg" alt="">
+                </button>
+
+                <button class="ml-4">
+                  <img src="images/blueLinkAttachIcon.svg" alt="">
+                </button>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+
+  </main>
+
+
+</body>
+</html>

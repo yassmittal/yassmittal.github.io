@@ -1,0 +1,10 @@
+.visitors{
+  border: 1px solid red;
+  border-radius: 5px;
+  padding: 10px 26px 24px 22px;
+
+}
+
+.container{
+  display: inline-block;
+}

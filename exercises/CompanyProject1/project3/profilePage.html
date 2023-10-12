@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="./homePage.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#1F2128]">
+  
+  <header class="header flex justify-between items-center pt-[47px] pb-[26px] pr-6 pl-[45px] relative">
+    <div>
+      <img src="./images/Group 20766.svg" alt="logo">
+    </div>
+
+    <div class="flex items-center justify-start">
+      <div class="notification relative mr-12">
+        <img src="./images/Notification.svg" alt="notification icon">
+      </div>
+
+      <div>
+        <img src="./images/bg copy 2.svg" alt="profile image" class="bg-[#FFA2C0] rounded-full">
+      </div>
+    </div>
+
+    <hr>
+    
+  </header>
+
+  <main class="flex h-full">
+
+    
+    <div class="side-bar pl-[50px] pr-[14px] relative h-full">
+
+      <div class="side-bar-wrapper  h-full">
+
+        <div class="side-bar-element text-[#808191] flex items-center cursor-pointer mt-7 hover:text-[#8C72FA]">
+          <img src="./images/GameGray.svg" alt="">
+          <p class="text-sm font-semibold relative ml-[18px] w-full pt-1 ">Wall</p>
+  
+          <hr class="">
+        </div>
+  
+        <div class="text-[#808191] hover:text-[#8C72FA] side-bar-element flex items-center cursor-pointer mt-7 active">
+          <img src="./images/ProfileViolet.svg" alt="">
+          <p class="text-sm font-semibold relative ml-[18px] w-full pt-1 ">Profile</p>
+        </div>
+  
+        <div class="text-[#808191]  hover:text-[#8C72FA] side-bar-element flex items-center cursor-pointer mt-7 ">
+          <img src="./images/Chat.svg" alt="">
+          <p class="text-sm font-semibold relative ml-[18px] w-full pt-1 ">Messages</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="profile-main-section w-full flex flex-col items-center justify-center text-white ">
+
+      <div class="relative">
+
+        <img src="./images/coverImage.jpg" alt="cover image">
+        <div class="absolute top-[37px] right-[37px]">
+          <button class="bg-transparent border-2 border-[#8C72FA] hover:bg-[#6C5DD3] transition-colors hover:border-[#6C5DD3] text-sm leading-5 text-white font-['Inter'] rounded-[10px] py-[8px] px-[18px]" type="button">Edit Your Cover</button>
+        </div>
+
+
+     
+          <div class="bg-[#242731] w-[90%] m-auto p-12 relative rounded-3xl -translate-y-1/2">
+  
+            <div class="flex gap-[18px] float-right ">
+   
+              <button type="button" class="rounded-2xl py-[18px] px-[43px] font-bold text-sm font-['Inter'] border border-[#8C72FA]">Messages</button>
+  
+              <button class="rounded-2xl bg-[#F0F3F61A] border-none p-[18px]">
+                <img src="./images/ChatIconWhite.svg" alt="chat icon">
+              </button>
+  
+            </div>
+  
+            <div class="flex gap-8">
+  
+              <div class="border-4 border-[#8C72FA] rounded-full w-fit relative">
+                <img src="./images/profileImage.svg" alt="" class="m-[5px] w-[110px]">
+                <div class="circle absolute -top-0 -right-0 w-7 h-7 rounded-full bg-[#7FBA7A] border-2 border-[#242731]"></div>
+              </div>
+    
+              <div class="flex flex-col">
+                <h2 class="text-5xl leading-[72px] -tracking-[1px] font-semibold ">Elle Hudson</h2>
+                <h3 class="text-[21px] leading-5 font-semibold border-b-2 w-fit">Ellehudson91</h3>
+                <div class="flex items-center font-medium text-lg leading-6 gap-6 mt-2">
+                  <p>536K followers</p>
+                  <p>120 videos</p>
+                </div>
+              </div>
+  
+            </div>
+  
+            <div class="font-['Inter'] w-full  absolute left-1/2 -translate-x-1/2 -bottom-[60px]">
+              <div class="gap-2 m-auto w-fit items-center justify-center">
+  
+                <button class="bg-[#6C5DD3]  rounded-lg h-14 w-[200px] font-bold text-[13px] leading-[18px]" type="button">Creator's Wall</button>
+                <button class="rounded-lg h-14 w-[200px] font-bold text-[13px] leading-[18px] border border-[#8C72FA] hover:bg-[#6C5DD3] transition-colors" type="button">About Creator</button>
+                <button class="rounded-lg h-14 w-[200px] font-bold text-[13px] leading-[18px] border border-[#8C72FA] hover:bg-[#6C5DD3] transition-colors" type="button">Packages</button>
+  
+              </div>
+              
+            </div>
+  
+
+            <div class="bg-[#242731] opacity-60 absolute top-0 right-2 left-2 -bottom-2 rounded-3xl -z-10"></div>
+            <div class="bg-[#242731] opacity-20 absolute top-0 right-4 left-4 -bottom-4 rounded-3xl -z-20"></div>
+  
+  
+          </div>
+        
+
+      </div>
+      <!-- main profile image and cover section completed  -->
+
+      <div class="bg-[#242731] rounded-[32px] overflow-auto">
+
+        <div class="relative">
+          <img src="./images/girlImageHandOnHair.svg" alt="a girl image">
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <button class="bg-[#1B1D21D9] py-[34px] px-[38px] rounded-2xl">
+              <img src="./images/playButtonicon.svg" alt="button icon">
+            </button>
+          </div>
+
+          <div class="flex items-center gap-2 absolute left-8 bottom-8">
+            <button class="bg-[#1B1D21B3] p-[5px]  rounded">
+              <img src="./images/button-pause.svg" alt="pause button icon">
+            </button>
+
+            <button class="bg-[#1B1D21B3] p-[5px]  rounded">
+              <img src="./images/sound.svg" alt="sound icon">
+            </button>
+
+            <button class=" rounded">
+              <img src="./images/sound control.svg" alt="sound icon">
+            </button>
+          </div>
+
+          <div class="flex items-center gap-2 absolute right-8 bottom-8">
+            <button class="bg-[#1B1D21B3] p-1  rounded">
+              <img src="./images/Shape.svg" alt="pause button icon">
+            </button>
+
+            <button class="bg-[#1B1D21B3] p-1  rounded">
+              <img src="./images/cinema.svg" alt="sound icon">
+            </button>
+
+            <button class="bg-[#1B1D21B3] p-1  rounded">
+              <img src="./images/zoom-e.svg" alt="sound icon">
+            </button>
+          </div>
+        </div>
+
+        <div class=" px-[31px]">
+
+          <div class="flex items-center float-right mt-[27px]">
+            <div class="mr-[20px] flex items-center">
+              <div class="circle w-2 h-2 rounded-full bg-[#0049C6]"></div>
+              <p class="text-xs font-medium text-[#808191] ml-2">8.1M views</p>
+            </div>
+  
+            <div class=" flex items-center">
+              <div class="circle w-2 h-2 rounded-full bg-[#7FBA7A]"></div>
+              <p class="text-xs font-medium text-[#808191] ml-2">3 months ago</p>
+            </div>
+
+            <div>
+              <button class="bg-[#FF754C] rounded-lg font-medium text-[13px] leading-[18px] py-[3px] px-3 ml-[26px]">Follow to view</button>
+            </div>
+  
+            <div class="flex items-center ml-[40px] relative ">
+              <img src="./images/sendIcon.svg" alt="">
+              <button class="edit-delete-toggle-btn z-10">
+                  <img src="./images/Group 20672.svg" alt="" class="ml-4 pointer-events-none">
+              </button>
+
+              
+              <div class="edit-delete-toggle-content absolute -bottom-14 right-0 border border-[#FE754D] rounded-md">
+                <div class="bg-transparent pr-[14.7px] pl-[11px] pt-[11px] pb-[7px] text-[7.36px] leading-[10.31px] tracking-[0.0041em] rounded-[5px]">Edit</div>
+                <div class="bg-[#FE754D] pr-[14.7px] pl-[11px] py-[7px] text-[7.36px] leading-[10.31px] tracking-[0.0041em] rounded-[5px]">Delete</div>
+              </div>
+
+            </div>
+  
+          </div>
+  
+          <div class="w-full -translate-y-5">
+  
+            <div class="flex items-start w-full pt-0">
+              <div class="mr-[23px]">
+                <img src="./images/sittingGirl.svg" alt="">
+              </div>
+  
+              <div class="">
+  
+                <div class="flex items-center">
+                  <h4 class="text-lg font-medium"> Master Wayne</h4>
+                  <p class="text-[13px] leading-6 font-light ml-[33px]">02/05/2022, Wednesday</p>
+                </div>
+  
+                <div>
+                  <p class="font-medium text-lg leading-6 text-[#8C72FA] mt-[3px]">Video title here.</p>
+                </div>
+  
+                <div class="">
+                  <p class="font-light text-base leading-6  w-full">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus consequat amet ipsum ornare <br> aenean urna, sagittis, risus. Pretium mal amet ipsum ornare aenean urna, sagittis, risus. Pretium <br> malesuada orci, donec vitae diam dignissim mattis. Risus, fringilla blandit nec <br> faucibus lacus, cras pellentesque volutpat justo.</p>
+                </div>
+  
+              </div>
+            </div>
+  
+  
+          </div>
+
+        </div>
+
+ 
+
+      </div>
+
+      <div class="mt-[62px]  ml-28">
+
+        <div class="flex gap-8 z-50 translate-y-10">
+          <img src="./images/img9.svg" alt="girl image" class="h-[575px]" >
+          <img src="./images/img10.svg" alt="girl image" class="h-[575px]">
+        </div> 
+
+        <div class=" px-[31px] w-[95%] bg-[#242731] bg-transparent pt-10 rounded-b-[32px] ">
+
+          <div class="flex items-center float-right mt-[27px] mr-0">
+            <div class="mr-6 flex items-center">
+              <div class="circle w-2 h-2 rounded-full bg-[#0049C6]"></div>
+              <p class="text-xs font-medium text-[#808191] ml-2">8.1M views</p>
+            </div>
+  
+            <div class=" flex items-center">
+              <div class="circle w-2 h-2 rounded-full bg-[#7FBA7A]"></div>
+              <p class="text-xs font-medium text-[#808191] ml-2">3 months ago</p>
+            </div>
+  
+            <div class="flex items-center ml-[45px] relative">
+              <img src="./images/Frame 55.svg" alt="">
+               <button class="edit-delete-toggle-btn  z-10">
+                 <img src="./images/Group 20672.svg" alt="" class="ml-4 pointer-events-none">
+               </button>
+
+               
+              <div class="edit-delete-toggle-content absolute -bottom-14 right-0 border border-[#FE754D] rounded-md">
+                <div class="bg-transparent pr-[14.7px] pl-[11px] pt-[11px] pb-[7px] text-[7.36px] leading-[10.31px] tracking-[0.0041em] rounded-[5px]">Edit</div>
+                <div class="bg-[#FE754D] pr-[14.7px] pl-[11px] py-[7px] text-[7.36px] leading-[10.31px] tracking-[0.0041em] rounded-[5px]">Delete</div>
+              </div>
+
+               
+            </div>
+  
+          </div>
+  
+          <div class="w-full -translate-y-5">
+  
+            <div class="flex items-start w-full pt-0">
+              <div class="mr-[23px]">
+                <img src="./images/sittingGirl.svg" alt="">
+              </div>
+  
+              <div class="">
+  
+                <div class="flex items-center">
+                  <h4 class="text-lg font-medium">Master Wayne</h4>
+                  <p class="text-[13px] leading-6 font-light ml-[33px]">02/05/2022, Wednesday</p>
+                </div>
+  
+                <div>
+                  <p class="font-medium text-lg leading-6 text-[#8C72FA] mt-1">Photos like a pro</p>
+                </div>
+  
+                <div class="">
+                  <p class="font-light text-base leading-6 mt-[2px] w-full">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus consequat amet ipsum ornare <br> aenean urna, sagittis, risus. Pretium mal amet ipsum ornare aenean urna, sagittis, risus. Pretium <br> malesuada orci, donec vitae diam dignissim mattis. Risus, fringilla blandit nec <br> faucibus lacus, cras pellentesque volutpat justo.</p>
+                </div>
+  
+              </div>
+            </div>
+  
+  
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="bg-[#242731] rounded-[32px] mt-[62px] overflow-auto">
+
+        <div class="relative">
+          <img src="./images/girlImageHandOnHair.svg" alt="a girl image">
+
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <button class="bg-[#1B1D21D9] py-[34px] px-[38px] rounded-2xl">
+              <img src="./images/playButtonicon.svg" alt="button icon">
+            </button>
+          </div>
+
+          <div class="flex items-center gap-2 absolute left-8 bottom-8">
+            <button class="bg-[#1B1D21B3] p-[5px]  rounded">
+              <img src="./images/button-pause.svg" alt="pause button icon">
+            </button>
+
+            <button class="bg-[#1B1D21B3] p-[5px]  rounded">
+              <img src="./images/sound.svg" alt="sound icon">
+            </button>
+
+            <button class=" rounded">
+              <img src="./images/sound control.svg" alt="sound icon">
+            </button>
+          </div>
+
+          <div class="flex items-center gap-2 absolute right-8 bottom-8">
+            <button class="bg-[#1B1D21B3] p-1  rounded">
+              <img src="./images/Shape.svg" alt="pause button icon">
+            </button>
+
+            <button class="bg-[#1B1D21B3] p-1  rounded">
+              <img src="./images/cinema.svg" alt="sound icon">
+            </button>
+
+            <button class="bg-[#1B1D21B3] p-1  rounded">
+              <img src="./images/zoom-e.svg" alt="sound icon">
+            </button>
+          </div>
+        </div>
+
+        <div class=" px-[31px]">
+
+          <div class="flex items-center float-right mt-[27px]">
+            <div class="mr-[20px] flex items-center">
+              <div class="circle w-2 h-2 rounded-full bg-[#0049C6]"></div>
+              <p class="text-xs font-medium text-[#808191] ml-2">8.1M views</p>
+            </div>
+  
+            <div class=" flex items-center">
+              <div class="circle w-2 h-2 rounded-full bg-[#7FBA7A]"></div>
+              <p class="text-xs font-medium text-[#808191] ml-2">3 months ago</p>
+            </div>
+
+            <div>
+              <button class="bg-[#FF754C] rounded-lg font-medium text-[13px] leading-[18px] py-[3px] px-3 ml-[26px]">Follow to view</button>
+            </div>
+  
+            <div class="flex items-center ml-[40px] relative ">
+              <img src="./images/sendIcon.svg" alt="">
+               <button class="edit-delete-toggle-btn  z-10">
+                 <img src="./images/Group 20672.svg" alt="" class="ml-4 pointer-events-none">
+               </button>
+
+               
+              <div class="edit-delete-toggle-content absolute -bottom-14 right-0 border border-[#FE754D] rounded-md">
+                <div class="bg-transparent pr-[14.7px] pl-[11px] pt-[11px] pb-[7px] text-[7.36px] leading-[10.31px] tracking-[0.0041em] rounded-[5px]">Edit</div>
+                <div class="bg-[#FE754D] pr-[14.7px] pl-[11px] py-[7px] text-[7.36px] leading-[10.31px] tracking-[0.0041em] rounded-[5px]">Delete</div>
+              </div>
+
+               
+            </div>
+  
+          </div>
+  
+          <div class="w-full -translate-y-5">
+  
+            <div class="flex items-start w-full pt-0">
+              <div class="mr-[23px]">
+                <img src="./images/sittingGirl.svg" alt="">
+              </div>
+  
+              <div class="">
+  
+                <div class="flex items-center">
+                  <h4 class="text-lg font-medium"> Master Wayne</h4>
+                  <p class="text-[13px] leading-6 font-light ml-[33px]">02/05/2022, Wednesday</p>
+                </div>
+  
+                <div>
+                  <p class="font-medium text-lg leading-6 text-[#8C72FA] mt-[3px]">Video title here.</p>
+                </div>
+  
+                <div class="">
+                  <p class="font-light text-base leading-6  w-full">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus consequat amet ipsum ornare <br> aenean urna, sagittis, risus. Pretium mal amet ipsum ornare aenean urna, sagittis, risus. Pretium <br> malesuada orci, donec vitae diam dignissim mattis. Risus, fringilla blandit nec <br> faucibus lacus, cras pellentesque volutpat justo.</p>
+                </div>
+  
+              </div>
+            </div>
+  
+  
+          </div>
+
+        </div>
+
+ 
+
+      </div>
+
+      <div class="px-[31px] w-[83%] bg-[#242731] bg-transparent rounded-[32px] mt-[54px] mb-[280px]">
+
+        <div class="flex items-center float-right mt-[27px] mr-0">
+          <div class="mr-6 flex items-center">
+            <div class="circle w-2 h-2 rounded-full bg-[#0049C6]"></div>
+            <p class="text-xs font-medium text-[#808191] ml-2">8.1M views</p>
+          </div>
+
+          <div class=" flex items-center">
+            <div class="circle w-2 h-2 rounded-full bg-[#7FBA7A]"></div>
+            <p class="text-xs font-medium text-[#808191] ml-2">3 months ago</p>
+          </div>
+
+          <div class="flex items-center ml-[45px] relative">
+            <img src="./images/Frame 55.svg" alt="">
+             <button class="edit-delete-toggle-btn z-10">
+               <img src="./images/Group 20672.svg" alt="" class="ml-4 pointer-events-none">
+             </button>
+
+             
+              <div class="edit-delete-toggle-content absolute -bottom-14 right-0 border border-[#FE754D] rounded-md">
+                <div class="bg-transparent pr-[14.7px] pl-[11px] pt-[11px] pb-[7px] text-[7.36px] leading-[10.31px] tracking-[0.0041em] rounded-[5px]">Edit</div>
+                <div class="bg-[#FE754D] pr-[14.7px] pl-[11px] py-[7px] text-[7.36px] leading-[10.31px] tracking-[0.0041em] rounded-[5px]">Delete</div>
+              </div>
+
+             
+          </div>
+
+        </div>
+
+        <div class="w-full -translate-y-5">
+
+          <div class="flex items-start w-full pt-0">
+            <div class="mr-[23px]">
+              <img src="./images/sittingGirl.svg" alt="">
+            </div>
+
+            <div class="">
+
+              <div class="flex items-center">
+                <h4 class="text-lg font-medium">Master Wayne</h4>
+                <p class="text-[13px] leading-6 font-light ml-[33px]">02/05/2022, Wednesday</p>
+              </div>
+
+              <div>
+                <p class="font-medium text-lg leading-6 text-[#8C72FA] mt-1">Photos like a pro</p>
+              </div>
+
+              <div class="">
+                <p class="font-light text-base leading-6 mt-[2px] w-full">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus consequat amet ipsum ornare <br> aenean urna, sagittis, risus. Pretium mal amet ipsum ornare aenean urna, sagittis, risus. Pretium <br> malesuada orci, donec vitae diam dignissim mattis. Risus, fringilla blandit nec <br> faucibus lacus, cras pellentesque volutpat justo.</p>
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+    </div>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>

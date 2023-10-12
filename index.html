@@ -1,515 +1,484 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yash's Portfolio</title>
-  <link rel="stylesheet" href="./exercises/personalPortfolio/styles.css">
-	<link rel="stylesheet" href="style2.css">
-	<link rel="shortcut icon" href="/MainImages/YashImagee-modified.png" type="image/x-icon" >
-  <script src="https://kit.fontawesome.com/06b3244631.js" crossorigin="anonymous"></script>
-</head>
-<body>
-	<header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yash's Portfolio</title>
+    <link rel="stylesheet" href="./exercises/personalPortfolio/styles.css" />
+    <link rel="stylesheet" href="style2.css" />
+    <link
+      rel="shortcut icon"
+      href="/MainImages/YashImagee-modified.png"
+      type="image/x-icon"
+    />
+    <script
+      src="https://kit.fontawesome.com/06b3244631.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <span class="fa-solid fa-code" aria-hidden="true"> Yash</span>
+      </div>
 
-		<div>
-			<span class="fa-solid fa-code" aria-hidden="true"> Yash</span> 
+      <button class="nav-toggle">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="#services" class="nav__link">My services</a></li>
+          <li><a href="#about" class="nav__link">About me</a></li>
+          <li><a href="#work" class="nav__link"> My work</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <div class="choose-theme-section">
+      <div>
+        <p>Choose Color Theme</p>
+        <button class="theme-1">Greyish</button>
+        <button class="theme-2">Pinkish</button>
+        <button class="theme-3">blue</button>
+      </div>
     </div>
-		
-    <button class="nav-toggle">
-			<span class="hamburger"></span>
-    </button>
-		
-    <nav class="nav">
-			
-			<ul class="nav__list">
-				<li><a href="index.html" class="nav__link">Home</a></li>
-				<li><a href="#services" class="nav__link">My services</a></li>
-				<li><a href="#about" class="nav__link">About me</a></li>
-				<li><a href="#work" class="nav__link"> My work</a></li>
-      </ul>
-			
-    </nav>
-    
-  </header>
-	
-  <!-- *****************introduction************** -->
-	
-  <section class="intro" id="home">
 
-		<h1 class="section__title section__title--intro">
-			Hi, I am <strong>Yash Mittal</strong>
-    </h1>
-		
-    <p class="section__subtitle section__subtitle--intro">Front-end dev</p>
-    <img src="./MainImages/profileImageYash.png" alt="A Picture Of Yash Mittal" class="intro__img">
-		
-  </section>
-	
-  <!-- *********my secvices****** -->
-  <section class="my-services" id="services">
-		
-		<h2 class="section__title section__title--services">What I do</h2>
-    <div class="services">
-			
-      <div class="service">
-				<h3>Web Development</h3>
+    <!-- *****************introduction************** -->
+
+    <section class="intro" id="home">
+      <h1 class="section__title section__title--intro">
+        Hi, I am <strong>Yash Mittal</strong>
+      </h1>
+
+      <p class="section__subtitle section__subtitle--intro">Front-end dev</p>
+      <img
+        src="./MainImages/profileImageYash.png"
+        alt="A Picture Of Yash Mittal"
+        class="intro__img"
+      />
+    </section>
+
+    <!-- *********my secvices****** -->
+    <section class="my-services" id="services">
+      <h2 class="section__title section__title--services">What I do</h2>
+      <div class="services">
+        <div class="service">
+          <h3>Web Development</h3>
+          <p>
+            I made a lot of clone website based on my knowledge of HTML5, CSS3
+            and Javascript.
+          </p>
+        </div>
+      </div>
+
+      <a href="#work" class="btn">My Work</a>
+    </section>
+
+    <!-- *************about me********** -->
+
+    <section class="about-me" id="about">
+      <h2 class="section__title section__title--about">Who I am</h2>
+      <p class="section__subtitle section__subtitle--about">
+        Front-end developer based out of Gwalior
+      </p>
+
+      <div class="about-me__body">
         <p>
-				  I made a lot of clone website based on my knowledge of HTML5, CSS3 and Javascript.
+          Hi, I am a web developer with excellent skills in HTML CSS, and
+          javascript. I believe in solving problems by using my own skill. From
+          the beginning I used to be a better problem solver than others, that's
+          why my interest in math never fades down, but with maths, I didn't get
+          so many chances to solve problems based on my mental ability that's
+          why my interest in web development increase day by day. And till now
+          whenever I think about my decision to change my carrier I always
+          appreciate myself for it. I am a very passionate person who wants to
+          build real-time projects to improve my skills. I am also a quick
+          learner who always wishes to increase knowledge.
         </p>
       </div>
-			
-    </div>
-		
-    <a href="#work" class="btn">My Work</a>
-		
-  </section>
-	
-  <!-- *************about me********** -->
-	
-	<section class="about-me" id="about">
-		
-		<h2 class="section__title section__title--about">Who I am</h2>
-		<p class="section__subtitle section__subtitle--about">
-			Front-end developer based out of Gwalior
-		</p>
-		
-		<div class="about-me__body">
-			<p>
-
-				Hi, I am a web developer with excellent skills in HTML CSS, and javascript. I believe in solving problems by using my own skill.
-
-From the beginning I used to be a better problem solver than others, that's why my interest in math never fades down,
-
-but with maths, I didn't get so many chances to solve problems based on my mental ability that's why my interest in web development increase day by day. And till now whenever I think about my decision to change my carrier I always appreciate myself for it.
-				I am a very passionate person who wants to build real-time projects to  
-				improve my skills. I am also a quick learner who always wishes to increase knowledge.
-			</p>
-		</div>
-		
-		<img src="./exercises/" alt="yash Image" class="about-me__img">
-	</section>
-	
-	<!-- *****my work*** -->
-
-	<section class="my-work" id="work">
-		<h2 class="section__title section__title--work">My work</h2>
-	
-		<p class="section__subtitle section__subtitle--work">A selection of my range of work</p>
-	
-		<div class="portfolio">
-	
-			<div class="drink-wrater-project">
-
-				<div class="image">
-					<a href="./exercises/drinkWater/" target="_blank">
-						<img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img">
-				  </a>
-				</div>
-
-				<div class="about-project">
-					<h3 class="title-project">Drink Water</h3>
-	
-					<p class="description-project">
-						Click on the glass to drink water as you want.
-					</p>
-				</div>
-				
-				<div class="details">
-					<strong>Click</strong> on the image to see the demo
-				</div>
-				</div>
-			
-			
-			<div class="playerLeaderboard-project">
-				<div class="image">
-
-					<a href="./exercises/playerLeaderboard/" target="_blank">
-						<img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img">
-					</a>
-
-				</div>
-				
-				<div class="about-project">
-					
-						<h3 class="title-project">Player LeaderBoard</h3>
-						<p class="description-project">
-							The public leaderboard to share their gameplay activity publicly.
-						</p>
-					
-				</div>
-				
-				<div class="details">
-					<strong>Click</strong> on the image to see the demo
-				</div>
-
-			</div>
-			
-			
-			<div class="music-player-project">
-
-				<div class="image">
-					<a href="./exercises/musicPlayer/" target="_blank">
-						<img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img">
-					</a>
-				</div>
-
-				<div class="about-project">
-					
-					<h3 class="title-project">Music Player</h3>
-	
-					<p class="description-project">
-						Click on the play button and play music.
-					</p>
-				
-			</div>
-
-			<div class="details">
-				<strong>Click</strong> on the image to see the demo
-			</div>
-				
-			</div>
-			
-			<div class="bmi-calculator-project">
-
-				<div class="image">
-
-					<a href="./exercises/BMICalculator/" target="_blank">
-						<img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img">
-				  </a>
-
-				</div>
-				
-
-				<div class="about-project">
-					<h3 class="title-project">BMI Calculater</h3>
-	
-					<p class="description-project">
-						By input the Weight and height of a person calculate body mass index
-					</p>
-			</div>
-
-			<div class="details">
-					<strong>Click</strong> on the image to see the demo
-				</div>
-
-			</div>
-			
-			<div class="pricing-card-project">
-
-				<div class="image">
-					<a href="./exercises/pricingCard/" target="_blank">
-						<img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img">
-					</a>
-				</div>
-
-				<div class="about-project">
-					
-					<h3 class="title-project">Pricing Card</h3>
-	
-					<p class="description-project">
-						Toggle button to change the price of the component.
-					</p>
-				
-			</div>
-
-			<div class="details">
-					<strong>Click</strong> on the image to see the demo
-				</div>
-
-			</div>
-			
-			<div class="portfolioProject">
-				
-				<div class="image">
-					<a href="./exercises/personalPorfolioFrontend/" target="_blank">
-						<img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img">
-				  </a>
-				</div>
-
-				<div class="about-project">
-					
-					<h3 class="title-project">Personal Portfolio</h3>
-	
-					<p class="description-project">
-						This is a dummy portfolio Project.
-					</p>
-				
-			</div>
-
-			<div class="details">
-					<strong>Click</strong> on the image to see the demo
-				</div>
-			</div>
-
-			<div class="scroll-animation-project">
-
-				<div class="image">
-					<a href="./exercises/scrollAnimation/" target="_blank">
-						<img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img">
-				  </a>
-				</div>
-
-				<div class="about-project">
-					<h3 class="title-project">Scroll Animation</h3>
-					<p class="description-project">
-						Scroll page and get the slider content.
-					</p>
-			</div>
-
-			<div class="details">
-					<strong>Click</strong> on the image to see the demo
-				</div>
-
-			</div>
-
-			<div class="expanding-cards-project">
-
-				<div class="image">
-					<a href="./exercises/expandingCards/" target="_blank">
-						<img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img">
-				  </a>
-				</div>
-
-				<div class="about-project">
-					<h3 class="title-project">Expanding Cards</h3>
-					<p class="description-project">
-						Click on the cards and get the full view and name of the places
-					</p>
-				</div>
-
-				<div class="details">
-					<strong>Click</strong> on the image to see the demo
-				</div>
-			</div>
-
-			<div class="carousal-image-project">
-
-				<div class="image">
-					<a href="./exercises/carousalImage/" target="_blank">
-						<img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img">
-				  </a>
-
-				</div>
-
-				<div class="about-project">
-					
-					<h3 class="title-project">Carousal Image</h3>
-	
-					<p class="description-project">
-						Automatically changing the image and you can also change on clicking the button.
-					</p>
-				
-			</div>
-
-			<div class="details">
-					<strong>Click</strong> on the image to see the demo
-				</div>
-
-			</div>
-
-			<div class="to-do-list-project">
-
-				<div class="image">
-					<a href="./exercises/todoList/" target="_blank">
-						<img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img">
-				  </a>
-
-					
-				</div>
-
-				<div class="about-project">
-					
-					<h3 class="title-project">To-do list</h3>
-	
-					<p class="description-project">
-						Add list of things that one wants to get done or that need to get done
-					</p>
-				
-			</div>
-
-			<div class="details">
-					<strong>Click</strong> on the image to see the demo
-				</div>
-
-
-			</div>
-
-			<div class="internship-project">
-
-				<div class="image">
-					<a href="./internshipProject/" target="_blank">
-						<img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img">
-				  </a>
-
-					
-				</div>
-
-				<div class="about-project">
-					
-					<h3 class="title-project">RP Alloys</h3>
-	
-					<p class="description-project">
-					Practice Project And made the whole home page of RP Alloys
-					</p>
-				
-			</div>
-
-			<div class="details">
-					<strong>Click</strong> on the image to see the demo
-				</div>
-
-
-			</div>
-			
-			<div class="movie-booking-project">
-
-				<div class="image">
-					<a href="./exercises/movieSeatBooking/" target="_blank">
-						<img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img">
-				  </a>
-					
-				</div>
-
-					<div class="about-project">
-							<h3 class="title-project">Movie Seat Booking</h3>
-							<p class="description-project">
-								Book a seat in a movie theatre as your choice
-							</p>
-					</div>
-
-				<div class="details">
-					<strong>Click</strong> on the image to see the demo
-				</div>
-
-
-			</div>
-
-			<div class="random-choice-project">
-
-				<div class="image">
-					<a href="./exercises/randomChoicePicker/" target="_blank">
-						<img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img">
-				  </a>
-					
-				</div>
-
-				<div class="about-project">
-					
-					<h3 class="title-project">Random Choice Picker</h3>
-	
-					<p class="description-project">
-						Enter all the choices that you want and get a random choice.
-					</p>
-				
-			</div>
-
-			<div class="details">
-					<strong>Click</strong> on the image to see the demo
-				</div>
-
-
-			</div>
-
-			<div class="FAQ-project">
-
-				<div class="image">
-					<a href="./exercises/frequentlyAskedQuestion/" target="_blank">
-						<img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img">
-				  </a>
-
-					
-				</div>
-
-				<div class="about-project">
-					
-					<h3 class="title-project">Frequently Asked Questions</h3>
-	
-					<p class="description-project">
-						Click the Question button and get the answer of the question.
-					</p>
-				
-			</div>
-
-			<div class="details">
-					<strong>Click</strong> on the image to see the demo
-				</div>
-
-			</div>
-
-			<div class="sliderBackground-project">
-
-				<div class="image">
-					<a href="./exercises/sliderBackground/" target="_blank">
-						<img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img">
-				  </a>
-				</div>
-
-				<div class="about-project">
-					<h3 class="title-project">Slider Background</h3>
-					<p class="description-project">
-						image with the samebackground blur image And change by clicking on icons
-					</p>
-				</div>
-
-				<div class="details">
-					<strong>Click</strong> on the image to see the demo
-				</div>
-			</div>
-			
-		</div>
-
-		<div>
-			<a href="./allProjectsFile/">
-				<button class="all-projects-button" type="button">Click Here to See All Projects</button>
-			</a>
-		</div>
-	</section>
-
-	
-<!--************* footer********* -->
-<footer class="footer">
-	<a href="mailto:yashmittalmm@gmail.com" class="footer__link">Yashmittalmm@gmail.com</a>
-	
-  <ul class="social-list">
-		
-		
-		<li class="social-list__item">
-			<a href="https://codepen.io/yassmittal" class="social-list__link" target="_blank">
-				<i class="fa-brands fa-codepen"></i>
-      </a>
-    </li>
-		
-    <li class="social-list__item">
-			<a href="https://twitter.com/Yshmittall" class="social-list__link" target="_blank">
-				<i class="fa-brands fa-twitter"></i>
-      </a>
-    </li>
-		
-    
-    <li class="social-list__item">
-			<a href="https://www.linkedin.com/in/yash-mittal-4b1020217/" class="social-list__link" target="_blank">
-				<i class="fa-brands fa-linkedin"></i>
-      </a>
-    </li>
-
-    
-    <li class="social-list__item">
-			<a href="https://github.com/yassmittal/" class="social-list__link"  target="_blank">
-				<i class="fa-brands fa-github"></i>
-      </a>
-    </li>
-		
-		
-  </ul>
-</footer>
-
-<script src="./exercises/personalPortfolio/script.js"></script>
-</body>
+
+      <img
+        src="./exercises/personalPortfolio/Images/1662120691598.jpg"
+        alt="yash Image"
+        class="about-me__img"
+      />
+    </section>
+
+    <!-- *****my work*** -->
+
+    <section class="my-work" id="work">
+      <h2 class="section__title section__title--work">My work</h2>
+
+      <p class="section__subtitle section__subtitle--work">
+        A selection of my range of work
+      </p>
+
+      <div class="portfolio">
+        <div class="drink-wrater-project">
+          <div class="image">
+            <a href="./exercises/drinkWater/" target="_blank">
+              <img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img" />
+            </a>
+          </div>
+
+          <div class="about-project">
+            <h3 class="title-project">Drink Water</h3>
+
+            <p class="description-project">
+              Click on the glass to drink water as you want.
+            </p>
+          </div>
+
+          <div class="details">
+            <strong>Click</strong> on the image to see the demo
+          </div>
+        </div>
+
+        <div class="playerLeaderboard-project">
+          <div class="image">
+            <a href="./exercises/playerLeaderboard/" target="_blank">
+              <img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img" />
+            </a>
+          </div>
+
+          <div class="about-project">
+            <h3 class="title-project">Player LeaderBoard</h3>
+            <p class="description-project">
+              The public leaderboard to share their gameplay activity publicly.
+            </p>
+          </div>
+
+          <div class="details">
+            <strong>Click</strong> on the image to see the demo
+          </div>
+        </div>
+
+        <div class="music-player-project">
+          <div class="image">
+            <a href="./exercises/musicPlayer/" target="_blank">
+              <img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img" />
+            </a>
+          </div>
+
+          <div class="about-project">
+            <h3 class="title-project">Music Player</h3>
+
+            <p class="description-project">
+              Click on the play button and play music.
+            </p>
+          </div>
+
+          <div class="details">
+            <strong>Click</strong> on the image to see the demo
+          </div>
+        </div>
+
+        <div class="bmi-calculator-project">
+          <div class="image">
+            <a href="./exercises/BMICalculator/" target="_blank">
+              <img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img" />
+            </a>
+          </div>
+
+          <div class="about-project">
+            <h3 class="title-project">BMI Calculater</h3>
+
+            <p class="description-project">
+              By input the Weight and height of a person calculate body mass
+              index
+            </p>
+          </div>
+
+          <div class="details">
+            <strong>Click</strong> on the image to see the demo
+          </div>
+        </div>
+
+        <div class="pricing-card-project">
+          <div class="image">
+            <a href="./exercises/pricingCard/" target="_blank">
+              <img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img" />
+            </a>
+          </div>
+
+          <div class="about-project">
+            <h3 class="title-project">Pricing Card</h3>
+
+            <p class="description-project">
+              Toggle button to change the price of the component.
+            </p>
+          </div>
+
+          <div class="details">
+            <strong>Click</strong> on the image to see the demo
+          </div>
+        </div>
+
+        <div class="portfolioProject">
+          <div class="image">
+            <a href="./exercises/personalPorfolioFrontend/" target="_blank">
+              <img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img" />
+            </a>
+          </div>
+
+          <div class="about-project">
+            <h3 class="title-project">Personal Portfolio</h3>
+
+            <p class="description-project">
+              This is a dummy portfolio Project.
+            </p>
+          </div>
+
+          <div class="details">
+            <strong>Click</strong> on the image to see the demo
+          </div>
+        </div>
+
+        <div class="scroll-animation-project">
+          <div class="image">
+            <a href="./exercises/scrollAnimation/" target="_blank">
+              <img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img" />
+            </a>
+          </div>
+
+          <div class="about-project">
+            <h3 class="title-project">Scroll Animation</h3>
+            <p class="description-project">
+              Scroll page and get the slider content.
+            </p>
+          </div>
+
+          <div class="details">
+            <strong>Click</strong> on the image to see the demo
+          </div>
+        </div>
+
+        <div class="expanding-cards-project">
+          <div class="image">
+            <a href="./exercises/expandingCards/" target="_blank">
+              <img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img" />
+            </a>
+          </div>
+
+          <div class="about-project">
+            <h3 class="title-project">Expanding Cards</h3>
+            <p class="description-project">
+              Click on the cards and get the full view and name of the places
+            </p>
+          </div>
+
+          <div class="details">
+            <strong>Click</strong> on the image to see the demo
+          </div>
+        </div>
+
+        <div class="carousal-image-project">
+          <div class="image">
+            <a href="./exercises/carousalImage/" target="_blank">
+              <img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img" />
+            </a>
+          </div>
+
+          <div class="about-project">
+            <h3 class="title-project">Carousal Image</h3>
+
+            <p class="description-project">
+              Automatically changing the image and you can also change on
+              clicking the button.
+            </p>
+          </div>
+
+          <div class="details">
+            <strong>Click</strong> on the image to see the demo
+          </div>
+        </div>
+
+        <div class="to-do-list-project">
+          <div class="image">
+            <a href="./exercises/todoList/" target="_blank">
+              <img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img" />
+            </a>
+          </div>
+
+          <div class="about-project">
+            <h3 class="title-project">To-do list</h3>
+
+            <p class="description-project">
+              Add list of things that one wants to get done or that need to get
+              done
+            </p>
+          </div>
+
+          <div class="details">
+            <strong>Click</strong> on the image to see the demo
+          </div>
+        </div>
+
+        <div class="internship-project">
+          <div class="image">
+            <a href="./internshipProject/" target="_blank">
+              <img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img" />
+            </a>
+          </div>
+
+          <div class="about-project">
+            <h3 class="title-project">RP Alloys</h3>
+
+            <p class="description-project">
+              Practice Project And made the whole home page of RP Alloys
+            </p>
+          </div>
+
+          <div class="details">
+            <strong>Click</strong> on the image to see the demo
+          </div>
+        </div>
+
+        <div class="movie-booking-project">
+          <div class="image">
+            <a href="./exercises/movieSeatBooking/" target="_blank">
+              <img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img" />
+            </a>
+          </div>
+
+          <div class="about-project">
+            <h3 class="title-project">Movie Seat Booking</h3>
+            <p class="description-project">
+              Book a seat in a movie theatre as your choice
+            </p>
+          </div>
+
+          <div class="details">
+            <strong>Click</strong> on the image to see the demo
+          </div>
+        </div>
+
+        <div class="random-choice-project">
+          <div class="image">
+            <a href="./exercises/randomChoicePicker/" target="_blank">
+              <img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img" />
+            </a>
+          </div>
+
+          <div class="about-project">
+            <h3 class="title-project">Random Choice Picker</h3>
+
+            <p class="description-project">
+              Enter all the choices that you want and get a random choice.
+            </p>
+          </div>
+
+          <div class="details">
+            <strong>Click</strong> on the image to see the demo
+          </div>
+        </div>
+
+        <div class="FAQ-project">
+          <div class="image">
+            <a href="./exercises/frequentlyAskedQuestion/" target="_blank">
+              <img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img" />
+            </a>
+          </div>
+
+          <div class="about-project">
+            <h3 class="title-project">Frequently Asked Questions</h3>
+
+            <p class="description-project">
+              Click the Question button and get the answer of the question.
+            </p>
+          </div>
+
+          <div class="details">
+            <strong>Click</strong> on the image to see the demo
+          </div>
+        </div>
+
+        <div class="sliderBackground-project">
+          <div class="image">
+            <a href="./exercises/sliderBackground/" target="_blank">
+              <img src="./MainImages/ProjectsThumbnail.jpg" alt="Project Img" />
+            </a>
+          </div>
+
+          <div class="about-project">
+            <h3 class="title-project">Slider Background</h3>
+            <p class="description-project">
+              image with the samebackground blur image And change by clicking on
+              icons
+            </p>
+          </div>
+
+          <div class="details">
+            <strong>Click</strong> on the image to see the demo
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <a href="./allProjectsFile/">
+          <button class="all-projects-button" type="button">
+            Click Here to See All Projects
+          </button>
+        </a>
+      </div>
+    </section>
+
+    <!--************* footer********* -->
+    <footer class="footer">
+      <a href="mailto:yashmittalmm@gmail.com" class="footer__link"
+        >Yashmittalmm@gmail.com</a
+      >
+
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a
+            href="https://codepen.io/yassmittal"
+            class="social-list__link"
+            target="_blank"
+          >
+            <i class="fa-brands fa-codepen"></i>
+          </a>
+        </li>
+
+        <li class="social-list__item">
+          <a
+            href="https://twitter.com/Yshmittall"
+            class="social-list__link"
+            target="_blank"
+          >
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </li>
+
+        <li class="social-list__item">
+          <a
+            href="https://www.linkedin.com/in/yash-mittal-4b1020217/"
+            class="social-list__link"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
+
+        <li class="social-list__item">
+          <a
+            href="https://github.com/yassmittal/"
+            class="social-list__link"
+            target="_blank"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
+
+    <script src="./exercises/personalPortfolio/script.js"></script>
+  </body>
 </html>
-
-
 
 <!-- <!DOCTYPE html>
 <html lang="en">

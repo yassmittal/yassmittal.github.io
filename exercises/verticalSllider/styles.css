@@ -54,6 +54,7 @@ button:focus{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: transform 500ms ease;
 }
 
 .title{
@@ -99,9 +100,19 @@ button:focus{
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  transition: transform 500ms ease;
+
 }
 
 .button-down{
   transform: translate(-100% , 155%);
   border-radius: 5px 0 0 5px;
+}
+
+.moveUp{
+  transform: translateY(-100%);
+}
+
+.moveDown{
+  transform: translateY(100%);
 }

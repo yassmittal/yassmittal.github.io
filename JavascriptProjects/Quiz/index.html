@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <title>Quiz App</title>
+  </head>
+  <body>
+    <section
+      class="min-h-screen flex-AllCenter p-3 bg-slate-700 MainBodyBackground transition-colors text-white"
+    >
+      <div class="absolute top-5 right-8">
+        <div class="checkbox-v1">
+          <label for="checkboxv1" class="flex gap-8 items-center cursor-pointer">
+            <span>Dark Mode</span>
+            <input
+              type="checkbox"
+              id="checkboxv1"
+              class="themeChangeCheckbox"
+            />
+            <div class="checkbox-v1-outer">
+              <div class="checkbox-v1-inner transition-transform"></div>
+            </div>
+            <span>Light Mode</span>
+          </label>
+        </div>
+      </div>
+
+      <div
+        class="cardV1 bg-gray-600 w-11/12 max-w-lg rounded-xl shadow-md transition-colors"
+      >
+        <div class="px-7 py-16">
+          <h2 class="text-2xl font-bold text-center Question">
+            Which language runs in a web browser?
+          </h2>
+          <ul class="flex flex-col gap-4 text-lg font-medium px-5 py-3">
+            <li class="flex items-center gap-3">
+              <label for="option1" class="cursor-pointer">
+                <input
+                  type="radio"
+                  name="Option"
+                  class="align-middle cursor-pointer optionInput"
+                  id="option1"
+                />
+                <span class="optionContent ml-3"></span>
+              </label>
+            </li>
+
+            <li class="flex items-center gap-3">
+              <label for="option2" class="cursor-pointer">
+                <input
+                  type="radio"
+                  name="Option"
+                  class="align-middle cursor-pointer optionInput"
+                  id="option2"
+                />
+                <span class="optionContent ml-3"></span>
+              </label>
+            </li>
+
+            <li class="flex items-center gap-3">
+              <label for="option3" class="cursor-pointer">
+                <input
+                  type="radio"
+                  name="Option"
+                  class="align-middle cursor-pointer optionInput"
+                  id="option3"
+                />
+                <span class="optionContent ml-3"></span>
+              </label>
+            </li>
+
+            <li class="flex items-center gap-3">
+              <label for="option4" class="cursor-pointer">
+                <input
+                  type="radio"
+                  name="Option"
+                  class="align-middle cursor-pointer optionInput"
+                  id="option4"
+                />
+                <span class="optionContent ml-3"></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <button
+          class="cardV1FooterButton bg-[#8e44ad] hover:bg-[#732d91] w-full p-4 text-white text-lg rounded-b-xl disabled:bg-[#8e44adaa] disabled:cursor-not-allowed"
+          disabled
+        >
+          Submit
+        </button>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>

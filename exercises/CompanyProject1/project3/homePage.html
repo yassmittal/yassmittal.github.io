@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./homePage.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+</head>
+<body class="bg-[#1F2128]">
+
+  <header class="header flex justify-between items-center pt-3 pb-3 px-6 relative">
+    <div>
+      <img src="./images/Group 20766.svg" alt="logo">
+    </div>
+
+    <div class="flex items-center justify-start">
+      <div class="notification relative mr-12">
+        <img src="./images/Notification.svg" alt="notification icon">
+      </div>
+
+      <div>
+        <img src="./images/bg copy 2.svg" alt="profile image" class="bg-[#FFA2C0] rounded-full">
+      </div>
+    </div>
+
+    <hr>
+    
+  </header>
+
+  <main class="flex ">
+
+    <!-- side bar below  -->
+
+    <div class="side-bar pl-[30px] pr-[63px]">
+      <div class="text-[#8C72FA] side-bar-element flex items-center cursor-pointer mt-7 active">
+        <img src="./images/Game.svg" alt="">
+        <p class="text-sm font-semibold relative ml-[18px] w-full pt-1 ">Wall</p>
+      </div>
+
+      <div class="text-[#808191] hover:text-[#8C72FA] side-bar-element  cursor-pointer mt-7">
+        <a href="./profilePage.html" class="flex items-center">
+          <img src="./images/Profile.svg" alt="">
+          <p class="text-sm font-semibold relative ml-[18px] w-full pt-1 ">Profile</p>
+        </a>
+      </div>
+
+      <div class="text-[#808191]  hover:text-[#8C72FA] side-bar-element flex items-center cursor-pointer mt-7 ">
+        <img src="./images/Chat.svg" alt="">
+        <p class="text-sm font-semibold relative ml-[18px] w-full pt-1 ">Messages</p>
+      </div>
+
+      <div class="text-[#808191]  hover:text-[#8C72FA] side-bar-element flex items-center cursor-pointer mt-7">
+        <img src="./images/Group.svg" alt="">
+        <p class="text-sm font-semibold relative ml-[18px] w-full pt-1 ">Uploads</p>
+      </div>
+    </div>
+
+    <!-- side bar completed above  -->
+
+
+    <!-- main Wall section below  -->
+
+    <div class="text-white pt-[31px] main-wall-wrapper">
+      <h1 class="text-5xl font-semibold">Wall</h1>
+
+      <div class="main-section-head flex items-center justify-between w-full mt-7 pr-[107px]">
+        <div class="search-bar-wrapper flex items-center w-1/3 relative">
+          <img src="./images/Search.svg" alt="search icon" class="w-9">
+
+          <input type="text" id="search" class="relative" placeholder="Search via username/ Title.">
+        </div>
+
+        <div class="flex items-center justify-between">
+          <p class="text-[21px] font-medium mr-5">Filter</p>
+
+          <div class="select bg-[#E4E4E411] px-2 py-3 rounded-[11px] flex items-center justify-between w-[190px] cursor-pointer">
+            <p class="text-[#808191] text-sm font-semibold">All (Photos/Videos)</p>
+            <span class="material-icons">expand_more</span>
+              
+          </div>
+
+          
+        </div>
+      </div>
+
+      <!-- top card section below  -->
+      <div class="top-card-section flex gap-8 flex-wrap  items-center mt-[70px] mb-10">
+        <div class="card relative overflow-hidden rounded-t-none">
+          <div class="absolute top-4 right-4 font-['Inter'] bg-[#1B1D21B3] font-bold text-[13px] px-[9px] py-[3px] rounded-md"><p>10:42</p></div>
+          <img src="./images/img.svg" alt="" class="w-full object-cover h-[170px] ">
+          <div class="w-full h-1 bg-[#1B1D21]">
+            <div class="bg-[#FF754C] h-full w-2/3"></div>
+          </div>
+          <div class="card-content p-6">
+
+            <h3 class="text-lg leading-6 font-medium">The Results Are Now <br> - Call of Duty</h3>
+            <div class="flex items-center mt-4">
+              <div class="mr-6 flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#0049C6]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">8.1M views</p>
+              </div>
+
+              <div class=" flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#7FBA7A]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">3 months ago</p>
+              </div>
+            </div>
+
+            <div class="flex items-center  mt-[18px]">
+              <img src="./images/icon.svg" alt="">
+              <p class="text-[13px] leading-[18px] font-bold ml-2">Dylan Hodges</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card relative overflow-hidden">
+          <div class="absolute top-4 right-4 font-['Inter'] bg-[#1B1D21B3] font-bold text-[13px] px-[9px] py-[3px] rounded-md"><p>10:42</p></div>
+          <img src="./images/img2.svg" alt="" class="w-full object-cover h-[170px]">
+          <div class="w-full h-1 bg-[#1B1D21]">
+            <div class="bg-[#FF754C] h-full w-2/3"></div>
+          </div>
+          <div class="card-content p-6">
+
+            <h3 class="text-lg leading-6 font-medium">The Results Are Now <br> - Call of Duty</h3>
+            <div class="flex items-center mt-4">
+              <div class="mr-6 flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#0049C6]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">8.1M views</p>
+              </div>
+
+              <div class=" flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#7FBA7A]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">3 months ago</p>
+              </div>
+            </div>
+
+            <div class="flex items-center  mt-[18px]">
+              <img src="./images/icon.svg" alt="">
+              <p class="text-[13px] leading-[18px] font-bold ml-2">Creator’s Name</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card relative overflow-hidden">
+          <div class="absolute top-4 right-4 font-['Inter'] bg-[#1B1D21B3] font-bold text-[13px] px-[9px] py-[3px] rounded-md"><p>10:42</p></div>
+          <img src="./images/img3.svg" alt="" class="w-full object-cover h-[170px] ">
+          <div class="w-full h-1 bg-[#1B1D21]">
+            <div class="bg-[#FF754C] h-full w-2/3"></div>
+          </div>
+          <div class="card-content p-6">
+
+            <h3 class="text-lg leading-6 font-medium">The Results Are Now <br> - Call of Duty</h3>
+            <div class="flex items-center mt-4">
+              <div class="mr-6 flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#0049C6]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">8.1M views</p>
+              </div>
+
+              <div class=" flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#7FBA7A]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">3 months ago</p>
+              </div>
+            </div>
+
+            <div class="flex items-center  mt-[18px]">
+              <img src="./images/icon.svg" alt="">
+              <p class="text-[13px] leading-[18px] font-bold ml-2">Creator's Name</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card relative overflow-hidden">
+          <div class="absolute top-4 right-4 font-['Inter'] bg-[#1B1D21B3] font-bold text-[13px] px-[9px] py-[3px] rounded-md"><p>10:42</p></div>
+          <img src="./images/img4.svg" alt="" class="w-full object-cover h-[170px] ">
+          <div class="w-full h-1 bg-[#1B1D21]">
+            <div class="bg-[#FF754C] h-full w-2/3"></div>
+          </div>
+          <div class="card-content p-6">
+
+            <h3 class="text-lg leading-6 font-medium">The Results Are Now <br> - Call of Duty</h3>
+            <div class="flex items-center mt-4">
+              <div class="mr-6 flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#0049C6]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">8.1M views</p>
+              </div>
+
+              <div class=" flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#7FBA7A]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">3 months ago</p>
+              </div>
+            </div>
+
+            <div class="flex items-center  mt-[18px]">
+              <img src="./images/icon.svg" alt="">
+              <p class="text-[13px] leading-[18px] font-bold ml-2">Creato's Name</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card relative overflow-hidden">
+          <div class="absolute top-4 right-4 font-['Inter'] bg-[#1B1D21B3] font-bold text-[13px] px-[9px] py-[3px] rounded-md"><p>10:42</p></div>
+          <img src="./images/img5.svg" alt="" class="w-full object-cover h-[170px] ">
+          <div class="w-full h-1 bg-[#1B1D21]">
+            <div class="bg-[#FF754C] h-full w-2/3"></div>
+          </div>
+          <div class="card-content p-6">
+
+            <h3 class="text-lg leading-6 font-medium">The Results Are Now <br> - Call of Duty</h3>
+            <div class="flex items-center mt-4">
+              <div class="mr-6 flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#0049C6]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">8.1M views</p>
+              </div>
+
+              <div class=" flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#7FBA7A]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">3 months ago</p>
+              </div>
+            </div>
+
+            <div class="flex items-center  mt-[18px]">
+              <img src="./images/icon.svg" alt="">
+              <p class="text-[13px] leading-[18px] font-bold ml-2">Creator’s Name</p>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="card relative overflow-hidden">
+          <div class="absolute top-4 right-4 font-['Inter'] bg-[#1B1D21B3] font-bold text-[13px] px-[9px] py-[3px] rounded-md"><p>10:42</p></div>
+          <img src="./images/img6.svg" alt="" class="w-full object-cover h-[170px] ">
+          <div class="w-full h-1 bg-[#1B1D21]">
+            <div class="bg-[#FF754C] h-full w-2/3"></div>
+          </div>
+          <div class="card-content p-6">
+
+            <h3 class="text-lg leading-6 font-medium">The Results Are Now <br> - Call of Duty</h3>
+            <div class="flex items-center mt-4">
+              <div class="mr-6 flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#0049C6]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">8.1M views</p>
+              </div>
+
+              <div class=" flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#7FBA7A]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">3 months ago</p>
+              </div>
+            </div>
+
+            <div class="flex items-center  mt-[18px]">
+              <img src="./images/icon.svg" alt="">
+              <p class="text-[13px] leading-[18px] font-bold ml-2">Creator’s Name</p>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="card relative overflow-hidden">
+          <div class="absolute top-4 right-4 font-['Inter'] bg-[#1B1D21B3] font-bold text-[13px] px-[9px] py-[3px] rounded-md"><p>10:42</p></div>
+          <img src="./images/img7.svg" alt="" class="w-full object-cover h-[170px] ">
+          <div class="w-full h-1 bg-[#1B1D21]">
+            <div class="bg-[#FF754C] h-full w-2/3"></div>
+          </div>
+          <div class="card-content p-6">
+
+            <h3 class="text-lg leading-6 font-medium">The Results Are Now <br> - Call of Duty</h3>
+            <div class="flex items-center mt-4">
+              <div class="mr-6 flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#0049C6]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">8.1M views</p>
+              </div>
+
+              <div class=" flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#7FBA7A]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">3 months ago</p>
+              </div>
+            </div>
+
+            <div class="flex items-center  mt-[18px]">
+              <img src="./images/icon.svg" alt="">
+              <p class="text-[13px] leading-[18px] font-bold ml-2">Creator’s Name</p>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="card relative overflow-hidden">
+          <div class="absolute top-4 right-4 font-['Inter'] bg-[#1B1D21B3] font-bold text-[13px] px-[9px] py-[3px] rounded-md"><p>10:42</p></div>
+          <img src="./images/img8.svg" alt="" class="w-full object-cover h-[170px] ">
+          <div class="w-full h-1 bg-[#1B1D21]">
+            <div class="bg-[#FF754C] h-full w-2/3"></div>
+          </div>
+          <div class="card-content p-6">
+
+            <h3 class="text-lg leading-6 font-medium">The Results Are Now <br> - Call of Duty</h3>
+            <div class="flex items-center mt-4">
+              <div class="mr-6 flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#0049C6]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">8.1M views</p>
+              </div>
+
+              <div class=" flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#7FBA7A]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">3 months ago</p>
+              </div>
+            </div>
+
+            <div class="flex items-center  mt-[18px]">
+              <img src="./images/icon.svg" alt="">
+              <p class="text-[13px] leading-[18px] font-bold ml-2">Creator’s Name</p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <!-- middle section  -->
+
+      <div class="middle-section-wrapper">
+
+        <div class="flex gap-8">
+          <img src="./images/img9.svg" alt="girl image" class="h-[590px]">
+          <img src="./images/img10.svg" alt="girl image" class="h-[595px]">
+        </div> 
+
+        <div class=" px-[31px]">
+
+          <div class="flex items-center float-right mt-[27px] mr-20">
+            <div class="mr-6 flex items-center">
+              <div class="circle w-2 h-2 rounded-full bg-[#0049C6]"></div>
+              <p class="text-xs font-medium text-[#808191] ml-2">8.1M views</p>
+            </div>
+  
+            <div class=" flex items-center">
+              <div class="circle w-2 h-2 rounded-full bg-[#7FBA7A]"></div>
+              <p class="text-xs font-medium text-[#808191] ml-2">3 months ago</p>
+            </div>
+  
+            <div class="flex items-center ml-[45px] ">
+              <img src="./images/Frame 55.svg" alt="">
+              <img src="./images/Group 20672.svg" alt="" class="ml-4">
+            </div>
+  
+          </div>
+  
+          <div class="w-[73%] -translate-y-5">
+  
+            <div class="flex items-start w-full pt-0">
+              <div class="mr-[23px]">
+                <img src="./images/sittingGirl.svg" alt="">
+              </div>
+  
+              <div class="">
+  
+                <div class="flex items-center">
+                  <h4 class="text-lg font-medium">Master Wayne</h4>
+                  <p class="text-[13px] leading-6 font-light ml-[33px]">02/05/2022, Wednesday</p>
+                </div>
+  
+                <div>
+                  <p class="font-medium text-lg leading-6 text-[#8C72FA] mt-1">Photos like a pro</p>
+                </div>
+  
+                <div class="">
+                  <p class="font-light text-base leading-6 mt-[2px] w-full">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus consequat amet ipsum ornare <br> aenean urna, sagittis, risus. Pretium mal amet ipsum ornare aenean urna, sagittis, risus. Pretium <br> malesuada orci, donec vitae diam dignissim mattis. Risus, fringilla blandit nec <br> faucibus lacus, cras pellentesque volutpat justo.</p>
+                </div>
+  
+              </div>
+            </div>
+  
+  
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- last section  -->
+
+      <div class="top-card-section flex gap-8 flex-wrap  items-center mt-[70px] mb-[158px]">
+        <div class="card relative overflow-hidden">
+          <div class="absolute top-4 right-4 font-['Inter'] bg-[#1B1D21B3] font-bold text-[13px] px-[9px] py-[3px] rounded-md"><p>10:42</p></div>
+          <img src="./images/img.svg" alt="" class="w-full object-cover h-[170px] ">
+          <div class="w-full h-1 bg-[#1B1D21]">
+            <div class="bg-[#FF754C] h-full w-2/3"></div>
+          </div>
+          <div class="card-content p-6">
+
+            <h3 class="text-lg leading-6 font-medium">The Results Are Now <br> - Call of Duty</h3>
+            <div class="flex items-center mt-4">
+              <div class="mr-6 flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#0049C6]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">8.1M views</p>
+              </div>
+
+              <div class=" flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#7FBA7A]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">3 months ago</p>
+              </div>
+            </div>
+
+            <div class="flex items-center  mt-[18px]">
+              <img src="./images/icon.svg" alt="">
+              <p class="text-[13px] leading-[18px] font-bold ml-2">Creator’s Name</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card relative overflow-hidden">
+          <div class="absolute top-4 right-4 font-['Inter'] bg-[#1B1D21B3] font-bold text-[13px] px-[9px] py-[3px] rounded-md"><p>10:42</p></div>
+          <img src="./images/img2.svg" alt="" class="w-full object-cover h-[170px]">
+          <div class="w-full h-1 bg-[#1B1D21]">
+            <div class="bg-[#FF754C] h-full w-2/3"></div>
+          </div>
+          <div class="card-content p-6">
+
+            <h3 class="text-lg leading-6 font-medium">The Results Are Now <br> - Call of Duty</h3>
+            <div class="flex items-center mt-4">
+              <div class="mr-6 flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#0049C6]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">8.1M views</p>
+              </div>
+
+              <div class=" flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#7FBA7A]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">3 months ago</p>
+              </div>
+            </div>
+
+            <div class="flex items-center  mt-[18px]">
+              <img src="./images/icon.svg" alt="">
+              <p class="text-[13px] leading-[18px] font-bold ml-2">Creator's Name</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card relative overflow-hidden">
+          <div class="absolute top-4 right-4 font-['Inter'] bg-[#1B1D21B3] font-bold text-[13px] px-[9px] py-[3px] rounded-md"><p>10:42</p></div>
+          <img src="./images/img3.svg" alt="" class="w-full object-cover h-[170px] ">
+          <div class="w-full h-1 bg-[#1B1D21]">
+            <div class="bg-[#FF754C] h-full w-2/3"></div>
+          </div>
+          <div class="card-content p-6">
+
+            <h3 class="text-lg leading-6 font-medium">The Results Are Now <br> - Call of Duty</h3>
+            <div class="flex items-center mt-4">
+              <div class="mr-6 flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#0049C6]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">8.1M views</p>
+              </div>
+
+              <div class=" flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#7FBA7A]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">3 months ago</p>
+              </div>
+            </div>
+
+            <div class="flex items-center  mt-[18px]">
+              <img src="./images/icon.svg" alt="">
+              <p class="text-[13px] leading-[18px] font-bold ml-2">Creator's Name</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card relative overflow-hidden">
+          <div class="absolute top-4 right-4 font-['Inter'] bg-[#1B1D21B3] font-bold text-[13px] px-[9px] py-[3px] rounded-md"><p>08:56</p></div>
+          <img src="./images/img4.svg" alt="" class="w-full object-cover h-[170px] ">
+          <div class="w-full h-1 bg-[#1B1D21]">
+            <div class="bg-[#FF754C] h-full w-2/3"></div>
+          </div>
+          <div class="card-content p-6">
+
+            <h3 class="text-lg leading-6 font-medium">The Results Are Now <br> - Call of Duty</h3>
+            <div class="flex items-center mt-4">
+              <div class="mr-6 flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#0049C6]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">8.1M views</p>
+              </div>
+
+              <div class=" flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#7FBA7A]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">3 months ago</p>
+              </div>
+            </div>
+
+            <div class="flex items-center  mt-[18px]">
+              <img src="./images/icon.svg" alt="">
+              <p class="text-[13px] leading-[18px] font-bold ml-2">Creato's Name</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card relative overflow-hidden">
+          <div class="absolute top-4 right-4 font-['Inter'] bg-[#1B1D21B3] font-bold text-[13px] px-[9px] py-[3px] rounded-md"><p>10:42</p></div>
+          <img src="./images/img5.svg" alt="" class="w-full object-cover h-[170px] ">
+          <div class="w-full h-1 bg-[#1B1D21]">
+            <div class="bg-[#FF754C] h-full w-2/3"></div>
+          </div>
+          <div class="card-content p-6">
+
+            <h3 class="text-lg leading-6 font-medium">The Results Are Now <br> - Call of Duty</h3>
+            <div class="flex items-center mt-4">
+              <div class="mr-6 flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#0049C6]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">8.1M views</p>
+              </div>
+
+              <div class=" flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#7FBA7A]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">3 months ago</p>
+              </div>
+            </div>
+
+            <div class="flex items-center  mt-[18px]">
+              <img src="./images/icon.svg" alt="">
+              <p class="text-[13px] leading-[18px] font-bold ml-2">Creator’s Name</p>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="card relative overflow-hidden">
+          <div class="absolute top-4 right-4 font-['Inter'] bg-[#1B1D21B3] font-bold text-[13px] px-[9px] py-[3px] rounded-md"><p>10:42</p></div>
+          <img src="./images/img6.svg" alt="" class="w-full object-cover h-[170px] ">
+          <div class="w-full h-1 bg-[#1B1D21]">
+            <div class="bg-[#FF754C] h-full w-2/3"></div>
+          </div>
+          <div class="card-content p-6">
+
+            <h3 class="text-lg leading-6 font-medium">The Results Are Now <br> - Call of Duty</h3>
+            <div class="flex items-center mt-4">
+              <div class="mr-6 flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#0049C6]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">8.1M views</p>
+              </div>
+
+              <div class=" flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#7FBA7A]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">3 months ago</p>
+              </div>
+            </div>
+
+            <div class="flex items-center  mt-[18px]">
+              <img src="./images/icon.svg" alt="">
+              <p class="text-[13px] leading-[18px] font-bold ml-2">Creator’s Name</p>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="card relative overflow-hidden">
+          <div class="absolute top-4 right-4 font-['Inter'] bg-[#1B1D21B3] font-bold text-[13px] px-[9px] py-[3px] rounded-md"><p>10:42</p></div>
+          <img src="./images/img7.svg" alt="" class="w-full object-cover h-[170px] ">
+          <div class="w-full h-1 bg-[#1B1D21]">
+            <div class="bg-[#FF754C] h-full w-2/3"></div>
+          </div>
+          <div class="card-content p-6">
+
+            <h3 class="text-lg leading-6 font-medium">The Results Are Now <br> - Call of Duty</h3>
+            <div class="flex items-center mt-4">
+              <div class="mr-6 flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#0049C6]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">8.1M views</p>
+              </div>
+
+              <div class=" flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#7FBA7A]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">3 months ago</p>
+              </div>
+            </div>
+
+            <div class="flex items-center  mt-[18px]">
+              <img src="./images/icon.svg" alt="">
+              <p class="text-[13px] leading-[18px] font-bold ml-2">Creator’s Name</p>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="card relative overflow-hidden">
+          <div class="absolute top-4 right-4 font-['Inter'] bg-[#1B1D21B3] font-bold text-[13px] px-[9px] py-[3px] rounded-md"><p>10:42</p></div>
+          <img src="./images/img8.svg" alt="" class="w-full object-cover h-[170px] ">
+          <div class="w-full h-1 bg-[#1B1D21]">
+            <div class="bg-[#FF754C] h-full w-2/3"></div>
+          </div>
+          <div class="card-content p-6">
+
+            <h3 class="text-lg leading-6 font-medium">The Results Are Now <br> - Call of Duty</h3>
+            <div class="flex items-center mt-4">
+              <div class="mr-6 flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#0049C6]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">8.1M views</p>
+              </div>
+
+              <div class=" flex items-center">
+                <div class="circle w-2 h-2 rounded-full bg-[#7FBA7A]"></div>
+                <p class="text-xs font-medium text-[#808191] ml-2">3 months ago</p>
+              </div>
+            </div>
+
+            <div class="flex items-center  mt-[18px]">
+              <img src="./images/icon.svg" alt="">
+              <p class="text-[13px] leading-[18px] font-bold ml-2">Creator’s Name</p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+  </main>
+  
+</body>
+</html>

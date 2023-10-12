@@ -25,9 +25,3 @@ inputForToDo.addEventListener('keypress' , (event) => {
     
   }
 })
-
-// for(let i = 0; i < lists.length; i++){
-//   lists[i].addEventListener('click' , ()=>{
-//     console.log('cliedk')
-//   })
-// }

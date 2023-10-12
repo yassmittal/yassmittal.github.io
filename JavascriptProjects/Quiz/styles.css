@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.bg-gradient1 {
+  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 100%);
+}
+
+.flex-AllCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+.checkbox-v1-outer {
+  width: 120px;
+  height: 40px;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(255, 255, 255, 0.4) 0px 48px 100px 0px;
+  background-color: rgb(157, 177, 204);
+}
+
+/* .checkbox-v1-outer{
+  --tw-ring-shadow: 255 255 #FFFF !important;
+  --tw-ring-offset-shadow: 255 255 #FFFF !important;
+  --tw-shadow: 0 10px 15px -3px rgb(255 , 255 , 255), 0 4px 6px -4px rgb(255 , 255 , 255) !important;
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+  box-shadow: rgba(255 , 255 , 255 , 0.4) 0px 48px 100px 0px !important;
+} */
+
+.checkbox-v1 input[type="checkbox"] {
+  opacity: 0;
+  transform: translate(-400%, -40000000px);
+  position: absolute;
+}
+
+.checkbox-v1-inner {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgb(78, 91, 109);
+  /* transition: transform 200ms ease; */
+}
+
+.checkbox-v1
+  input[type="checkbox"]:checked
+  + .checkbox-v1-outer
+  .checkbox-v1-inner {
+  transform: translateX(60px);
+  background-color: rgb(181, 189, 201);
+}
+
+
+.checkbox-v1
+  input[type="checkbox"]:checked
+  + .checkbox-v1-outer {
+  background-color: rgb(35, 40, 47);
+}

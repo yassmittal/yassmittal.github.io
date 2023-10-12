@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="min-h-screen min-w-full flex items-center justify-center">
+      <div
+        class="w-11/12 max-w-[600px] mx-auto px-6 md:px-10 py-20 bg-slate-600 text-white rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl"
+      >
+        <h1 class="text-2xl text-center font-semibold">
+          Random Password Generator
+        </h1>
+        <p class="text-white/30 text-sm text-center">A Javascript Project</p>
+
+        <div class="pt-8 flex items-center gap-4">
+          <div class="w-full relative">
+            <input
+              type="text"
+              value=""
+              placeholder="Your Password Will come here"
+              class="GeneratedPasswordInput bg-white/5 border border-white/5 py-3 pl-3 pe-10 outline-none rounded-lg w-full"
+            />
+            <button
+              class="absolute top-1/2 right-0 py-[10px] px-3 -translate-y-1/2 copyBtn rounded-lg hover:bg-white/5 :bg-white/10 mr-1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 22 22"
+                fill="none"
+              >
+                <path
+                  d="M8.40846 13.5945L13.5939 8.40902M6.46426 10.3534L5.1679 11.6497C3.73598 13.0816 3.73556 15.4034 5.16748 16.8353C6.59941 18.2673 8.9217 18.2668 10.3536 16.8349L11.6486 15.5387M10.3528 6.46393L11.6492 5.16756C13.0811 3.73564 15.4024 3.7359 16.8343 5.16782C18.2663 6.59974 18.2662 8.92137 16.8343 10.3533L15.5386 11.6496"
+                  stroke="currentColor"
+                  stroke-width="1.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <button
+            class="generatePasswordBtn rounded-lg bg-[#00D1FF] font-bold text-black py-3 px-5 shadow-[0px_2px_20px_0px_#00D1FF] ms-auto"
+          >
+            Generate
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

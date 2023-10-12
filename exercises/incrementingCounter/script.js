@@ -1,9 +1,8 @@
 const counters = document.querySelectorAll(".counter");
 
+for(let i = 0; i < counters.length; i++){
 
-for(let i=0; i<counters.length; i++){
-
-function updateCounter (){
+function updateCounter(){
 let counterCurrent_value = parseInt(counters[i].innerText)
 let target = counters[i].getAttribute('data-target');
 target = parseInt(target)

@@ -3,20 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>calculator</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="input.css">
+  <!-- <link rel="stylesheet" href="styles.css"> -->
 </head>
-<body>
-  <main class="calculator">
+<body class="h-full flex justify-start items-start font-semibold text-white ">
+  <main class="calculator bg-black w-7/12 h-96 my-6 mx-auto rounded-lg flex flex-col">
 
-    <div class="calculation-space">
-      <p>0</p>
+    <div class="calculation-space h-1/6 flex justify-end items-end text-right text-5xl font-normal px-2">
+      <p class="">0</p>
     </div>
 
-    <div class="keys">
-      <button class="key top-key">AC</button>
-      <button class="key top-key">DEL</button>
+    <div class="keys flex justify-between items-center text-2xl flex-wrap mx-6">
+      <button class="key">AC</button>
+      <button class="key top-key  focus:border focus:border-orange-500 border-4">DEL</button>
       <button class="key top-key">%</button>
       <button class="key right-most-key">÷</button>
       <button class="key">7</button>

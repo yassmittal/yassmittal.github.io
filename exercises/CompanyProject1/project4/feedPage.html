@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./index.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#F5B5441A] flex">
+  <div class="dashboard-side-bar relative bg-white text-[#091B3D] h-[1024px]">
+    <div class="mb-[44px]">
+      <img src="./images/Brand.svg" alt="" class="m-auto">
+    </div>
+
+    <div class="bg-[#F5B5441A] py-8 rounded-2xl mx-6">
+      <img src="./images/Avatar 6.svg" alt="" class="rounded-2xl mx-auto mb-4">
+      <h3 class="text-base leading-[26px] text-center font-bold ">Linh Nguyen</h3>
+      <p class="text-xs text-center font-normal text-[#091B3D66]">Owner & Founder</p>
+    </div>
+
+    <nav class="mt-6">
+      <a href="./dashboard.html" class="flex items-center py-[18.15px] rounded-2xl px-[26px] text-[#091B3D66] hover:text-[#091B3D] cursor-pointer transition-colors">
+        <img src="./images/dashboardIcongreay.svg" alt="dashboard logo">
+        <p class="ml-[18.5px] text-sm leading-5 font-bold">Dashboard</p>
+      </a>
+
+      <a href="./message.html" class="flex items-center py-[18.15px] rounded-2xl px-[26px] text-[#091B3D66] hover:text-[#091B3D] cursor-pointer transition-colors relative">
+        <img src="./images/chatIcon.svg" alt="dashboard logo">
+        <p class="ml-[18.5px] text-sm leading-5 font-bold">Message</p>
+        <div class="bg-[#2772F0] rounded-lg font-bold  text-center text-white absolute right-6 top-4 px-2 w-6 h-6 flex items-center justify-center text-xs leading-4">5</div>
+      </a>
+
+      <a href="./feedPage.html" class="flex items-center py-[18.15px] rounded-2xl px-[26px]  hover:text-[#091B3D] cursor-pointer transition-colors">
+        <img src="./images/taskIcon.svg" alt="dashboard logo">
+        <p class="ml-[18.5px] text-sm leading-5 font-bold">Project</p>
+      </a>
+
+      <div class="flex items-center py-[18.15px] rounded-2xl px-[26px] text-[#091B3D66] hover:text-[#091B3D] cursor-pointer transition-colors relative">
+        <img src="./images/calendarIcon.svg" alt="dashboard logo">
+        <p class="ml-[18.5px] text-sm leading-5 font-bold">Schedule</p>
+        <div class=" absolute right-[30px] top-6">
+          <img src="./images/dropDownIcon.svg" alt="drop down logo">
+        </div>
+
+      </div>
+
+      <div class="flex items-center py-[18.15px] rounded-2xl px-[26px] text-[#091B3D66] hover:text-[#091B3D] cursor-pointer transition-colors">
+        <img src="./images/clockIcon.svg" alt="dashboard logo">
+        <p class="ml-[18.5px] text-sm leading-5 font-bold">Activity</p>
+      </div>
+      
+    </nav>
+
+    
+    <div class="px-6 absolute bottom-6 w-11/12">
+      <h3 class="font-bold text-[18px] leading-[28px] mb-6">My Teams</h3>
+      <div class=" bg-[#F5B5441A] flex items-end p-4 rounded-2xl w-full">
+        <div class="relative  mr-8">
+          <img src="./images/aWomanImage.svg" alt="" class="relative rounded-lg z-50 min-w-[30px]">
+          <img src="./images/AMenImage.svg" alt="" class="rounded-lg absolute -right-5 -top-3  min-w-[30px]">
+        </div>
+
+        <div>
+          <p class="text-sm font-bold leading-6">CaDesign</p>
+          <p class="text-[#091B3D66] text-xs mt-1">@cadesign</p>
+        </div>
+
+
+      </div>
+
+      <div class="w-full mt-4 flex items-center justify-center gap-[15px] py-4  border border-[#091B3D1A] rounded-2xl cursor-pointer">
+        <img src="./images/AddIcon.svg" alt="add icon">
+        <p class="text-[#2772F0] font-bold text-sm leading-6">Add New Team</p>
+      </div>
+    </div>
+
+  </div>
+  
+  <main class="w-[82%] px-16 py-8 text-[#091B3D]">
+    <header class=" flex justify-between items-center mb-16">
+      <div class="w-fit relative">
+        <input type="text" class="placeholder-[#091B3D66] placeholder-text-xs px-[52PX] py-4 rounded-2xl focus:outline-none w-[400px]" placeholder="Search in mail">
+        <img src="./images/searchIcon.svg" alt="search Icon" class="absolute left-[18px] top-[18px]">
+        <img src="./images/blueDropDownIcon.svg" alt="drop down icon" class="absolute right-[22px] top-[14px] rotate-180">
+      </div>
+
+      <div class="flex gap-6 ">
+        <div class="flex items-center justify-center w-14 h-14 bg-[#f5b5441A] rounded-2xl">
+          <img src="./images/User-plus.svg" alt="notification icon">
+        </div>
+
+        <div class="flex items-center justify-center w-14 h-14 bg-[#f5b5441A] rounded-2xl">
+          <img src="./images/chatIconDark.svg" alt="setting icon">
+        </div>
+
+        <div class="flex items-center justify-center w-14 h-14 bg-[#f5b5441A] rounded-2xl">
+          <img src="./images/Notification.svg" alt="setting icon">
+        </div>
+      </div>
+    </header>
+
+<!-- main section's main content here  -->
+
+    <div class="flex">
+      <div class="w-[70%]">
+        <div class="flex items-center justify-start flex-wrap gap-[11px] relative w-fit">
+
+          <div class="bg-[#F5B5441A] rounded-2xl h-[160px] w-[108px] flex flex-col items-center justify-center px-4">
+            <img src="./images/AddIcon.svg" alt="add icon" class="w-[10px]">
+            <h3 class="text-sm leading-6 font-bold text-center mt-[15px]">Create Your Story</h3>
+          </div>
+
+          <div class="story-1 flex flex-col items-center justify-between h-[160px] w-[108px] p-6">
+            <div class="rounded-[10px] border-2 border-[#F5B544] w-fit p-[2px]">
+              <img src="images/Avatar 2.svg" alt="person profile image" class="rounded-full w-6 h-6">
+            </div>
+
+            <div>
+              <p class="text-white font-bold text-sm leading-6">Gabriel</p>
+            </div>
+          </div>
+
+          <div class="story-2 flex flex-col items-center justify-between h-[160px] w-[108px] p-6">
+            <div class="rounded-[10px] border-2 border-[#F5B544] w-fit p-[2px]">
+              <img src="images/Avatar 1.svg" alt="person profile image" class="rounded-full w-6 h-6">
+            </div>
+
+            <div>
+              <p class="text-white font-bold text-sm leading-6">Gabriel</p>
+            </div>
+          </div>
+
+          <div class="story-3 flex flex-col items-center justify-between h-[160px] w-[108px] p-6">
+            <div class="rounded-[10px] border-2 border-[#F5B544] w-fit p-[2px]">
+              <img src="images/Avatar 5.svg" alt="person profile image" class="rounded-full w-6 h-6">
+            </div>
+
+            <div>
+              <p class="text-white font-bold text-sm leading-6">Myrtie</p>
+            </div>
+          </div>
+
+          <div class="story-4 flex flex-col items-center justify-between h-[160px] w-[108px] p-6">
+            <div class="rounded-[10px] border-2 border-[#F5B544] w-fit p-[2px]">
+              <img src="images/Avatar 8.svg" alt="person profile image" class="rounded-full w-6 h-6">
+            </div>
+
+            <div>
+              <p class="text-white font-bold text-sm leading-6">Augusta</p>
+            </div>
+          </div>
+
+          <div class="story-5 flex flex-col items-center justify-between h-[160px] w-[108px] p-6">
+            <div class="rounded-[10px] border-2 border-[#F5B544] w-fit p-[2px]">
+              <img src="images/Avatar 6.svg" alt="person profile image" class="rounded-full w-6 h-6">
+            </div>
+
+            <div>
+              <p class="text-white font-bold text-sm leading-6">Ryan</p>
+            </div>
+          </div>
+
+          <div class="absolute cursor-pointer -right-5 bg-[#F5B544] w-10 h-10 rounded-2xl flex items-center justify-center">
+            <img src="./images/rightArrowWhite.svg" alt="arrow icon">
+          </div>
+         
+
+        </div>
+
+        <div class="p-6 bg-white rounded-2xl w-fit mt-6 create-post-section-click">
+          <div class="flex items-center">
+            <img src="./images/Avatar 6.svg" alt="person profile image" class="rounded-full w-8 h-8">
+            <textarea name="" id="what-is-your-mind-input" cols="50" rows="1" class="focus:outline-none ml-4 resize-none" placeholder="What's on your mind, Linh?"></textarea>
+          </div>
+
+          <div class="mt-8 flex items-center justify-center gap-5">
+            <div class="flex items-center justify-center gap-2 bg-[#F5B5441A] hover:bg-[#F5B54444] transition-colors cursor-pointer rounded-2xl w-[205px] h-[48px]">
+              <img src="./images/GalleryIconYellow.svg" alt="gallery icon">
+              <p class="text-sm leading-6 font-bold">Photo</p>
+            </div>
+
+            <div class="flex items-center justify-center gap-2 bg-[#E6521F1A] hover:bg-[#E6521F44] transition-colors cursor-pointer rounded-2xl w-[205px] h-[48px]">
+              <img src="./images/redvideoIcon.svg" alt="gallery icon">
+              <p class="text-sm leading-6 font-bold">Video</p>
+            </div>
+
+            <div class="flex items-center justify-center gap-2 bg-[#4B9F471A] hover:bg-[#4B9F4744] transition-colors cursor-pointer rounded-2xl w-[205px] h-[48px]">
+              <img src="./images/locationIconGreen.svg" alt="gallery icon">
+              <p class="text-sm leading-6 font-bold">Check in</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl w-fit p-6 mt-6">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center">
+              <div>
+                <img src="./images/AMenImage.svg" alt="person profile" class="rounded-2xl w-12 h-12">
+              </div>
+
+              <div class="ml-4">
+                <h3 class="text-sm leading-6 font-bold">Lillian Greer</h3>
+                <p class="text-[#091B3D66] text-xs font-normal mt-2">6 Apr 2021</p>
+              </div>
+              
+            </div>
+
+            <div class="">
+              <img src="images/grayThreeDotIcon.svg" alt="icon three dots">
+            </div>
+
+          </div>
+
+          <div>
+            <p class="text-sm leading-6 font-normal">Global Travel And Vacations Luxury Travel On A Tight Budget</p>
+          </div>
+
+          <div class="my-6">
+            <img src="./images/postImage.svg" alt="post image" class="rounded-3xl">
+          </div>
+
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-6">
+              <div class="flex items-center">
+                <div>
+                  <img src="images/likeIcon.svg" alt="like icon">
+                </div>
+
+                <p class="text-sm leading-6 font-normal ml-2">1.3K</p>
+              </div>
+
+              <div class="flex items-center">
+                <div>
+                  <img src="images/chatIcon.svg" alt="like icon">
+                </div>
+
+                <p class="text-sm leading-6 font-normal ml-2">251</p>
+              </div>
+            </div>
+
+
+
+            <div class="flex items-center">
+              <div>
+                <img src="images/forwardIcon.svg" alt="forward icon">
+              </div>
+
+              <p class="text-sm leading-6 font-normal ml-2">453</p>
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <div class="w-full rounded-2xl overflow-hidden p-3 relative h-[48px] ">
+
+              <img src="./images/Avatar 6.svg" alt="person image" class="rounded-full w-8 h-8  absolute top-2">
+              <input type="text" id="message" class=" absolute top-0 left-0 right-0 bottom-0 rounded-3xl w-full h-[48px] py-6 bg-[#F5B5441A] pl-[56px] pr-24 focus:outline-none" placeholder="Write your comment…">
+
+              <div class="absolute top-3 right-[17px]">
+                <button>
+                  <img src="images/linkAttachIcon.svg" alt="" class="w-6 h-6">
+                </button>
+
+                <button class="ml-4">
+                  <img src="images/GalleryIcon.svg" alt="">
+                </button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="bg-white rounded-t-3xl pt-8 pb-6 pl-[13px] pr-[19px] relative " >
+
+        <div>
+          <h3 class="font-bold text-lg leading-[28px] mb-6 ml-2">Contacts</h3>
+        </div>
+
+        <div class="py-3 px-4 flex items-center justify-between">
+          <div class="flex items-center">
+            <div class="bg-white rounded-2xl ">
+              <img src="images/Avatar 1.svg" alt="person dp" class="rounded-lg w-8 h-8">
+            </div>
+
+            <div>
+              <p class="text-sm leading-6 font-bold ml-4 w-[182px]">Terry McDaniel</p>
+            </div>
+            
+          </div>
+
+          <div class="bg-[#2772F0] h-6 w-6 rounded-lg"></div>
+        </div>
+
+        <div class="py-3 pl-4 pr-6 flex items-center justify-between mt-4">
+          <div class="flex items-center">
+            <div class="bg-white rounded-2xl ">
+              <img src="images/Avatar 3.svg" alt="person dp" class="rounded-lg w-8 h-8">
+            </div>
+
+            <div>
+              <p class="text-sm leading-6 font-bold ml-4 w-[182px]">Charlotte Peters</p>
+            </div>
+            
+          </div>
+
+          <div class="bg-[#4B9F47] h-2 w-2 rounded-full"></div>
+        </div>
+
+        <div class="py-3 pl-4 pr-6  flex items-center justify-between mt-4">
+          <div class="flex items-center">
+            <div class="bg-white rounded-2xl ">
+              <img src="images/Avatar 8.svg" alt="person dp" class="rounded-lg w-8 h-8">
+            </div>
+
+            <div>
+              <p class="text-sm leading-6 font-bold ml-4 w-[166px]">Pearl Ward</p>
+            </div>
+            
+          </div>
+
+          <div class="">
+            <p class="text-[#091B3D66] text-xs font-normal">10 mins</p>
+          </div>
+        </div>
+
+        <div class="py-3 pl-4 pr-6 flex items-center justify-between mt-4">
+          <div class="flex items-center">
+            <div class="bg-white rounded-2xl ">
+              <img src="images/Avatar 7.svg" alt="person dp" class="rounded-lg w-8 h-8">
+            </div>
+
+            <div>
+              <p class="text-sm leading-6 font-bold ml-4 w-[182px]">Martha Gross</p>
+            </div>
+            
+          </div>
+
+          <div class="bg-[#4B9F47] h-2 w-2 rounded-full"></div>
+        </div>
+
+        <div class="py-3 pl-4 pr-6  flex items-center justify-between mt-4">
+          <div class="flex items-center">
+            <div class="bg-white rounded-2xl ">
+              <img src="images/Avatar 5.svg" alt="person dp" class="rounded-lg w-8 h-8">
+            </div>
+
+            <div>
+              <p class="text-sm leading-6 font-bold ml-4 w-[166px]">Vera Powell</p>
+            </div>
+            
+          </div>
+
+          <div class="">
+            <p class="text-[#091B3D66] text-xs font-normal">3 mins</p>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-lg leading-[28px] font-bold mt-8 mb-6 ml-2">Groups</h3>
+        </div>
+
+        <div class=" bg-white flex items-end justify- p-4 rounded-2xl w-full relative">
+          <div class="relative translate-y-1">
+            <img src="./images/Avatar 2.jpg" alt="" class="relative rounded-lg z-50 w-[21.33px] h-[21.33px]">
+            <img src="./images/Avatar 8.svg" alt="" class="rounded-lg absolute -right-3 -top-3 w-[21.33px] h-[21.33px]">
+          </div>
+  
+          <div>
+            <p class="text-sm font-bold leading-6 ml-8">CaDesign Team 💪</p>
+          </div>
+  
+          <div class="w-6 h-6 rounded-lg bg-[#2772F0] absolute right-6"></div>
+  
+  
+        </div>
+        
+        
+        <div class=" bg-white flex items-end justify- p-4 rounded-2xl w-full relative mt-4">
+          <div class="relative translate-y-1">
+            <img src="./images/AMenImage.svg" alt="" class="relative rounded-lg z-50 w-[21.33px] h-[21.33px]">
+            <img src="./images/Avatar 6.svg" alt="" class="rounded-lg absolute -right-3 -top-3 w-[21.33px] h-[21.33px]">
+          </div>
+  
+          <div>
+            <p class="text-sm font-bold leading-6 ml-8">Ca Project Team ⭐️</p>
+          </div>
+  
+          <div class=" absolute right-6">
+            <p class="text-xs text-right text-[#091B3D66] font-normal">3 mins</p>
+          </div>
+  
+  
+        </div>
+
+        <div class=" bg-white flex items-end justify- p-4 rounded-2xl w-full relative mt-4">
+          <div class="relative translate-y-1">
+            <img src="./images/Avatar 5.svg" alt="" class="relative rounded-lg z-50 w-[21.33px] h-[21.33px]">
+            <img src="./images/Avatar 1.svg" alt="" class="rounded-lg absolute -right-3 -top-3 w-[21.33px] h-[21.33px]">
+          </div>
+  
+          <div>
+            <p class="text-sm font-bold leading-6 ml-8">Study Group 👨‍🎓👩‍🎓</p>
+          </div>
+  
+          <div class="w-2 h-2 rounded-full bg-[#4B9F47] absolute right-[26px]">
+          </div>
+  
+  
+        </div>
+
+        <div class="absolute bottom-6 left-[21px]">
+          <div class="w-fit relative">
+            <input type="text" class="placeholder-[#091B3D66] placeholder-text-xs pl-[52PX] py-4 rounded-2xl focus:outline-none bg-[#F5B5441A] "  placeholder="Search by name or group" id="search-for-name-input">
+            <img src="./images/searchIcon.svg" alt="search Icon" class="absolute left-[18px] top-[18px]">
+          </div>
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+    <div class="create-post-section ">
+
+      <div class="relative pb-6 flex items-center justify-between">
+        <p class="text-sm leading-6 font-bold">Create Post</p>
+
+        <div>
+          <button class="p-2 create-post-section-cross-btn ">
+            <img src="./images/crossIconGray.svg" alt="cross icon">
+          </button>
+        </div>
+
+        <hr class="h-[1px] absolute bottom-0 -left-6 -right-6  border-t border-t-[#091B3D0D]">
+
+      </div>
+
+      <div class="flex items-center justify-between py-6">
+        <div class="flex items-center gap-4">
+          <div>
+            <img src="./images/AMenImage.svg" alt="person profile image" class="rounded-2xl bg-white w-12 h-12">
+          </div>
+
+          <div>
+            <h3 class="text-sm font-bold leading-6">Linh Nguyen</h3>
+          </div>
+        </div>
+
+        <div class="flex bg-[#F5B5441A] rounded-2xl py-2 px-4">
+
+          <p class="font-bold text-sm leading-6 mr-[10px] ">Public</p>
+          <div>
+            <img src="images/arrowDownDark.svg" alt="arrow down image">
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="">
+        <textarea name="" id="what-is-your-mind-input" cols="50" rows="3" class="focus:outline-none resize-none" placeholder="What's on your mind, Linh?"></textarea>
+      </div>
+
+      <div class="flex flex-col gap-4 relative py-6">
+        <div class="flex gap-6 items-center justify-center">
+          <div class=" flex items-center justify-center py-3 w-[240px] bg-[#E6521F1A] rounded-2xl hover:bg-[#E6521F44] transition-colors cursor-pointer">
+            <div>
+              <img src="./images/redvideoIcon.svg" alt="video icon">
+            </div>
+  
+            <p class="text-sm font-bold leading-6 ml-2">Live Video</p>
+          </div>
+  
+          <div class=" flex items-center justify-center py-3 w-[240px] bg-[#4B9F471A] rounded-2xl hover:bg-[#4B9F4744] transition-colors cursor-pointer ">
+            <div>
+              <img src="./images/galleyIconGreen.svg" alt="video icon">
+            </div>
+  
+            <p class="text-sm font-bold leading-6 ml-2">Photo/Video</p>
+          </div>
+  
+  
+        </div>
+
+        <div class="flex gap-6 items-center justify-center">
+          
+          <div class=" flex items-center justify-center py-3 w-[240px] bg-[#2772F01A] rounded-2xl hover:bg-[#2772F044] transition-colors cursor-pointer ">
+            <div>
+              <img src="./images/friendsIconBlue.svg" alt="video icon">
+            </div>
+            
+            <p class="text-sm font-bold leading-6 ml-2">Tag Friends</p>
+          </div>
+          
+          <div class=" flex items-center justify-center py-3 w-[240px] bg-[#E6521F1A] rounded-2xl hover:bg-[#E6521F44] transition-colors cursor-pointer">
+            <div>
+              <img src="./images/locationIconRed.svg" alt="video icon">
+            </div>
+  
+            <p class="text-sm font-bold leading-6 ml-2">Check In</p>
+          </div>
+  
+        </div>
+
+        <div class="flex gap-6 items-center justify-center ">
+          <div class=" flex items-center justify-center py-3 w-[240px] bg-[#F5B5441A] rounded-2xl hover:bg-[#F5B54444] transition-colors cursor-pointer">
+            <div>
+              <img src="./images/starIconYellow.svg" alt="video icon">
+            </div>
+  
+            <p class="text-sm font-bold leading-6 ml-2">Feeling/Activity</p>
+          </div>
+  
+          <div class=" flex items-center justify-center py-3 w-[240px] bg-[#091B3D1A] rounded-2xl hover:bg-[#091B3D44] transition-colors cursor-pointer ">
+            <div>
+              <img src="./images/threeDotIconBlack.svg" alt="video icon">
+            </div>
+  
+            <p class="text-sm font-bold leading-6 ml-2">More</p>
+          </div>
+  
+  
+        </div>
+
+        <hr class="h-[1px] absolute bottom-0 -left-6 -right-6  border-t border-t-[#091B3D0D]">
+
+
+      </div>
+
+      <div class="pt-6">
+        <button class="w-full py-4 text-sm leading-6 font-bold rounded-2xl bg-[#2772F0] text-white">
+          Post
+        </button>
+      </div>
+
+    </div>
+
+    <div class="backdrop"></div>
+
+
+
+
+  </main>
+
+
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -34,6 +34,7 @@ body{
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50% , -50%);
 }
 
 h1{
@@ -45,6 +46,7 @@ h1{
   font-weight: 800;
 }
 
+
 .main-wrapper .current-question{
   font-size: 1.7rem;
   font-weight: 800;
@@ -52,6 +54,7 @@ h1{
 
 .current-question-wrapper{
   min-height: 120px;
+  max-width: 900px;
 }
 
 .select-rating-wrapper{
@@ -60,7 +63,9 @@ h1{
   margin: auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
+
 }     
 
 .select-rating-wrapper::before{
@@ -70,7 +75,13 @@ h1{
   background-color: #FFF;
   width: 100%;
   top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
   z-index: -1;
+}
+
+.select-rating-wrapper > div{
+  height: 25px;
 }
 
 .select-rating-wrapper .radio-input{

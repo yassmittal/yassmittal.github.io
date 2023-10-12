@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./index.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body >
+  <div class="main-logInPage-wrapper flex justify-center text-[#091B3D] py-10">
+
+    <div class="mx-auto flex flex-col main-element-with-form">
+
+      <!-- logo wrapper below  -->
+      <div class="mx-auto mb-10">
+        <img src="./images/Brand.svg" alt="logo">
+      </div>
+
+
+      <!-- form wrapper below  -->
+      <form action="./dashboard.html" class="bg-white px-10 rounded-[48px] py-10">
+        <h2 class="font-bold text-2xl leading-[34px] text-center mb-2">Getting Started</h2>
+
+        <p class="font-normal text-sm leading-6 text-center text-[#091B3D99]">Create an account to continue!</p>
+
+
+          <div class="relative mt-12">
+            <label for="email" class="absolute left-4 -top-[6px] font-normal text-xs text-[#091B3D66] bg-white px-2">Email</label>
+            <input type="email" id="email" class="w-full h-full border border-[#091B3D1A] rounded-2xl py-4 px-6 focus:outline-none ">
+          </div>
+
+          <div class="relative mt-6">
+            <label for="name" class="absolute left-4 -top-[6px] font-normal text-xs text-[#091B3D66] bg-white px-2">Your Name</label>
+            <input type="name" id="name" class="w-full h-full border border-[#091B3D1A] rounded-2xl py-4 px-6 focus:outline-none ">
+          </div>
+
+          <div class="relative my-6">
+            <label for="password" class="absolute left-4 -top-[6px] font-normal text-xs text-[#091B3D66] bg-white px-2">Create Password</label>
+            <input type="password" id="password" class="w-full h-full border border-[#091B3D1A] rounded-2xl py-4 px-6 focus:outline-none ">
+          </div>
+
+
+          <div class="flex gap-2 items-center justify-center">
+            <div class="rounded-t-[15px] w-[52px] h-[3px] bg-[#E6521F] "></div>
+            <div class="rounded-t-[15px] w-[52px] h-[3px] bg-[#E6521F] "></div>
+            <div class="rounded-t-[15px] w-[52px] h-[3px] bg-[#F5B544]"></div>
+            <div class="rounded-t-[15px] w-[52px] h-[3px] bg-[#F5B544] "></div>
+            <div class="rounded-t-[15px] w-[52px] h-[3px] bg-[#4B9F47]"></div>
+            <div class="rounded-t-[15px] w-[52px] h-[3px] bg-[#091B3D1A]"></div>
+          </div> 
+
+          <div class="mt-8">
+            <input type="checkbox" name="terms-conditions" id="terms-conditions" class="align-middle">
+            <label for="terms-conditions" class="font-bold text-sm leading-6 cursor-pointer align-middle ml-[17px]">You agree to our Term and Conditions</label>
+          </div>
+
+          <div class="mt-12 mb-6">
+            <button type="submit" class="font-bold text-sm leading-6 text-center py-4 w-full bg-[#2772F0] rounded-2xl text-white">Register</button>
+          </div>
+
+          <div class="text-center mb-4">
+            <a href="#" class="font-normal text-base text-center leading-[26px] text-[#091B3D66]">Sign In with:</a>
+          </div>
+
+          <div class="flex items-center justify-center gap-4">
+            <button type="button" class="rounded-2xl px-[58px] py-4 bg-yellow-50 flex items-center">
+              <img src="./images/Icon.svg" alt="goolge icon">
+              <p class="text-sm leading-6 pl-3">Google</p>
+            </button>
+
+            <button type="button" class=" rounded-2xl px-[58px] py-4 bg-yellow-50 flex items-center">
+              <img src="./images/Path.svg" alt="Twitter icon">
+              <p class="text-sm leading-6 pl-3">Twitter</p>
+            </button>
+          </div>
+
+  
+
+        </form>
+
+      <div class="mt-[72px]">
+        <p class="font-normal text-base leading-[26px] text-center">Already have an account ? <a href="#" class="text-[#2772F0] font-bold">Sign in</a></p>
+      </div>
+
+
+    </div>
+
+
+
+
+  </div>
+</body>

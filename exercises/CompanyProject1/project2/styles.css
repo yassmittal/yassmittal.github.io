@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background-color: #F5F5F5;
+  width: 100%;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+.side-bar{
+  background-color: #F58120;
+  height: 100vh !important;
+  color: #FFF;
+  width: 14%;
+  min-width: 210px;
+}
+
+.appointment-section{
+  width: 86%;
+  display: flex;
+}
+
+.left-side-appointment-section{
+  height: 860px !important;
+}
+
+.call-interface{
+  background-image: url(./Images/unsplash_63XrEEiOko8.svg);
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  margin-top: 12px;
+}
+
+.received-msg-wrapper .msg-with-image-wrapper p{
+background: rgba(245, 129, 32, 0.04);
+  border: 1px solid #F58120;
+  box-shadow: 6px 25px 80px 0px #3E4E6114;
+  font-size: 12px;
+  line-height: 160%;
+  font-weight: 400;
+  color: #32425B;
+  border-radius: 20px;
+  padding: 6px 12px;
+  display: inline-block;
+  margin-right: 8px;
+  max-width: 240px;
+}
+
+.send-msg-wrapper .msg-with-image-wrapper p{
+  font-size: 12px;
+  line-height: 160%;
+  font-weight: 400;
+  color: #32425B;
+  padding: 6px 12px;
+  display: inline-block;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid rgba(27, 45, 73, 0.05);
+  box-shadow: 6px 25px 80px rgba(62, 78, 97, 0.08);
+  border-radius: 20px;
+  width: 42%;
+  margin-left: 0.3rem;
+}
+
+.msg-input-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.msg-input-wrapper input{
+  border: 1px solid rgba(245, 129, 32, 0.08);
+  border-radius: 6px;
+  display: block;
+  bottom: 2;
+  margin-top: 65px;
+  background: #FFFFFF;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 12px 20px;
+  font-size: 12px;
+  color: Black;
+  box-shadow: 12px 12px 69px rgba(0, 0, 0, 0.1);
+}
+
+
+.msg-input-wrapper input::placeholder{
+  color: #32425B;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.msg-input-wrapper input:focus{
+  outline: none;
+}
+
+
+@media (max-width: 1000px){
+
+  .appointment-section{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .left-side-appointment-section,
+  .right-side-appointment-section{
+    width: 90% !important;
+  }
+
+  .call-interface{
+    max-height: 40vh;
+    background-position: left 10% top 20% !important;
+    overflow: hidden;
+    background-color: black;
+  }
+
+  .left-side-appointment-section {
+    height: 50vh !important;
+}
+}
+
+@media (max-width: 800px){
+
+
+  .appointment-section{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .left-side-appointment-section,
+  .right-side-appointment-section{
+    width: 90% !important;
+  }
+
+  .call-interface{
+    max-height: 40vh;
+    background-position: left 10% top 20% !important;
+    overflow: hidden;
+    background-color: black;
+  }
+
+  .left-side-appointment-section {
+    height: 50vh !important;
+}
+}
+

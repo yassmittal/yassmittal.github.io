@@ -10,338 +10,1744 @@
       rel="stylesheet">
       <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="font-body">
+<body class="font-body bg-[#FAFBFC]">
+
+
+
+    <!-- complete page below -->
+  
+  <!-- header below  -->
+
+  <header class="w-full p-1 flex justify-between items-center bg-white">
+    <!-- left side header below  -->
+    <div class="left-side-header flex  items-center mr-auto h-full relative transition-transform ease-in-out">
+      <img src="./Images/machineryLogo.png" alt="logo" class="w-10 mr-2">
+      <div class="logo-text">
+        <span class="text-[#7238b3]">SAFETY</span> <br>
+        <span class="text-[#C82FC2]">MANAGEMENT TOOL</span>
+      </div>
+
+      <div class="navCollapsingTab rounded-full border border-[#8e60c2] flex justify-center items-center cursor-pointer ml-7 ">
+        <span class="material-icons text-[#8e60c2]">
+          chevron_right
+          </span>
+      </div>
+
+      <ul class="flex justify-between font-semibold ml-3 h-full text-sm">
+        <li class="header-list-el cursor-pointer relative py-5 px-2 h-full users" data-users>Users</li>
+        <div class="users-div-wrapper">
+          <div class="user" data-users-child>
+            <img src="./Images/dustinRivestImg.webp" alt="profile img" class="w-10 h-10 rounded-full object-cover object-top">
+            <p class="mx-4">Dustin Rivest</p>
+          </div>
+  
+          <div class="user" data-users-child>
+            <img src="./Images/cartoonImg.jpg" alt="profile img" class="w-10 h-10 rounded-full object-cover object-top">
+            <p class="mx-4">Jun USA</p>
+          </div>
+  
+          <div class="user" data-users-child>
+            <img src="./Images/cartoonImg.jpg" alt="profile img" class="w-10 h-10 rounded-full object-cover object-top">
+            <p class="mx-4">Kenny Ko</p>
+          </div>
+  
+          <div class="user" data-users-child>
+            <img src="./Images/CindyShawImg.webp" alt="profile img" class="w-10 h-10 rounded-full object-cover object-top">
+            <p class="mx-4">Cindy Shaw</p>
+          </div>
+  
+          <div class="user" data-users-child>
+            <img src="./Images/henryFordImage.png" alt="profile img" class="w-10 h-10 rounded-full object-cover object-top">
+            <p class="mx-4">Henry Ford</p>
+          </div>
+
+          <div class="invite-user pl-7" data-users-child>
+            <div class="w-10 h-10 rounded-full add-wrapper flex items-center justify-center mr-4" data-users-child>
+               <span class="material-icons text-2xl font-thin">add</span>
+            </div>
+            <p>Invite User</p>
+          </div>
+
+          <hr>
+
+          <a href="./usercard.html">
+          <div class="py-4 flex justify-center items-center text-[#203b54] hover:text-[#7238B3]" data-users-child>
+              <h4>See all users</h4>
+          </div>
+          </a>
+        </div> 
+        <li class="switch-workspace header-list-el cursor-pointer relative py-5 px-2 h-full" data-switchWorkspace>Add Workspace</li>
+
+        <div class="switch-workspace-wrapper" data-swithcWorkspace-child>
+          <div class="flex justify-between items-center w-full my-4" data-swithcWorkspace-child>
+            <h4 class="text-lg">Switch to</h4>
+            <a href="#" class="text-[#7238b3] font-normal">
+              Add workspace
+              <span class="material-icons font-normal align-middle text-lg">
+                edit_note
+                </span>
+            </a>
+          </div>
+          <hr>
+
+          <div class="work-space active relative flex items-center py-2 px-3 font-normal text-sm my-2 cursor-pointer" data-swithcWorkspace-child>
+            <img src="./Images/profileimage.png" alt="profile image" class="w-14 rounded-2xl mr-3">
+            <p>First New Workspace</p>
+            <span class="material-icons font-normal opacity-0 text-[#7238b3] text-lg ml-10 absolute right-4">
+              edit_note
+              </span>
+          </div>
+
+          <div class="work-space relative flex items-center py-2 px-3 font-normal text-sm my-2 cursor-pointer" data-swithcWorkspace-child>
+            <img src="./Images/profilePicture.webp" alt="profile image" class="w-14 rounded-2xl mr-3">
+            <p>New Year 2023</p>
+            <span class="material-icons font-normal opacity-0 text-[#7238b3] text-lg ml-10 absolute right-4">
+              edit_note
+              </span>
+          </div>
+          
+        </div>
+
+      </ul>
+    </div>
+
+<!-- right side header below  -->
+    <div class="right-side-header flex items-center justify-between cursor-pointer text-[#203b54] relative" data-edit-drop-down-button>
+      <img src="./Images/profilePicture.webp" alt="Image Profile" class="w-10 rounded-full mr-2 pointer-events-none">
+      <h3 class="mr-3 font-semibold text-sm pointer-events-none">Nimish Taneja</h3>
+      <!-- triangle below  -->
+      <div class="transition-transform duration-100 ease-linear border-8 border-x-[#FAFBFC] border-b-[#FAFBFC] border-t-[#203b54] cursor-pointer translate-y-1 pointer-events-none">
+      </div>
+
+
+      <div class="profile-edit-drop-down absolute bg-white top-12 right-4 cursor-pointer z-50" data-edit-drop-down>
+        <div class="relative">
+          <button class="flex pl-3 pr-12 py-2 relative">
+
+            <span class="material-icons">
+              person_outline
+              </span>
+            <p class="ml-2 text-[#203B54] text-[0.875rem]">Profile</p>
+
+          </button>
+        </div>
+
+        <div class="relative">
+          <button id="logout-btn">
+            <a href="./index.html" class="flex pl-3 pr-12 py-2 relative" >
+              <span class="material-icons text-[#EC6060] mr-1">
+                power_settings_new
+                </span>
+              <p class="ml-1">Log out</p>
+            </a>
+            
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- header completed above  -->
+
+
   <!-- complete page below -->
   <main class="flex pb-12"> 
 
         <!-- side-bar below -->
-      <div class="side-bar flex flex-col justify-between shadow-inne w-1/4 border-x border-[#E2E2EA] text-sm font-semibold text-[#2D3F50] h-1/4 lg:text-xs min-w-fit">
-        <!-- this is work space div -->
-      <div class=" work-space-name flex justify-between pl-16 pr-20 py-4 bg-[#7238B31A]  2xl:pl-4 2xl:pr-4 ">
-        <img src="./Images/delivery.svg" alt="truck" class="pr-4">
-        <p>Workspace Name</p>
-      </div>
-
-      <!-- this is add project div -->
-      <div class="add-project flex items-center space-x-3  text-[#7238B3] text-xs py-5 pl-7">
-        <span class="material-icons text-sm text-[#7238B3]">add</span>
-        <p> Add Project</p>
-      </div>
+        <div class="bg-white side-bar-wrappper">
+          <div class="side-bar flex flex-col justify-between  text-[#203b54]  bg-white">
+              <!-- this is work space div -->
+            <div class="work-space-name flex items-center bg-[#e3d7f0]  hover:text-[#2D3F50] cursor-pointer">
+              <div class="image"></div>
+              <p>First New Workspace</p>
+            </div>
       
-      <!-- this is samsung  heading div  -->
-      <div class="samsung-div pl-11 relative  2xl:pl-6 2xl:w-11/12 lg:pl-2 lg:w-full" tabindex="0">
-        <img src="./Images/icon (1).svg" alt="icon" class="lg:w-5">
-        <h3>Samsung</h3>
-
-        <div class="flex justify-between items-center">
-          <span class="material-icons text-[#A5AAB5] text-xl">
-            more_horiz
-            </span>
-            <span class="material-icons text-[#A5AAB5] text-xl ml-1">add</span>
-        </div>
-
-        <div class="active hide left-border bg-[#7238B3] w-2 h-full absolute left-0 top-0 bottom-0 rounded-full -translate-x-1.5">
-        </div>
-      </div>
-
-      <!-- this is oled project div -->
-
-      <div class="hide project-details flex flex-start items-center pl-10 pt-2 2xl:pl-2 2xl:w-11/12 lg:pl-0 lg:w-full">
-        <div class="circle w-1 h-1 rounded-full bg-[black]"></div>
-        <span  class="pl-2">OLED Project</span>
-        <i class="material-icons text-[#A5AAB5] text-xl pl-2">
-          more_horiz
-          </i>
-          <span class="material-icons text-[#A5AAB5] text-xl pl-2">add</span>
-      </div>
-
-      <div class="hide flex  items-center pl-20 pt-2 2xl:pl-6 2xl:w-11/12 lg:pl-2 lg:w-full">
-        <span >Crypto analysis</span>
-        <i class="material-icons text-[#A5AAB5] text-xl pl-2">
-          more_horiz
-          </i>
-          <span class="material-icons text-[#A5AAB5] text-xl pl-2">add</span>
-      </div>
-
-      <div class="hide flex items-center pl-20 text-sm ml-2 pt-2 2xl:pl-6 2xl:w-11/12 lg:pl-2 lg:w-full">
-        <div class="circle w-1 h-1 rounded-full bg-[#A5AAB5] mr-2"></div>
-        <span >Jun’s Book</span>
-        <i class="material-icons text-[#A5AAB5] text-xl pl-2">
-          more_horiz
-          </i>
-      </div>
-
-      <div class="hide flex items-center pl-20 text-sm ml-2 pt-2 2xl:pl-6 2xl:w-11/12 lg:pl-2 lg:w-full">
-        <div class="circle w-1 h-1 rounded-full bg-[#A5AAB5] mr-2"></div>
-        <span >Jun’s PC</span>
-        <i class="material-icons text-[#A5AAB5] text-xl pl-2">
-          more_horiz
-          </i>
-      </div>
-
-      <div class="hide flex items-center pl-20 text-sm ml-2 pt-2 2xl:pl-6 2xl:w-11/12 lg:pl-2 lg:w-full">
-        <div class="circle w-1 h-1 rounded-full bg-[#A5AAB5] mr-2"></div>
-        <span >Jun’s hardware</span>
-        <i class="material-icons text-[#A5AAB5] text-xl pl-2">
-          more_horiz
-          </i>
-      </div>
-
-      <div class="hide flex items-center pl-20 text-sm ml-2 pt-2 2xl:pl-6 2xl:w-11/12 lg:pl-2 lg:w-full">
-        <div class="circle w-1 h-1 rounded-full bg-[#A5AAB5] mr-2"></div>
-        <span >Increase Jun’s Pc Ram</span>
-      </div>
-
-      <div class="hide flex items-center  pl-10 text-sm pt-3 2xl:pl-6 2xl:w-11/12 lg:pl-2 lg:w-full">
-        <div class="circle w-1 h-1 rounded-full bg-[black] mr-2"></div>
-        <span >Apple OLED</span>
-      </div>
-
-    </div>
-
-    <!-- side bar completed above -->
-
-    <!-- main right hand side wrapper below -->
- 
-    <div class="main-peoples-wrapper bg-[#F5F5F5]  h-full w-full px-6 py-6">
-      <h2 class="font-semibold text-[#203B54] my-5">You work with</h2>
-
-      <!-- System Users section below  -->
-      <div>
-        <h3 class="font-semibold text-[#203B54]">System Users</h3>
+            <!-- this is add project div -->
+            <div class="add-project flex items-center space-x-5  text-base py-4 pl-5 cursor-pointer">
+              <div class="hover:bg-[#7238b322] w-8 h-8 rounded-full add-wrapper flex items-center justify-center">
+                <span class="material-icons text-2xl font-thin">add</span>
+              </div>
+              <p class="text-[#203b54] text-sm"> Add Project</p>
+            </div>
+      
+      
+            <div class="add-project-function">
+              <div class="absolute top-1 left-[14px] cursor-pointer cross-sign  opacity-50 hover:opacity-100">
+                <span class="material-icons font-thin rotate-45 pointer-events-none text-4xl  text-black ">add</span>
+              </div>
+      
+              <div class="mt-[68px] mb-1">
+               <p class="text-2xl font-semibold text-[#212529] mb-1">Pick your Preference</p>
+               <p class="font-normal text-[#212529] text-base ">to Create Project</p>
+              </div>
+      
+              <div class="flex items-center">
+                <div class="border-[0.5px] border-[#e7edef]  rounded-md w-[141.312px] flex flex-col justify-between items-center h-32 py-5 m-2 cursor-pointer hover:border-[#8e60c2] px-12 ">
+                  <span class="material-icons text-[#8e60c2] bg-[#f9f9f9] p-3 rounded-full">
+                    assignment_ind
+                    </span>
+                    <p class="text-[#364f65] text-[13px] text-center">Using Templates</p>
+                    
+                </div>
+      
+                <div class="border rounded-md w-[140px] flex flex-col justify-between items-center h-32 py-5 m-2 cursor-pointer hover:border-[#8e60c2] p-6">
+                  <span class="material-icons text-[#8e60c2] bg-[#f9f9f9] p-3 rounded-full">
+                    add
+                    </span>
+                    <p class="text-center text-[#364f65] text-[13px] leading-[17px] ">Create From Scratch</p>
+                    
+                </div>
+              </div>
+      
+      
+            </div>
+      
+            <div class="add-project-function-backdrop"></div>
+            
+            <div class="nav-div-wrapper">
+              <!-- this is first div  -->
+              <div>
+                
+                <!-- new project below  -->
+                <div class=" pl-4 relative w-full  nav-project-div project-2">
+                  <img src="./Images/icon (1).svg" alt="icon" class="pointer-events-none">
+                  <h3 class="mr-16 pointer-events-none">New Project</h3>
+          
+                  <!-- <div class="flex items-center" tabindex="0"> -->
+                    <span class="material-icons text-lg three-dot-icon">more_horiz</span>
+                    <div class="three-dot-icon-dropdown z-50">
+                      <div class="hover:bg-[#e9ecef] flex space-x-2 items-center">
+                        <span class="material-icons">person_outline</span>
+                          <p class="font-normal text-base">Edit</p>
+                      </div>
+      
+                      <div class="hover:bg-[#e9ecef] flex space-x-2 items-center">
+                        <span class="material-icons text-lg">visibility</span>
+                          <p class="font-normal text-base">View</p>
+                      </div>
+      
+      
+                      <div class="hover:bg-[#e9ecef] flex space-x-2 items-center">
+                        <span class="material-icons text-lg text-[#da1e28]">delete_outline</span>
+                          <p class="font-normal text-base">Delete</p>
+                      </div>
+      
+                    </div>
+                    <span class="material-icons text-lg ml-2 add-icon pointer-events-none">add</span>
+                  <!-- </div> -->
+                  
+                </div>
+                <!-- new project child below  -->
+                <ul class="nav-div-child-wrapper py-2 list-disc relative hide">
+                  <!-- demo test  -->
+                  <li class="nav-div-child flex items-center pl-9 pr-1 my-5 cursor-pointer relative">
+                    <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                    <h3 class="ml-2">Demo Test</h3>
+                    <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                      more_horiz
+                      </span>
+                      <div class="three-dot-icon-dropdown z-10">
+                        <div class="hover:bg-[#e9ecef] flex space-x-2 items-center">
+                          <span class="material-icons text-lg">person_outline</span>
+                            <p class="font-normal text-base">Edit</p>
+                        </div>
         
-        <div class="system-cards-wrapper flex flex-wrap w-9/12">
+                        <div class="hover:bg-[#e9ecef] flex space-x-2 items-center">
+                          <span class="material-icons text-lg">visibility</span>
+                            <p class="font-normal text-base">View</p>
+                        </div>
+        
+        
+                        <div class="hover:bg-[#e9ecef] flex space-x-2 items-center">
+                          <span class="material-icons text-lg text-[#da1e28]">delete_outline</span>
+                            <p class="font-normal text-base">Delete</p>
+                        </div>
+        
+                      </div>
+                      <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                  </li>
+                  <ul class="sub-sub-child-wrapper ml-4">
+                    <!-- sub sub child 1  //////////////////////////-->
+      
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer relative">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 1</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon"> more_horiz</span>
+                      <div class="three-dot-icon-dropdown z-10">
+                      <div class="hover:bg-[#e9ecef] flex items-center">
+                        <div class="material-icons text-lg">person_outline</div>
+                          <p class="font-normal text-base">Edit</p>
+                      </div>
+      
+                      <div class="hover:bg-[#e9ecef] flex items-center">
+                        <div class="material-icons text-lg">visibility</div>
+                          <p class="font-normal text-base">View</p>
+                      </div>
+      
+      
+                      <div class="hover:bg-[#e9ecef] flex items-center">
+                        <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                          <p class="font-normal text-base">Delete</p>
+                      </div>
+      
+                      </div>
+      
+      
+                       <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+      
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer relative">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 2</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-10">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+      
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer relative">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 3</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-50">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+                  </ul>
+      
+                    <li class="nav-div-child flex items-center pl-9 pr-1 my-5 cursor-pointer">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">Sub</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-50">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                      </li>
+      
+                      
+                 <ul class="sub-sub-child-wrapper ml-4">
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 1</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-50">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+      
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 2</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-50">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+      
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 3</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-50">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+                  </ul>
+      
+        
+                  <li class="nav-div-child flex items-center pl-9 pr-1 my-5 cursor-pointer" >
+                    <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                    <h3 class="ml-2">New Project...</h3>
+                    <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                      more_horiz
+                      </span>
+      
+                      <div class="three-dot-icon-dropdown z-50">
+                        <div class="hover:bg-[#e9ecef] flex items-center">
+                          <div class="material-icons text-lg">person_outline</div>
+                            <p class="font-normal text-base">Edit</p>
+                        </div>
+        
+                        <div class="hover:bg-[#e9ecef] flex items-center">
+                          <div class="material-icons text-lg">visibility</div>
+                            <p class="font-normal text-base">View</p>
+                        </div>
+        
+        
+                        <div class="hover:bg-[#e9ecef] flex items-center">
+                          <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                            <p class="font-normal text-base">Delete</p>
+                        </div>
+        
+                      </div>
+                      <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+      
+                    
+                  <ul class="sub-sub-child-wrapper ml-4">
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 1</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-50">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+      
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 2</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-50">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+      
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 3</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-50">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+                  </ul>
+      
+                </ul>
+      
+              </div>
+      
+      
+      
+      
+              <!-- this is the second div  -->
+      
+              <div>
+                
+                <!-- new project below  -->
+                <div class=" pl-4 relative w-full  nav-project-div project-2">
+                  <img src="./Images/icon (1).svg" alt="icon" class="pointer-events-none">
+                  <h3 class="mr-16 pointer-events-none">New Project</h3>
+          
+                  <!-- <div class="flex items-center" tabindex="0"> -->
+                    <span class="material-icons text-lg three-dot-icon">more_horiz</span>
+                    <div class="three-dot-icon-dropdown z-10">
+                      <div class="hover:bg-[#e9ecef] flex space-x-2 items-center">
+                        <span class="material-icons text-lg">person_outline</span>
+                          <p class="font-normal text-base">Edit</p>
+                      </div>
+      
+                      <div class="hover:bg-[#e9ecef] flex space-x-2 items-center">
+                        <span class="material-icons text-lg">visibility</span>
+                          <p class="font-normal text-base">View</p>
+                      </div>
+      
+      
+                      <div class="hover:bg-[#e9ecef] flex space-x-2 items-center">
+                        <span class="material-icons text-lg text-[#da1e28]">delete_outline</span>
+                          <p class="font-normal text-base">Delete</p>
+                      </div>
+      
+                    </div>
+                    <span class="material-icons text-lg ml-2 add-icon pointer-events-none">add</span>
+                  <!-- </div> -->
+                  
+                </div>
+                <!-- new procet child below  -->
+                <ul class="nav-div-child-wrapper py-2 list-disc relative hide">
+                  <!-- demo test  -->
+                  <li class="nav-div-child flex items-center pl-9 pr-1 my-5 cursor-pointer relative">
+                    <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                    <h3 class="ml-2">Demo Test</h3>
+                    <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                      more_horiz
+                      </span>
+                      <div class="three-dot-icon-dropdown z-10">
+                        <div class="hover:bg-[#e9ecef] flex space-x-2 items-center">
+                          <span class="material-icons text-lg">person_outline</span>
+                            <p class="font-normal text-base">Edit</p>
+                        </div>
+        
+                        <div class="hover:bg-[#e9ecef] flex space-x-2 items-center">
+                          <span class="material-icons text-lg">visibility</span>
+                            <p class="font-normal text-base">View</p>
+                        </div>
+        
+        
+                        <div class="hover:bg-[#e9ecef] flex space-x-2 items-center">
+                          <span class="material-icons text-lg text-[#da1e28]">delete_outline</span>
+                            <p class="font-normal text-base">Delete</p>
+                        </div>
+        
+                      </div>
+                      <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                  </li>
+                  <ul class="sub-sub-child-wrapper ml-4">
+                    <!-- sub sub child 1  //////////////////////////-->
+      
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer relative">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 1</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon"> more_horiz</span>
+                      <div class="three-dot-icon-dropdown z-10">
+                      <div class="hover:bg-[#e9ecef] flex items-center">
+                        <div class="material-icons text-lg">person_outline</div>
+                          <p class="font-normal text-base">Edit</p>
+                      </div>
+      
+                      <div class="hover:bg-[#e9ecef] flex items-center">
+                        <div class="material-icons text-lg">visibility</div>
+                          <p class="font-normal text-base">View</p>
+                      </div>
+      
+      
+                      <div class="hover:bg-[#e9ecef] flex items-center">
+                        <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                          <p class="font-normal text-base">Delete</p>
+                      </div>
+      
+                      </div>
+      
+      
+                       <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+      
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer relative">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 2</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-10">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+      
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer relative">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 3</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-50">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+                  </ul>
+      
+                    <li class="nav-div-child flex items-center pl-9 pr-1 my-5 cursor-pointer">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">Sub</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-50">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                      </li>
+      
+                      
+                 <ul class="sub-sub-child-wrapper ml-4">
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 1</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-50">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+      
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 2</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-50">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+      
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 3</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-50">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+                  </ul>
+      
+        
+                  <li class="nav-div-child flex items-center pl-9 pr-1 my-5 cursor-pointer" >
+                    <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                    <h3 class="ml-2">New Project...</h3>
+                    <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                      more_horiz
+                      </span>
+      
+                      <div class="three-dot-icon-dropdown z-50">
+                        <div class="hover:bg-[#e9ecef] flex items-center">
+                          <div class="material-icons text-lg">person_outline</div>
+                            <p class="font-normal text-base">Edit</p>
+                        </div>
+        
+                        <div class="hover:bg-[#e9ecef] flex items-center">
+                          <div class="material-icons text-lg">visibility</div>
+                            <p class="font-normal text-base">View</p>
+                        </div>
+        
+        
+                        <div class="hover:bg-[#e9ecef] flex items-center">
+                          <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                            <p class="font-normal text-base">Delete</p>
+                        </div>
+        
+                      </div>
+                      <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+      
+                    
+                  <ul class="sub-sub-child-wrapper ml-4">
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 1</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-50">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+      
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 2</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-50">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+      
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 3</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-50">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+                  </ul>
+      
+                </ul>
+      
+              </div>
+      
+              <!-- this is the third div  -->
+      
+              <div>
+                
+                <!-- new project below  -->
+                <div class=" pl-4 relative w-full  nav-project-div project-2">
+                  <img src="./Images/icon (1).svg" alt="icon" class="pointer-events-none">
+                  <h3 class="mr-16 pointer-events-none">New Project</h3>
+          
+                  <!-- <div class="flex items-center" tabindex="0"> -->
+                    <span class="material-icons text-lg three-dot-icon">more_horiz</span>
+                    <div class="three-dot-icon-dropdown z-10">
+                      <div class="hover:bg-[#e9ecef] flex space-x-2 items-center">
+                        <span class="material-icons text-lg">person_outline</span>
+                          <p class="font-normal text-base">Edit</p>
+                      </div>
+      
+                      <div class="hover:bg-[#e9ecef] flex space-x-2 items-center">
+                        <span class="material-icons text-lg">visibility</span>
+                          <p class="font-normal text-base">View</p>
+                      </div>
+      
+      
+                      <div class="hover:bg-[#e9ecef] flex space-x-2 items-center">
+                        <span class="material-icons text-lg text-[#da1e28]">delete_outline</span>
+                          <p class="font-normal text-base">Delete</p>
+                      </div>
+      
+                    </div>
+                    <span class="material-icons text-lg ml-2 add-icon pointer-events-none">add</span>
+                  <!-- </div> -->
+                  
+                </div>
+                <!-- new procet child below  -->
+                <ul class="nav-div-child-wrapper py-2 list-disc relative hide">
+                  <!-- demo test  -->
+                  <li class="nav-div-child flex items-center pl-9 pr-1 my-5 cursor-pointer relative">
+                    <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                    <h3 class="ml-2">Demo Test</h3>
+                    <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                      more_horiz
+                      </span>
+                      <div class="three-dot-icon-dropdown z-10">
+                        <div class="hover:bg-[#e9ecef] flex space-x-2 items-center">
+                          <span class="material-icons text-lg">person_outline</span>
+                            <p class="font-normal text-base">Edit</p>
+                        </div>
+        
+                        <div class="hover:bg-[#e9ecef] flex space-x-2 items-center">
+                          <span class="material-icons text-lg">visibility</span>
+                            <p class="font-normal text-base">View</p>
+                        </div>
+        
+        
+                        <div class="hover:bg-[#e9ecef] flex space-x-2 items-center">
+                          <span class="material-icons text-lg text-[#da1e28]">delete_outline</span>
+                            <p class="font-normal text-base">Delete</p>
+                        </div>
+        
+                      </div>
+                      <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                  </li>
+                  <ul class="sub-sub-child-wrapper ml-4">
+                    <!-- sub sub child 1  //////////////////////////-->
+      
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer relative">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 1</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon"> more_horiz</span>
+                      <div class="three-dot-icon-dropdown z-10">
+                      <div class="hover:bg-[#e9ecef] flex items-center">
+                        <div class="material-icons text-lg">person_outline</div>
+                          <p class="font-normal text-base">Edit</p>
+                      </div>
+      
+                      <div class="hover:bg-[#e9ecef] flex items-center">
+                        <div class="material-icons text-lg">visibility</div>
+                          <p class="font-normal text-base">View</p>
+                      </div>
+      
+      
+                      <div class="hover:bg-[#e9ecef] flex items-center">
+                        <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                          <p class="font-normal text-base">Delete</p>
+                      </div>
+      
+                      </div>
+      
+      
+                       <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+      
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer relative">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 2</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-10">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+      
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer relative">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 3</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-50">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+                  </ul>
+      
+                    <li class="nav-div-child flex items-center pl-9 pr-1 my-5 cursor-pointer">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">Sub</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-50">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                      </li>
+      
+                      
+                 <ul class="sub-sub-child-wrapper ml-4">
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 1</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-50">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+      
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 2</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-50">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+      
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 3</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-50">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+          
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+                  </ul>
+      
+        
+                  <li class="nav-div-child flex items-center pl-9 pr-1 my-5 cursor-pointer" >
+                    <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                    <h3 class="ml-2">New Project...</h3>
+                    <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                      more_horiz
+                      </span>
+      
+                      <div class="three-dot-icon-dropdown z-50">
+                        <div class="hover:bg-[#e9ecef] flex items-center">
+                          <div class="material-icons text-lg">person_outline</div>
+                            <p class="font-normal text-base">Edit</p>
+                        </div>
+        
+                        <div class="hover:bg-[#e9ecef] flex items-center">
+                          <div class="material-icons text-lg">visibility</div>
+                            <p class="font-normal text-base">View</p>
+                        </div>
+        
+        
+                        <div class="hover:bg-[#e9ecef] flex items-center">
+                          <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                            <p class="font-normal text-base">Delete</p>
+                        </div>
+        
+                      </div>
+                      <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+      
+                    
+                  <ul class="sub-sub-child-wrapper ml-4">
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 1</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-50">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+      
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 2</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-50">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+      
+                    <li class="flex items-center pl-9 pr-1 my-5 cursor-pointer">
+                      <div class="circle w-[5px] h-[5px] rounded-full bg-black"></div>
+                      <h3 class="ml-2">sub-sub-child 3</h3>
+                      <span class="material-icons text-lg ml-6 absolute right-11 three-dot-icon">
+                        more_horiz
+                        </span>
+      
+                        <div class="three-dot-icon-dropdown z-50">
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">person_outline</div>
+                              <p class="font-normal text-base">Edit</p>
+                          </div>
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg">visibility</div>
+                              <p class="font-normal text-base">View</p>
+                          </div>
+          
+          
+                          <div class="hover:bg-[#e9ecef] flex items-center">
+                            <div class="material-icons text-lg text-[#da1e28]">delete_outline</div>
+                              <p class="font-normal text-base">Delete</p>
+                          </div>
+          
+                        </div>
+                        <span class="material-icons text-lg ml-2 add-icon absolute right-5">add</span>
+                    </li>
+                  </ul>
+      
+                </ul>
+      
+              </div>
+      
+            </div>
+      
+          </div>
+        </div>
+      <!-- side bar completed above -->
+
+ 
+    <div class="main-peoples-wrapper  h-full w-full px-12 py-[67px]">
+      
+      <!-- you work wiht people below  -->
+      <div>
+        <h3 class="font-semibold text-[.875rem] m-0">You work with</h3>
+        
+        <div class="system-cards-wrapper flex flex-wrap w-full mt-3 gap-6">
   
           <!-- first card -->
-          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl w-36 border text-center flex flex-col items-center mr-4 mt-4">
-            <img src="./Images/professional-architect-Q375YLM 1.svg" alt="person image" class="rounded-full">
-            <h4 class="text-xs text-[#364F65] mt-3 mb-1 font-medium">Mark Henry</h4>
-            <p class="text-[#9A9DAA] text-[10px] bg-white font-light">Project Manager</p>
+
+          <div class="relative card-people space-x-2 py-5  bg-white rounded-xl border text-center flex flex-col items-center">
+            <img src="./Images/dustinRivestImg.webp" alt="person image" class="rounded-full active:scale-75">
+            <h4 class="text-[.875rem] text-[#203b54] mt-3 mb-1 font-medium">Dustin Rivest</h4>
     
-            <span class=" three-dots-icon material-icons text-[#2D3F50] text-xl absolute top-0 right-3 cursor-pointer">
+            <span class="cards-More-icon material-icons text-[#2D3F50] text-xl absolute top-1 right-3 cursor-pointer">
               more_horiz
               </span>
   
-              <div class="edit-delete-wrapper absolute hide bg-white top-4 -right-28 cursor-pointer shadow-lg">
-                <div class="edit flex pl-3 pr-12 py-2">
-                  <img src="./Images/icon (2).svg" alt="edit-icon">
-                  <p class="ml-2 text-[#203B54]">Edit</p>
+              <div class="edit-delete-wrapper absolute  bg-white top-9 left-[128px]  cursor-pointer  text-[#212529]">
+                <div class="edit flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons text-[1.125rem]">person_outline</span>
+                  <p class="ml-2 text-[.875rem]">Edit</p>
                 </div>
       
-                <div class="delete flex text-[#EC6060] bg-[#F9FAFB] pl-3 pr-12 py-2">
-                  <img src="./Images/icon (3).svg" alt="edit-icon">
-                  <p class="ml-1 font-light">Delete</p>
+                <div class="delete flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons danger text-[#da1e28] text-[1.125rem]">power_settings_new</span>
+                  <p class="ml-2 text-[.875rem]">Delete</p>
+                </div>
+      
+              </div>
+  
+        </div>
+
+            <!-- second card -->
+          <div class="relative card-people space-x-2 py-5  bg-white rounded-xl border text-center flex flex-col items-center">
+              <img src="./Images/CindyShawImg.webp" alt="person image" class="rounded-full active:scale-75">
+              <h4 class=" text-[.875rem] text-[#203b54] mt-3 mb-1 font-medium">Mark Henry</h4>
+      
+              <span class="cards-More-icon material-icons text-[#2D3F50] text-xl absolute top-1 right-3 cursor-pointer">
+                more_horiz
+                </span>
+    
+            <div class="edit-delete-wrapper absolute  bg-white top-9 left-[128px]  cursor-pointer  text-[#212529]">
+                <div class="edit flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons text-[1.125rem]">person_outline</span>
+                  <p class="ml-2 text-[.875rem]">Edit</p>
+                </div>
+      
+                <div class="delete flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons danger text-[#da1e28] text-[1.125rem]">power_settings_new</span>
+                  <p class="ml-2 text-[.875rem]">Delete</p>
+                </div>
+      
+              </div>
+    
+          </div>
+          
+          
+            <!-- third card -->
+          <div class="relative card-people space-x-2 py-5  bg-white rounded-xl border text-center flex flex-col items-center">
+              <img src="./Images/cartoonImg.jpg" alt="person image" class="rounded-full active:scale-75">
+              <h4 class=" text-[.875rem] text-[#203b54] mt-3 mb-1 font-medium">Kenny Ko</h4>
+      
+              <span class="cards-More-icon material-icons text-[#2D3F50] text-xl absolute top-1 right-3 cursor-pointer">
+                more_horiz
+                </span>
+    
+            <div class="edit-delete-wrapper absolute  bg-white top-9 left-[128px]  cursor-pointer  text-[#212529]">
+                <div class="edit flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons text-[1.125rem]">person_outline</span>
+                  <p class="ml-2 text-[.875rem]">Edit</p>
+                </div>
+      
+                <div class="delete flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons danger text-[#da1e28] text-[1.125rem]">power_settings_new</span>
+                  <p class="ml-2 text-[.875rem]">Delete</p>
+                </div>
+      
+              </div>
+    
+          </div>
+  
+           <!-- fourth card -->
+            <div class="relative card-people space-x-2 py-5  bg-white rounded-xl border text-center flex flex-col items-center">
+              <img src="./Images/cartoonImg.jpg" alt="person image" class="rounded-full active:scale-75">
+              <h4 class=" text-[.875rem] text-[#203b54] mt-3 mb-1 font-medium">Jun USA</h4>
+      
+              <span class="cards-More-icon material-icons text-[#2D3F50] text-xl absolute top-1 right-3 cursor-pointer">
+                more_horiz
+                </span>
+    
+            <div class="edit-delete-wrapper absolute  bg-white top-9 left-[128px]  cursor-pointer  text-[#212529]">
+                <div class="edit flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons text-[1.125rem]">person_outline</span>
+                  <p class="ml-2 text-[.875rem]">Edit</p>
+                </div>
+      
+                <div class="delete flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons danger text-[#da1e28] text-[1.125rem]">power_settings_new</span>
+                  <p class="ml-2 text-[.875rem]">Delete</p>
+                </div>
+      
+              </div>
+    
+           </div>
+
+            <!-- 5th card -->
+            <div class="relative card-people space-x-2 py-5  bg-white rounded-xl border text-center flex flex-col items-center">
+              <img src="./Images/henryFordImage.png" alt="person image" class="rounded-full active:scale-75">
+              <h4 class=" text-[.875rem] text-[#203b54] mt-3 mb-1 font-medium">Jun USA</h4>
+      
+              <span class="cards-More-icon material-icons text-[#2D3F50] text-xl absolute top-1 right-3 cursor-pointer">
+                more_horiz
+                </span>
+    
+            <div class="edit-delete-wrapper absolute  bg-white top-9 left-[128px]  cursor-pointer  text-[#212529]">
+                <div class="edit flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons text-[1.125rem]">person_outline</span>
+                  <p class="ml-2 text-[.875rem]">Edit</p>
+                </div>
+      
+                <div class="delete flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons danger text-[#da1e28] text-[1.125rem]">power_settings_new</span>
+                  <p class="ml-2 text-[.875rem]">Delete</p>
+                </div>
+      
+              </div>
+    
+            </div>
+
+            <!-- 6th card -->
+            <div class="relative card-people space-x-2 py-5  bg-white rounded-xl border text-center flex flex-col items-center">
+            <img src="./Images/drewThomas.png" alt="person image" class="rounded-full active:scale-75">
+            <h4 class=" text-[.875rem] text-[#203b54] mt-3 mb-1 font-medium">Micky James</h4>
+    
+            <span class="cards-More-icon material-icons text-[#2D3F50] text-xl absolute top-1 right-3 cursor-pointer">
+              more_horiz
+              </span>
+  
+            <div class="edit-delete-wrapper absolute  bg-white top-9 left-[128px]  cursor-pointer  text-[#212529]">
+                <div class="edit flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons text-[1.125rem]">person_outline</span>
+                  <p class="ml-2 text-[.875rem]">Edit</p>
+                </div>
+      
+                <div class="delete flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons danger text-[#da1e28] text-[1.125rem]">power_settings_new</span>
+                  <p class="ml-2 text-[.875rem]">Delete</p>
+                </div>
+      
+              </div>
+  
+          </div>  
+
+
+          <!-- 7th card -->
+          <div class="relative card-people space-x-2 py-5  bg-white rounded-xl border text-center flex flex-col items-center">
+          <img src="./Images/drewThomas.png" alt="person image" class="rounded-full active:scale-75">
+          <h4 class=" text-[.875rem] text-[#203b54] mt-3 mb-1 font-medium">Drew Thomas</h4>
+
+          <span class="cards-More-icon material-icons text-[#2D3F50] text-xl absolute top-1 right-3 cursor-pointer">
+            more_horiz
+            </span>
+
+            <div class="edit-delete-wrapper absolute  bg-white top-9 left-[128px]  cursor-pointer  text-[#212529]">
+              <div class="edit flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                <span class="material-icons text-[1.125rem]">person_outline</span>
+                <p class="ml-2 text-[.875rem]">Edit</p>
+              </div>
+    
+              <div class="delete flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                <span class="material-icons danger text-[#da1e28] text-[1.125rem]">power_settings_new</span>
+                <p class="ml-2 text-[.875rem]">Delete</p>
+              </div>
+    
+            </div>
+
+        </div>
+
+            <!-- 8th card -->
+            <div class="relative card-people space-x-2 py-5  bg-white rounded-xl border text-center flex flex-col items-center">
+            <img src="./Images/Steve Rodes.jpg" alt="person image" class="rounded-full active:scale-75">
+            <h4 class=" text-[.875rem] text-[#203b54] mt-3 mb-1 font-medium">Steve Rodes</h4>
+    
+            <span class="cards-More-icon material-icons text-[#2D3F50] text-xl absolute top-1 right-3 cursor-pointer">
+              more_horiz
+              </span>
+  
+            <div class="edit-delete-wrapper absolute  bg-white top-9 left-[128px]  cursor-pointer  text-[#212529]">
+                <div class="edit flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons text-[1.125rem]">person_outline</span>
+                  <p class="ml-2 text-[.875rem]">Edit</p>
+                </div>
+      
+                <div class="delete flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons danger text-[#da1e28] text-[1.125rem]">power_settings_new</span>
+                  <p class="ml-2 text-[.875rem]">Delete</p>
                 </div>
       
               </div>
   
           </div>
-  
-          <!-- second card  -->
-          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl w-36 border text-center flex flex-col items-center mr-4 mt-4">
-            <img src="./Images/professional-architect-Q375YLM 1.svg" alt="person image" class="rounded-full">
-            <h4 class="text-xs text-[#364F65] mt-3 mb-1 font-medium">Mark Henry</h4>
-            <p class="text-[#9A9DAA] text-[10px] bg-white font-light">Project Manager</p>
+
+         <!-- 9th card -->
+            <div class="relative card-people space-x-2 py-5  bg-white rounded-xl border text-center flex flex-col items-center">
+              <img src="./Images/Martin Crew Image.jpg" alt="person image" class="rounded-full active:scale-75">
+              <h4 class=" text-[.875rem] text-[#203b54] mt-3 mb-1 font-medium">Martin Crew</h4>
+      
+              <span class="cards-More-icon material-icons text-[#2D3F50] text-xl absolute top-1 right-3 cursor-pointer">
+                more_horiz
+                </span>
     
-            <span class=" three-dots-icon material-icons text-[#2D3F50] text-xl absolute top-0 right-3 cursor-pointer">
+            <div class="edit-delete-wrapper absolute  bg-white top-9 left-[128px]  cursor-pointer  text-[#212529]">
+                <div class="edit flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons text-[1.125rem]">person_outline</span>
+                  <p class="ml-2 text-[.875rem]">Edit</p>
+                </div>
+      
+                <div class="delete flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons danger text-[#da1e28] text-[1.125rem]">power_settings_new</span>
+                  <p class="ml-2 text-[.875rem]">Delete</p>
+                </div>
+      
+              </div>
+    
+           </div>
+
+
+           <!-- 10th card -->
+            <div class="relative card-people space-x-2 py-5  bg-white rounded-xl border text-center flex flex-col items-center">
+              <img src="./Images/drewThomas.png" alt="person image" class="rounded-full active:scale-75">
+              <h4 class=" text-[.875rem] text-[#203b54] mt-3 mb-1 font-medium">Mike hussel</h4>
+      
+              <span class="cards-More-icon material-icons text-[#2D3F50] text-xl absolute top-1 right-3 cursor-pointer">
+                more_horiz
+                </span>
+    
+            <div class="edit-delete-wrapper absolute  bg-white top-9 left-[128px]  cursor-pointer  text-[#212529]">
+                <div class="edit flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons text-[1.125rem]">person_outline</span>
+                  <p class="ml-2 text-[.875rem]">Edit</p>
+                </div>
+      
+                <div class="delete flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons danger text-[#da1e28] text-[1.125rem]">power_settings_new</span>
+                  <p class="ml-2 text-[.875rem]">Delete</p>
+                </div>
+      
+              </div>
+    
+            </div>
+
+
+    <!-- 11th card -->
+            <div class="relative card-people space-x-2 py-5  bg-white rounded-xl border text-center flex flex-col items-center">
+              <img src="./Images/Andrew tay.jpg" alt="person image" class="rounded-full active:scale-75">
+              <h4 class=" text-[.875rem] text-[#203b54] mt-3 mb-1 font-medium">Andrew tay</h4>
+      
+              <span class="cards-More-icon material-icons text-[#2D3F50] text-xl absolute top-1 right-3 cursor-pointer">
+                more_horiz
+                </span>
+    
+            <div class="edit-delete-wrapper absolute  bg-white top-9 left-[128px]  cursor-pointer  text-[#212529]">
+                <div class="edit flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons text-[1.125rem]">person_outline</span>
+                  <p class="ml-2 text-[.875rem]">Edit</p>
+                </div>
+      
+                <div class="delete flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons danger text-[#da1e28] text-[1.125rem]">power_settings_new</span>
+                  <p class="ml-2 text-[.875rem]">Delete</p>
+                </div>
+      
+              </div>
+    
+           </div>
+
+
+      <!-- 12th card -->
+            <div class="relative card-people space-x-2 py-5  bg-white rounded-xl border text-center flex flex-col items-center">
+              <img src="./Images/cartoonImg.jpg" alt="person image" class="rounded-full active:scale-75">
+              <h4 class=" text-[.875rem] text-[#203b54] mt-3 mb-1 font-medium">Prabhanjan</h4>
+      
+              <span class="cards-More-icon material-icons text-[#2D3F50] text-xl absolute top-1 right-3 cursor-pointer">
+                more_horiz
+                </span>
+    
+            <div class="edit-delete-wrapper absolute  bg-white top-9 left-[128px]  cursor-pointer  text-[#212529]">
+                <div class="edit flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons text-[1.125rem]">person_outline</span>
+                  <p class="ml-2 text-[.875rem]">Edit</p>
+                </div>
+      
+                <div class="delete flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons danger text-[#da1e28] text-[1.125rem]">power_settings_new</span>
+                  <p class="ml-2 text-[.875rem]">Delete</p>
+                </div>
+      
+              </div>
+    
+           </div>
+
+
+            <!-- 13th card -->
+            <div class="relative card-people space-x-2 py-5  bg-white rounded-xl border text-center flex flex-col items-center">
+              <img src="./Images/cartoonImg.jpg" alt="person image" class="rounded-full active:scale-75">
+              <h4 class=" text-[.875rem] text-[#203b54] mt-3 mb-1 font-medium">Santu</h4>
+      
+              <span class="cards-More-icon material-icons text-[#2D3F50] text-xl absolute top-1 right-3 cursor-pointer">
+                more_horiz
+                </span>
+    
+            <div class="edit-delete-wrapper absolute  bg-white top-9 left-[128px]  cursor-pointer  text-[#212529]">
+                <div class="edit flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons text-[1.125rem]">person_outline</span>
+                  <p class="ml-2 text-[.875rem]">Edit</p>
+                </div>
+      
+                <div class="delete flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons danger text-[#da1e28] text-[1.125rem]">power_settings_new</span>
+                  <p class="ml-2 text-[.875rem]">Delete</p>
+                </div>
+      
+              </div>
+    
+           </div>
+
+             <!-- 14th card -->
+          <div class="relative card-people space-x-2 py-5  bg-white rounded-xl border text-center flex flex-col items-center">
+            <img src="./Images/cartoonImg.jpg" alt="person image" class="rounded-full active:scale-75">
+            <h4 class=" text-[.875rem] text-[#203b54] mt-3 mb-1 font-medium">Brady</h4>
+    
+            <span class="cards-More-icon material-icons text-[#2D3F50] text-xl absolute top-1 right-3 cursor-pointer">
               more_horiz
               </span>
   
-              <div class="edit-delete-wrapper hide absolute bg-white top-4 -right-28 cursor-pointer shadow-lg">
-                <div class="edit flex pl-3 pr-12 py-2">
-                  <img src="./Images/icon (2).svg" alt="edit-icon">
-                  <p class="ml-2 text-[#203B54]">Edit</p>
+            <div class="edit-delete-wrapper absolute  bg-white top-9 left-[128px]  cursor-pointer  text-[#212529]">
+                <div class="edit flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons text-[1.125rem]">person_outline</span>
+                  <p class="ml-2 text-[.875rem]">Edit</p>
                 </div>
       
-                <div class="delete flex text-[#EC6060] bg-[#F9FAFB] pl-3 pr-12 py-2">
-                  <img src="./Images/icon (3).svg" alt="edit-icon">
-                  <p class="ml-1 font-light">Delete</p>
+                <div class="delete flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons danger text-[#da1e28] text-[1.125rem]">power_settings_new</span>
+                  <p class="ml-2 text-[.875rem]">Delete</p>
                 </div>
       
               </div>
   
           </div>
-  
-          <!-- third card  -->
-          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl w-36 border text-center flex flex-col items-center mr-4 mt-4">
-            <img src="./Images/professional-architect-Q375YLM 1.svg" alt="person image" class="rounded-full">
-            <h4 class="text-xs text-[#364F65] mt-3 mb-1 font-medium">Mark Henry</h4>
-            <p class="text-[#9A9DAA] text-[10px] bg-white font-light">Project Manager</p>
+
+
+           <!-- 15th card -->
+            <div class="relative card-people space-x-2 py-5  bg-white rounded-xl border text-center flex flex-col items-center">
+              <img src="./Images/Martin Bay.jpeg" alt="person image" class="rounded-full active:scale-75">
+              <h4 class=" text-[.875rem] text-[#203b54] mt-3 mb-1 font-medium">Martin Bay</h4>
+      
+              <span class="cards-More-icon material-icons text-[#2D3F50] text-xl absolute top-1 right-3 cursor-pointer">
+                more_horiz
+                </span>
     
-            <span class=" three-dots-icon material-icons text-[#2D3F50] text-xl absolute top-0 right-3 cursor-pointer">
-              more_horiz
-              </span>
-  
-              <div class="edit-delete-wrapper hide absolute bg-white top-4 -right-28 cursor-pointer shadow-lg">
-                <div class="edit flex pl-3 pr-12 py-2">
-                  <img src="./Images/icon (2).svg" alt="edit-icon">
-                  <p class="ml-2 text-[#203B54]">Edit</p>
+            <div class="edit-delete-wrapper absolute  bg-white top-9 left-[128px]  cursor-pointer  text-[#212529]">
+                <div class="edit flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons text-[1.125rem]">person_outline</span>
+                  <p class="ml-2 text-[.875rem]">Edit</p>
                 </div>
       
-                <div class="delete flex text-[#EC6060] bg-[#F9FAFB] pl-3 pr-12 py-2">
-                  <img src="./Images/icon (3).svg" alt="edit-icon">
-                  <p class="ml-1 font-light">Delete</p>
+                <div class="delete flex items-center  w-[120px]  py-[0.45rem] px-[1rem] relative">
+                  <span class="material-icons danger text-[#da1e28] text-[1.125rem]">power_settings_new</span>
+                  <p class="ml-2 text-[.875rem]">Delete</p>
                 </div>
       
               </div>
-  
-          </div>
-  
-          <!-- fourth card  -->
-  
-          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl w-36 border text-center flex flex-col items-center mr-4 mt-4">
-            <img src="./Images/professional-architect-Q375YLM 1.svg" alt="person image" class="rounded-full">
-            <h4 class="text-xs text-[#364F65] mt-3 mb-1 font-medium">Mark Henry</h4>
-            <p class="text-[#9A9DAA] text-[10px] bg-white font-light">Project Manager</p>
     
-            <span class=" three-dots-icon material-icons text-[#2D3F50] text-xl absolute top-0 right-3 cursor-pointer">
-              more_horiz
-              </span>
-  
-              <div class="edit-delete-wrapper hide absolute bg-white top-4 -right-28 cursor-pointer shadow-lg">
-                <div class="edit flex pl-3 pr-12 py-2">
-                  <img src="./Images/icon (2).svg" alt="edit-icon">
-                  <p class="ml-2 text-[#203B54]">Edit</p>
-                </div>
-      
-                <div class="delete flex text-[#EC6060] bg-[#F9FAFB] pl-3 pr-12 py-2">
-                  <img src="./Images/icon (3).svg" alt="edit-icon">
-                  <p class="ml-1 font-light">Delete</p>
-                </div>
-      
-              </div>
-  
-          </div>
-  
-          <!-- fifth card  -->
-  
-          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl w-36 border text-center flex flex-col items-center mr-4 mt-4">
-            <img src="./Images/professional-architect-Q375YLM 1.svg" alt="person image" class="rounded-full">
-            <h4 class="text-xs text-[#364F65] mt-3 mb-1 font-medium">Mark Henry</h4>
-            <p class="text-[#9A9DAA] text-[10px] bg-white font-light">Project Manager</p>
-    
-            <span class=" three-dots-icon material-icons text-[#2D3F50] text-xl absolute top-0 right-3 cursor-pointer">
-              more_horiz
-              </span>
-  
-              <div class="edit-delete-wrapper hide absolute bg-white top-4 -right-28 cursor-pointer shadow-lg">
-                <div class="edit flex pl-3 pr-12 py-2">
-                  <img src="./Images/icon (2).svg" alt="edit-icon">
-                  <p class="ml-2 text-[#203B54]">Edit</p>
-                </div>
-      
-                <div class="delete flex text-[#EC6060] bg-[#F9FAFB] pl-3 pr-12 py-2">
-                  <img src="./Images/icon (3).svg" alt="edit-icon">
-                  <p class="ml-1 font-light">Delete</p>
-                </div>
-      
-              </div>
-  
-          </div>
-  
-          <!-- sixth card  -->
-  
-          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl w-36 border text-center flex flex-col items-center mr-4 mt-4">
-            <img src="./Images/professional-architect-Q375YLM 1.svg" alt="person image" class="rounded-full">
-            <h4 class="text-xs text-[#364F65] mt-3 mb-1 font-medium">Mark Henry</h4>
-            <p class="text-[#9A9DAA] text-[10px] bg-white font-light">Project Manager</p>
-    
-            <span class=" three-dots-icon material-icons text-[#2D3F50] text-xl absolute top-0 right-3 cursor-pointer">
-              more_horiz
-              </span>
-  
-              <div class="edit-delete-wrapper hide absolute bg-white top-4 -right-28 cursor-pointer shadow-lg">
-                <div class="edit flex pl-3 pr-12 py-2">
-                  <img src="./Images/icon (2).svg" alt="edit-icon">
-                  <p class="ml-2 text-[#203B54]">Edit</p>
-                </div>
-      
-                <div class="delete flex text-[#EC6060] bg-[#F9FAFB] pl-3 pr-12 py-2">
-                  <img src="./Images/icon (3).svg" alt="edit-icon">
-                  <p class="ml-1 font-light">Delete</p>
-                </div>
-      
-              </div>
-  
-          </div>
-  
-          <!-- seventh card  -->
-  
-          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl w-36 border text-center flex flex-col items-center mr-4 mt-4">
-            <img src="./Images/professional-architect-Q375YLM 1.svg" alt="person image" class="rounded-full">
-            <h4 class="text-xs text-[#364F65] mt-3 mb-1 font-medium">Mark Henry</h4>
-            <p class="text-[#9A9DAA] text-[10px] bg-white font-light">Project Manager</p>
-    
-            <span class=" three-dots-icon material-icons text-[#2D3F50] text-xl absolute top-0 right-3 cursor-pointer">
-              more_horiz
-              </span>
-  
-              <div class="edit-delete-wrapper hide absolute bg-white top-4 -right-28 cursor-pointer shadow-lg">
-                <div class="edit flex pl-3 pr-12 py-2">
-                  <img src="./Images/icon (2).svg" alt="edit-icon">
-                  <p class="ml-2 text-[#203B54]">Edit</p>
-                </div>
-      
-                <div class="delete flex text-[#EC6060] bg-[#F9FAFB] pl-3 pr-12 py-2">
-                  <img src="./Images/icon (3).svg" alt="edit-icon">
-                  <p class="ml-1 font-light">Delete</p>
-                </div>
-      
-              </div>
-  
-          </div>
-  
-          <!-- eighth card  -->
-  
-          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl w-36 border text-center flex flex-col items-center mr-4 mt-4">
-            <img src="./Images/professional-architect-Q375YLM 1.svg" alt="person image" class="rounded-full">
-            <h4 class="text-xs text-[#364F65] mt-3 mb-1 font-medium">Mark Henry</h4>
-            <p class="text-[#9A9DAA] text-[10px] bg-white font-light">Project Manager</p>
-    
-            <span class=" three-dots-icon material-icons text-[#2D3F50] text-xl absolute top-0 right-3 cursor-pointer">
-              more_horiz
-              </span>
-  
-              <div class="edit-delete-wrapper hide absolute bg-white top-4 -right-28 cursor-pointer shadow-lg">
-                <div class="edit flex pl-3 pr-12 py-2">
-                  <img src="./Images/icon (2).svg" alt="edit-icon">
-                  <p class="ml-2 text-[#203B54]">Edit</p>
-                </div>
-      
-                <div class="delete flex text-[#EC6060] bg-[#F9FAFB] pl-3 pr-12 py-2">
-                  <img src="./Images/icon (3).svg" alt="edit-icon">
-                  <p class="ml-1 font-light">Delete</p>
-                </div>
-      
-              </div>
-  
-          </div>
-  
-          <!-- ninth card  -->
-  
-          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl w-36 border text-center flex flex-col items-center mr-4 mt-4">
-            <img src="./Images/professional-architect-Q375YLM 1.svg" alt="person image" class="rounded-full">
-            <h4 class="text-xs text-[#364F65] mt-3 mb-1 font-medium">Mark Henry</h4>
-            <p class="text-[#9A9DAA] text-[10px] bg-white font-light">Project Manager</p>
-    
-            <span class=" three-dots-icon material-icons text-[#2D3F50] text-xl absolute top-0 right-3 cursor-pointer">
-              more_horiz
-              </span>
-  
-              <div class="edit-delete-wrapper hide absolute bg-white top-4 -right-28 cursor-pointer shadow-lg">
-                <div class="edit flex pl-3 pr-12 py-2">
-                  <img src="./Images/icon (2).svg" alt="edit-icon">
-                  <p class="ml-2 text-[#203B54]">Edit</p>
-                </div>
-      
-                <div class="delete flex text-[#EC6060] bg-[#F9FAFB] pl-3 pr-12 py-2">
-                  <img src="./Images/icon (3).svg" alt="edit-icon">
-                  <p class="ml-1 font-light">Delete</p>
-                </div>
-      
-              </div>
-  
-          </div>
+           </div>
+
+           
+
+
   
         </div>
       </div>
@@ -349,115 +1755,342 @@
       <!-- invited users section below  -->
 
       <div class="my-7">
-        <h3 class="font-semibold text-[#203B54]">Invited</h3>
+        <h3 class="font-semibold text-[#203B54] mb-4">Invited</h3>
         
-        <div class="invited-cards-wrapper flex flex-wrap w-9/12">
+        <div class="invited-cards-wrapper flex flex-wrap w-full relative gap-6">
   
           <!-- first card -->
-          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl w-36 border-y border-[#7238B3] text-center flex flex-col items-center mr-4 mt-4">
-            <img src="./Images/professional-architect-Q375YLM 1.svg" alt="person image" class="rounded-full">
-            <h4 class="text-xs text-[#364F65] mt-3 mb-1 font-medium">Mark Henry</h4>
-            <p class="text-[#7238B3] text-[10px] bg-white font-light">Waiting to accept Invite</p>
-    
+          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl text-center flex flex-col items-center border">
+            <img src="./Images/cartoonImg.jpg" alt="person image" class="rounded-full">
+
+            <div class="z-10 email text-white bg-pink-50 absolute -top-7">
+              <p class="bg-black px-2 py-1 rounded-md">Nancy2@yopmail.com</p>
+              <div class="z-10 triangle absolute border-8 border-x-transparent border-b-transparent border-t-black -bottom-4 left-[4.5rem] cursor-pointer"></div>
+            </div>
+
+            <h4 class="text-[#364F65] mt-3 mb-1 font-medium">Nancy2</h4>
+            <p class="text-[#7238B3] text-xs bg-white font-medium">Waiting to accept Invite</p>
+            
           </div>
   
-          <!-- second card  -->
-          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl w-36 border text-center flex flex-col items-center mr-4 mt-4 36 border-y border-x-0 border-[#D96980] ">
-            <img src="./Images/professional-architect-Q375YLM 1.svg" alt="person image" class="rounded-full">
-            <h4 class="text-xs text-[#364F65] mt-3 mb-1 font-medium">Mark Henry</h4>
-            <p class="text-[10px] bg-white font-light text-[#D96980]">Invite Expired</p>
-    
+          <!-- second card -->
+          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl text-center flex flex-col items-center border">
+            <img src="./Images/cartoonImg.jpg" alt="person image" class="rounded-full">
+
+            <div class="z-10 email text-white bg-pink-50 absolute -top-7">
+              <p class="bg-black px-2 py-1 rounded-md">martingarax@yopmail.com</p>
+              <div class="z-10 triangle absolute border-8 border-x-transparent border-b-transparent border-t-black -bottom-4 left-[4.5rem] cursor-pointer"></div>
+            </div>
+
+            <h4 class="text-[#364F65] mt-3 mb-1 font-medium">martingarax</h4>
+            <p class="text-red-500 text-xs bg-white font-medium">Invite Expired</p>
+            
           </div>
+
+          <!-- third card -->
+           <div class="relative card-people space-x-2 py-6  bg-white rounded-xl text-center flex flex-col items-center border">
+              <img src="./Images/cartoonImg.jpg" alt="person image" class="rounded-full">
   
-          <!-- third card  -->
-          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl w-36 border text-center flex flex-col items-center mr-4 mt-4 36 border-y border-[#D96980] border-x-0 ">
-            <img src="./Images/professional-architect-Q375YLM 1.svg" alt="person image" class="rounded-full">
-            <h4 class="text-xs text-[#364F65] mt-3 mb-1 font-medium">Mark Henry</h4>
-            <p class="background: #7238B3;
-text-[10px] bg-white font-light text-[#D96980]">Declined</p>
-     
+              <div class="z-10 email text-white bg-pink-50 absolute -top-7">
+                <p class="bg-black px-2 py-1 rounded-md">Jack@yopmail.com</p>
+                <div class="z-10 triangle absolute border-8 border-x-transparent border-b-transparent border-t-black -bottom-4 left-[4.5rem] cursor-pointer"></div>
+              </div>
+  
+              <h4 class="text-[#364F65] mt-3 mb-1 font-medium">Jack</h4>
+              <p class="text-[#7238B3] text-xs bg-white font-medium">Waiting to accept Invite</p>
+              
           </div>
-  
+
+          <!-- 4th card -->
+        <div class="relative card-people space-x-2 py-6  bg-white rounded-xl text-center flex flex-col items-center border">
+            <img src="./Images/cartoonImg.jpg" alt="person image" class="rounded-full">
+
+            <div class="z-10 email text-white bg-pink-50 absolute -top-7">
+              <p class="bg-black px-2 py-1 rounded-md">Steve@yopmail.com</p>
+              <div class="z-10 triangle absolute border-8 border-x-transparent border-b-transparent border-t-black -bottom-4 left-[4.5rem] cursor-pointer"></div>
+            </div>
+
+            <h4 class="text-[#364F65] mt-3 mb-1 font-medium">Steve</h4>
+            <p class="text-[#7238B3] text-xs bg-white font-medium">Waiting to accept Invite</p>
+            
+        </div>
+
+          <!-- 5th card -->
+          <div class="relative card-people space-x-2 py-6  bg-white rounded-xl text-center flex flex-col items-center border">
+            <img src="./Images/cartoonImg.jpg" alt="person image" class="rounded-full">
+
+            <div class="z-10 email text-white bg-pink-50 absolute -top-7">
+              <p class="bg-black px-2 py-1 rounded-md">drew@yopmail.com</p>
+              <div class="z-10 triangle absolute border-8 border-x-transparent border-b-transparent border-t-black -bottom-4 left-[4.5rem] cursor-pointer"></div>
+            </div>
+
+            <h4 class="text-[#364F65] mt-3 mb-1 font-medium">drew</h4>
+            <p class="text-[#7238B3] text-xs bg-white font-medium">Waiting to accept Invite</p>
+                    
+         </div>
+
+
+     <!-- 6th card -->
+       <div class="relative card-people space-x-2 py-6  bg-white rounded-xl text-center flex flex-col items-center border">
+          <img src="./Images/cartoonImg.jpg" alt="person image" class="rounded-full">
+
+          <div class="z-10 email text-white bg-pink-50 absolute -top-7">
+            <p class="bg-black px-2 py-1 rounded-md">AnkitMaster@yopmail.com</p>
+            <div class="z-10 triangle absolute border-8 border-x-transparent border-b-transparent border-t-black -bottom-4 left-[4.5rem] cursor-pointer"></div>
+          </div>
+
+          <h4 class="text-[#364F65] mt-3 mb-1 font-medium">AnkitMaster</h4>
+          <p class="text-[#7238B3] text-xs bg-white font-medium">Waiting to accept Invite</p>
+          
+       </div>
+
+      <!-- 7th card -->
+        <div class="relative card-people space-x-2 py-6  bg-white rounded-xl text-center flex flex-col items-center border">
+          <img src="./Images/cartoonImg.jpg" alt="person image" class="rounded-full">
+
+          <div class="z-10 email text-white bg-pink-50 absolute -top-7">
+            <p class="bg-black px-2 py-1 rounded-md">nitin@yopmail.com</p>
+            <div class="z-10 triangle absolute border-8 border-x-transparent border-b-transparent border-t-black -bottom-4 left-[4.5rem] cursor-pointer"></div>
+          </div>
+
+          <h4 class="text-[#364F65] mt-3 mb-1 font-medium">nitin</h4>
+          <p class="text-[#7238B3] text-xs bg-white font-medium">Waiting to accept Invite</p>
+                  
+        </div>
+
+
+      <!-- 8th card -->
+       <div class="relative card-people space-x-2 py-6  bg-white rounded-xl text-center flex flex-col items-center border">
+          <img src="./Images/cartoonImg.jpg" alt="person image" class="rounded-full">
+
+          <div class="z-10 email text-white bg-pink-50 absolute -top-7">
+            <p class="bg-black px-2 py-1 rounded-md">niko1992@yopmail.com</p>
+            <div class="z-10 triangle absolute border-8 border-x-transparent border-b-transparent border-t-black -bottom-4 left-[4.5rem] cursor-pointer"></div>
+          </div>
+
+          <h4 class="text-[#364F65] mt-3 mb-1 font-medium">niko1992</h4>
+          <p class="text-[#7238B3] text-xs bg-white font-medium">Waiting to accept Invite</p>
+          
+      </div>
+
+        <!-- 9th card -->
+        <div class="relative card-people space-x-2 py-6  bg-white rounded-xl text-center flex flex-col items-center border">
+          <img src="./Images/cartoonImg.jpg" alt="person image" class="rounded-full">
+
+          <div class="z-10 email text-white bg-pink-50 absolute -top-7">
+            <p class="bg-black px-2 py-1 rounded-md">iloggaque@emltmp.com</p>
+            <div class="z-10 triangle absolute border-8 border-x-transparent border-b-transparent border-t-black -bottom-4 left-[4.5rem] cursor-pointer"></div>
+          </div>
+
+          <h4 class="text-[#364F65] mt-3 mb-1 font-medium">iloggaque</h4>
+          <p class="text-[#7238B3] text-xs bg-white font-medium">Waiting to accept Invite</p>
+          
+      </div>
+
         </div>
       </div>
 
       <!-- Your team section below  -->
 
-      <div class="mt-16">
-        <h3 class="font-semibold text-[#203B54]">Your Teams</h3>
+      <div class="">
+        <h3 class="font-semibold my-4">Your Teams</h3>
 
-        <div class="your-team-card-wrapper flex flex-wrap">
-          <div class="relative card-people space-x-2  bg-white rounded-xl w-36 border text-center flex flex-col items-center mr-4 mt-4"> 
-    
-            <div class="top-section w-full bg-[#E3D7F0] py-5 rounded-t-xl">
-              <p class="text-[#364F65] text-sm font-medium">WHOA CRM</p>
-            </div>
-
-              <div class="flex rounded-br-md bg-white m-auto pb-7 pt-10">
-                <img src="./Images/Profile.png" alt="" class="w-10 h-1w-10 rounded-full object-cover object-left-top" >
-                <img src="./Images/Profile (1).png" alt="" class="w-10 h-1w-10 rounded-full object-cover object-left-top -translate-x-2" >
-                <img src="./Images/Profile (2).png" alt="" class="w-10 h-1w-10 rounded-full object-cover object-left-top -translate-x-4" >
-              </div>
-
-
-            <span class=" three-dots-icon material-icons text-[#2D3F50] text-xl absolute top-0 right-2 cursor-pointer">
-              more_horiz
-              </span>
+        <!-- cards wrapper below  -->
+        <div class="your-team-cards-wrapper flex justify-center flex-wrap items-center gap-6">
+          <!-- first below 1st -->
+          <div class="your-team-card bg-white rounded-lg">
+            <div class="bg-[#e3d7f0] h-16 rounded-t-lg relative flex items-center justify-center py-8 text-[#203b54]">
+              <p>Safety Management Tool</p>
+              <span class="your-team-three-dots cards-More-icon material-icons text-[#2D3F50] text-xl absolute top-1 right-3 cursor-pointer">
+                more_horiz
+                </span>
   
-              <div class="edit-delete-wrapper absolute hide bg-white top-4 -right-28 cursor-pointer shadow-lg">
-                <div class="edit flex pl-3 pr-12 py-2">
-                  <img src="./Images/icon (2).svg" alt="edit-icon">
-                  <p class="ml-2 text-[#203B54]">Edit</p>
-                </div>
-      
-                <div class="delete flex text-[#EC6060] bg-[#F9FAFB] pl-3 pr-12 py-2">
-                  <img src="./Images/icon (3).svg" alt="edit-icon">
-                  <p class="ml-1 font-light">Delete</p>
-                </div>
-      
-              </div>
-  
-          </div>
-          <div class="relative card-people space-x-2  bg-white rounded-xl w-36 border text-center flex flex-col items-center mr-4 mt-4"> 
-    
-            <div class="top-section w-full bg-[#E3D7F0] py-5 rounded-t-xl">
-              <p class="text-[#364F65] text-sm font-medium">Safety CRM</p>
-            </div>
-
-              <div class="flex rounded-br-md bg-white m-auto pb-7 pt-10">
-                <img src="./Images/Profile.png" alt="" class="w-10 h-1w-10 rounded-full object-cover object-left-top" >
-                <img src="./Images/Profile (1).png" alt="" class="w-10 h-1w-10 rounded-full object-cover object-left-top -translate-x-2" >
-                <img src="./Images/Profile (2).png" alt="" class="w-10 h-1w-10 rounded-full object-cover object-left-top -translate-x-4" >
-              </div>
-
-
-            <span class=" three-dots-icon material-icons text-[#2D3F50] text-xl absolute top-0 right-2 cursor-pointer">
-              more_horiz
-              </span>
-  
-              <div class="edit-delete-wrapper absolute hide bg-white top-4 -right-28 cursor-pointer shadow-lg">
-                <div class="edit flex pl-3 pr-12 py-2">
-                  <img src="./Images/icon (2).svg" alt="edit-icon">
-                  <p class="ml-2 text-[#203B54]">Edit</p>
-                </div>
-      
-                <div class="delete flex text-[#EC6060] bg-[#F9FAFB] pl-3 pr-12 py-2">
-                  <img src="./Images/icon (3).svg" alt="edit-icon">
-                  <p class="ml-1 font-light">Delete</p>
-                </div>
-      
-              </div>
-  
-          </div>
-        </div>
+                <div class="edit-delete-wrapper absolute bg-white top-8 -right-28 cursor-pointer shadow-lg text-[#212529]">
+                  <div class="edit flex items-center  pl-3 pr-5 py-[10px] relative">
+                    <span> <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></span>
+                    <p class="ml-2  text-[0.875rem] ">Edit Team</p>
+                  </div>
         
+                  <div class="delete flex items-center   pl-3 pr-5 py-[10px] relative">
+                    <span><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path d="M7 4V2h10v2h5v2h-2v15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6H2V4h5zM6 6v14h12V6H6zm3 3h2v8H9V9zm4 0h2v8h-2V9z"></path></g></svg></span>
+                    <p class="ml-3  text-[0.875rem]">Delete</p>
+                  </div>
+        
+                </div>
+  
+            </div>
+            <div class="team-members flex items-center justify-center py-12 relative">
+              <img src="./Images/cartoonImg.jpg" alt="team member img" >
+              <div class="z-10 name text-white bg-pink-50 absolute -top-2 left-4">
+                <p class="bg-[#203b54] px-2 py-1 rounded-md">Dustin Rivest</p>
+                <div class="z-10 triangle absolute border-8 border-x-transparent border-b-transparent border-t-[#203b54] -bottom-4 right-12 cursor-pointer"></div>
+              </div>
+              <img src="./Images/CindyShawImg.webp" alt="team member img" class="-translate-x-2" >
+              <div class="z-10 name text-white bg-pink-50 absolute -top-2 left-14">
+                <p class="bg-[#203b54] px-2 py-1 rounded-md">Cindy Shaw</p>
+                <div class="z-10 triangle absolute border-8 border-x-transparent border-b-transparent border-t-[#203b54] -bottom-4 right-12 cursor-pointer"></div>
+              </div>
+              <img src="./Images/drewThomas.png" alt="team member img" class="-translate-x-4" >
+              <div class="z-10 name text-white bg-pink-50 absolute -top-2 left-24">
+                <p class="bg-[#203b54] px-2 py-1 rounded-md">Micky James</p>
+                <div class="z-10 triangle absolute border-8 border-x-transparent border-b-transparent border-t-[#203b54] -bottom-4 right-12 cursor-pointer"></div>
+              </div>
+              <div class="other-members-btn cards-More-icon -translate-x-6 py-2 pl-3 cursor-pointer">+2</div>
+              <div class="other-members cards-More-icon absolute rounded-md bg-white -top-16 -right-4 border cursor-pointer">
+                <div class="flex items-center justify-between bg-white z-10 px-5 py-2 w-44 rounded-t-md hover:bg-[#e3d7f066] hover:text-[#7238b3]">
+                  <img src="./Images/Profile (1).png" alt="image" class="w-8">
+                  <p class="text-sm">Drew Thomas</p>
+                </div>
+  
+                <hr>
+  
+                <div class="flex items-center justify-between bg-white z-10 px-5 py-2 w-44 rounded-b-md hover:bg-[#e3d7f066] hover:text-[#7238b3]">
+                  <img src="./Images/Profile (2).png" alt="image" class="w-8">
+                  <p class="text-sm">Andrew tay</p>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- 2nd below  -->
+          <div class="your-team-card bg-white rounded-lg">
+            <div class="bg-[#e3d7f0] h-16 rounded-t-lg relative flex items-center justify-center py-8 text-[#203b54]">
+              <p>SMT Core Members</p>
+              <span class="your-team-three-dots cards-More-icon material-icons text-[#2D3F50] text-xl absolute top-1 right-3 cursor-pointer">
+                more_horiz
+                </span>
+  
+                <div class="edit-delete-wrapper absolute bg-white top-8 -right-28 cursor-pointer shadow-lg text-[#212529]">
+                  <div class="edit flex items-center  pl-3 pr-5 py-[10px] relative">
+                    <span> <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></span>
+                    <p class="ml-2  text-[0.875rem] ">Edit Team</p>
+                  </div>
+        
+                  <div class="delete flex items-center   pl-3 pr-5 py-[10px] relative">
+                    <span><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path d="M7 4V2h10v2h5v2h-2v15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6H2V4h5zM6 6v14h12V6H6zm3 3h2v8H9V9zm4 0h2v8h-2V9z"></path></g></svg></span>
+                    <p class="ml-3  text-[0.875rem]">Delete</p>
+                  </div>
+        
+                </div>
+  
+            </div>
+            <div class="team-members flex items-center justify-center py-12 relative">
+              <img src="./Images/dustinRivestImg.webp" alt="team member img" >
+              <div class="z-10 name text-white bg-pink-50 absolute -top-2 left-14">
+                <p class="bg-[#203b54] px-2 py-1 rounded-md">Dustin Rivest</p>
+                <div class="z-10 triangle absolute border-8 border-x-transparent border-b-transparent border-t-[#203b54] -bottom-4 right-12 cursor-pointer"></div>
+              </div>
+              <img src="./Images/Steve Rodes.jpg" alt="team member img" class="-translate-x-2" >
+              <div class="z-10 name text-white bg-pink-50 absolute -top-2 left-24">
+                <p class="bg-[#203b54] px-2 py-1 rounded-md">Steve Rodes</p>
+                <div class="z-10 triangle absolute border-8 border-x-transparent border-b-transparent border-t-[#203b54] -bottom-4 right-12 cursor-pointer"></div>
+              </div>
+            </div>
+          </div>
+
+           <!-- 3rd below 1st -->
+          <div class="your-team-card bg-white rounded-lg">
+            <div class="bg-[#e3d7f0] h-16 rounded-t-lg relative flex items-center justify-center py-8 text-[#203b54]">
+              <p>Safety Management Tool</p>
+              <span class="your-team-three-dots cards-More-icon material-icons text-[#2D3F50] text-xl absolute top-1 right-3 cursor-pointer">
+                more_horiz
+                </span>
+  
+                <div class="edit-delete-wrapper absolute bg-white top-8 -right-28 cursor-pointer shadow-lg text-[#212529]">
+                  <div class="edit flex items-center  pl-3 pr-5 py-[10px] relative">
+                    <span> <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></span>
+                    <p class="ml-2  text-[0.875rem] ">Edit Team</p>
+                  </div>
+        
+                  <div class="delete flex items-center   pl-3 pr-5 py-[10px] relative">
+                    <span><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path d="M7 4V2h10v2h5v2h-2v15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6H2V4h5zM6 6v14h12V6H6zm3 3h2v8H9V9zm4 0h2v8h-2V9z"></path></g></svg></span>
+                    <p class="ml-3  text-[0.875rem]">Delete</p>
+                  </div>
+        
+                </div>
+  
+            </div>
+            <div class="team-members flex items-center justify-center py-12 relative">
+              <img src="./Images/dustinRivestImg.webp" alt="team member img" >
+              <div class="z-10 name text-white bg-pink-50 absolute -top-2 left-3">
+                <p class="bg-[#203b54] px-2 py-1 rounded-md">Dustin Rivest</p>
+                <div class="z-10 triangle absolute border-8 border-x-transparent border-b-transparent border-t-[#203b54] -bottom-4 right-12 cursor-pointer"></div>
+              </div>
+              <img src="./Images/cartoonImg.jpg" alt="team member img" class="-translate-x-2" >
+              <div class="z-10 name text-white bg-pink-50 absolute -top-2 left-[4rem]">
+                <p class="bg-[#203b54] px-2 py-1 rounded-md">Kenny Ko</p>
+                <div class="z-10 triangle absolute border-8 border-x-transparent border-b-transparent border-t-[#203b54] -bottom-4 right-9 cursor-pointer"></div>
+              </div>
+              <img src="./Images/cartoonImg.jpg" alt="team member img" class="-translate-x-4" >
+              <div class="z-10 name text-white bg-pink-50 absolute -top-2 left-24">
+                <p class="bg-[#203b54] px-2 py-1 rounded-md">John USA</p>
+                <div class="z-10 triangle absolute border-8 border-x-transparent border-b-transparent border-t-[#203b54] -bottom-4 right-9 cursor-pointer"></div>
+              </div>
+              <div class="other-members-btn cards-More-icon -translate-x-6 py-2 pl-3 cursor-pointer activated">+1</div>
+              <div class="other-members absolute rounded-md bg-white -bottom-4 -right-4 border cursor-pointer">
+                <div class="flex items-center justify-between bg-white z-10 px-5 py-2 w-44 rounded-t-md hover:bg-[#e3d7f066] hover:text-[#7238b3]">
+                  <img src="./Images/Profile (1).png" alt="image" class="w-8">
+                  <p class="text-sm">Drew Thomas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+           <!-- 4th below 1st -->
+           <div class="your-team-card bg-white rounded-lg">
+            <div class="bg-[#e3d7f0] h-16 rounded-t-lg relative flex items-center justify-center py-8 text-[#203b54]">
+              <p>Safety Management Tool</p>
+              <span class="your-team-three-dots cards-More-icon material-icons text-[#2D3F50] text-xl absolute top-1 right-3 cursor-pointer">
+                more_horiz
+                </span>
+  
+                <div class="edit-delete-wrapper absolute bg-white top-8 -right-12 cursor-pointer shadow-lg text-[#212529]">
+                  <div class="edit flex items-center  pl-3 pr-5 py-[10px] relative">
+                    <span> <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></span>
+                    <p class="ml-2  text-[0.875rem] ">Edit Team</p>
+                  </div>
+        
+                  <div class="delete flex items-center   pl-3 pr-5 py-[10px] relative">
+                    <span><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path d="M7 4V2h10v2h5v2h-2v15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6H2V4h5zM6 6v14h12V6H6zm3 3h2v8H9V9zm4 0h2v8h-2V9z"></path></g></svg></span>
+                    <p class="ml-3  text-[0.875rem]">Delete</p>
+                  </div>
+        
+                </div>
+  
+            </div>
+            <div class="team-members flex items-center justify-center py-12 relative">
+              <img src="./Images/cartoonImg.jpg" alt="team member img" >
+
+              <div class="z-10 name text-white bg-pink-50 absolute -top-2 left-12">
+                <p class="bg-[#203b54] px-2 py-1 rounded-md">Kenny Ko</p>
+                <div class="z-10 triangle absolute border-8 border-x-transparent border-b-transparent border-t-[#203b54] -bottom-4 right-9 cursor-pointer"></div>
+              </div>
+              <img src="./Images/drewThomas.png" alt="team member img" class="-translate-x-2" >
+
+              <div class="z-10 name text-white bg-pink-50 absolute -top-2 left-14">
+                <p class="bg-[#203b54] px-2 py-1 rounded-md">Drew Thomas</p>
+                <div class="z-10 triangle absolute border-8 border-x-transparent border-b-transparent border-t-[#203b54] -bottom-4 right-9 cursor-pointer"></div>
+              </div>
+              
+              <img src="./Images/Steve Rodes.jpg" alt="team member img" class="-translate-x-4" >
+
+              <div class="z-10 name text-white bg-pink-50 absolute -top-2 right-16">
+                <p class="bg-[#203b54] px-2 py-1 rounded-md">Steve Rodes</p>
+                <div class="z-10 triangle absolute border-8 border-x-transparent border-b-transparent border-t-[#203b54] -bottom-4 right-9 cursor-pointer"></div>
+              </div>
+            </div>
+          </div>
+          
+
+        </div>
       </div>
 
-      <div class="side-buttons space-x-4 absolute text-sm top-10 right-5 flex " >
-        <button class="rounded-lg  bg-[#E3D7F0] text-[#203B54] p-2 ">Create Team</button>
 
-        <button class="rounded-lg bg-[#7238B3] p-2 text-white flex items-center ml-3">
-          <span class="material-icons text-2xl font-normal mx-1">add</span>Add User
+      <div class="side-buttons space-x-4 absolute text-sm top-24 right-12 flex " >
+        <button class=" bg-[#e3d7f0] text-[#203B54] ">Create Team</button>
+
+        <button class="bg-[#7238B3] hover:bg-[#613098] text-white flex items-center ml-3">
+          <span class="material-icons text-lg font-thin mx-1">add</span>Invite user
         </button>
       </div>
 

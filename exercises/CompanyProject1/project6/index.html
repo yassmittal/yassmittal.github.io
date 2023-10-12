@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up for an Account</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex sign-up-page">
+    <div class="bg-[#2563EB] min-w-[50%] min-h-[100vh] p-12 relative">
+      <div>
+        <svg
+          width="167"
+          height="35"
+          viewBox="0 0 167 35"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M0.632969 5.82559C0 7.35371 0 9.29094 0 13.1654V21.4808C0 25.3552 0 27.2925 0.632969 28.8206C1.47693 30.8581 3.09571 32.4769 5.13321 33.3208C6.66133 33.9538 8.59856 33.9538 12.473 33.9538H20.7884C24.6629 33.9538 26.6001 33.9538 28.1282 33.3208C30.1657 32.4769 31.7845 30.8581 32.6284 28.8206C33.2614 27.2925 33.2614 25.3552 33.2614 21.4808V13.1654C33.2614 9.29094 33.2614 7.35371 32.6284 5.82559C31.7845 3.78809 30.1657 2.16931 28.1282 1.32535C26.6001 0.692383 24.6629 0.692383 20.7884 0.692383H12.473C8.59856 0.692383 6.66133 0.692383 5.13321 1.32535C3.09571 2.16931 1.47693 3.78809 0.632969 5.82559ZM19.1819 9.79902C19.2176 9.66963 19.0669 9.57012 18.9619 9.65376L9.67957 17.0496C9.59098 17.1202 9.61988 17.2614 9.72907 17.2916L14.677 18.6569C14.7508 18.6772 14.7941 18.7535 14.7737 18.8273L13.2036 24.5174C13.1679 24.6468 13.3186 24.7463 13.4236 24.6627L22.7059 17.2668C22.7945 17.1963 22.7656 17.055 22.6564 17.0249L17.7085 15.6595C17.6347 15.6392 17.5914 15.5629 17.6118 15.4891L19.1819 9.79902Z"
+            fill="white"
+          />
+          <path
+            d="M46.1007 28V7.84157H50.3627V16.1589H59.0147V7.84157H63.2668V28H59.0147V19.6728H50.3627V28H46.1007ZM66.3556 28V12.8812H70.5487V28H66.3556ZM68.462 10.9323C67.8386 10.9323 67.3038 10.7256 66.8576 10.3122C66.4179 9.89219 66.1981 9.3902 66.1981 8.80618C66.1981 8.22873 66.4179 7.7333 66.8576 7.31989C67.3038 6.89992 67.8386 6.68994 68.462 6.68994C69.0854 6.68994 69.6169 6.89992 70.0565 7.31989C70.5028 7.7333 70.7259 8.22873 70.7259 8.80618C70.7259 9.3902 70.5028 9.89219 70.0565 10.3122C69.6169 10.7256 69.0854 10.9323 68.462 10.9323ZM73.5611 33.6696V12.8812H77.6952V15.4207H77.8822C78.0659 15.0138 78.3317 14.6004 78.6795 14.1805C79.0338 13.7539 79.4932 13.3996 80.0575 13.1174C80.6284 12.8287 81.3371 12.6843 82.1836 12.6843C83.286 12.6843 84.3031 12.973 85.2349 13.5505C86.1667 14.1214 86.9115 14.9843 87.4693 16.1392C88.027 17.2876 88.3059 18.7279 88.3059 20.4603C88.3059 22.1467 88.0336 23.5707 87.489 24.7321C86.9509 25.887 86.2159 26.7631 85.2841 27.3602C84.3589 27.9508 83.3221 28.2461 82.1737 28.2461C81.3601 28.2461 80.6678 28.1116 80.0969 27.8425C79.5325 27.5735 79.0699 27.2355 78.709 26.8287C78.3481 26.4153 78.0725 25.9986 77.8822 25.5786H77.7542V33.6696H73.5611ZM77.6657 20.4406C77.6657 21.3396 77.7903 22.1237 78.0397 22.7931C78.289 23.4624 78.65 23.9841 79.1224 24.3581C79.5949 24.7256 80.1691 24.9093 80.8449 24.9093C81.5274 24.9093 82.1048 24.7223 82.5773 24.3483C83.0498 23.9677 83.4074 23.4427 83.6502 22.7734C83.8995 22.0975 84.0242 21.3199 84.0242 20.4406C84.0242 19.5678 83.9028 18.8001 83.66 18.1373C83.4172 17.4746 83.0596 16.9562 82.5871 16.5821C82.1147 16.2081 81.5339 16.0211 80.8449 16.0211C80.1625 16.0211 79.585 16.2015 79.1126 16.5625C78.6467 16.9234 78.289 17.4352 78.0397 18.098C77.7903 18.7607 77.6657 19.5416 77.6657 20.4406ZM94.948 19.2594V28H90.7549V7.84157H94.8299V15.5486H95.007C95.3483 14.6562 95.8995 13.9573 96.6606 13.4521C97.4218 12.9402 98.3766 12.6843 99.525 12.6843C100.575 12.6843 101.49 12.914 102.271 13.3733C103.059 13.8261 103.669 14.479 104.102 15.3321C104.542 16.1786 104.758 17.1924 104.752 18.3736V28H100.558V19.1216C100.565 18.1898 100.329 17.4647 99.8498 16.9463C99.3773 16.4279 98.7146 16.1687 97.8615 16.1687C97.2906 16.1687 96.7853 16.2901 96.3457 16.5329C95.9126 16.7757 95.5714 17.1301 95.322 17.596C95.0792 18.0553 94.9545 18.6098 94.948 19.2594ZM114.536 28.2953C113.007 28.2953 111.685 27.9705 110.569 27.3208C109.46 26.6646 108.604 25.7525 108 24.5845C107.397 23.4099 107.095 22.0483 107.095 20.4996C107.095 18.9379 107.397 17.573 108 16.405C108.604 15.2304 109.46 14.3183 110.569 13.6686C111.685 13.0124 113.007 12.6843 114.536 12.6843C116.065 12.6843 117.384 13.0124 118.493 13.6686C119.608 14.3183 120.468 15.2304 121.072 16.405C121.675 17.573 121.977 18.9379 121.977 20.4996C121.977 22.0483 121.675 23.4099 121.072 24.5845C120.468 25.7525 119.608 26.6646 118.493 27.3208C117.384 27.9705 116.065 28.2953 114.536 28.2953ZM114.556 25.0471C115.251 25.0471 115.832 24.8502 116.298 24.4565C116.764 24.0562 117.115 23.5116 117.351 22.8226C117.594 22.1336 117.715 21.3494 117.715 20.4701C117.715 19.5908 117.594 18.8067 117.351 18.1176C117.115 17.4286 116.764 16.884 116.298 16.4837C115.832 16.0834 115.251 15.8833 114.556 15.8833C113.854 15.8833 113.263 16.0834 112.784 16.4837C112.311 16.884 111.954 17.4286 111.711 18.1176C111.475 18.8067 111.357 19.5908 111.357 20.4701C111.357 21.3494 111.475 22.1336 111.711 22.8226C111.954 23.5116 112.311 24.0562 112.784 24.4565C113.263 24.8502 113.854 25.0471 114.556 25.0471ZM128.55 19.2594V28H124.357V12.8812H128.354V15.5486H128.531C128.865 14.6693 129.426 13.9737 130.214 13.4619C131.001 12.9435 131.956 12.6843 133.078 12.6843C134.128 12.6843 135.044 12.914 135.824 13.3733C136.605 13.8327 137.212 14.4889 137.645 15.3419C138.078 16.1884 138.295 17.199 138.295 18.3736V28H134.102V19.1216C134.108 18.1964 133.872 17.4746 133.393 16.9562C132.914 16.4312 132.255 16.1687 131.415 16.1687C130.85 16.1687 130.352 16.2901 129.919 16.5329C129.492 16.7757 129.157 17.1301 128.915 17.596C128.678 18.0553 128.557 18.6098 128.55 19.2594ZM141.253 28V12.8812H145.446V28H141.253ZM143.36 10.9323C142.736 10.9323 142.202 10.7256 141.755 10.3122C141.316 9.89219 141.096 9.3902 141.096 8.80618C141.096 8.22873 141.316 7.7333 141.755 7.31989C142.202 6.89992 142.736 6.68994 143.36 6.68994C143.983 6.68994 144.515 6.89992 144.954 7.31989C145.4 7.7333 145.624 8.22873 145.624 8.80618C145.624 9.3902 145.4 9.89219 144.954 10.3122C144.515 10.7256 143.983 10.9323 143.36 10.9323ZM155.29 28.2953C153.741 28.2953 152.409 27.9672 151.294 27.311C150.185 26.6482 149.332 25.7296 148.734 24.555C148.144 23.3804 147.849 22.0286 147.849 20.4996C147.849 18.951 148.147 17.5927 148.744 16.4247C149.348 15.2501 150.204 14.3347 151.313 13.6785C152.422 13.0157 153.741 12.6843 155.27 12.6843C156.589 12.6843 157.744 12.9238 158.735 13.4029C159.726 13.8819 160.51 14.5545 161.087 15.4207C161.665 16.2868 161.983 17.304 162.042 18.472H158.085C157.974 17.7174 157.678 17.1104 157.199 16.651C156.727 16.1851 156.107 15.9522 155.339 15.9522C154.689 15.9522 154.122 16.1294 153.636 16.4837C153.157 16.8315 152.783 17.34 152.514 18.0094C152.245 18.6787 152.111 19.4891 152.111 20.4406C152.111 21.4052 152.242 22.2254 152.504 22.9013C152.773 23.5772 153.151 24.0923 153.636 24.4467C154.122 24.801 154.689 24.9782 155.339 24.9782C155.818 24.9782 156.248 24.8798 156.629 24.6829C157.016 24.4861 157.334 24.2006 157.583 23.8266C157.839 23.446 158.007 22.9899 158.085 22.4584H162.042C161.977 23.6133 161.662 24.6304 161.097 25.5097C160.539 26.3825 159.768 27.0649 158.784 27.5571C157.8 28.0492 156.635 28.2953 155.29 28.2953Z"
+            fill="white"
+          />
+        </svg>
+      </div>
+
+      <div class="flex items-center justify-center mt-[59px]">
+        <div class="outer-circle">
+          <div class="inner-circle-bg"></div>
+          <div
+            class="content-cards-wrapper absolute top-1/2 left-[41%] -translate-x-1/2 -translate-y-1/2"
+          >
+            <div class="card bg-[#F1F5F9] rounded-xl overflow-hidden w-fit">
+              <div
+                class="card-header bg-white min-h-[35px] flex items-center justify-between pl-4 pr-3"
+              >
+                <div class="flex gap-[6px]">
+                  <div class="rounded-full w-2 h-2 bg-[#2563EB]"></div>
+                  <div class="rounded-full w-2 h-2 bg-[#24D164]"></div>
+                  <div class="rounded-full w-2 h-2 bg-[#F6A723]"></div>
+                </div>
+
+                <div
+                  class="bg-[#F1F5F9] rounded-[50px] min-w-[78px] min-h-[10px]"
+                ></div>
+              </div>
+
+              <div class="card-body pt-5 pb-[27px] px-4">
+                <div class="flex items-center justify-between mb-3">
+                  <div class="bg-white rounded-[4px] py-[6px] px-[7px]">
+                    <div class="bg-[#F1F5F9] rounded-[50px] h-2 w-16"></div>
+                  </div>
+
+                  <div
+                    class="bg-[#E2E8F0] rounded-[50px] min-w-[64px] min-h-[8px]"
+                  ></div>
+                </div>
+
+                <div
+                  class="bg-white rounded-lg px-3 py-[10px] flex items-center gap-2 min-w-[178px]"
+                >
+                  <div>
+                    <img src="Images/person1.svg" alt="person Image" />
+                  </div>
+
+                  <div class="flex flex-col gap-2">
+                    <div
+                      class="bg-[#CBD5E1] rounded-[50px] w-16 min-h-[6px]"
+                    ></div>
+                    <div
+                      class="bg-[#E2E8F0] rounded-[50px] w-[55px] min-h-[4px]"
+                    ></div>
+                  </div>
+                </div>
+
+                <div
+                  class="bg-white rounded-lg px-3 py-[10px] flex items-center gap-2 min-w-[178px] my-2"
+                >
+                  <div>
+                    <img src="Images/person2.svg" alt="person Image" />
+                  </div>
+
+                  <div class="flex flex-col gap-2">
+                    <div
+                      class="bg-[#CBD5E1] rounded-[50px] w-16 min-h-[6px]"
+                    ></div>
+                    <div
+                      class="bg-[#E2E8F0] rounded-[50px] w-[55px] min-h-[4px]"
+                    ></div>
+                  </div>
+                </div>
+
+                <div
+                  class="bg-white rounded-lg px-3 py-[10px] flex items-center gap-2 min-w-[178px]"
+                >
+                  <div>
+                    <img src="Images/person3.svg" alt="person Image" />
+                  </div>
+
+                  <div class="flex flex-col gap-2">
+                    <div
+                      class="bg-[#CBD5E1] rounded-[50px] w-16 min-h-[6px]"
+                    ></div>
+                    <div
+                      class="bg-[#E2E8F0] rounded-[50px] w-[55px] min-h-[4px]"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="absolute top-[55px] -right-[133px]">
+              <div class="activity-card bg-white rounded-xl w-fit">
+                <p class="font-bold text-xs leading-[19.2px] text-[#0F172A]">
+                  Activity
+                </p>
+                <div class="flex items-end justify-between gap-4">
+                  <div
+                    class="flex flex-col justify-end items-center gap-1 w-fit"
+                  >
+                    <div
+                      class="bg-[#38BDF8] h-[19px] w-[10px] rounded-t-[4px]"
+                    ></div>
+                    <p
+                      class="text-[#64748B] font-normal text-[8px] tracking-[0.3px] leading-[12.8px]"
+                    >
+                      M
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex flex-col justify-end items-center gap-1 w-fit"
+                  >
+                    <div
+                      class="bg-[#38BDF8] h-[30px] w-[10px] rounded-t-[4px]"
+                    ></div>
+                    <p
+                      class="text-[#64748B] font-normal text-[8px] tracking-[0.3px] leading-[12.8px]"
+                    >
+                      T
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex flex-col justify-end items-center gap-1 w-fit"
+                  >
+                    <div
+                      class="bg-[#38BDF8] h-6 w-[10px] rounded-t-[4px]"
+                    ></div>
+                    <p
+                      class="text-[#64748B] font-normal text-[8px] tracking-[0.3px] leading-[12.8px]"
+                    >
+                      W
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex flex-col justify-end items-center gap-1 w-fit"
+                  >
+                    <div
+                      class="bg-[#38BDF8] h-[42px] w-[10px] rounded-t-[4px]"
+                    ></div>
+                    <p
+                      class="text-[#64748B] font-normal text-[8px] tracking-[0.3px] leading-[12.8px]"
+                    >
+                      T
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex flex-col justify-end items-center gap-1 w-fit"
+                  >
+                    <div
+                      class="bg-[#38BDF8] h-[53px] w-[10px] rounded-t-[4px]"
+                    ></div>
+                    <p
+                      class="text-[#64748B] font-normal text-[8px] tracking-[0.3px] leading-[12.8px]"
+                    >
+                      F
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex flex-col justify-end items-center gap-1 w-fit"
+                  >
+                    <div
+                      class="bg-[#38BDF8] h-[47px] w-[10px] rounded-t-[4px]"
+                    ></div>
+                    <p
+                      class="text-[#64748B] font-normal text-[8px] tracking-[0.3px] leading-[12.8px]"
+                    >
+                      S
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex flex-col justify-end items-center gap-1 w-fit"
+                  >
+                    <div
+                      class="bg-[#38BDF8] h-[32px] w-[10px] rounded-t-[4px]"
+                    ></div>
+                    <p
+                      class="text-[#64748B] font-normal text-[8px] tracking-[0.3px] leading-[12.8px]"
+                    >
+                      S
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pie-chart-graph">
+                <div
+                  class="pie-chart-graph-header bg-white pt-3 pl-3 pb-2 pr-2 flex items-center mh-[28px] rounded-t-xl"
+                >
+                  <div class="bg-[#E2E8F0] rounded-full w-2 h-2 mr-2"></div>
+                  <div
+                    class="bg-[#E2E8F0] rounded-[50px] w-[65px] h-[6px]"
+                  ></div>
+                </div>
+
+                <div class="p-3 pb-[36px]">
+                  <div class="flex items-center justify-between gap-[7px]">
+                    <div class="bg-white py-[9px] px-[10px] rounded-lg">
+                      <img src="./Images/pieChart.svg" alt="pie chart" />
+                    </div>
+
+                    <div>
+                      <div
+                        class="bg-white rounded-lg p-[9px] min-w-[83px] min-h-[26px] mb-3"
+                      >
+                        <div
+                          class="bg-[#E2E8F0] rounded-[50px] min-w-[65px] min-h-[8px]"
+                        ></div>
+                      </div>
+
+                      <div
+                        class="bg-[#E2E8F0] rounded-[50px] min-h-[8px] w-[57px]"
+                      ></div>
+                      <div
+                        class="bg-[#E2E8F0] rounded-[50px] min-h-[4px] w-[79px] my-[6px]"
+                      ></div>
+                      <div
+                        class="bg-[#E2E8F0] rounded-[50px] min-h-[4px] w-[41px]"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="my-2 py-3 px-2 flex items-center justify-between bg-white rounded-lg"
+                  >
+                    <div>
+                      <div
+                        class="bg-[#E2E8F0] rounded-[4px] w-[67px] h-[6px] mb-3"
+                      ></div>
+                      <div
+                        class="bg-[#F1F5F9] rounded-[4px] w-[58px] h-[6px]"
+                      ></div>
+                    </div>
+
+                    <div>
+                      <p
+                        class="text-[#0F172A] text-right text-[10px] leading-4 font-bold mb-[2px]"
+                      >
+                        $1,235,00
+                      </p>
+                      <p
+                        class="text-[#34D399] font-normal text-[8px] leading-[12.8px] text-right"
+                      >
+                        Completed
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="py-3 px-2 flex items-center justify-between bg-white rounded-lg absolute left-3 right-3"
+                  >
+                    <div>
+                      <div
+                        class="bg-[#E2E8F0] rounded-[4px] w-[67px] h-[6px] mb-3"
+                      ></div>
+                      <div
+                        class="bg-[#F1F5F9] rounded-[4px] w-[58px] h-[6px]"
+                      ></div>
+                    </div>
+
+                    <div>
+                      <p
+                        class="text-[#0F172A] text-right text-[10px] leading-4 font-bold mb-[2px]"
+                      >
+                        $2,266,70
+                      </p>
+                      <p
+                        class="text-[#34D399] font-normal text-[8px] leading-[12.8px] text-right"
+                      >
+                        Completed
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-white text-center mt-[84px]">
+        <p class="font-bold text-2xl leading-[30px] tracking-[0.2px]">
+          Customizable Multipurpose Dashboard
+        </p>
+        <p class="font-normal text-sm leading-[22.4px] text-[#F8FAFCB3] mt-3">
+          Everything you need in an easily customizable dashboard.
+        </p>
+
+        <div class="flex items-center mt-10 mx-auto gap-4 w-fit">
+          <div class="w-[10px] h-[10px] rounded-full bg-white"></div>
+          <div class="w-[10px] h-[10px] rounded-full bg-[#FFFFFF33]"></div>
+          <div class="w-[10px] h-[10px] rounded-full bg-[#FFFFFF33]"></div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="text-[#0F172A] min-w-[50%] flex flex-col items-center justify-center"
+    >
+      <form action="#" class="mx-auto w-fit">
+        <h2 class="font-bold leading-[125%] tracking-[0.2px] mb-8">
+          Sign Up for an Account
+        </h2>
+        <div>
+          <label for="username" class="relative min-h-[56px]">
+            <input
+              type="text"
+              id="username"
+              class="border border-[#E2E8F0] py-2 pr-4 pl-[47px] rounded-xl min-h-[56px] focus:outline-none w-full"
+              placeholder="Username"
+            />
+            <span class="absolute left-4 -top-[3px]">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
+                  stroke="#64748B"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M6 21V19C6 17.9391 6.42143 16.9217 7.17157 16.1716C7.92172 15.4214 8.93913 15 10 15H14C15.0609 15 16.0783 15.4214 16.8284 16.1716C17.5786 16.9217 18 17.9391 18 19V21"
+                  stroke="#64748B"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+          </label>
+        </div>
+
+        <div class="my-4">
+          <label for="email" class="relative min-h-[56px]">
+            <input
+              type="email"
+              id="email"
+              class="border border-[#E2E8F0] py-2 pr-4 pl-[47px] rounded-xl min-h-[56px] focus:outline-none w-full"
+              placeholder="Email"
+            />
+            <span class="absolute left-4 -top-[3px]">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V7C21 5.89543 20.1046 5 19 5Z"
+                  stroke="#64748B"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M3 7L12 13L21 7"
+                  stroke="#64748B"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+          </label>
+        </div>
+
+        <div>
+          <label for="password" class="relative min-h-[56px]">
+            <input
+              type="password"
+              id="password"
+              class="border border-[#E2E8F0] py-2 pr-4 pl-[47px] rounded-xl min-h-[56px] focus:outline-none w-full"
+              placeholder="Password"
+            />
+            <span class="absolute left-4 -top-[3px]">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17 11H7C5.89543 11 5 11.8954 5 13V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V13C19 11.8954 18.1046 11 17 11Z"
+                  stroke="#64748B"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17Z"
+                  stroke="#64748B"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M8 11V7C8 5.93913 8.42143 4.92172 9.17157 4.17157C9.92172 3.42143 10.9391 3 12 3C13.0609 3 14.0783 3.42143 14.8284 4.17157C15.5786 4.92172 16 5.93913 16 7V11"
+                  stroke="#64748B"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+
+            <span class="absolute right-4 -top-[3px]">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 3L21 21"
+                  stroke="#64748B"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.584 10.5869C10.2087 10.9619 9.99775 11.4707 9.99756 12.0012C9.99737 12.5317 10.2079 13.0406 10.583 13.4159C10.958 13.7912 11.4667 14.0021 11.9973 14.0023C12.5278 14.0025 13.0367 13.7919 13.412 13.4169"
+                  stroke="#64748B"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9.363 5.36506C10.2204 5.11978 11.1082 4.9969 12 5.00006C16 5.00006 19.333 7.33306 22 12.0001C21.222 13.3611 20.388 14.5241 19.497 15.4881M17.357 17.3491C15.726 18.4491 13.942 19.0001 12 19.0001C8 19.0001 4.667 16.6671 2 12.0001C3.369 9.60506 4.913 7.82506 6.632 6.65906"
+                  stroke="#64748B"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+          </label>
+        </div>
+
+        <p class="text-[#64748B] font-normal text-xs leading-[160%] mt-3 mb-6">
+          Your password must have at least 8 characters
+        </p>
+
+        <div class="flex">
+          <div>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_878_12415)">
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="19"
+                  height="19"
+                  rx="3.5"
+                  stroke="#E2E8F0"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_878_12415">
+                  <rect width="20" height="20" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+
+          <p
+            class="text-xs leading-[160%] text-[#64748B] font-normal float-right ml-3"
+          >
+            By creating an account means you agree to the
+            <span class="font-semibold text-[#0F172A]"
+              >Terms <br />
+              & Conditions</span
+            >
+            and our
+            <span class="font-semibold text-[#0F172A]">Privacy Policy</span>
+          </p>
+        </div>
+
+        <div>
+          <button
+            type="submit"
+            class="bg-[#2563EB] rounded-xl py-[17px] w-full font-bold text-base leading-[140%] text-white my-8"
+          >
+            Sign Up
+          </button>
+        </div>
+
+        <div class="relative bg-pink-400">
+          <hr class="border-t border-[#E2E8F0]" />
+          <p
+            class="absolute bg-white text-[#64748B] text-xs leading-[160%] text-center font-normal left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 px-4"
+          >
+            Or sign up with
+          </p>
+        </div>
+
+        <div class="flex gap-4 my-8">
+          <button
+            class="bg-white border border-[#E2E8F0] rounded-xl py-4 font-semibold text-[#0F172A] tracking-[0.2px] leading-[150%] min-w-[193.5px] flex items-center justify-center gap-3"
+          >
+            <svg
+              width="21"
+              height="20"
+              viewBox="0 0 21 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.0011 10.1941C19.0011 9.47471 18.9415 8.94971 18.8126 8.40527H10.4297V11.6525H15.3503C15.2511 12.4594 14.7154 13.6747 13.5249 14.4913L13.5082 14.6L16.1587 16.6123L16.3424 16.6303C18.0288 15.1039 19.0011 12.858 19.0011 10.1941Z"
+                fill="#4285F4"
+              />
+              <path
+                d="M10.4293 18.75C12.84 18.75 14.8638 17.9722 16.342 16.6305L13.5245 14.4916C12.7706 15.0068 11.7586 15.3666 10.4293 15.3666C8.06822 15.3666 6.06427 13.8402 5.34992 11.7305L5.24522 11.7392L2.48917 13.8295L2.45312 13.9277C3.92136 16.786 6.93723 18.75 10.4293 18.75Z"
+                fill="#34A853"
+              />
+              <path
+                d="M5.35014 11.7302C5.16165 11.1858 5.05257 10.6024 5.05257 9.99967C5.05257 9.39686 5.16165 8.81355 5.34022 8.26911L5.33523 8.15316L2.54464 6.0293L2.45333 6.07186C1.8482 7.25798 1.50098 8.58995 1.50098 9.99967C1.50098 11.4094 1.8482 12.7413 2.45333 13.9274L5.35014 11.7302Z"
+                fill="#FBBC05"
+              />
+              <path
+                d="M10.4294 4.63331C12.1059 4.63331 13.2368 5.34303 13.8817 5.93613L16.4016 3.525C14.854 2.11528 12.84 1.25 10.4294 1.25C6.93725 1.25 3.92137 3.21387 2.45312 6.07218L5.34002 8.26944C6.0643 6.15972 8.06825 4.63331 10.4294 4.63331Z"
+                fill="#EB4335"
+              />
+            </svg>
+            <span>Google</span>
+          </button>
+
+          <button
+            class="bg-white border border-[#E2E8F0] rounded-xl py-4 font-semibold text-[#0F172A] tracking-[0.2px] leading-[150%] min-w-[193.5px] flex items-center justify-center gap-3"
+          >
+            <svg
+              width="21"
+              height="20"
+              viewBox="0 0 21 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_886_7675)">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0.25 10.0558C0.25 15.0275 3.86083 19.1617 8.58333 20V12.7775H6.08333V10H8.58333V7.7775C8.58333 5.2775 10.1942 3.88917 12.4725 3.88917C13.1942 3.88917 13.9725 4 14.6942 4.11083V6.66667H13.4167C12.1942 6.66667 11.9167 7.2775 11.9167 8.05583V10H14.5833L14.1392 12.7775H11.9167V20C16.6392 19.1617 20.25 15.0283 20.25 10.0558C20.25 4.525 15.75 0 10.25 0C4.75 0 0.25 4.525 0.25 10.0558Z"
+                  fill="#2563EB"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_886_7675">
+                  <rect
+                    width="20"
+                    height="20"
+                    fill="white"
+                    transform="translate(0.25)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <span>Facebook</span>
+          </button>
+        </div>
+
+        <p class="text-center font-normal leading-[160%] text-sm">
+          Already have an account?
+          <a href="" class="text-[#2563EB] font-bold">Log In</a>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>

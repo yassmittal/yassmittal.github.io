@@ -1,15 +1,13 @@
 //Initilize the varialbes
 const gameContainer = document.querySelector("#game-container");
 const tiles = [...document.querySelectorAll(".tile")];
-
+const body = document.querySelector("body");
 let boardArr = [
-  ["2", "4", "16", "2"],
-  ["4", "4", "16", "16"],
-  ["8", "4", "8", "16"],
-  ["8", "4", "8", "2"],
+  ["", "", "", ""],
+  ["", "", "", ""],
+  ["", "", "", ""],
+  ["", "", "", ""],
 ];
-
-/////////////////////////
 
 function convertVerticalToHorintalArr(arr) {
   const numRows = arr.length;
@@ -28,11 +26,9 @@ function convertVerticalToHorintalArr(arr) {
   return resultArr;
 }
 
-/////////////////////////
-
 let toRenderArr = [];
+initializeGame();
 renderBoardArr();
-// initializeGame();
 // utilities functions
 
 //When this function runs:- This function will only run once while starting the Game.
@@ -64,6 +60,11 @@ function renderBoardArr() {
   tiles.forEach((tile, tileIndex) => {
     tiles[tileIndex].textContent = toRenderArr[tileIndex];
   });
+}
+
+function change4By4ArrElToLineArrEl(arr, indexArr) {
+  let number = indexArr[0] * arr.length + indexArr[1];
+  return number;
 }
 
 function moveElToRightEnd(arr) {
@@ -151,18 +152,115 @@ function onPressingDownKey() {
   boardArr = moveAndAddArrayDownward(boardArr);
 }
 
+function renderRandomNumber(arr) {
+  let emptyElementIndexes = [];
+  let resultArr = [...arr];
+  resultArr.map((row, rowIndex) => {
+    row.map((element, colIndex) => {
+      if (boardArr[rowIndex][colIndex] == "") {
+        emptyElementIndexes.push([rowIndex, colIndex]);
+      }
+    });
+  });
+
+  let randomIndex = Math.floor(Math.random() * +emptyElementIndexes.length);
+
+  let randomIndexes = emptyElementIndexes[randomIndex];
+  resultArr[randomIndexes[0]][randomIndexes[1]] = 2;
+
+  runTransition(tiles[change4By4ArrElToLineArrEl(resultArr, randomIndexes)]);
+
+  setTimeout(() => {
+    removeTransition(
+      tiles[change4By4ArrElToLineArrEl(resultArr, randomIndexes)]
+    );
+  }, 500);
+}
+
 //Event listeners here
 document.addEventListener("keydown", (e) => {
   // console.log(e);
   if (e.key === "ArrowRight") {
     onPressingRightKey();
+    renderRandomNumber(boardArr);
+    renderBoardArr();
   } else if (e.key === "ArrowLeft") {
     onPressingLeftKey();
+    renderRandomNumber(boardArr);
+    renderBoardArr();
   } else if (e.key === "ArrowUp") {
     onPressingUpKey();
+    renderRandomNumber(boardArr);
+    renderBoardArr();
   } else if (e.key === "ArrowDown") {
     onPressingDownKey();
+    renderRandomNumber(boardArr);
+    renderBoardArr();
+  } else {
+    return;
   }
-  // console.log(boardArr);
-  renderBoardArr();
 });
+
+console.log(body);
+body.addEventListener(
+  "touchstart",
+  function (event) {
+    touchstartX = event.changedTouches[0].screenX;
+    touchstartY = event.changedTouches[0].screenY;
+  },
+  false
+);
+
+body.addEventListener(
+  "touchend",
+  function (event) {
+    touchendX = event.changedTouches[0].screenX;
+    touchendY = event.changedTouches[0].screenY;
+    handleGesture();
+  },
+  false
+);
+
+function handleGesture() {
+  if (touchendX < touchstartX) {
+    console.log("Swiped Left");
+    onPressingLeftKey();
+    renderRandomNumber(boardArr);
+    renderBoardArr();
+  }
+
+  if (touchendX > touchstartX) {
+    console.log("Swiped Right");
+    onPressingRightKey();
+    renderRandomNumber(boardArr);
+    renderBoardArr();
+  }
+
+  if (touchendY < touchstartY) {
+    console.log("Swiped Up");
+    onPressingUpKey();
+    renderRandomNumber(boardArr);
+    renderBoardArr();
+  }
+
+  if (touchendY > touchstartY) {
+    console.log("Swiped Down");
+    onPressingDownKey();
+    renderRandomNumber(boardArr);
+    renderBoardArr();
+  }
+
+  if (touchendY === touchstartY) {
+    console.log("Tap");
+  }
+}
+
+//function for transition
+
+function runTransition(element) {
+  element.classList.add("bounced");
+}
+
+function removeTransition(element) {
+  element.classList.remove("bounced");
+}

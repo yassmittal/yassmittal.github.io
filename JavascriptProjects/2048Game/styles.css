@@ -24,3 +24,23 @@ body {
   border-radius: 10px;
   background-color: #eee;
 }
+
+.transitionDiv {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 4rem;
+}
+div.bounced,
+.transitionDiv:hover {
+  animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

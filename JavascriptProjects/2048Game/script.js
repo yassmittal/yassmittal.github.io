@@ -3,11 +3,32 @@ const gameContainer = document.querySelector("#game-container");
 const tiles = [...document.querySelectorAll(".tile")];
 
 let boardArr = [
-  ["2", "", "", ""],
-  ["", "4", "16", ""],
-  ["", "", "8", ""],
-  ["4", "", "32", ""],
+  ["2", "4", "16", "2"],
+  ["4", "4", "16", "16"],
+  ["8", "4", "8", "16"],
+  ["8", "4", "8", "2"],
 ];
+
+/////////////////////////
+
+function convertVerticalToHorintalArr(arr) {
+  const numRows = arr.length;
+  const numCols = arr[0].length;
+
+  const resultArr = [];
+
+  for (let colIndex = 0; colIndex < numCols; colIndex++) {
+    const newRow = [];
+    for (let rowIndex = 0; rowIndex < numRows; rowIndex++) {
+      newRow.push(arr[rowIndex][colIndex]);
+    }
+    resultArr.push(newRow);
+  }
+
+  return resultArr;
+}
+
+/////////////////////////
 
 let toRenderArr = [];
 renderBoardArr();
@@ -40,8 +61,6 @@ function renderBoardArr() {
     });
   });
 
-  console.log(toRenderArr);
-
   tiles.forEach((tile, tileIndex) => {
     tiles[tileIndex].textContent = toRenderArr[tileIndex];
   });
@@ -54,20 +73,62 @@ function moveElToRightEnd(arr) {
   return resultElements;
 }
 
-// console.log(moveElToRightEnd(["3", "2", "", ""]));
-// console.log(moveElToRightEnd(["", "2", "", ""]));
-// console.log(moveElToRightEnd(["3", "2", "3", "6"]));
-// console.log(moveElToRightEnd(["3", "2", "3", ""]));
-// console.log(moveElToRightEnd(["", "2", "3", ""]));
-// console.log(moveElToRightEnd(["", "2", "3", "5"]));
-function moveElementsToRight() {
-  let newBoardArr = [];
+function moveElToLeftEnd(arr) {
+  let emptyElements = arr.filter((element) => element === "");
+  let filledElements = arr.filter((element) => element !== "");
+  let resultElements = filledElements.concat(emptyElements);
+  return resultElements;
+}
 
-  boardArr.forEach((row) => {
-    moveElToRightEnd(row);
-    newBoardArr.push(moveElToRightEnd(row));
+function addEqualAdjacentNumber(arr) {
+  let newArr = [...arr];
+  newArr.forEach((element, index) => {
+    if (element != "" && element != null && element == newArr[index - 1]) {
+      newArr[index] = +element + +newArr[index - 1];
+      newArr[index - 1] = "";
+    }
   });
-  boardArr = newBoardArr;
+
+  return newArr;
+}
+
+function moveAndAddArrayToRight(arr) {
+  let resultArr = [];
+
+  arr.forEach((row) => {
+    let resultRow = moveElToRightEnd(row);
+    resultRow = addEqualAdjacentNumber(resultRow);
+    resultRow = moveElToRightEnd(resultRow);
+    resultArr.push(resultRow);
+  });
+  // console.log(newBoardArr);
+  return resultArr;
+}
+
+function moveAndAddArrayToLeft(arr) {
+  let resultArr = [];
+  arr.forEach((row) => {
+    let resultRow = moveElToLeftEnd(row);
+    resultRow = addEqualAdjacentNumber(resultRow);
+    resultRow = moveElToLeftEnd(resultRow);
+    resultArr.push(resultRow);
+  });
+  // console.log(newBoardArr);
+  return resultArr;
+}
+
+function moveAndAddArrayDownward(arr) {
+  let convertedArr = convertVerticalToHorintalArr(arr);
+  let addedArr = moveAndAddArrayToRight(convertedArr);
+  let finalResult = convertVerticalToHorintalArr(addedArr);
+  return finalResult;
+}
+
+function moveAndAddArrayUpward(arr) {
+  let convertedArr = convertVerticalToHorintalArr(arr);
+  let addedArr = moveAndAddArrayToLeft(convertedArr);
+  let finalResult = convertVerticalToHorintalArr(addedArr);
+  return finalResult;
 }
 
 function initializeGame() {
@@ -75,25 +136,24 @@ function initializeGame() {
 }
 
 function onPressingRightKey() {
-  moveElementsToRight();
-  console.log("right arrow key pressed");
+  boardArr = moveAndAddArrayToRight(boardArr);
 }
 
 function onPressingLeftKey() {
-  console.log("left arrow key pressed");
+  boardArr = moveAndAddArrayToLeft(boardArr);
 }
 
 function onPressingUpKey() {
-  console.log("Up arrow key pressed");
+  boardArr = moveAndAddArrayUpward(boardArr);
 }
 
 function onPressingDownKey() {
-  console.log("Down arrow key pressed");
+  boardArr = moveAndAddArrayDownward(boardArr);
 }
 
 //Event listeners here
 document.addEventListener("keydown", (e) => {
-  console.log(e);
+  // console.log(e);
   if (e.key === "ArrowRight") {
     onPressingRightKey();
   } else if (e.key === "ArrowLeft") {
@@ -103,6 +163,6 @@ document.addEventListener("keydown", (e) => {
   } else if (e.key === "ArrowDown") {
     onPressingDownKey();
   }
-  console.log(boardArr);
+  // console.log(boardArr);
   renderBoardArr();
 });

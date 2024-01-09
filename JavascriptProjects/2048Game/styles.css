@@ -28,15 +28,30 @@ body {
   background-color: rgba(0, 0, 0, 0.04);
 }
 
-.transitionDiv {
-  background-color: red;
-  color: white;
-  border-radius: 50%;
-  padding: 4rem;
+.tile-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  z-index: 1;
+  position: relative;
 }
-div.bounced,
-.transitionDiv:hover {
+
+.score-container {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.bounced {
   animation: bounce 0.5s ease;
+  /* animation-delay: 5s; */
 }
 
 @keyframes bounce {

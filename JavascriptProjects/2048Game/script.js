@@ -1,6 +1,8 @@
 //Initilize the varialbes
 const gameContainer = document.querySelector("#game-container");
 const tiles = [...document.querySelectorAll(".tile")];
+const scoreEl = document.querySelector(".score");
+
 const body = document.querySelector("body");
 let boardArr = [
   ["", "", "", ""],
@@ -9,6 +11,7 @@ let boardArr = [
   ["", "", "", ""],
 ];
 
+let score = 0;
 let toRenderBg = {
   2: "#eee4da",
   4: "#ede0c8",
@@ -22,20 +25,6 @@ let toRenderBg = {
   1024: "#edc53f",
   2048: "#edc22e",
 };
-
-// let toRenderBg = {
-//   2: "red",
-//   4: "green",
-//   8: "blue",
-//   16: "skyblue",
-//   32: "#f67c5f",
-//   64: "#f65e3b",
-//   128: "#edcf72",
-//   256: "#edcc61",
-//   512: "#edc850",
-//   1024: "#edc53f",
-//   2048: "#edc22e",
-// };
 
 function convertVerticalToHorintalArr(arr) {
   const numRows = arr.length;
@@ -86,22 +75,17 @@ function renderBoardArr() {
   });
 
   tiles.forEach((tile, tileIndex) => {
-    console.log(toRenderArr[tileIndex]);
     let toRenderDiv = document.createElement("div");
     toRenderDiv.style.backgroundColor = toRenderBg[toRenderArr[tileIndex]];
+    toRenderDiv.classList.add("tile-content");
     toRenderDiv.textContent = toRenderArr[tileIndex];
-    toRenderDiv.style.width = "100%";
-    toRenderDiv.style.height = "100%";
-    toRenderDiv.style.display = "flex";
-    toRenderDiv.style.justifyContent = "center";
-    toRenderDiv.style.alignItems = "center";
-    toRenderDiv.style.borderRadius = "12px";
-
     tiles[tileIndex].replaceChildren(toRenderDiv);
-    console.log(toRenderDiv);
-    // tiles[tileIndex].textContent = toRenderArr[tileIndex];
   });
+
+  // runAllTransition(scoreEl);
+  scoreEl.textContent = score;
 }
+// runAllTransition(element);
 
 function change4By4ArrElToLineArrEl(arr, indexArr) {
   let number = indexArr[0] * arr.length + indexArr[1];
@@ -123,14 +107,19 @@ function moveElToLeftEnd(arr) {
 }
 
 function addEqualAdjacentNumber(arr) {
+  let addedBoxIndexArr = [];
   let newArr = [...arr];
   newArr.forEach((element, index) => {
     if (element != "" && element != null && element == newArr[index - 1]) {
       newArr[index] = +element + +newArr[index - 1];
       newArr[index - 1] = "";
+      addedBoxIndexArr.push(index - 1);
+      score += newArr[index];
+      runAllTransition(scoreEl);
     }
   });
 
+  // console.log(addedBoxIndexArr);
   return newArr;
 }
 
@@ -209,13 +198,10 @@ function renderRandomNumber(arr) {
   let randomIndexes = emptyElementIndexes[randomIndex];
   resultArr[randomIndexes[0]][randomIndexes[1]] = 2;
 
-  runTransition(tiles[change4By4ArrElToLineArrEl(resultArr, randomIndexes)]);
-
-  setTimeout(() => {
-    removeTransition(
-      tiles[change4By4ArrElToLineArrEl(resultArr, randomIndexes)]
-    );
-  }, 500);
+  let randomSelectedTile =
+    tiles[change4By4ArrElToLineArrEl(resultArr, randomIndexes)];
+  // console.log(randomSelectedTile);
+  runAllTransition(randomSelectedTile);
 }
 
 //Event listeners here
@@ -242,7 +228,6 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-console.log(body);
 body.addEventListener(
   "touchstart",
   function (event) {
@@ -297,6 +282,13 @@ function handleGesture() {
 }
 
 //function for transition
+
+function runAllTransition(element) {
+  runTransition(element);
+  setTimeout(() => {
+    removeTransition(element);
+  }, 500);
+}
 
 function runTransition(element) {
   element.classList.add("bounced");

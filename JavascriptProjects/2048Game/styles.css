@@ -62,3 +62,13 @@ body {
     transform: scale(1);
   }
 }
+
+@media screen and (max-width: 800px) {
+  #game-container {
+    grid-template-columns: repeat(4, 60px);
+  }
+  .tile {
+    width: 60px;
+    height: 60px;
+  }
+}

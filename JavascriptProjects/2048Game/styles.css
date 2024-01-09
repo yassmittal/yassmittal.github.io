@@ -11,6 +11,9 @@ body {
   grid-template-columns: repeat(4, 100px);
   gap: 10px;
   margin: 20px;
+  background-color: rgba(0, 0, 0, 0.02);
+  padding: 1rem;
+  border-radius: 12px;
 }
 
 .tile {
@@ -22,7 +25,7 @@ body {
   font-size: 24px;
   font-weight: bold;
   border-radius: 10px;
-  background-color: #eee;
+  background-color: rgba(0, 0, 0, 0.04);
 }
 
 .transitionDiv {

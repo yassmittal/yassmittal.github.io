@@ -9,6 +9,34 @@ let boardArr = [
   ["", "", "", ""],
 ];
 
+let toRenderBg = {
+  2: "#eee4da",
+  4: "#ede0c8",
+  8: "#f2b179",
+  16: "#f59563",
+  32: "#f67c5f",
+  64: "#f65e3b",
+  128: "#edcf72",
+  256: "#edcc61",
+  512: "#edc850",
+  1024: "#edc53f",
+  2048: "#edc22e",
+};
+
+// let toRenderBg = {
+//   2: "red",
+//   4: "green",
+//   8: "blue",
+//   16: "skyblue",
+//   32: "#f67c5f",
+//   64: "#f65e3b",
+//   128: "#edcf72",
+//   256: "#edcc61",
+//   512: "#edc850",
+//   1024: "#edc53f",
+//   2048: "#edc22e",
+// };
+
 function convertVerticalToHorintalArr(arr) {
   const numRows = arr.length;
   const numCols = arr[0].length;
@@ -58,7 +86,20 @@ function renderBoardArr() {
   });
 
   tiles.forEach((tile, tileIndex) => {
-    tiles[tileIndex].textContent = toRenderArr[tileIndex];
+    console.log(toRenderArr[tileIndex]);
+    let toRenderDiv = document.createElement("div");
+    toRenderDiv.style.backgroundColor = toRenderBg[toRenderArr[tileIndex]];
+    toRenderDiv.textContent = toRenderArr[tileIndex];
+    toRenderDiv.style.width = "100%";
+    toRenderDiv.style.height = "100%";
+    toRenderDiv.style.display = "flex";
+    toRenderDiv.style.justifyContent = "center";
+    toRenderDiv.style.alignItems = "center";
+    toRenderDiv.style.borderRadius = "12px";
+
+    tiles[tileIndex].replaceChildren(toRenderDiv);
+    console.log(toRenderDiv);
+    // tiles[tileIndex].textContent = toRenderArr[tileIndex];
   });
 }
 

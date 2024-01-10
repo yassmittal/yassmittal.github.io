@@ -5,7 +5,7 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: rgb(16, 24, 32, 0.6);
+  background-color: rgb(16, 24, 32);
 }
 #game-container {
   display: grid;
@@ -49,11 +49,19 @@ body {
   justify-content: center;
   align-items: center;
   gap: 8px;
+  color: white;
 }
 
 .bounced {
   animation: bounce 0.5s ease;
   /* animation-delay: 5s; */
+}
+
+.game-status {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: white;
 }
 
 @keyframes bounce {

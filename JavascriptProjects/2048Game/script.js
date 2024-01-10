@@ -2,6 +2,7 @@
 const gameContainer = document.querySelector("#game-container");
 const tiles = [...document.querySelectorAll(".tile")];
 const scoreEl = document.querySelector(".score");
+const gameStatus = document.querySelector(".game-status");
 
 const body = document.querySelector("body");
 let boardArr = [
@@ -10,6 +11,43 @@ let boardArr = [
   ["", "", "", ""],
   ["", "", "", ""],
 ];
+
+let haveEmptyBox = true;
+let isGameOver = false;
+
+function looseGame(arr) {
+  let reversedArray = convertVerticalToHorintalArr(arr);
+  let AdjacentEqualsArr = [];
+  if (haveEmptyBox == true) return;
+
+  arr.forEach((row) => {
+    AdjacentEqualsArr.push(isAdjacentElEqual(row));
+  });
+
+  reversedArray.forEach((row) => {
+    AdjacentEqualsArr.push(isAdjacentElEqual(row));
+  });
+
+  if (!AdjacentEqualsArr.includes(true)) {
+    gameStatus.textContent = "Game Over";
+    isGameOver = true;
+  }
+}
+
+function isAdjacentElEqual(arr) {
+  let AdjacentEqualsArr = [];
+  arr.forEach((element, index) => {
+    if (element == arr[index + 1]) {
+      AdjacentEqualsArr.push(true);
+    }
+  });
+
+  if (AdjacentEqualsArr.length != 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 let score = 0;
 let toRenderBg = {
@@ -84,6 +122,8 @@ function renderBoardArr() {
 
   // runAllTransition(scoreEl);
   scoreEl.textContent = score;
+
+  // isGameLoose(boardArr);
 }
 // runAllTransition(element);
 
@@ -107,19 +147,16 @@ function moveElToLeftEnd(arr) {
 }
 
 function addEqualAdjacentNumber(arr) {
-  let addedBoxIndexArr = [];
   let newArr = [...arr];
   newArr.forEach((element, index) => {
     if (element != "" && element != null && element == newArr[index - 1]) {
       newArr[index] = +element + +newArr[index - 1];
       newArr[index - 1] = "";
-      addedBoxIndexArr.push(index - 1);
       score += newArr[index];
       runAllTransition(scoreEl);
     }
   });
 
-  // console.log(addedBoxIndexArr);
   return newArr;
 }
 
@@ -193,6 +230,17 @@ function renderRandomNumber(arr) {
     });
   });
 
+  if (emptyElementIndexes.length == 0) {
+    haveEmptyBox = false;
+    return;
+  } else {
+    haveEmptyBox = true;
+  }
+
+  if (emptyElementIndexes.length == 1) {
+    haveEmptyBox = false;
+  }
+
   let randomIndex = Math.floor(Math.random() * +emptyElementIndexes.length);
 
   let randomIndexes = emptyElementIndexes[randomIndex];
@@ -204,48 +252,53 @@ function renderRandomNumber(arr) {
   runAllTransition(randomSelectedTile);
 }
 
-//Event listeners here
-document.addEventListener("keydown", (e) => {
-  // console.log(e);
-  if (e.key === "ArrowRight") {
-    onPressingRightKey();
-    renderRandomNumber(boardArr);
-    renderBoardArr();
-  } else if (e.key === "ArrowLeft") {
-    onPressingLeftKey();
-    renderRandomNumber(boardArr);
-    renderBoardArr();
-  } else if (e.key === "ArrowUp") {
-    onPressingUpKey();
-    renderRandomNumber(boardArr);
-    renderBoardArr();
-  } else if (e.key === "ArrowDown") {
-    onPressingDownKey();
-    renderRandomNumber(boardArr);
-    renderBoardArr();
-  } else {
-    return;
-  }
-});
+//Event listeners here'
+if (isGameOver == false) {
+  console.log("working");
+  document.addEventListener("keydown", (e) => {
+    // console.log(e);
+    if (e.key === "ArrowRight") {
+      onPressingRightKey();
+      renderRandomNumber(boardArr);
+      renderBoardArr();
+    } else if (e.key === "ArrowLeft") {
+      onPressingLeftKey();
+      renderRandomNumber(boardArr);
+      renderBoardArr();
+    } else if (e.key === "ArrowUp") {
+      onPressingUpKey();
+      renderRandomNumber(boardArr);
+      renderBoardArr();
+    } else if (e.key === "ArrowDown") {
+      onPressingDownKey();
+      renderRandomNumber(boardArr);
+      renderBoardArr();
+    } else {
+      return;
+    }
 
-body.addEventListener(
-  "touchstart",
-  function (event) {
-    touchstartX = event.changedTouches[0].screenX;
-    touchstartY = event.changedTouches[0].screenY;
-  },
-  false
-);
+    looseGame(boardArr);
+  });
 
-body.addEventListener(
-  "touchend",
-  function (event) {
-    touchendX = event.changedTouches[0].screenX;
-    touchendY = event.changedTouches[0].screenY;
-    handleGesture();
-  },
-  false
-);
+  body.addEventListener(
+    "touchstart",
+    function (event) {
+      touchstartX = event.changedTouches[0].screenX;
+      touchstartY = event.changedTouches[0].screenY;
+    },
+    false
+  );
+
+  body.addEventListener(
+    "touchend",
+    function (event) {
+      touchendX = event.changedTouches[0].screenX;
+      touchendY = event.changedTouches[0].screenY;
+      handleGesture();
+    },
+    false
+  );
+}
 
 function handleGesture() {
   if (touchendX < touchstartX) {

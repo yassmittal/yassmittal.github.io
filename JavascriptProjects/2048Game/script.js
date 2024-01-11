@@ -5,15 +5,22 @@ const scoreEl = document.querySelector(".score");
 const gameStatus = document.querySelector(".game-status");
 
 const body = document.querySelector("body");
+// let boardArr = [
+//   ["", "", "", ""],
+//   ["", "", "", ""],
+//   ["", "", "", ""],
+//   ["", "", "", ""],
+// ];
 let boardArr = [
-  ["", "", "", ""],
-  ["", "", "", ""],
-  ["", "", "", ""],
-  ["", "", "", ""],
+  ["2", "4", "8", "16"],
+  ["32", "64", "128", "256"],
+  ["512", "1024", "1024", "2"],
+  ["4", "8", "32", "128"],
 ];
 
 let haveEmptyBox = true;
 let isGameOver = false;
+let isYouWin = false;
 
 function looseGame(arr) {
   let reversedArray = convertVerticalToHorintalArr(arr);
@@ -31,6 +38,20 @@ function looseGame(arr) {
   if (!AdjacentEqualsArr.includes(true)) {
     gameStatus.textContent = "Game Over";
     isGameOver = true;
+  }
+}
+
+function isWin(arr) {
+  arr.forEach((row) => {
+    row.forEach((element) => {
+      if (element == 2048) {
+        isYouWin = true;
+      }
+    });
+  });
+
+  if (isYouWin == true) {
+    gameStatus.textContent = "yay! Congrats!!! You won the Game";
   }
 }
 
@@ -82,7 +103,7 @@ function convertVerticalToHorintalArr(arr) {
 }
 
 let toRenderArr = [];
-initializeGame();
+// initializeGame();
 renderBoardArr();
 // utilities functions
 
@@ -253,10 +274,9 @@ function renderRandomNumber(arr) {
 }
 
 //Event listeners here'
-if (isGameOver == false) {
-  console.log("working");
+if (isGameOver == false && isYouWin === false) {
   document.addEventListener("keydown", (e) => {
-    // console.log(e);
+    console.log(isYouWin);
     if (e.key === "ArrowRight") {
       onPressingRightKey();
       renderRandomNumber(boardArr);
@@ -277,7 +297,9 @@ if (isGameOver == false) {
       return;
     }
 
+    isWin(boardArr);
     looseGame(boardArr);
+    console.log(isYouWin);
   });
 
   body.addEventListener(

@@ -13,9 +13,9 @@ const body = document.querySelector("body");
 // ];
 let boardArr = [
   ["2", "4", "8", "16"],
-  ["32", "64", "128", "256"],
-  ["512", "1024", "1024", "2"],
-  ["4", "8", "32", "128"],
+  ["16", "64", "128", "256"],
+  ["512", "1024", "2", "16"],
+  ["4", "8", "2", "128"],
 ];
 
 let haveEmptyBox = true;
@@ -36,7 +36,7 @@ function looseGame(arr) {
   });
 
   if (!AdjacentEqualsArr.includes(true)) {
-    gameStatus.textContent = "Game Over";
+    gameStatus.textContent = "Game Over! You Loose! Dont't Worry Try again";
     isGameOver = true;
   }
 }
@@ -274,53 +274,50 @@ function renderRandomNumber(arr) {
 }
 
 //Event listeners here'
-if (isGameOver == false && isYouWin === false) {
-  document.addEventListener("keydown", (e) => {
-    console.log(isYouWin);
-    if (e.key === "ArrowRight") {
-      onPressingRightKey();
-      renderRandomNumber(boardArr);
-      renderBoardArr();
-    } else if (e.key === "ArrowLeft") {
-      onPressingLeftKey();
-      renderRandomNumber(boardArr);
-      renderBoardArr();
-    } else if (e.key === "ArrowUp") {
-      onPressingUpKey();
-      renderRandomNumber(boardArr);
-      renderBoardArr();
-    } else if (e.key === "ArrowDown") {
-      onPressingDownKey();
-      renderRandomNumber(boardArr);
-      renderBoardArr();
-    } else {
-      return;
-    }
+document.addEventListener("keydown", (e) => {
+  if (isYouWin == true || isGameOver === true) return;
+  if (e.key === "ArrowRight") {
+    onPressingRightKey();
+    renderRandomNumber(boardArr);
+    renderBoardArr();
+  } else if (e.key === "ArrowLeft") {
+    onPressingLeftKey();
+    renderRandomNumber(boardArr);
+    renderBoardArr();
+  } else if (e.key === "ArrowUp") {
+    onPressingUpKey();
+    renderRandomNumber(boardArr);
+    renderBoardArr();
+  } else if (e.key === "ArrowDown") {
+    onPressingDownKey();
+    renderRandomNumber(boardArr);
+    renderBoardArr();
+  } else {
+    return;
+  }
 
-    isWin(boardArr);
-    looseGame(boardArr);
-    console.log(isYouWin);
-  });
+  isWin(boardArr);
+  looseGame(boardArr);
+});
 
-  body.addEventListener(
-    "touchstart",
-    function (event) {
-      touchstartX = event.changedTouches[0].screenX;
-      touchstartY = event.changedTouches[0].screenY;
-    },
-    false
-  );
+body.addEventListener(
+  "touchstart",
+  function (event) {
+    touchstartX = event.changedTouches[0].screenX;
+    touchstartY = event.changedTouches[0].screenY;
+  },
+  false
+);
 
-  body.addEventListener(
-    "touchend",
-    function (event) {
-      touchendX = event.changedTouches[0].screenX;
-      touchendY = event.changedTouches[0].screenY;
-      handleGesture();
-    },
-    false
-  );
-}
+body.addEventListener(
+  "touchend",
+  function (event) {
+    touchendX = event.changedTouches[0].screenX;
+    touchendY = event.changedTouches[0].screenY;
+    handleGesture();
+  },
+  false
+);
 
 function handleGesture() {
   if (touchendX < touchstartX) {

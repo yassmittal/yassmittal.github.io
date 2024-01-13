@@ -9,7 +9,20 @@
   </head>
   <body>
     <div class="game-container-wrap">
-      <button class="start-btn">Start</button>
+      <button class="question-btn"></button>
+      <div class="levels-info">
+        <h1>Memory Matrix</h1>
+        <h2>Your Current Level is <span data-id="current-level"></span></h2>
+        <h3>
+          Number of hidden tiles will be
+          <span data-id="hidden-tiles-number"></span>
+        </h3>
+      </div>
+      <div class="function-btn-wrap">
+        <div class="btn-primary" data-id="previous-level">previous level</div>
+        <button class="btn-primary" data-id="start-btn">Start The Game</button>
+        <div class="btn-primary" data-id="next-level">Next level</div>
+      </div>
       <div class="game-container">
         <div></div>
         <div></div>
@@ -34,6 +47,21 @@
 
     <div class="TimerWrapper hide">
       <div class="TimerContent"></div>
+    </div>
+
+    <div class="modalWrapper">
+      <div class="modal-content">
+        <h2>Instructions</h2>
+        Memory Matrix is a game where you have to use your memory to fill the
+        matrix and reproduce a pattern without mistakes.
+        <ul>
+          <li>the order in which you click the cells is not important.</li>
+          <li>
+            in order to reproduce the pattern you must click only on the cells
+            that belong to the pattern.
+          </li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>

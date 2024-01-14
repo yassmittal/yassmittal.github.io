@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="mainContent">
+      <div class="person-selector">
+        <button
+          class="button person-selector-button active-person"
+          id="john-selector"
+        >
+          John
+        </button>
+        <button class="button person-selector-button" id="Jane-selector">
+          Jane
+        </button>
+      </div>
+
+      <div class="chat-container">
+        <h2 class="chat-header">John chatting..</h2>
+        <div class="chat-messages"></div>
+      </div>
+
+      <form action="" class="chat-input-form">
+        <input
+          type="text"
+          class="chat-input"
+          required
+          placeholder="Type here, John..."
+        />
+
+        <button type="submit" class="button send-button">Send</button>
+      </form>
+      <button class="button clear-chat-button">clear</button>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

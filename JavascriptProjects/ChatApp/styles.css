@@ -1,0 +1,138 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #5973c4;
+}
+
+.mainContent{
+  max-width: 37.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button {
+  border: none;
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 40ms ease;
+}
+
+.button:hover {
+  filter: brightness(0.9);
+}
+
+.button:active {
+  transform: translateY(2px);
+}
+
+.person-selector {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin: 3em auto;
+  max-width: 40em;
+}
+
+.person-selector-button {
+  width: 100%;
+  background-color: black;
+  color: #fff;
+  font: 1.1rem;
+}
+
+.active-person {
+  background-color: rgb(60, 0, 255);
+}
+
+.chat-container {
+  background-color: rgb(58, 28, 28);
+  border-radius: 0.5em;
+  padding: 0.5em 1.25em;
+  margin: auto;
+  max-width: 37.5em;
+  box-shadow: 0 0 1.25em 0.5em rgba(0, 0, 0, 0, 2);
+}
+
+.chat-header {
+  margin-bottom: 1em;
+  color: white;
+}
+
+.chat-header h2 {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.chat-messages {
+  height: 23em;
+  overflow-y: auto;
+}
+
+.chat-messages::-webkit-scrollbar {
+  display: none;
+}
+
+.message {
+  padding: 0.625em;
+  border-radius: 1em;
+  margin-bottom: 0.625em;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.message-sender {
+  font-weight: bold;
+  margin-bottom: 0.31em;
+}
+
+.message-text {
+  font-size: 1em;
+  margin-bottom: 0.31em;
+  word-wrap: break-word;
+}
+
+.message-timestamp {
+  font-size: 0.75e;
+  text-align: right;
+}
+
+.blue-bg {
+  background-color: blue;
+}
+
+.gray-bg {
+  background-color: gray;
+}
+
+.chat-input-form {
+  display: flex;
+  align-items: center;
+  margin-top: 2em;
+  gap: 0.625em;
+}
+
+.chat-input {
+  padding: 0.625em;
+  border: none;
+  border-radius: 0.5em;
+  background-color: rgb(250, 239, 239);
+  color: #333;
+  font: 1em;
+  flex-grow: 1;
+}
+
+.sent-button {
+  background-color: blue;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.clear-chat-button{
+  display: block;
+  margin: 0.25em auto;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/loginPages.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-pink-100">
+    <header class="flex justify-between p-4 bg-white">
+      <a href="#">
+        <img
+          class=""
+          src="/images/myntra_logo.webp"
+          alt="Myntra Home"
+          width="36"
+        />
+      </a>
+
+      <ul class="flex gap-3 justify-between font-semibold">
+        <li>
+          <a href="#"> MEN </a>
+        </li>
+
+        <li>
+          <a href="#"> WOMEN </a>
+        </li>
+
+        <li>
+          <a href="#"> KIDS </a>
+        </li>
+
+        <li>
+          <a href="#"> HOME LIVING </a>
+        </li>
+
+        <li>
+          <a href="#"> STUDIO </a>
+        </li>
+      </ul>
+
+      <div class="flex items-center">
+        <button class="flex items-center justify-between gap-2 me-4">
+          <span class="material-symbols-outlined action_icon">favorite</span>
+          <span class="action_name">Wishlist</span>
+        </button>
+
+        <button>
+          <a
+            class="flex items-center justify-between gap-2"
+            href="pages/bag.html"
+          >
+            <span class="material-symbols-outlined action_icon"
+              >shopping_bag</span
+            >
+            <span class="action_name">Bag</span>
+          </a>
+        </button>
+      </div>
+    </header>
+
+    <main class="py-5">
+      <div class="w-full max-w-[400px] mx-auto">
+        <img
+          src="https://assets.myntassets.com/f_webp,dpr_1.5,q_auto,w_400,c_limit,fl_progressive/assets/images/2023/10/26/f96c9b3f-6c5c-4383-8f11-12de043faa501698300150501-Flat_400--1-.jpg"
+          alt=""
+          class="w-100"
+        />
+
+        <div class="bg-white p-5">
+          <div class="font-semibold text-lg">
+            <span>Login</span>
+            <span class="font-normal text-base"> or </span>
+            <span> Signup </span>
+          </div>
+
+          <form action="/pages/submitOTP.html" data-id="login-form">
+            <div
+              class="relative text-[#282c3f] opacity-70 font-normal text-sm px-3 py-2 border border-[#d4d5d9] mt-5"
+            >
+              <input type="number" class="outline-none pl-9 pe-3 w-full" />
+              <div class="absolute left-0 top-1/2 -translate-y-1/2 px-4">
+                +91
+              </div>
+            </div>
+
+            <div class="text-[13px] text-[#42455399] my-5">
+              By continuing, I agree to the
+              <a href="#" class="text-[#ff3c6f] font-bold"> Terms of Use </a>
+              &
+              <a href="#" class="text-[#ff3c6f] font-bold"> Privacy Policy </a>
+            </div>
+
+            <div>
+              <a href="./submitOTP.html">
+                <button
+                  type="submit"
+                  class="w-full p-3 text-sm bg-[#ff3f6c] text-white font-bold"
+                >
+                  CONTINUE
+                </button>
+              </a>
+            </div>
+
+            <div class="text-[13px] text-[#42455399] mt-5">
+              Have trouble logging in?
+
+              <a href="#" class="text-[#ff3c6f] font-bold"> Get help </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="/scripts/auth/login.js"></script>
+  </body>
+</html>

@@ -10,6 +10,10 @@ body {
   text-align: center;
 }
 
+p {
+  margin-top: 0.5rem;
+}
+
 .question-btn {
   background-image: url('data:image/svg+xml,<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="200px" width="200px" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 15H13V17H11V15ZM13 13.3551V14H11V12.5C11 11.9477 11.4477 11.5 12 11.5C12.8284 11.5 13.5 10.8284 13.5 10C13.5 9.17157 12.8284 8.5 12 8.5C11.2723 8.5 10.6656 9.01823 10.5288 9.70577L8.56731 9.31346C8.88637 7.70919 10.302 6.5 12 6.5C13.933 6.5 15.5 8.067 15.5 10C15.5 11.5855 14.4457 12.9248 13 13.3551Z"></path></svg>');
   background-size: 100%;
@@ -42,6 +46,9 @@ h3 {
 
 .game-container-wrap {
   width: 100%;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
   min-height: 100vh;
   display: flex;
   gap: 1rem;
@@ -51,9 +58,13 @@ h3 {
 }
 
 .function-btn-wrap {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  width: 100%;
+  /* height: 100%; */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  max-width: 100%;
 }
 
 .btn-primary {
@@ -218,6 +229,47 @@ h3 {
     width: 300px;
     height: 300px;
     padding: 1rem;
+  }
+
+  .btn-primary {
+    padding: 0.5rem 0.75rem;
+    box-shadow: 0.1px 0.1px 0px var(--shadow-color),
+      0.2px 0.2px 0px var(--shadow-color), 0.3px 0.3px 0px var(--shadow-color),
+      0.4px 0.4px 0px var(--shadow-color), 0.5px 0.5px 0px var(--shadow-color),
+      0.6px 0.6px 0px var(--shadow-color), 0.7px 0.7px 0px var(--shadow-color),
+      0.8px 0.8px 0px var(--shadow-color), 0.9px 0.9px 0px var(--shadow-color),
+      1px 1px 0px var(--shadow-color), 1.1px 1.1px 0px var(--shadow-color),
+      1.2px 1.2px 0px var(--shadow-color), 1.3px 1.3px 0px var(--shadow-color),
+      1.4px 1.4px 0px var(--shadow-color), 1.5px 1.5px 0px var(--shadow-color),
+      1.6px 1.6px 0px var(--shadow-color), 1.7px 1.7px 0px var(--shadow-color),
+      1.8px 1.8px 0px var(--shadow-color), 1.9px 1.9px 0px var(--shadow-color),
+      2px 2px 0px var(--shadow-color), 2.1px 2.1px 0px var(--shadow-color),
+      2.2px 2.2px 0px var(--shadow-color), 2.3px 2.3px 0px var(--shadow-color),
+      2.4px 2.4px 0px var(--shadow-color), 2.5px 2.5px 0px var(--shadow-color),
+      2.6px 2.6px 0px var(--shadow-color), 2.7px 2.7px 0px var(--shadow-color),
+      2.8px 2.8px 0px var(--shadow-color), 2.9px 2.9px 0px var(--shadow-color),
+      3px 3px 0px var(--shadow-color), 3.1px 3.1px 0px var(--shadow-color),
+      3.2px 3.2px 0px var(--shadow-color), 3.3px 3.3px 0px var(--shadow-color),
+      3.4px 3.4px 0px var(--shadow-color), 3.5px 3.5px 0px var(--shadow-color),
+      3.6px 3.6px 0px var(--shadow-color), 3.7px 3.7px 0px var(--shadow-color),
+      3.8px 3.8px 0px var(--shadow-color), 3.9px 3.9px 0px var(--shadow-color),
+      4px 4px 0px var(--shadow-color), 4.1px 4.1px 0px var(--shadow-color),
+      4.2px 4.2px 0px var(--shadow-color), 4.3px 4.3px 0px var(--shadow-color),
+      4.4px 4.4px 0px var(--shadow-color), 4.5px 4.5px 0px var(--shadow-color),
+      4.6px 4.6px 0px var(--shadow-color), 4.7px 4.7px 0px var(--shadow-color),
+      4.8px 4.8px 0px var(--shadow-color), 4.9px 4.9px 0px var(--shadow-color),
+      5px 5px 0px var(--shadow-color);
+    font-size: 0.75rem;
+  }
+
+  .btn-primary:active {
+    transform: translate(5px, 5px);
+  }
+
+  .TimerWrapper .TimerContent {
+    width: 65px;
+    height: 65px;
+    font-size: 2rem;
   }
 }
 

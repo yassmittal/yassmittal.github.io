@@ -10,6 +10,10 @@
   <body>
     <div class="game-container-wrap">
       <button class="question-btn"></button>
+      <div class="score-info">
+        Current Score:- <span data-id="current-score"></span> <br />
+        Total Score:- <span data-id="total-score"></span>
+      </div>
       <div class="levels-info">
         <h1>Memory Matrix</h1>
         <h2>Your Current Level is <span data-id="current-level"></span></h2>
@@ -19,9 +23,12 @@
         </h3>
       </div>
       <div class="function-btn-wrap">
-        <div class="btn-primary" data-id="previous-level">previous level</div>
+        <button class="btn-primary" data-id="previous-level">
+          previous level
+        </button>
+        <button class="btn-primary" data-id="next-level">Next level</button>
         <button class="btn-primary" data-id="start-btn">Start The Game</button>
-        <div class="btn-primary" data-id="next-level">Next level</div>
+        <button class="btn-primary" data-id="reset-game">Reset Game</button>
       </div>
       <div class="game-container">
         <div></div>
@@ -60,7 +67,27 @@
             in order to reproduce the pattern you must click only on the cells
             that belong to the pattern.
           </li>
+
+          <li>for every correct cell clicked you get 10 points</li>
+
+          <li>
+            You will only get the chances to click the tile equals to the number
+            of tiles hidden <br />
+
+            <p>
+              For Example:- <br />
+              If you have 7 tiles hidden only 7 Times you can click the tiles.
+              If you clicked wrong tile 2 time Then you will get 20 Points less
+              than the maximum point you can get from that level
+            </p>
+          </li>
         </ul>
+
+        <div>
+          Note:- This task challenges a part of your short-term memory called
+          spatial recall — your ability to track location and position within an
+          environment.
+        </div>
       </div>
     </div>
   </body>

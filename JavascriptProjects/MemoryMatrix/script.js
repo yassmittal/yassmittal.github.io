@@ -12,16 +12,24 @@ const hiddenTilesNumEl = document.querySelector(
 let modalContent = document.querySelector(".modal-content");
 const questionBtn = document.querySelector(".question-btn");
 const modalWrapper = document.querySelector(".modalWrapper");
+const currentScoreEl = document.querySelector('[data-id="current-score"]');
+const totalScoreEl = document.querySelector('[data-id="total-score"]');
+const resetGameBtn = document.querySelector('[data-id="reset-game"]');
 
 let currentLevel = 1;
 let totalTiles = 16;
 let NumOfTiles = currentLevel + 3;
 let allJSTiles = [];
 let randomNumArr = [];
+let clickedItemArr = [];
 let isPlaying = false;
 let clickedTiles = 0;
 let arrToRender;
-renderCurrentLevel();
+let currentScore = 0;
+let totalScore = localStorage.getItem("totalScore")
+  ? JSON.parse(localStorage.getItem("totalScore"))
+  : 0;
+renderCurrentState();
 
 function calculateLevelAndtiles() {
   NumOfTiles = currentLevel + 3;
@@ -43,6 +51,16 @@ function generateRandomUniqueNumsArr(num) {
   return randomNumArr;
 }
 
+function resetVariables() {
+  allJSTiles = [];
+  randomNumArr = [];
+  clickedTiles = 0;
+  clearDomTiles();
+  arrToRender = [];
+  currentScore = 0;
+  renderCurrentLevelScore();
+}
+
 function showHiddenTiles() {
   let randomNumArr = generateRandomUniqueNumsArr(NumOfTiles);
   renderDOMTiles(randomNumArr);
@@ -59,11 +77,7 @@ function renderDOMTiles(tilePositionArr) {
 }
 
 function startGame() {
-  allJSTiles = [];
-  randomNumArr = [];
-  clickedTiles = 0;
-  clearDomTiles();
-  arrToRender = [];
+  resetVariables();
   showTimer();
   result.textContent = "";
   isPlaying = false;
@@ -119,10 +133,16 @@ modalWrapper.addEventListener("click", (e) => {
 });
 allDOMTiles.forEach((DOMTile) => {
   DOMTile.addEventListener("click", (e) => {
-    if (isPlaying == false) return;
+    let isItemAlreadyClicked = clickedItemArr.find((item) => {
+      return item == e.target.id;
+    });
 
+    if (isItemAlreadyClicked != null) return;
+
+    if (isPlaying == false) return;
     ++clickedTiles;
     let clickedElId = e.target.id;
+    clickedItemArr.push(clickedElId);
 
     let isRightItemClicked = randomNumArr.find((el) => {
       return el == clickedElId;
@@ -132,6 +152,10 @@ allDOMTiles.forEach((DOMTile) => {
       DOMTile.classList.add("wrongTile");
     } else {
       DOMTile.classList.add("rotated");
+      currentScore = currentScore + 10;
+      totalScore = totalScore + 10;
+      renderCurrentLevelScore();
+      renderHighLevelScore();
     }
     if (clickedTiles >= NumOfTiles) {
       showResult();
@@ -139,6 +163,12 @@ allDOMTiles.forEach((DOMTile) => {
       return;
     }
   });
+});
+
+resetGameBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  totalScore = 0;
+  renderHighLevelScore();
 });
 
 function runClearDomTimer() {
@@ -159,19 +189,40 @@ function showResult() {
   result.textContent = "You finished the Game";
 }
 
-function renderCurrentLevel() {
+function renderCurrentState() {
   calculateLevelAndtiles();
   levelEl.textContent = currentLevel;
   hiddenTilesNumEl.textContent = NumOfTiles;
+  currentScoreEl.textContent = currentScore;
+  totalScoreEl.textContent = totalScore;
+}
+
+function renderCurrentLevelScore() {
+  currentScoreEl.textContent = currentScore;
+}
+
+function renderHighLevelScore() {
+  totalScoreEl.textContent = totalScore;
+  localStorage.setItem("totalScore", JSON.stringify(totalScore));
 }
 
 function goToNextLevel() {
+  if (currentLevel >= 8) return;
   ++currentLevel;
-  renderCurrentLevel();
+  renderCurrentState();
   clearDomTiles();
+  resetVariables();
+  result.textContent = "";
+  isPlaying = false;
+  startBtn.textContent = "Start Game";
 }
 function goToPrevLevel() {
+  if (currentLevel <= 1) return;
   --currentLevel;
-  renderCurrentLevel();
+  renderCurrentState();
   clearDomTiles();
+  resetVariables();
+  result.textContent = "";
+  isPlaying = false;
+  startBtn.textContent = "Start Game";
 }

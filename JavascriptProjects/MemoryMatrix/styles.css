@@ -229,6 +229,9 @@ h3 {
 }
 
 @media screen and (max-width: 800px) {
+  body {
+    font-size: 0.75rem;
+  }
   .game-container {
     width: 300px;
     height: 300px;

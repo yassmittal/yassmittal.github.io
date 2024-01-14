@@ -5,18 +5,13 @@ const scoreEl = document.querySelector(".score");
 const gameStatus = document.querySelector(".game-status");
 
 const body = document.querySelector("body");
-// let boardArr = [
-//   ["", "", "", ""],
-//   ["", "", "", ""],
-//   ["", "", "", ""],
-//   ["", "", "", ""],
-// ];
 let boardArr = [
-  ["2", "4", "8", "16"],
-  ["16", "64", "128", "256"],
-  ["512", "1024", "2", "16"],
-  ["4", "8", "2", "128"],
+  ["", "", "", ""],
+  ["", "", "", ""],
+  ["", "", "", ""],
+  ["", "", "", ""],
 ];
+
 
 let haveEmptyBox = true;
 let isGameOver = false;
@@ -26,6 +21,7 @@ function looseGame(arr) {
   let reversedArray = convertVerticalToHorintalArr(arr);
   let AdjacentEqualsArr = [];
   if (haveEmptyBox == true) return;
+  if (isYouWin == true) return;
 
   arr.forEach((row) => {
     AdjacentEqualsArr.push(isAdjacentElEqual(row));

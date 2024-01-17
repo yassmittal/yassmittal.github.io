@@ -99,7 +99,7 @@ function convertVerticalToHorintalArr(arr) {
 }
 
 let toRenderArr = [];
-// initializeGame();
+initializeGame();
 renderBoardArr();
 // utilities functions
 

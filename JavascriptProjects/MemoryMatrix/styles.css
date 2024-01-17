@@ -10,6 +10,13 @@ body {
   text-align: center;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
 p {
   margin-top: 0.5rem;
 }
@@ -19,15 +26,12 @@ p {
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
   background-color: transparent;
   border: none;
   outline: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 8px;
+  margin-left: 8px;
   cursor: pointer;
 }
 
@@ -139,7 +143,7 @@ h3 {
   max-width: 100%;
 }
 
-.game-container > div {
+.game-container>div {
   background-color: #633b3b;
   cursor: pointer;
   transition-duration: 300ms;
@@ -147,12 +151,12 @@ h3 {
   transition-property: color, transform;
 }
 
-.game-container > div.rotated {
+.game-container>div.rotated {
   transform: rotate3d(0, 1, 0, 180deg);
   background-color: #73a580;
 }
 
-.game-container > div.wrongTile {
+.game-container>div.wrongTile {
   transform: rotate3d(0, 1, 0, 180deg);
   background-color: red;
   background-size: 50%;
@@ -228,10 +232,83 @@ h3 {
   align-items: center;
 }
 
+.toolTipWrap {
+  position: relative;
+}
+
+.toprightfixedBtn>img {
+  max-width: 50px;
+}
+
+.toolTipWrap:hover .toolTipContent {
+  opacity: 1;
+  transform: translate(0px, -50%);
+  pointer-events: all;
+}
+
+.toolTipWrap>.toolTipContent {
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  color: white;
+  font-size: 0.75rem;
+  opacity: 0;
+  transform: translate(-20px, -50%);
+  min-width: 90px;
+  background-color: rgba(var(--primary));
+  border-radius: 8px;
+  padding: 4px 8px;
+  transition: transform 200ms ease, opacity 200ms ease;
+  margin-right: 14px;
+  pointer-events: none;
+}
+
+.toolTipWrap>.toolTipContent::after {
+  content: '';
+  position: absolute;
+  left: calc(100% - 1px);
+  /*Here I decreased the 1px because i don't want to leave any type of separation between the tooltip content and triangle  */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid rgba(var(--primary));
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid transparent;
+}
+
+.toolTipWrap>.toolTipContentOnBottom {
+  top: 100%;
+  transform: translate(50%, 0);
+  right: 50%;
+  margin-right: 0;
+  margin-top: 28px;
+  min-width: 70px;
+}
+
+.toolTipWrap:hover .toolTipContentOnBottom {
+  transform: translate(50%, -20px);
+}
+
+.toolTipWrap>.toolTipContentOnBottom::after {
+  right: auto;
+  top: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(100% - 1px);
+  border-left-color: transparent;
+  border-bottom-color: rgba(var(--primary));
+}
+
+
+
+
 @media screen and (max-width: 800px) {
   body {
     font-size: 0.75rem;
   }
+
   .game-container {
     width: 300px;
     height: 300px;

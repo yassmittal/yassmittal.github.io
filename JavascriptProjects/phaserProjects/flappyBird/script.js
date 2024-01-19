@@ -20,6 +20,7 @@ var config = {
 var game = new Phaser.Game(config);
 
 var pillars;
+var bird;
 
 function preload() {
   this.load.image('initialMsg', 'assets/images/message-initial.png');
@@ -38,18 +39,33 @@ function create() {
   this.add.image(144, 256, 'bg');
 
   this.add.image(144, 256, 'initialMsg');
-  const bird = this.add.sprite(60, 60, 'bird');
-  // 320 height of pipe 
-
   pillars = this.physics.add.staticGroup();
 
   pillars.create(200, 160, 'TopPipe');
   pillars.create(26, 352, 'bottomPipe');
 
+  bird = this.physics.add.sprite(60, 60, 'bird');
+  bird.setBounce(0.2);
+  bird.setCollideWorldBounds(true);
+
+  this.physics.add.collider(bird, pillars);
+
+  this.anims.create({
+    key: 'fly',
+    frames: this.anims.generateFrameNumbers('bird', { start: 0, end: 2 }),
+    frameRate: 12,
+    repeat: -1
+  });
 
 
+  bird.anims.play('fly', true);
+  // cursors = this.input.keyboard.createCursorKeys();
 
 }
 
 function update() {
+  this.input.keyboard.on('keydown', () => {
+    bird.setVelocityY(-100);
+  })
+
 }

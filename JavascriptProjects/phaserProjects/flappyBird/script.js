@@ -36,7 +36,8 @@ function preload() {
 
 
 function create() {
-  this.add.image(144, 256, 'bg');
+
+  this.bg = this.add.tileSprite(0, 0, 288, 512, 'bg').setOrigin(0, 0);
 
   this.add.image(144, 256, 'initialMsg');
   pillars = this.physics.add.staticGroup();
@@ -67,5 +68,7 @@ function update() {
   this.input.keyboard.on('keydown', () => {
     bird.setVelocityY(-100);
   })
+
+  this.bg.tilePositionX += 2;
 
 }

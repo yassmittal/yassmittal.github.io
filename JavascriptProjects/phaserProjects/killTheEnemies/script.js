@@ -1,5 +1,5 @@
 let player;
-let enemies = [];
+let enemies;
 let enemiesToSpawn = 10;
 let enemiesLeft = enemiesToSpawn;
 let enemiesAreSafe;
@@ -87,10 +87,11 @@ let gamePlay = new Phaser.Class({
 
     enemies = this.physics.add.staticGroup({
       key: "buddie",
-      repeat: enemiesToSpawn
+      repeat: enemiesToSpawn - 1
     })
 
     enemies.children.iterate(function (enemy) {
+      console.log('enemy made')
       enemy.setX(Phaser.Math.FloatBetween(32, config.width - 32))
       enemy.setY(Phaser.Math.FloatBetween(32, config.height - 32))
     })
@@ -164,17 +165,18 @@ let gamePlay = new Phaser.Class({
 function switchEnemyState() {
 
   if (gameStarted && !gameEnded) {
+    // console.log(enemiesAreSafe)
     if (enemiesAreSafe) {
       enemiesAreSafe = false;
+      enemies.children.iterate(function (enemy) {
+        enemy.anims.play('unsafe');
+      })
+    } else {
+      enemiesAreSafe = true;
       enemies.children.iterate(function (enemy) {
         enemy.anims.play('safe');
       })
 
-    } else {
-      enemies.children.iterate(function (enemy) {
-        enemy.anims.play('unsafe');
-        enemiesAreSafe = true;
-      })
     }
 
     // if (enemiesAreSafe == false) {
@@ -205,15 +207,16 @@ function collideWithEnemy(player, enemy) {
 
     enemy.disableBody(true, true);
     --enemiesLeft;
+    console.log(hitPoints)
+    console.log(enemiesLeft)
 
     if (hitPoints <= 0) {
       killGame();
       introText.setText("Game Over! Rerun to play again");
     } else if (hitPoints > 0 && enemiesLeft <= 0) {
       introText.setText("Yey!! you won the game");
+      killGame();
     }
-
-
   }
 
 }

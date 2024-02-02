@@ -26,7 +26,6 @@ let gameEnded;
 
 let gamePlay = new Phaser.Class({
   //Define Scene
-
   Extends: Phaser.Scene,
   initialize: function GamePlay() {
     Phaser.Scene.call(this, {

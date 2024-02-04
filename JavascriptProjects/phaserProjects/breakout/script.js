@@ -99,7 +99,8 @@ function create() {
   this.physics.add.collider(this.ball, paddle, paddleHit, null, this);
 
   endLine = this.physics.add.staticGroup();
-  endLine.add(this.add.zone(config.width / 2, config.height - 9, config.width, 1));
+  endLine.add(this.add.zone(config.width / 2, config.height - 20, config.width, 0));
+
 
   this.physics.add.collider(this.ball, endLine, ballHitsLine);
 

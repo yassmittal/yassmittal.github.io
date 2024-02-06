@@ -17,6 +17,9 @@ var config = {
 };
 var game = new Phaser.Game(config);
 
+let soundOnPaddleHit;
+let soundOnGroundHit;
+let soundOnGameOver;
 
 let bricks = [];
 let paddle;
@@ -44,13 +47,34 @@ function preload() {
   this.load.image('background', 'assets/background2.png');
   this.load.image('paddle', 'assets/paddle.png');
   this.load.image('ball', 'assets/ball.png');
+  this.load.audio('hitBrick', 'assets/Sounds/hitBrick.mp3')
+  this.load.audio('paddleHit', 'assets/Sounds/paddleHit.mp3')
+  this.load.audio('bgMusic', 'assets/Sounds/sounds_techno.wav');
+  this.load.audio('ballHitGround', 'assets/Sounds/ballHitGround.mp3');
+  this.load.audio('gameOver', 'assets/Sounds/GameOver.mp3');
 }
 
 function create() {
   this.bg = this.add.tileSprite(0, 0, 960, 720, 'background').setOrigin(0, 0);
 
+  soundOnPaddleHit = this.sound.add('paddleHit')
+  soundOnBrickHit = this.sound.add('hitBrick');
+  soundOnGroundHit = this.sound.add('ballHitGround')
+  soundOnGameOver = this.sound.add('gameOver')
+
+
+  const backgroundMusic = this.sound.add('bgMusic', { loop: true });
+  backgroundMusic.play();
+
+
+
   StartGameText = this.add.text(config.width / 2 - 100, config.height / 2, 'Click Anywhere To start the Game', { fontFamily: 'Georgia, "Goudy Bookletter 1911", Times, serif' }).setOrigin(0, 0);
-  LifeLineText = this.add.text(config.width - 120, config.height - 40, `LifeLine : ${lifeLineCount}`, { fontFamily: 'Georgia, "Goudy Bookletter 1911", Times, serif' }).setOrigin(0, 0);
+  LifeLineText = this.add.text(config.width - 180, config.height - 80, `LifeLine : ${lifeLineCount}`, { fontFamily: 'Georgia, "Goudy Bookletter 1911", Times, serif', fontSize: "30px" }).setOrigin(0, 0);
+
+
+
+
+
   for (let i = 0; i < 30; i++) {
     bricks.push(this.physics.add.sprite(0, 0, 'brick'));
   }
@@ -68,6 +92,7 @@ function create() {
 
     this.physics.world.on('collide', (ball, brick) => {
       brick.disableBody(true, true);
+      soundOnBrickHit.play()
     });
   })
 
@@ -102,7 +127,9 @@ function create() {
   endLine.add(this.add.zone(config.width / 2, config.height - 20, config.width, 0));
 
 
-  this.physics.add.collider(this.ball, endLine, ballHitsLine);
+  this.physics.add.collider(this.ball, endLine, function () {
+    ballHitsLine(this.ball, this)
+  }, null, this);
 
   cursors = this.input.keyboard.createCursorKeys();
 
@@ -134,6 +161,7 @@ function paddleHit(ball, paddle) {
     } else {
       ball.body.velocity.x += +150 * 1.1;
     }
+    soundOnPaddleHit.play()
   }
 
 }
@@ -155,15 +183,25 @@ function checkIfgameOver(ball) {
   }
 }
 
-function ballHitsLine() {
+function ballHitsLine(ball, currentScene) {
   --lifeLineCount;
   LifeLineText.setText(`LifeLine : ${lifeLineCount}`);
-  console.log('hitting')
+  soundOnGroundHit.play();
+  isGameStarted = false;
+  ball.setBounce(0);
+  ball.body.velocity.y = 0;
+  ball.body.velocity.x = 0;
+  ball.body.position.x = startingBallPositionX;
+  ball.body.position.y = startingBallPositionY - 4;
+  paddle.body.position.x = startingPaddlePositionX
+  paddle.body.position.y = startingPaddlePositionY;
+  blinkFunction(currentScene)
 }
 
 function gameOver(ball) {
-  gameOverText.setText('Game Over! Click AnyWhere To Restart The Game')
-  resetGame(ball)
+  gameOverText.setText('Game Over! Click AnyWhere To Restart The Game');
+  soundOnGameOver.play()
+  resetGame(ball);
 }
 
 function resetGame(ball) {
@@ -198,4 +236,15 @@ function checkIfYouWon(ball) {
     resetBricks()
     resetGame(ball)
   }
+}
+
+function blinkFunction(currentScene) {
+  currentScene.tweens.add({
+    targets: LifeLineText,
+    alpha: 0,
+    ease: 'Cubic.easeOut',
+    duration: 200,
+    repeat: 1,
+    yoyo: true
+  })
 }

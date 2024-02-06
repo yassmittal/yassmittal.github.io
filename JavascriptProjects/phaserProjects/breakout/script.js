@@ -20,6 +20,7 @@ var game = new Phaser.Game(config);
 let soundOnPaddleHit;
 let soundOnGroundHit;
 let soundOnGameOver;
+let soundOnWining
 
 let bricks = [];
 let paddle;
@@ -52,6 +53,7 @@ function preload() {
   this.load.audio('bgMusic', 'assets/Sounds/sounds_techno.wav');
   this.load.audio('ballHitGround', 'assets/Sounds/ballHitGround.mp3');
   this.load.audio('gameOver', 'assets/Sounds/GameOver.mp3');
+  this.load.audio('win', 'assets/Sounds/win.mp3');
 }
 
 function create() {
@@ -61,6 +63,7 @@ function create() {
   soundOnBrickHit = this.sound.add('hitBrick');
   soundOnGroundHit = this.sound.add('ballHitGround')
   soundOnGameOver = this.sound.add('gameOver')
+  soundOnWining = this.sound.add('win')
 
 
   const backgroundMusic = this.sound.add('bgMusic', { loop: true });
@@ -232,6 +235,7 @@ function checkIfYouWon(ball) {
 
 
   if (!anyBrickRemains) {
+    soundOnWining.play()
     gameOverText.setText('Yey!! Congratulations You won the Game. \n Click AnyWhere To Restart The Game')
     resetBricks()
     resetGame(ball)

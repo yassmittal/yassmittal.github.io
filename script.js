@@ -31,6 +31,8 @@ let IsGameOver = false;
 
 let soundOnWining;
 let soundOnGameOver;
+let soundOnFiring;
+let soundOnKilling;
 
 function preload() {
   this.load.image('spaceshipImg', 'assets/images/spaceship.png');
@@ -40,10 +42,14 @@ function preload() {
   this.load.audio('bgMusic', 'assets/Sounds/sounds_techno.wav');
   this.load.audio('gameOver', 'assets/Sounds/GameOver.mp3');
   this.load.audio('win', 'assets/Sounds/win.mp3');
+  this.load.audio('firing', 'assets/Sounds/FiringSound.mp3');
+  this.load.audio('killing', 'assets/Sounds/EnemyKill.wav')
 }
 function create() {
   soundOnWining = this.sound.add('win')
   soundOnGameOver = this.sound.add('gameOver');
+  soundOnFiring = this.sound.add('firing')
+  soundOnKilling = this.sound.add('killing')
   const backgroundMusic = this.sound.add('bgMusic', { loop: true });
   backgroundMusic.play();
 
@@ -97,6 +103,7 @@ function launchBullets(currentScene) {
   function createBullet() {
     let bullet = currentScene.physics.add.sprite(spaceship.body.position.x + 45, config.height - 100, 'bulletImg').setScale(0.005);
     bullets.push(bullet);
+    soundOnFiring.play()
     invaders.forEach((invader) => {
       this.physics.add.collider(bullet, invader, bulletHit, null, this);
     })
@@ -104,6 +111,7 @@ function launchBullets(currentScene) {
     function bulletHit(bullet, invader) {
       bullet.disableBody(true, true);
       invader.disableBody(true, true);
+      soundOnKilling.play()
     }
   }
 
@@ -184,7 +192,6 @@ function generateInvaders(currentScene) {
     callbackScope: currentScene,
 
   })
-
 }
 
 function gameOver(currentScene) {
@@ -200,15 +207,10 @@ function resetGame(currentScene) {
   invaders.forEach(invader => {
     invader.disableBody(true, true);
   })
-
-  console.log(createBulletTimer)
   createBulletTimer.destroy()
-
 }
 
 function blinkFunction(currentScene) {
-  // console.log('blinking')
-
   currentScene.tweens.add({
     targets: [spaceship, gameEndText],
     alpha: 0,

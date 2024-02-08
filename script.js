@@ -20,6 +20,12 @@ var config = {
 var game = new Phaser.Game(config);
 let startGameText;
 let gameEndText;
+
+let currentScoreText;
+let highestScoreText;
+let highestScore;
+
+let currentScore = 0;
 let spaceship;
 let bullets = [];
 let invaders = [];
@@ -59,13 +65,13 @@ function create() {
   spaceship.setCollideWorldBounds(true);
 
   startGameText = this.add.text(config.width / 2 - 160, config.height / 2, 'Click Anywhere To start the Game', { fontFamily: 'Georgia, "Goudy Bookletter 1911", Times, serif', fontSize: "1.25rem" }).setOrigin(0, 0);
+  currentScoreText = this.add.text(20, 20, `Current Score: ${currentScore}`, { fontFamily: 'Georgia, "Goudy Bookletter 1911", Times, serif', fontSize: "1.25rem" }).setOrigin(0, 0);
+  highestScoreText = this.add.text(20, 50, `Highest Score: ${currentScore}`, { fontFamily: 'Georgia, "Goudy Bookletter 1911", Times, serif', fontSize: "1.25rem" }).setOrigin(0, 0);
 
   cursors = this.input.keyboard.createCursorKeys();
-
+  setHighestScore()
 
   this.input.on('pointerdown', startGame, this);
-
-
 }
 
 function update() {
@@ -84,6 +90,19 @@ function update() {
     bullet.setVelocityY(-420);
   })
 
+  if (IsGameOver === false && isGameStarted) {
+    invaders.forEach(invader => {
+      if (invader.body.position.y > config.height - 30) {
+        if (!IsGameOver) {
+          gameOver(this)
+        }
+      }
+    })
+  }
+
+
+
+
 }
 
 function startGame() {
@@ -94,6 +113,12 @@ function startGame() {
     generateInvaders(this);
     startGameText.setText('')
     gameEndText && gameEndText.setText('')
+    currentScore = 0;
+    currentScoreText.setText(`Current Score: ${currentScore}`);
+
+
+    console.log(highestScore)
+    setHighestScore()
   }
 
 }
@@ -106,11 +131,16 @@ function launchBullets(currentScene) {
     soundOnFiring.play()
     invaders.forEach((invader) => {
       this.physics.add.collider(bullet, invader, bulletHit, null, this);
+
     })
 
     function bulletHit(bullet, invader) {
       bullet.disableBody(true, true);
       invader.disableBody(true, true);
+      currentScore = currentScore + 100;
+      currentScoreText.setText(`Current Score: ${currentScore}`);
+      setHighestScore()
+
       soundOnKilling.play()
     }
   }
@@ -132,12 +162,14 @@ function generateInvaders(currentScene) {
   }
 
   newInvaders.forEach(invader => {
-
     currentScene.physics.add.collider(spaceship, invader, () => {
       if (!IsGameOver) {
         gameOver(currentScene)
       }
     }, null, this);
+
+
+
   })
 
   invaders = [...invaders, ...newInvaders];
@@ -169,28 +201,26 @@ function generateInvaders(currentScene) {
   }
 
   var timer = currentScene.time.addEvent({
-    delay: 10,
+    delay: 40,
     callback: moveInvadersGroup,
     callbackScope: currentScene,
     loop: true
   });
 
   var timer2 = currentScene.time.addEvent({
-    delay: 2000,
+    delay: 5000,
     callback: () => {
       generateInvaders(currentScene);
     },
     callbackScope: currentScene,
-    // loop: true
   });
 
-  var timer2 = currentScene.time.addEvent({
-    delay: 12000,
+  var timer3 = currentScene.time.addEvent({
+    delay: 24000,
     callback: () => {
       invaders = invaders.slice(60);
     },
     callbackScope: currentScene,
-
   })
 }
 
@@ -207,6 +237,11 @@ function resetGame(currentScene) {
   invaders.forEach(invader => {
     invader.disableBody(true, true);
   })
+
+  invaders = []
+
+
+  currentScene.time.removeAllEvents();
   createBulletTimer.destroy()
 }
 
@@ -220,4 +255,15 @@ function blinkFunction(currentScene) {
     yoyo: true
   })
 
+}
+
+function setHighestScore() {
+  if (highestScore <= currentScore - 100) {
+    localStorage.setItem('highestScore', JSON.stringify(currentScore))
+  }
+
+  highestScore = localStorage.getItem("highestScore")
+    ? JSON.parse(localStorage.getItem("highestScore"))
+    : 0;
+  highestScoreText.setText(`Highest Score: ${highestScore}`)
 }

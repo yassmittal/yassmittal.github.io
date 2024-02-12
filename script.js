@@ -6,7 +6,7 @@ var config = {
   physics: {
     default: 'arcade',
     arcade: {
-      gravity: { y: 300 },
+      gravity: { y: 50 },
 
       debug: false
     }
@@ -35,6 +35,8 @@ let createBulletTimer
 let isGameStarted = false;
 let IsGameOver = false;
 
+let bulletCounts = 1;
+
 let soundOnWining;
 let soundOnGameOver;
 let soundOnFiring;
@@ -43,7 +45,8 @@ let soundOnKilling;
 function preload() {
   this.load.image('spaceshipImg', 'assets/images/spaceship.png');
   this.load.image('invaderImg', 'assets/images/invader.png');
-  this.load.image('bulletImg', 'assets/images/bullet.png')
+  this.load.image('bulletImg', 'assets/images/bullet.png');
+  this.load.image('levelUpImg', 'assets/images/levelUp.svg')
 
   this.load.audio('bgMusic', 'assets/Sounds/sounds_techno.wav');
   this.load.audio('gameOver', 'assets/Sounds/GameOver.mp3');
@@ -70,6 +73,14 @@ function create() {
 
   cursors = this.input.keyboard.createCursorKeys();
   setHighestScore()
+
+  let levelUpEl = this.physics.add.image(400, 300, 'levelUpImg').setScale(0.2);
+
+  this.physics.add.collider(levelUpEl, spaceship, () => {
+    if (!IsGameOver) {
+      LevelUp(levelUpEl);
+    }
+  }, null, this);
 
   this.input.on('pointerdown', startGame, this);
 }
@@ -98,6 +109,7 @@ function update() {
         }
       }
     })
+
   }
 
 
@@ -116,8 +128,9 @@ function startGame() {
     currentScore = 0;
     currentScoreText.setText(`Current Score: ${currentScore}`);
 
+    throwPowerCapsule(this)
 
-    console.log(highestScore)
+
     setHighestScore()
   }
 
@@ -126,12 +139,20 @@ function startGame() {
 function launchBullets(currentScene) {
 
   function createBullet() {
-    let bullet = currentScene.physics.add.sprite(spaceship.body.position.x + 45, config.height - 100, 'bulletImg').setScale(0.005);
-    bullets.push(bullet);
-    soundOnFiring.play()
-    invaders.forEach((invader) => {
-      this.physics.add.collider(bullet, invader, bulletHit, null, this);
 
+    let bulletsOnSingleThrow = [];
+    let positionXOfBullet = spaceship.body.position.x + 45;
+    for (let i = 0; i < bulletCounts; i++) {
+      bulletsOnSingleThrow.push(currentScene.physics.add.sprite(positionXOfBullet, config.height - 100, 'bulletImg').setScale(0.005));
+      positionXOfBullet = positionXOfBullet + 10;
+    }
+    bullets.push(...bulletsOnSingleThrow);
+    // console.log(bullets)
+    soundOnFiring.play()
+    bulletsOnSingleThrow.forEach(bullet => {
+      invaders.forEach((invader) => {
+        this.physics.add.collider(bullet, invader, bulletHit, null, this);
+      })
     })
 
     function bulletHit(bullet, invader) {
@@ -140,13 +161,18 @@ function launchBullets(currentScene) {
       currentScore = currentScore + 100;
       currentScoreText.setText(`Current Score: ${currentScore}`);
       setHighestScore()
-
       soundOnKilling.play()
     }
+
+
+
+    // console.log(bullets)
   }
 
+  destroyBullets(currentScene)
+
   createBulletTimer = currentScene.time.addEvent({
-    delay: 100,                // ms
+    delay: 100,
     callback: createBullet,
     callbackScope: currentScene,
     loop: true
@@ -266,4 +292,46 @@ function setHighestScore() {
     ? JSON.parse(localStorage.getItem("highestScore"))
     : 0;
   highestScoreText.setText(`Highest Score: ${highestScore}`)
+}
+
+function throwPowerCapsule(currentScene) {
+  let throwPowerCapsuleTimer = currentScene.time.addEvent({
+    delay: 1500,
+    callback: throwPowerCapsuleFunctionality,
+    callbackScope: currentScene,
+  });
+
+  function throwPowerCapsuleFunctionality() {
+    this.add.image(400, 300, 'levelUpImg')
+  }
+}
+
+function LevelUp(levelUpEl) {
+  levelUpEl.disableBody(true, true);
+
+  doubleTheBullets()
+}
+
+function doubleTheBullets() {
+  ++bulletCounts;
+}
+
+function destroyBullets(currentScene) {
+
+  let destroyBulletsTimer = currentScene.time.addEvent({
+    delay: 8000,
+
+    callback: () => {
+      console.log(bullets.length)
+      for (let i = 79; i > 0; i--) {
+        console.log(bullets.length)
+        bullets[bullets.length - i].disableBody(true, true)
+      }
+
+      bullets.splice(-79);
+
+    },
+    callbackScope: currentScene,
+    loop: true
+  })
 }

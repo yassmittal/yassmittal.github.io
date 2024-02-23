@@ -21,11 +21,16 @@ body {
   background-color: #7d2ae8;
 }
 
+.container-wrapper {
+  padding: 2rem;
+}
+
 .container {
   padding: 2rem 7rem;
   border-radius: 14px;
   background: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
 }
 
 .result_images {
@@ -166,4 +171,20 @@ body {
   border-right: 10px solid transparent;
   border-bottom: 10px solid transparent;
   border-top: 10px solid transparent;
+}
+
+@media screen and (max-width: 660px) {
+  .result_images img {
+    width: 60px;
+  }
+
+  .option_image img {
+    width: 35px;
+  }
+
+  .container {
+    padding: 1.2rem 3rem;
+    width: 100%;
+    margin: auto;
+  }
 }

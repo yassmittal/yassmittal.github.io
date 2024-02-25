@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
 
-body{
+body {
   font-family: 'Lato', sans-serif;
   height: 100vh;
   background-color: #242333;
@@ -11,14 +11,14 @@ body{
   justify-content: center;
 }
 
-.movie-picker label{
+.movie-picker label {
   font-size: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.movie-picker select{
+.movie-picker select {
   height: 40px;
   width: 200px;
   border-radius: 10px;
@@ -27,14 +27,14 @@ body{
   font-size: 15px;
 }
 
-.movie-hall{
+.movie-hall {
   display: flex;
   flex-direction: column;
   align-items: center;
   perspective: 1000px;
 }
 
-.movie-hall .availability{
+.movie-hall .availability {
   width: 450px;
   background-color: rgba(0, 0, 0, 0.1);
   height: 50px;
@@ -48,14 +48,14 @@ body{
   font-weight: 400;
 }
 
-.availability div{
+.availability div {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.3em;
 }
 
-.seat{
+.seat {
   width: 34px;
   height: 28px;
   border-radius: 12px 12px 0 0;
@@ -63,24 +63,25 @@ body{
   margin: 0.3em;
 }
 
-.seat:hover{
+.seat:hover {
   cursor: pointer;
   transform: scale(1.03);
 }
 
-.available{
+.available {
   background-color: #444451;
 }
 
-.selected{
-  background-color: #6feaf6;;
+.selected {
+  background-color: #6feaf6;
+  ;
 }
 
-.occupied{
+.occupied {
   background-color: #fff;
 }
 
-.movie-screen{
+.movie-screen {
   background-color: #FFF;
   width: 400px;
   height: 160px;
@@ -89,30 +90,54 @@ body{
   box-shadow: 0 3px 10px rgb(255 255 255 / 70%);
 }
 
-.seats{
+.seats {
   display: flex;
   flex-direction: column;
 }
 
-.row{
+.row {
   display: flex;
   flex-direction: row;
 }
 
 .row .seat:nth-child(3),
-.row .seat:nth-child(7){
+.row .seat:nth-child(7) {
   margin-left: 2em;
 }
 
-.final-selection{
+.final-selection {
   font-size: 20px;
 }
 
-.final-selection span{
+.final-selection span {
   color: #6feaf6;
 }
 
-.occupied:hover{
+.occupied:hover {
   transform: scale(1);
   cursor: auto;
+}
+
+@media screen and (max-width: 700px) {
+
+  .movie-hall .availability {
+    width: 350px;
+    height: 50px;
+  }
+
+  .movie-screen {
+    width: 300px;
+  }
+
+  .seat {
+    width: 30px;
+    height: 25px;
+  }
+
+
+  .row .seat:nth-child(3),
+  .row .seat:nth-child(7) {
+    margin-left: 1em;
+  }
+
 }

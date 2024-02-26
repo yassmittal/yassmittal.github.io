@@ -1,18 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body{
+body {
   font-family: "Muli", sans-serif;
   background-color: #f0f0f0;
   padding: 2em;
 }
 
-main{
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,9 +20,10 @@ main{
   gap: 2em;
 }
 
-.question-wrapper{
-  width: 56%;
-  height: 80px;
+.question-wrapper {
+  width: 100%;
+  max-width: 700px;
+  height: 60px;
   border: 1px solid #9fa4a8;
   border-radius: 10px;
   padding: 1em;
@@ -33,7 +34,7 @@ main{
   transition: height 200ms linear;
 }
 
-.question-wrapper button{
+.question-wrapper button {
   position: absolute;
   right: 3px;
   top: 2px;
@@ -44,33 +45,33 @@ main{
   background: transparent;
 }
 
-.question-wrapper button .fas{
+.question-wrapper button .fas {
   position: absolute;
   left: 10px;
 }
 
-.question-wrapper .fa-times{
+.question-wrapper .fa-times {
   opacity: 0;
 }
 
-.question-wrapper .question{
+.question-wrapper .question {
   font-weight: bold;
   font-size: 20px;
 }
 
-.question-wrapper .answer{
+.question-wrapper .answer {
   display: none;
   margin-top: 2em;
 }
 
-.answered{
+.answered {
   height: 120px;
   background-color: #fff;
   overflow: hidden;
 }
 
 .answered::before,
-.answered::after{
+.answered::after {
   content: "\f075";
   font-family: "Font Awesome 5 Free";
   color: #2ecc71;
@@ -81,21 +82,32 @@ main{
   position: absolute;
 }
 
-.answered::before{
+.answered::before {
   color: #3498db;
   left: -9px;
   top: -40px;
   transform: rotateY(180deg);
 }
 
-.answered button .fa-chevron-down{
+.answered button .fa-chevron-down {
   opacity: 0;
 }
 
-.answered button .fa-times{
+.answered button .fa-times {
   opacity: 1;
 }
 
-.answered .answer{
+.answered .answer {
   display: block;
+}
+
+
+@media screen and (max-width: 700px) {
+  main {
+    gap: 1rem;
+  }
+
+  .question-wrapper .question {
+    font-size: 1rem;
+  }
 }

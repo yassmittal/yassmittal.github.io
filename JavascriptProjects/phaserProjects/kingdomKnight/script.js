@@ -10,19 +10,15 @@ let mainScene = new Phaser.Class({
 
 
   preload: function () {
-
     this.load.image('tiles', 'assets/tilemaps/tiles/dungeon-16-16.png');
     this.load.tilemapTiledJSON('tileMap', 'assets/tilemaps/json/dungeon.json');
-
   },
 
   create: function () {
 
-
     const map = this.make.tilemap({ key: 'tileMap' })
 
     const tileSet = map.addTilesetImage('dungeon', 'tiles')
-
 
     const Ground = map.createLayer('Ground', [tileSet]);
     const Walls = map.createLayer('Walls', [tileSet]);
